@@ -1,0 +1,203 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import StatGrid from '../../components/StatGrid.astro';
+import BulletList from '../../components/BulletList.astro';
+import FiringArcDiagram from '../../components/FiringArcDiagram.astro';
+import TierTypePills from '../../components/TierTypePills.astro';
+import { GOAL_CATEGORIES } from '../../lib/goals';
+
+export async function getStaticPaths() {
+  const ships = await getCollection('ships');
+  return ships.map((ship) => ({
+    params: { id: ship.id },
+    props: { ship },
+  }));
+}
+
+const { ship } = Astro.props;
+const { data } = ship;
+
+const consumableRatingLabels: Record<'strong' | 'average' | 'weak', string> = {
+  strong: 'Strong pick',
+  average: 'Average',
+  weak: 'Below average',
+};
+---
+
+<BaseLayout title={data.name} backHref="/ships/" backLabel="Ships">
+  <div class="ship-header-pills">
+    <TierTypePills nation={data.nation} type={data.type} tier={data.tier} />
+  </div>
+  <h1>{data.name}</h1>
+  <p>{data.role}</p>
+
+  {data.image && (
+    <div class="ship-photo">
+      <img src={data.image} alt={`${data.name}, the real ship`} loading="lazy" />
+      {data.imageCredit && <p class="ship-photo__credit">{data.imageCredit}</p>}
+    </div>
+  )}
+
+  <div class="section playstyle-summary">
+    <ul>
+      {data.playstyle.summary.map((line) => <li>{line}</li>)}
+    </ul>
+  </div>
+
+  <BulletList heading="Tips" items={data.tips} />
+
+  <div class="section">
+    <h2>Stats</h2>
+    <StatGrid rows={data.stats} />
+  </div>
+
+  {data.turrets.length > 0 && (
+    <div class="section">
+      <h2>Main Battery Firing Arcs</h2>
+      <FiringArcDiagram mode="battery" turrets={data.turrets} />
+    </div>
+  )}
+
+  {data.torpedoMounts.length > 0 && (
+    <div class="section">
+      <h2>Torpedo Firing Arcs</h2>
+      <FiringArcDiagram mode="torpedoes" torpedoMounts={data.torpedoMounts} />
+    </div>
+  )}
+
+  <div class="section">
+    <h2>Consumables</h2>
+    <ul>
+      {data.consumables.map((c) => (
+        <li>
+          <strong>{c.name}:</strong> {c.flavor}
+          {c.rating && (
+            <span class={`consumable-rating consumable-rating--${c.rating}`}>
+              {consumableRatingLabels[c.rating]}
+            </span>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {data.legendaryModule && (
+    <div class="section">
+      <h2>Legendary Module</h2>
+      <p><strong>{data.legendaryModule.name}:</strong> {data.legendaryModule.effect}</p>
+      <p class="muted">{data.legendaryModule.unlockNote}</p>
+    </div>
+  )}
+
+  <BulletList heading="Strengths" items={data.strengths} />
+  <BulletList heading="Weaknesses" items={data.weaknesses} />
+
+  {data.threats.length > 0 && (
+    <div class="section">
+      <h2>Watch Out For</h2>
+      <ul>
+        {data.threats.map((t) => <li><strong>{t.threat}:</strong> {t.reason}</li>)}
+      </ul>
+    </div>
+  )}
+
+  {data.goalTags.length > 0 && (
+    <div class="section">
+      <h2>Good At</h2>
+      <ul>
+        {data.goalTags.map((g) => <li><strong>{GOAL_CATEGORIES[g.tag].title}:</strong> {g.note}</li>)}
+      </ul>
+    </div>
+  )}
+
+  <div class="section">
+    <h2>Playstyle</h2>
+    <p>{data.playstyle.detail}</p>
+  </div>
+
+  {data.upgrades.length > 0 && (
+    <div class="section">
+      <h2>Recommended Upgrades</h2>
+      <ul>
+        {data.upgrades.map((u) => (
+          <li>
+            <strong>{u.slot}:</strong> {u.recommended}
+            {u.alternative && <> (or {u.alternative})</>}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+
+  {data.captainsNotes && (
+    <div class="section">
+      <h2>Captain's Notes</h2>
+      <p class="captains-notes">{data.captainsNotes}</p>
+    </div>
+  )}
+</BaseLayout>
+
+<style>
+  .ship-header-pills {
+    margin-bottom: var(--space-4);
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .ship-photo {
+    margin-bottom: var(--space-4);
+  }
+
+  .ship-photo img {
+    display: block;
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-border);
+  }
+
+  .ship-photo__credit {
+    margin: var(--space-1) 0 0;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-align: right;
+  }
+
+  .playstyle-summary {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 3px solid var(--color-accent);
+    border-radius: var(--radius);
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .playstyle-summary ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    font-weight: 600;
+  }
+
+  .muted {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .captains-notes {
+    white-space: pre-line;
+    font-style: italic;
+  }
+
+  .consumable-rating {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .consumable-rating--strong { color: var(--color-rating-strong); }
+  .consumable-rating--weak { color: var(--color-rating-weak); }
+</style>

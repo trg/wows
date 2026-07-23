@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ShipCard from '../../components/ShipCard.astro';
+import ShipSearch from '../../components/ShipSearch.astro';
+
+const ships = (await getCollection('ships')).sort((a, b) => a.data.tier - b.data.tier || a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout title="Ships" backHref="/" backLabel="Home">
+  <h1>Ships</h1>
+  <ShipSearch />
+  {ships.map((ship) => (
+    <ShipCard
+      id={ship.id}
+      name={ship.data.name}
+      nation={ship.data.nation}
+      type={ship.data.type}
+      tier={ship.data.tier}
+      shortDescription={ship.data.shortDescription}
+      image={ship.data.image}
+    />
+  ))}
+</BaseLayout>

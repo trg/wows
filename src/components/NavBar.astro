@@ -1,0 +1,67 @@
+---
+const { pathname } = Astro.url;
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/ships/', label: 'Ships' },
+  { href: '/maps/', label: 'Maps' },
+  { href: '/goals/', label: 'Best For' },
+];
+
+function isActive(href: string): boolean {
+  if (href === '/') return pathname === '/';
+  return pathname.startsWith(href);
+}
+---
+
+<nav class="navbar">
+  {links.map((link) => (
+    <a href={link.href} class:list={['navbar__link', { 'navbar__link--active': isActive(link.href) }]}>
+      {link.label}
+    </a>
+  ))}
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    height: var(--nav-height);
+    z-index: 10;
+  }
+
+  .navbar__link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+  }
+
+  .navbar__link--active {
+    color: var(--color-accent);
+  }
+
+  @media (min-width: 640px) {
+    .navbar {
+      left: 50%;
+      right: auto;
+      bottom: var(--space-4);
+      transform: translateX(-50%);
+      width: calc(100% - var(--space-6) * 2);
+      max-width: 480px;
+      height: calc(var(--nav-height) - var(--space-2));
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+  }
+</style>

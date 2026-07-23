@@ -1,0 +1,77 @@
+{
+  "name": "USS Farragut",
+  "nation": "USA",
+  "type": "Destroyer",
+  "tier": 4,
+  "shortDescription": "Hard-hitting tier IV gunboat with fast, high-DPM guns and short-legged torpedoes.",
+  "role": "Gunboat destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "11,200", "rating": "weak" },
+    { "label": "Main Battery", "value": "5x1 127mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "10.2 km", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "2x4 533mm", "rating": "average" },
+    { "label": "Torpedo Range", "value": "5.5 km", "rating": "weak" },
+    { "label": "Torpedo Damage", "value": "11,733", "rating": "average" },
+    { "label": "Torpedo Speed", "value": "56 kts stock, 58 kts upgraded", "rating": "average" },
+    { "label": "Max Speed", "value": "36.5 kts", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "6.2 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "3.0 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-21mm hull, no real belt", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Standard USN destroyer cycle, back up before a second fire usually catches you.", "rating": "average" },
+    { "name": "Smoke Generator", "flavor": "2 charges, 25s to lay, roughly 115s of screen, 240s cooldown. 'Extended Smoke' is a named ship trait, but you only get two chances to use it.", "rating": "average" },
+    { "name": "Engine Boost", "flavor": "2 charges, +8% speed for 120s, 180s cooldown. Enough uptime to plan a push around, not just bail out of one fight.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 1, "arcs": ["stern", "port", "starboard"] },
+    { "label": "4", "guns": 1, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 1, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "1", "tubes": "4 tubes", "side": "centerline", "note": "Both mounts sit on the centerline and can traverse to either broadside." },
+    { "label": "2", "tubes": "4 tubes", "side": "centerline" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Armaments Modification 1" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 1" },
+    { "slot": "Slot 3", "recommended": "Steering Gears Modification 1", "alternative": "Aiming Systems Modification 1" }
+  ],
+  "strengths": [
+    "Fast-reloading 127mm battery gives some of the best gun DPM at tier IV",
+    "Above-average fire chance keeps HE spam dangerous",
+    "High top speed with a quick rudder shift, easy to reposition"
+  ],
+  "weaknesses": [
+    "Less hull HP than tier IV rival Nicholas",
+    "Floaty shell arcs make long-range hits inconsistent",
+    "Short torpedo range keeps the fish a close-range tool only",
+    "Bad concealment gets you spotted first in most fights",
+    "No repair party, so damage taken is permanent"
+  ],
+  "tips": [
+    "Lead with your guns against other destroyers. The DPM usually wins a straight fight at this tier.",
+    "Close the distance before opening up, those arcing shells miss more at range.",
+    "Cap early and hold your position, but keep an escape route in mind before you commit.",
+    "Save torps for a ship that's already pushed in close. The range is too short to chip-damage from afar."
+  ],
+  "threats": [
+    { "threat": "Cruisers with radar or hydro", "reason": "They strip away your smoke's usefulness and can punish you at range." },
+    { "threat": "Destroyers with better concealment", "reason": "They dictate the terms of the fight if they see you first." }
+  ],
+  "playstyle": {
+    "summary": [
+      "A gunboat destroyer built around a fast, hard-hitting 127mm battery, not a knife fighter.",
+      "Gun DPM and fire chance lead the way, torpedoes are a short-ranged backup.",
+      "Fast and nimble, but thin-skinned and easy to spot for the tier."
+    ],
+    "detail": "Farragut plays more like a small cruiser than a knife in the dark. She can trade shells with almost any destroyer her tier and usually come out ahead on damage per minute, so she doesn't need to hide the way some others do. Contest caps, spot when it's safe, and treat the torpedoes as a finishing move rather than the whole plan. Just don't forget there's no repair party behind that hull, and no armor to speak of either."
+  },
+  "image": "/images/ships/farragut.jpg",
+  "imageCredit": "USS Farragut (DD-348) underway, September 1939. U.S. Navy, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "fire-starter", "note": "Fast-reloading 127mm guns with above-average fire chance make her one of the better HE spam boats at tier IV." }
+  ]
+}

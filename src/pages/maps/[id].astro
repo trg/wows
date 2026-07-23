@@ -1,0 +1,35 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import KeyAreaList from '../../components/KeyAreaList.astro';
+import BulletList from '../../components/BulletList.astro';
+
+export async function getStaticPaths() {
+  const maps = await getCollection('maps');
+  return maps.map((map) => ({
+    params: { id: map.id },
+    props: { map },
+  }));
+}
+
+const { map } = Astro.props;
+const { data } = map;
+---
+
+<BaseLayout title={data.name} backHref="/maps/" backLabel="Maps">
+  <span class="badge">{data.size}</span>
+  <h1>{data.name}</h1>
+  <p>{data.description}</p>
+
+  <div class="section">
+    <h2>Game Modes</h2>
+    <p>{data.gameModes.join(', ')}</p>
+  </div>
+
+  <div class="section">
+    <h2>Key Areas</h2>
+    <KeyAreaList keyAreas={data.keyAreas} />
+  </div>
+
+  <BulletList heading="Strategy Notes" items={data.strategyNotes} />
+</BaseLayout>

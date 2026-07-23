@@ -1,0 +1,83 @@
+{
+  "name": "USS Omaha",
+  "nation": "USA",
+  "type": "Cruiser",
+  "tier": 4,
+  "shortDescription": "Gun-and-torpedo hybrid light cruiser with real bite at close range.",
+  "role": "Hybrid gun/torpedo cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "26,800", "rating": "average" },
+    { "label": "Main Battery", "value": "8x1 + 2x2 152mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "13.4 km", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "4x3 533mm", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "5.5 km", "rating": "weak" },
+    { "label": "Torpedo Damage", "value": "11,733", "rating": "average" },
+    { "label": "Torpedo Speed", "value": "56 kts", "rating": "average" },
+    { "label": "Max Speed", "value": "34 kts", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "11.1 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "6.7 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-76mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 5s action, 60s cooldown. Quicker reset than a battleship's, slower than a destroyer's.", "rating": "average" },
+    { "name": "Sonar", "flavor": "2 charges, 90s active on a 180s cooldown. Pings ships out to 3.7 km and torpedoes at 2.7 km.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "2 charges, 100s uptime on an 80s cooldown. It's her only answer to enemy planes, no on-demand Defensive AA Fire in this kit.", "rating": "weak" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"], "position": "centerline", "note": "Forward twin turret. Tracks far enough forward that she keeps some main battery firepower while bow-in, unusual for a cruiser." },
+    { "label": "Port Fwd", "guns": 2, "arcs": ["port"], "position": "port", "note": "Single-gun casemate mounts, welded to their own side of the hull. Can't cross to fire starboard." },
+    { "label": "Stbd Fwd", "guns": 2, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "Port Aft", "guns": 2, "arcs": ["port"], "position": "port" },
+    { "label": "Stbd Aft", "guns": 2, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "2", "guns": 2, "arcs": ["stern", "port", "starboard"], "position": "centerline", "note": "Aft twin turret, mirrors turret 1's forward-friendly coverage from the stern." }
+  ],
+  "torpedoMounts": [
+    { "label": "Port 1", "tubes": "3 tubes", "side": "port", "note": "All four mounts are fixed to their own broadside, no centerline swing. Commit to a side before you fire." },
+    { "label": "Port 2", "tubes": "3 tubes", "side": "port" },
+    { "label": "Starboard 1", "tubes": "3 tubes", "side": "starboard" },
+    { "label": "Starboard 2", "tubes": "3 tubes", "side": "starboard" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Armaments Modification 1" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 1" },
+    { "slot": "Slot 3", "recommended": "Aiming Systems Modification 1", "alternative": "Torpedo Tube Modification 1" }
+  ],
+  "strengths": [
+    "Twelve guns split across turrets and casemates, more firepower than most cruisers see this early",
+    "Both twin turrets track far enough forward to keep shooting while bow-in, an unusual angle advantage for a cruiser",
+    "Four torpedo mounts and twelve tubes total give a big spread if you can close the gap",
+    "Sonar gives her a way to spot hidden ships and incoming torpedoes that most tier IV cruisers don't have"
+  ],
+  "weaknesses": [
+    "Large detection radius (11.1 km sea, 6.7 km air) makes it hard to stay hidden",
+    "Thin armor (6-76mm) is an easy citadel for battleships and cruisers alike",
+    "No self-heal. Damage Control Party only handles fire and flooding, so chip damage just piles up over a match",
+    "Torpedo tubes are fixed one per side, no centerline swing, so you're committed to a broadside before you fire",
+    "Short 5.5 km torpedo range forces a genuinely risky approach to use them"
+  ],
+  "tips": [
+    "Don't show your broadside near anything with big guns. You will eat a citadel.",
+    "Use islands to peek, fire, and duck back before return fire lands. There's no Repair Party to undo a mistake.",
+    "Pick your side before you commit to a torpedo run. The tubes are welded to one broadside, not centerline.",
+    "Save Sonar for when you actually need to confirm a threat, not just to run it on cooldown."
+  ],
+  "threats": [
+    { "threat": "Enemy destroyers", "reason": "They outspot you and can torpedo you before you even know they're there." },
+    { "threat": "Battleships at close to mid range", "reason": "One well-aimed AP salvo can citadel you through that thin armor." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Twelve-gun hybrid cruiser, more firepower than a tier IV cruiser has any right to.",
+      "Thin-skinned, one citadel hit from a battleship ends the fight.",
+      "Torpedoes turn any overextending enemy into a mistake, if you get the right broadside on them."
+    ],
+    "detail": "Omaha rewards a bit of aggression as long as it's controlled. Twelve guns spread across turrets and casemates put fire on a target faster than most tier IV cruisers can answer, and the torpedoes make anyone who overextends regret it. But the armor is thin and there's no Repair Party to lean on, so the whole game is choosing when to be seen. Peek, shoot, pull back, and do it again."
+  },
+  "image": "/images/ships/omaha.jpg",
+  "imageCredit": "USS Omaha (CL-4) anchored in the Hudson River, 2 May 1927. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "fire-starter", "note": "Twelve guns of HE output makes her one of the better fire-spam cruisers at her tier." },
+    { "tag": "torpedo-alpha", "note": "Four triple mounts, twelve tubes total. Single-torpedo damage isn't exceptional, but the volley size is." },
+    { "tag": "utility-support", "note": "Sonar pings hidden ships and torpedoes, a spotting tool most tier IV cruisers don't get." }
+  ]
+}

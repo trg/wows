@@ -1,0 +1,78 @@
+{
+  "name": "IJN Hyūga",
+  "nation": "Japan",
+  "type": "Battleship",
+  "tier": 5,
+  "shortDescription": "Premium tier V battleship built entirely around broadside fire, twelve 356mm guns across six turrets, not one of which can point straight ahead.",
+  "role": "Broadside-only premium battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "60,700", "rating": "strong" },
+    { "label": "Main Battery", "value": "6x2 356mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "16.2 km", "rating": "strong" },
+    { "label": "Max Speed", "value": "25.3 kts", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "15 s", "rating": "average" },
+    { "label": "Turning Radius", "value": "750 m", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "13.8 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "11.4 km", "rating": "average" },
+    { "label": "Armor", "value": "16-350mm", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "34%", "rating": "average" },
+    { "label": "AA", "value": "10x2 25mm + 4x2 127mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "10s action, 80s cooldown, unlimited charges. Half New Mexico's 20s cycle, one of the quicker DCP resets on a tier IV-V battleship.", "rating": "strong" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 304 hp/s, about 8,500 hp per activation and roughly 42% of her 60,700 hp pool across all three, in line with peers at this tier.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "90s duration, 80s reload, 3 charges.", "rating": "average" },
+    { "name": "Main Battery Reload Booster", "flavor": "-50% main battery reload for 15s, 150s cooldown, 2 charges. Turns a 29s reload into roughly 14.5s for the window, good for one extra salvo mid-engagement. Not every premium at this tier gets one.", "rating": "strong" },
+    { "name": "Observation Seaplane", "flavor": "30s duration, 200s reload, 3 charges, tightens shell groupings while active.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "30s window, 160s reload, 3 charges. Sharpens an already below-average secondary battery rather than turning a weak one into a real threat.", "rating": "weak" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["port", "stern", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["port", "stern", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships pair, needs a full broadside to bear, can't reach either the bow or stern arc." },
+    { "label": "4", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships pair, needs a full broadside to bear, can't reach either the bow or stern arc." },
+    { "label": "5", "guns": 2, "arcs": ["port", "stern", "starboard"] },
+    { "label": "6", "guns": 2, "arcs": ["port", "stern", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Damage Control System Modification 2" }
+  ],
+  "strengths": [
+    "Twelve 356mm guns across six turrets, longest main battery range of any tier IV-V battleship in this DB at 16.2 km",
+    "60,700 hull HP and armor the ship's own in-game notes call out as excellent, tanks small and mid-caliber fire well",
+    "25.3-knot top speed, the fastest battleship in this DB by a wide margin, enough to pick her own range and angle",
+    "Main Battery Reload Booster cuts reload by half for 15 seconds, a tool most premiums at this tier don't carry",
+    "13.8 km surface detectability is genuinely low for a battleship this size"
+  ],
+  "weaknesses": [
+    "No turret on the ship can fire into the bow arc, she has to show a broadside before any gun can shoot",
+    "The amidships pair (turrets 3 and 4) is even more restricted, port and starboard only, needing a full broadside just to bear at all",
+    "Secondary battery and AA are both weaker than peers, neither covers an approach or a passing striker",
+    "750m turning radius and a 15s rudder shift make it slow to swing the broadside onto a new target once committed"
+  ],
+  "tips": [
+    "Get your broadside on before you're in range to open fire, none of her guns work bow-on so there's no partial engagement while approaching",
+    "Save the Reload Booster for a target you're already angled on and expect to keep shooting at, not as an opener",
+    "Don't try to soak hits bow-in while closing, you're taking fire without answering back until you turn",
+    "Use the speed to choose the fight rather than to chase, you can't recover from a bad angle once you're committed to one"
+  ],
+  "threats": [
+    { "threat": "Anything that can hold a position where she can't turn broadside in time", "reason": "Every turret needs at least part of a broadside to fire, she's defenseless from dead ahead." },
+    { "threat": "Destroyers and aircraft that close inside her weak AA and secondary coverage", "reason": "Neither system is strong enough to meaningfully punish something that gets in close." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Fast, well-armored premium battleship whose entire main battery depends on showing a broadside, no turret bears on the bow arc at all.",
+      "Twelve 356mm guns with more reach than any other battleship in this DB at tier IV-V.",
+      "A -50% reload booster gives her a burst window most peers at this tier don't have.",
+      "Weak secondaries and AA mean she has little to fall back on if she gets caught out of position."
+    ],
+    "detail": "Hyūga shares her hull with sister ship Ise, and the turret arrangement shows it: six twin mounts split fore, amidships, and aft, and not one of them can swing onto the bow. That's an unusual thing to ask of a battleship captain, she has to commit to a broadside before she can fire back at all. In exchange she gets real speed for the tier, armor that holds up, a big hit point pool, and a reload booster that most premiums her tier don't carry. Play her patiently, pick the moment to turn broadside rather than getting caught bow-in, and the twelve-gun salvo she puts out backed by the longest range at this bracket is worth the wait."
+  },
+  "image": "/images/ships/hyuga.jpg",
+  "imageCredit": "IJN Hyūga, 4 December 1941, public domain (Kure Naval Arsenal), via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "60,700 hp and armor called out as excellent in her own in-game notes let her absorb punishment well once she's turned broadside." }
+  ]
+}

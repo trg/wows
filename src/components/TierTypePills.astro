@@ -1,0 +1,32 @@
+---
+import { NATION_FLAGS } from '../lib/nations';
+
+interface Props {
+  nation: string;
+  type: 'Destroyer' | 'Cruiser' | 'Battleship';
+  tier: number;
+}
+
+const { nation, type, tier } = Astro.props;
+---
+
+<span class="pills">
+  <span class="badge badge--nation" title={nation} aria-label={nation}>{NATION_FLAGS[nation] ?? nation}</span>
+  <span class="badge badge--tier">T{tier}</span>
+  <span class={`badge badge--${type}`}>{type}</span>
+</span>
+
+<style>
+  .pills {
+    display: inline-flex;
+    gap: var(--space-2);
+  }
+
+  .pills .badge {
+    font-size: 0.85rem;
+  }
+
+  .badge--tier {
+    color: var(--color-text-muted);
+  }
+</style>

@@ -1,0 +1,257 @@
+---
+interface Turret {
+  label: string;
+  guns: number;
+  arcs: Array<'bow' | 'stern' | 'port' | 'starboard'>;
+  position?: 'centerline' | 'port' | 'starboard';
+  note?: string;
+}
+
+interface TorpedoMount {
+  label: string;
+  tubes: string;
+  side: 'centerline' | 'port' | 'starboard';
+  firingSector?: 'narrow' | 'average' | 'wide';
+  spreadPattern?: { narrowDeg: number; wideDeg: number };
+  singleTubeFire?: boolean;
+  note?: string;
+}
+
+interface Props {
+  turrets?: Turret[];
+  torpedoMounts?: TorpedoMount[];
+  mode: 'battery' | 'torpedoes';
+}
+
+const { turrets = [], torpedoMounts = [], mode } = Astro.props;
+
+const WIDTH = 160;
+const HEIGHT = 340;
+const CENTER_X = WIDTH / 2;
+const TURRET_R = 34;
+
+// Angle 0 = bow (straight up), increases clockwise. Each zone is a 90-degree wedge
+// centered on its cardinal direction so the four zones tile the full circle exactly.
+const ZONE_ANGLES: Record<Turret['arcs'][number], [number, number]> = {
+  bow: [-45, 45],
+  starboard: [45, 135],
+  stern: [135, 225],
+  port: [225, 315],
+};
+const ZONE_ORDER: Turret['arcs'][number][] = ['bow', 'starboard', 'stern', 'port'];
+
+// Total angular width of the firing-sector wedge, centered on the beam (90 for starboard,
+// 270 for port), keyed by the qualitative rating.
+const SECTOR_SPAN: Record<NonNullable<TorpedoMount['firingSector']>, number> = {
+  narrow: 40,
+  average: 90,
+  wide: 140,
+};
+const SECTOR_R = 30;
+
+function sectorRange(side: 'port' | 'starboard', span: number): [number, number] {
+  const center = side === 'starboard' ? 90 : 270;
+  return [center - span / 2, center + span / 2];
+}
+
+function point(cx: number, cy: number, r: number, angleDeg: number) {
+  const rad = (angleDeg * Math.PI) / 180;
+  return { x: cx + r * Math.sin(rad), y: cy - r * Math.cos(rad) };
+}
+
+function wedgePath(cx: number, cy: number, r: number, [start, end]: [number, number]) {
+  const p1 = point(cx, cy, r, start);
+  const p2 = point(cx, cy, r, end);
+  return `M ${cx} ${cy} L ${p1.x.toFixed(1)} ${p1.y.toFixed(1)} A ${r} ${r} 0 0 1 ${p2.x.toFixed(1)} ${p2.y.toFixed(1)} Z`;
+}
+
+// Hull outline: pointed bow at top, parallel sides, rounded stern at bottom.
+const hullPath = `M ${CENTER_X} 12
+  Q 42 46 34 96
+  L 34 268
+  Q 34 300 60 310
+  L ${WIDTH - 60} 310
+  Q ${WIDTH - 34} 300 ${WIDTH - 34} 268
+  L ${WIDTH - 34} 96
+  Q ${WIDTH - 42} 46 ${CENTER_X} 12
+  Z`;
+
+function laidOutY(index: number, count: number, top: number, bottom: number) {
+  if (count <= 1) return (top + bottom) / 2;
+  return top + (index * (bottom - top)) / (count - 1);
+}
+
+// Turrets on the same side share a fore-aft line with the same-occurrence turret on the
+// opposite side (1st port with 1st starboard, 2nd with 2nd, ...); centerline turrets each get
+// their own line. Lines are ordered by first appearance, bow to stern.
+const TURRET_X_OFFSET = 26;
+
+const sideCounts = { centerline: 0, port: 0, starboard: 0 };
+const rowKeys = turrets.map((t) => {
+  const position = t.position ?? 'centerline';
+  const key = position === 'centerline' ? `c${sideCounts.centerline}` : `ps${sideCounts[position]}`;
+  sideCounts[position]++;
+  return key;
+});
+const rowOrder = [...new Set(rowKeys)];
+
+// Marker is a pill sized to the label so multi-word labels (e.g. "Port Fwd") don't spill their
+// dark text past a fixed-size dot onto the dark hull background.
+const BADGE_HEIGHT = 14;
+const CHAR_WIDTH = 5.4;
+
+const turretPositions = turrets.map((t, i) => {
+  const position = t.position ?? 'centerline';
+  return {
+    ...t,
+    cx: position === 'centerline' ? CENTER_X : position === 'port' ? CENTER_X - TURRET_X_OFFSET : CENTER_X + TURRET_X_OFFSET,
+    cy: laidOutY(rowOrder.indexOf(rowKeys[i]), rowOrder.length, 55, 290),
+    badgeWidth: Math.max(BADGE_HEIGHT, t.label.length * CHAR_WIDTH + 8),
+  };
+});
+
+// Same pairing scheme as turrets: mounts on the same side share a fore-aft line with the
+// same-occurrence mount on the opposite side (1st port with 1st starboard, ...); centerline
+// mounts each get their own line. Fixed-side mounts are drawn offset toward their side of the
+// hull rather than sitting on the centerline.
+const MOUNT_X_OFFSET = 26;
+
+const torpedoSideCounts = { centerline: 0, port: 0, starboard: 0 };
+const torpedoRowKeys = torpedoMounts.map((m) => {
+  const key = m.side === 'centerline' ? `c${torpedoSideCounts.centerline}` : `ps${torpedoSideCounts[m.side]}`;
+  torpedoSideCounts[m.side]++;
+  return key;
+});
+const torpedoRowOrder = [...new Set(torpedoRowKeys)];
+
+// Torpedo tubes sit on deck within the hull's parallel mid-body, not out at the pointed bow or
+// rounded stern the way end turrets can — so lay them out over a narrower band than turrets use.
+const torpedoPositions = torpedoMounts.map((m, i) => ({
+  ...m,
+  cx: m.side === 'centerline' ? CENTER_X : m.side === 'port' ? CENTER_X - MOUNT_X_OFFSET : CENTER_X + MOUNT_X_OFFSET,
+  cy: laidOutY(torpedoRowOrder.indexOf(torpedoRowKeys[i]), torpedoRowOrder.length, 110, 250),
+}));
+
+const ariaLabel =
+  mode === 'battery'
+    ? 'Top-down diagram of main battery firing arcs'
+    : 'Top-down diagram of torpedo firing arcs';
+---
+
+<div class="diagram">
+  <svg viewBox={`0 0 ${WIDTH} ${HEIGHT}`} role="img" aria-label={ariaLabel}>
+    <path class="hull" d={hullPath} />
+
+    {mode === 'battery' && turretPositions.map((t) => (
+      <g class="turret">
+        {ZONE_ORDER.filter((zone) => t.arcs.includes(zone)).map((zone) => (
+          <path d={wedgePath(t.cx, t.cy, TURRET_R, ZONE_ANGLES[zone])} class="arc-covered" />
+        ))}
+        <rect
+          x={t.cx - t.badgeWidth / 2} y={t.cy - BADGE_HEIGHT / 2}
+          width={t.badgeWidth} height={BADGE_HEIGHT} rx={BADGE_HEIGHT / 2}
+          class="turret-marker"
+        />
+        <text x={t.cx} y={t.cy + 3.5} class="turret-label">{t.label}</text>
+      </g>
+    ))}
+
+    {mode === 'torpedoes' && torpedoPositions.map((m) => (
+      <g class="torpedo">
+        {(m.side === 'centerline' || m.side === 'port') && (
+          <path d={wedgePath(m.cx, m.cy, SECTOR_R, sectorRange('port', SECTOR_SPAN[m.firingSector ?? 'average']))} class="sector-wedge" />
+        )}
+        {(m.side === 'centerline' || m.side === 'starboard') && (
+          <path d={wedgePath(m.cx, m.cy, SECTOR_R, sectorRange('starboard', SECTOR_SPAN[m.firingSector ?? 'average']))} class="sector-wedge" />
+        )}
+        <circle cx={m.cx} cy={m.cy} r="4" class="torpedo-marker" />
+      </g>
+    ))}
+  </svg>
+
+  <ul class="legend">
+    {mode === 'battery' && turrets.map((t) => (
+      <li>
+        <strong>Turret {t.label}</strong> ({t.guns} guns): {t.arcs.join(', ')}.
+        {t.note && <span class="note"> {t.note}</span>}
+      </li>
+    ))}
+    {mode === 'torpedoes' && torpedoMounts.map((m) => {
+      const clauses = [m.side === 'centerline' ? 'fires to either side' : `fixed to ${m.side}`];
+      if (m.firingSector) clauses.push(`${m.firingSector} firing sector`);
+      if (m.singleTubeFire) clauses.push('can fire single tubes');
+      if (m.spreadPattern) clauses.push(`spread toggle ${m.spreadPattern.narrowDeg}° narrow / ${m.spreadPattern.wideDeg}° wide`);
+      return (
+        <li>
+          <strong>Torpedo Mount {m.label}</strong> ({m.tubes}): {clauses.join(', ')}.
+          {m.note && <span class="note"> {m.note}</span>}
+        </li>
+      );
+    })}
+  </ul>
+</div>
+
+<style>
+  .diagram {
+    display: grid;
+    gap: var(--space-3);
+    justify-items: center;
+  }
+
+  svg {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .hull {
+    fill: var(--color-surface);
+    stroke: var(--color-border);
+    stroke-width: 2;
+  }
+
+  .arc-covered {
+    fill: var(--color-accent);
+    fill-opacity: 0.28;
+    stroke: var(--color-accent);
+    stroke-opacity: 0.6;
+    stroke-width: 1;
+  }
+
+  .turret-marker {
+    fill: var(--color-text);
+  }
+
+  .turret-label {
+    fill: var(--color-surface);
+    font-size: 9px;
+    font-weight: 700;
+    text-anchor: middle;
+  }
+
+  .sector-wedge {
+    fill: var(--color-cruiser);
+    fill-opacity: 0.18;
+    stroke: var(--color-cruiser);
+    stroke-opacity: 0.5;
+    stroke-width: 1;
+  }
+
+  .torpedo-marker {
+    fill: var(--color-text);
+  }
+
+  .legend {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 0.85rem;
+    display: grid;
+    gap: var(--space-1);
+  }
+
+  .legend .note {
+    color: var(--color-text-muted);
+  }
+</style>

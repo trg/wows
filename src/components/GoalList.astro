@@ -1,0 +1,61 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  entries: Array<{
+    shipId: string;
+    name: string;
+    type: 'Destroyer' | 'Cruiser' | 'Battleship';
+    tier: number;
+    note: string;
+  }>;
+}
+
+const { title, description, entries } = Astro.props;
+---
+
+<div class="section">
+  <h2>{title}</h2>
+  <p class="goal-list__description">{description}</p>
+  {entries.length === 0 ? (
+    <p class="goal-list__empty">No ships tagged for this yet.</p>
+  ) : (
+    <div class="goal-list">
+      {entries.map((entry) => (
+        <a href={`/ships/${entry.shipId}/`} class="card goal-list__item">
+          <div class="goal-list__header">
+            <span class={`badge badge--${entry.type}`}>T{entry.tier}</span>
+            <strong>{entry.name}</strong>
+          </div>
+          <p>{entry.note}</p>
+        </a>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .goal-list__description {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .goal-list__empty {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .goal-list__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+  }
+
+  .goal-list__item p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>

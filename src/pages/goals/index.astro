@@ -1,0 +1,39 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import GoalList from '../../components/GoalList.astro';
+import { GOAL_TAGS, GOAL_CATEGORIES, type GoalTag } from '../../lib/goals';
+
+const ships = await getCollection('ships');
+
+function entriesFor(tag: GoalTag) {
+  return ships
+    .flatMap((ship) => {
+      const match = ship.data.goalTags.find((g) => g.tag === tag);
+      if (!match) return [];
+      return [
+        {
+          shipId: ship.id,
+          name: ship.data.name,
+          type: ship.data.type,
+          tier: ship.data.tier,
+          note: match.note,
+        },
+      ];
+    })
+    .sort((a, b) => a.tier - b.tier);
+}
+---
+
+<BaseLayout title="Best For..." backHref="/" backLabel="Home">
+  <h1>Best Ships For...</h1>
+  <p>Quick picks by goal, roughly one per tier as the roster grows.</p>
+
+  {GOAL_TAGS.map((tag) => (
+    <GoalList
+      title={GOAL_CATEGORIES[tag].title}
+      description={GOAL_CATEGORIES[tag].description}
+      entries={entriesFor(tag)}
+    />
+  ))}
+</BaseLayout>

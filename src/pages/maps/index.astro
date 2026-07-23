@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MapCard from '../../components/MapCard.astro';
+
+const maps = (await getCollection('maps')).sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<BaseLayout title="Maps" backHref="/" backLabel="Home">
+  <h1>Maps</h1>
+  {maps.map((map) => (
+    <MapCard
+      id={map.id}
+      name={map.data.name}
+      size={map.data.size}
+      description={map.data.description}
+      image={map.data.image}
+    />
+  ))}
+</BaseLayout>

@@ -1,0 +1,19 @@
+{
+  "name": "Trap",
+  "size": "Medium, island-dense",
+  "gameModes": ["Standard Battle", "Domination"],
+  "description": "A tight cluster of islands that rewards patience and punishes anyone who pushes in blind.",
+  "keyAreas": [
+    { "name": "Point A", "type": "capture-point", "notes": "Tucked near islands. Easy to contest under cover, but also easy to get boxed in." },
+    { "name": "Point B (center)", "type": "capture-point", "notes": "Wide open relative to the rest of the map. Taking it exposes you to multiple angles at once." },
+    { "name": "Point C", "type": "capture-point", "notes": "Mirror of Point A on the opposite side. Same cover, same risk of getting pinned." },
+    { "name": "Central island cluster", "type": "camping-spot", "notes": "A popular spot for cruisers and battleships to sit and peek. Expect return fire the moment you show broadside." },
+    { "name": "Narrow channel between islands", "type": "chokepoint", "notes": "Great for ambushing destroyers, bad to get caught in against multiple opponents." },
+    { "name": "Outer edges", "type": "flank-route", "notes": "Less contested early. A good route for destroyers to slip past the main clash." }
+  ],
+  "strategyNotes": [
+    "Islands make this a good map for destroyers to ambush from concealment. Use them.",
+    "Battleships should avoid sitting still in the open near the center point. The island clusters offer much safer firing angles.",
+    "Don't fully commit to one capture point early. The layout makes it easy to get flanked from a route you didn't expect."
+  ]
+}

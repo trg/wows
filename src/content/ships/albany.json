@@ -1,0 +1,51 @@
+{
+  "name": "USS Albany",
+  "nation": "USA",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "Tier I starter cruiser with six guns and a big hit point pool, if you can get past how slow she is.",
+  "role": "Heavy-gunned starter cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "11,500", "rating": "strong" },
+    { "label": "Main Battery", "value": "6x1 152mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "8.7 km", "rating": "weak" },
+    { "label": "Max Speed", "value": "20 kts", "rating": "weak" },
+    { "label": "Turning Radius", "value": "350 m", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "8.3 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "5.0 km", "rating": "average" },
+    { "label": "Armor", "value": "6-76mm", "rating": "average" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 5s action, 60s cooldown, the kind of reset most cruisers don't get until several tiers later.", "rating": "average" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "Six 152mm guns is a heavier main battery than almost anything else at tier I",
+    "11,500 hull HP gives her more cushion than a typical tier I ship",
+    "350m turning radius is tight enough to jink in close even though she can't outrun anything"
+  ],
+  "weaknesses": [
+    "20-knot top speed is slow even by tier I standards, no way to disengage or reposition quickly",
+    "8.7 km stock gun range is short, has to close distance to put that battery to use",
+    "Damage Control Party is the only consumable in the kit, nothing else to lean on"
+  ],
+  "tips": [
+    "Lean on the six-gun battery early, most tier I opponents can't answer that much output",
+    "Don't count on outrunning a bad fight. Pick your engagements instead of trying to reposition out of one",
+    "Close the gap on purpose since the stock range is short, don't expect to win a trade at range"
+  ],
+  "threats": [
+    { "threat": "Faster tier I ships", "reason": "They dictate range and angle against a 20-knot top speed that can't chase or flee." },
+    { "threat": "Anything that outranges 8.7 km", "reason": "They get to shoot first and keep shooting before her guns are even in play." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Slowest ship most players will see this early, but carries more guns than anything else at tier I.",
+      "Built to slug at close range and soak hits, not to dodge or run.",
+      "Short-ranged and short-legged, has to close in on purpose to put that battery to use."
+    ],
+    "detail": "Albany doesn't get to pick when a fight starts, she's too slow for that. What she gets instead is six guns throwing more shells than anything else this early, and enough hit points to survive being seen while she does it. Close the distance on purpose, get her broadside where it counts, and let the extra barrels do the work. Play her like a destroyer and that top speed will make a liar out of you every time."
+  },
+  "image": "/images/ships/albany.jpg",
+  "imageCredit": "USS Albany (CL-23), 1900. Naval History and Heritage Command, public domain, via Wikimedia Commons."
+}

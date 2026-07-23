@@ -1,0 +1,70 @@
+{
+  "name": "SMS König",
+  "nation": "Germany",
+  "type": "Battleship",
+  "tier": 4,
+  "shortDescription": "Fast, heavily armored German dreadnought that leans on an enormous secondary battery instead of big-caliber guns.",
+  "role": "Secondary-battery brawler",
+  "stats": [
+    { "label": "Hull HP", "value": "40,700", "rating": "strong" },
+    { "label": "Main Battery", "value": "5x2 305mm", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "13.9 km", "rating": "average" },
+    { "label": "Secondary Battery", "value": "14x1 150mm + 6x1 88mm", "rating": "strong" },
+    { "label": "Max Speed", "value": "21.6 kts", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "20.8 s", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "13.4 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "10.7 km", "rating": "weak" },
+    { "label": "Armor", "value": "13-356mm", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "22%", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "15s action, 80s cooldown, unlimited charges, five seconds quicker than New York's, though still slower than any cruiser or destroyer reset.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 235 hp/s, about 6,580 hp per activation, a smaller slice of her considerably bigger hit point pool than that number first suggests.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, doubles secondary shell grouping and halves secondary dispersion, turning an already generous twenty-gun secondary suite into a real close-range threat to anything that strays inside 4.5 km.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships between the funnels, needs a full broadside to bring this turret to bear, the narrowest arc on the ship." },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Secondary Battery Modification 2", "alternative": "Aiming Systems Modification 1" }
+  ],
+  "strengths": [
+    "40,700 hit points and armor up to 356mm give her more staying power than the era's typical dreadnought",
+    "Twenty secondary guns across two batteries is an enormous close-range arsenal for the tier, and Enhanced Secondary Targeting sharpens it further",
+    "21.6 knots stock is a real speed edge over other tier IV battleships, enough to reposition instead of just holding a spot",
+    "Above-average HE penetration on the main battery keeps her HE shells relevant against armor, not just for starting fires",
+    "Main turrets were rearranged from her Kaiser-class predecessor specifically so all five can bring their weight to a broadside"
+  ],
+  "weaknesses": [
+    "305mm main guns are small caliber for the tier, so per-shell damage lags the 356-406mm guns most peers carry",
+    "20.8s rudder shift is sluggish, so she doesn't turn crisply even with a workable turning circle",
+    "22% torpedo damage reduction is below par, which stings on a ship built to fight at close range",
+    "Sigma of 1.8 means shells scatter more than tighter-shooting peers, so long-range salvos land less predictably"
+  ],
+  "tips": [
+    "Close the distance on purpose. The secondary battery and Enhanced Secondary Targeting do their best work inside 4.5 km, not at range where the modest main-battery caliber and loose dispersion hold her back.",
+    "Use the speed advantage to pick your fights instead of getting stuck defending one flank like a typical dreadnought.",
+    "Respect torpedoes more than the hit point pool suggests. Poor torpedo damage reduction eats into that big health bar faster than it looks."
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "Poor torpedo damage reduction and a sluggish rudder make it hard to dodge or shrug off a spread." },
+    { "threat": "Battleships with larger-caliber guns", "reason": "Their per-shell damage outpaces König's modest 305mm battery in a straight trade." }
+  ],
+  "playstyle": {
+    "summary": [
+      "A German dreadnought built around an enormous secondary battery and heavy armor rather than raw gun caliber.",
+      "Faster than most tier IV peers, enough to actually reposition instead of just holding a flank.",
+      "Best in close, where twenty secondary guns and a heal-boosted consumable suite punish anyone who gets near."
+    ],
+    "detail": "König doesn't win a long-range gunnery duel. Her 305mm guns are small for the tier and her dispersion is nothing special, so patient sniping isn't the plan. What she's built for is closing the distance and making the enemy pay for it: heavy armor and a big hit point pool let her soak punishment on the way in, and once she's inside 4.5 km, fourteen 150mm guns and six 88mm mounts turn her broadside into a real threat, sharpened further by Enhanced Secondary Targeting. Get there deliberately, angle that armor, and let the secondaries do the work her main battery can't."
+  },
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "Heavy armor, a big hit point pool, and an enormous secondary battery built for punishing anyone who closes to brawling range." }
+  ],
+  "image": "/images/ships/konig.jpg",
+  "imageCredit": "Royal Navy Intelligence recognition drawing of SMS König, 1918, public domain, via Wikimedia Commons."
+}

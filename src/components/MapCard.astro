@@ -1,0 +1,62 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  size: string;
+  description: string;
+  image?: string;
+}
+
+const { id, name, size, description, image } = Astro.props;
+---
+
+<a href={`/maps/${id}/`} class="card map-card">
+  <div class="map-card__row">
+    <div class="map-card__thumb">
+      {image ? <img src={image} alt="" loading="lazy" /> : <span>{name.charAt(0)}</span>}
+    </div>
+    <div>
+      <span class="badge">{size}</span>
+      <h3>{name}</h3>
+      <p>{description}</p>
+    </div>
+  </div>
+</a>
+
+<style>
+  .map-card__row {
+    display: flex;
+    gap: var(--space-4);
+  }
+
+  .map-card__thumb {
+    flex: none;
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius);
+    background: var(--color-surface-raised);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    overflow: hidden;
+  }
+
+  .map-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .map-card h3 {
+    margin: var(--space-2) 0 var(--space-1);
+    font-size: 1.05rem;
+  }
+
+  .map-card p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>

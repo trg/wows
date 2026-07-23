@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Home">
+  <h1>World of Warship: Legends - Unofficial Companion Site</h1>
+  <p>Quickly find <i>World of Warships: Legends</i> info here.</p>
+
+  <div class="home-links">
+    <a class="card home-links__item" href="/ships/">
+      <h2>Ships</h2>
+      <p>Tips, armament positions, and stats, and more.</p>
+    </a>
+    <a class="card home-links__item" href="/maps/">
+      <h2>Maps</h2>
+      <p>Capture points, camping spots, and strategy notes.</p>
+    </a>
+    <a class="card home-links__item" href="/goals/">
+      <h2>Best For...</h2>
+      <p>Which ship to pick when you want to start fires, brawl, or run torps.</p>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .home-links {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .home-links__item h2 {
+    margin: 0 0 var(--space-1);
+    font-size: 1.15rem;
+    color: var(--color-accent);
+  }
+
+  .home-links__item p {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+</style>

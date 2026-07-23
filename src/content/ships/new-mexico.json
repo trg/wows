@@ -1,0 +1,68 @@
+{
+  "name": "USS New Mexico",
+  "nation": "USA",
+  "type": "Battleship",
+  "tier": 5,
+  "shortDescription": "Twelve-gun mid-tier battleship, heavily armored, that needs patience to land its broadside.",
+  "role": "Mid-range firepower battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "53,200", "rating": "strong" },
+    { "label": "Main Battery", "value": "4x3 356mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "15.8 km", "rating": "average" },
+    { "label": "Max Speed", "value": "21 kts", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "14.2 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "11.4 km", "rating": "average" },
+    { "label": "Armor", "value": "6-457mm hull range", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "40%", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown, unlimited charges, the same cycle as New York's.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 266 hp/s, about 7,450 hp per activation, roughly 42% of her 53,200 hp pool across all three.", "rating": "average" },
+    { "name": "Observation Seaplane", "flavor": "3 charges, 30s duration, 200s cooldown. Tightens shell grouping 10% instead of extending vision or range, worth saving for a called shot rather than popping on cooldown.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 3, "arcs": ["stern", "port", "starboard"] },
+    { "label": "4", "guns": 3, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Armaments Modification 1" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 1" },
+    { "slot": "Slot 3", "recommended": "Aiming Systems Modification 1", "alternative": "Secondary Battery Modification 1" }
+  ],
+  "strengths": [
+    "Twelve 356mm guns across four turrets, good firing angles fore and aft, one of the biggest broadsides at tier V",
+    "Heavy belt and citadel protection plus 40% torpedo damage reduction, hard to core when angled",
+    "Respectable AA and decent concealment for a battleship, with a tighter turning radius than her top speed suggests"
+  ],
+  "weaknesses": [
+    "Slow main battery reload and mediocre dispersion blunt the twelve-gun alpha strike in practice",
+    "Turret traverse is slow, a full swing takes a full minute, easy to get outangled by anything that closes fast",
+    "Slow speed and even slower acceleration make repositioning or disengaging painful",
+    "Large superstructure gives enemy gunners plenty to shoot at"
+  ],
+  "tips": [
+    "Angle in before you commit. Dispersion isn't great at range, so closing the distance a bit actually helps you land the broadside instead of just eating one.",
+    "Pop Observation Seaplane when you've got a clear shot lined up for the accuracy bump, not just because it's off cooldown.",
+    "Don't chase destroyers. The torpedo protection takes some sting out of a hit, but you still can't catch them, so let your cruisers handle it."
+  ],
+  "threats": [
+    { "threat": "Destroyers and cruisers exploiting slow traverse", "reason": "They can circle you faster than your turrets can track." },
+    { "threat": "Torpedo bombers and destroyer torpedoes", "reason": "Your size and speed make you easy to line up, though the 40% damage reduction softens whatever lands." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Twelve 356mm guns in four turrets, one of the biggest broadsides at tier V.",
+      "Slow and bulky, heavy armor and torpedo protection over mobility or accuracy.",
+      "Observation Seaplane tightens the group for one big volley, then it's on cooldown for a while."
+    ],
+    "detail": "New Mexico trades speed for a broadside that means business. Twelve guns landing together is a bad day for whoever's on the other end, and the heavy armor plus torpedo protection let her shrug off plenty on the way in. The dispersion isn't great and the reload is on the slow side, so she rewards patience: hold an angle, wait for a clean shot, and let Observation Seaplane tighten the group when you finally pull the trigger. Turret traverse is sluggish too, so she isn't built to chase anything that closes fast."
+  },
+  "image": "/images/ships/new-mexico.jpg",
+  "imageCredit": "USS New Mexico (BB-40) off Puget Sound Navy Yard following overhaul, 6 October 1943. U.S. Navy, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "Heavy belt and citadel protection plus 40% torpedo damage reduction make her hard to core even up close." },
+    { "tag": "aa-defense", "note": "Three AA mounts with roughly 90 combined DPS on the upgraded hull, respectable for tier V." }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "SMS Dresden",
+  "nation": "Germany",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "Twelve small-caliber guns and the fastest reload at tier I, built to bury targets in shell volume instead of landing big hits.",
+  "role": "Rapid-fire scout cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "11,900", "rating": "average" },
+    { "label": "Main Battery", "value": "12x1 105mm", "rating": "weak" },
+    { "label": "Main Battery Reload", "value": "4.0 s", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "9 km", "rating": "average" },
+    { "label": "Max Speed", "value": "25 kts", "rating": "strong" },
+    { "label": "Turning Radius", "value": "580 m", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "4.9 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "8.9 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "5.3 km", "rating": "average" },
+    { "label": "Armor", "value": "6-100mm", "rating": "average" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges, the same stock reset every tier I cruiser gets.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port"], "position": "port", "note": "Bow-most pair, wide enough traverse to also hit the bow arc." },
+    { "label": "2", "guns": 1, "arcs": ["bow", "starboard"], "position": "starboard", "note": "Bow-most pair, wide enough traverse to also hit the bow arc." },
+    { "label": "3", "guns": 1, "arcs": ["port"], "position": "port", "note": "Casemate mount, fixed to this broadside only." },
+    { "label": "4", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "5", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "6", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "7", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "8", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "9", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "10", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "11", "guns": 1, "arcs": ["stern", "port"], "position": "port", "note": "Sternmost pair, wide enough traverse to also hit the stern arc." },
+    { "label": "12", "guns": 1, "arcs": ["stern", "starboard"], "position": "starboard", "note": "Sternmost pair, wide enough traverse to also hit the stern arc." }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "12 individual 105mm mounts and a 4.0s reload, the ship's own 'Reloader' trait, throw more shells per minute than either Albany or Weymouth's smaller batteries",
+    "25 knots is faster than Albany's 20 and on par with Weymouth's 26, enough to dictate range and reposition",
+    "100mm max armor splits the difference between Albany's 76mm and Weymouth's 152mm, a bit more cushion than the thinnest tier I hulls",
+    "The bow-most and stern-most gun pairs cover their own broadside plus the bow or stern arc, so 2 guns can still bear firing dead ahead or dead astern even with no true centerline mounts"
+  ],
+  "weaknesses": [
+    "105mm is a smaller main-battery caliber than Albany or Weymouth's 152mm guns, the ship's own 'Modest Guns' trait, and HE tops out at just 1,200 damage",
+    "AP shells are next to useless at this caliber, so there's little to fall back on when HE won't cut it",
+    "High shell arc makes it harder to land hits on anything moving at range",
+    "580m turning circle is wider than Albany's 350m or Weymouth's 500m, so she can't dodge or reposition as tightly as the top speed suggests",
+    "8.9 km surface detectability runs a bit higher than Albany's 8.3 or Weymouth's 8.2, undercutting the scout role she's built for"
+  ],
+  "tips": [
+    "Hold the trigger down. Twelve guns and a 4-second reload out-DPM most tier I peers even though each hit is small",
+    "Load HE almost all the time, AP barely does anything at this caliber",
+    "Use the speed to open the range or reposition, don't rely on the rudder to dodge incoming fire mid-turn",
+    "Don't try to snipe at long range, the high shell arc gives moving targets time to dodge before shells land",
+    "You're not fully blind bow-on or running away in a straight line, the bow and stern pairs can still shoot straight ahead or straight behind"
+  ],
+  "threats": [
+    { "threat": "Bigger-caliber tier I cruisers like Weymouth or Albany", "reason": "Their 152mm guns hit harder per shell, so a straight trade favors them even against the faster reload." },
+    { "threat": "Anything dodging at range", "reason": "The high shell arc means shells take a while to arrive, giving a moving target time to juke clear." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Twelve small 105mm guns and one of the fastest reloads at tier I, built to spam shells rather than land big hits",
+      "Among the fastest tier I cruisers, but a wide turning circle keeps her from being nimble",
+      "Weak HE and next-to-useless AP mean the volume of fire matters more than any single shell"
+    ],
+    "detail": "Dresden doesn't win a fight with any one shell. Her 105mm guns are the smallest main battery of any tier I cruiser in this fleet, and neither her HE nor her AP does much on impact. What she brings instead is rate of fire: twelve guns cycling every four seconds put more shells in the air than almost anything else this early, and 25 knots gets her into position to use them. Point her at anything undefended and let the sheer number of hits do the work individual shell damage can't. Just don't expect to dodge your way out once committed, a 580m turning circle is wide for the tier and the speed doesn't help if the rudder can't follow."
+  },
+  "goalTags": [],
+  "image": "/images/ships/dresden.jpg",
+  "imageCredit": "SMS Dresden during the 1909 Hudson-Fulton fleet review, New York. Detroit Publishing Co., Library of Congress, public domain, via Wikimedia Commons."
+}

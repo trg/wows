@@ -1,0 +1,16 @@
+{
+  "name": "Ocean",
+  "size": "Large, fully open water",
+  "gameModes": ["Standard Battle", "Domination"],
+  "description": "No islands, no cover. Just open water and whoever aims better.",
+  "keyAreas": [
+    { "name": "Center", "type": "capture-point", "notes": "The only real feature on this map is positioning itself. Control of the center dictates the whole match." },
+    { "name": "Either flank", "type": "flank-route", "notes": "Completely open. Pushing a flank here means committing in full view of the enemy team." },
+    { "name": "Everywhere else", "type": "open-water", "notes": "No cover anywhere. Positioning and angling matter more here than on any other map." }
+  ],
+  "strategyNotes": [
+    "Destroyers are exposed early. There's no cover to approach the enemy unseen.",
+    "Battleships should stick together and cross-fire rather than push alone. There's nowhere to hide from a focused broadside.",
+    "Cruisers do better held back, using range and smoke instead of trying to flank."
+  ]
+}

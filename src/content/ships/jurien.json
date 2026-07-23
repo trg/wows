@@ -1,0 +1,67 @@
+{
+  "name": "Jurien",
+  "nation": "France",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "The French cruiser line's starter ship: the heaviest guns and thickest armor of any tier I cruiser, held back by rough accuracy and a slow reload.",
+  "role": "Slow, heavy-gunned starter cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "14,100", "rating": "strong" },
+    { "label": "Main Battery", "value": "8x1 165mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "9.1 km", "rating": "strong" },
+    { "label": "Max Speed", "value": "23 kts", "rating": "average" },
+    { "label": "Turning Radius", "value": "510 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "5.8 s", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "8.8 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "5.3 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-160mm", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock reset every tier I cruiser starts with, nothing unique to this hull.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["port"], "position": "port", "note": "Casemate mount, fixed to this broadside only." },
+    { "label": "3", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "4", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "5", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "6", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "7", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "8", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "165mm main battery is the heaviest-caliber armament of any tier I cruiser, hitting for real per-shell damage instead of chipping away",
+    "Citadel is heavily armored on top and along the sides and sits below the waterline, backed by 6-160mm of plating that's hard to core even up close",
+    "14,100 hull HP gives her a deep pool to soak damage, near the top of what tier I cruisers carry"
+  ],
+  "weaknesses": [
+    "23-knot top speed and 8.8 km sea detectability are a bad combination, she gets spotted easily and has no speed to break contact or reposition once she is",
+    "Dispersion is rough enough that shells frequently over- or under-shoot, so the big 165mm guns don't land as often as the caliber alone suggests",
+    "9s reload and an 18s 180-degree turret traverse mean that extra caliber comes out in a slow trickle, Legends' own player notes rate her actual output below Chikuma's smaller-caliber battery",
+    "5.8s rudder shift is sluggish, she won't snap into a dodge once she's committed to a heading"
+  ],
+  "tips": [
+    "Pick your engagements, don't count on outrunning a bad one at 23 knots",
+    "Lean on the armor, angle in and let 6-160mm of plating shrug off small stuff while the big guns work",
+    "Don't expect every salvo to land, the dispersion is rough enough that you'll eat some embarrassing overs and unders even on a lined-up shot",
+    "Commit to a heading early since the rudder is slow to answer, don't try to jink late into a turn"
+  ],
+  "threats": [
+    { "threat": "Faster tier I ships", "reason": "23 knots isn't enough to dictate range or run from a fight someone else picked the terms for." },
+    { "threat": "Anything already inside her gun range", "reason": "Slow reload and rough dispersion mean she can't punish a close-range brawl as fast as the caliber promises." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Big guns and heavy armor built around soaking hits and landing occasional heavy blows, not outreloading or out-turning anyone",
+      "Middling speed for the tier, not fast enough to dictate range, not slow enough to be pinned down",
+      "Dispersion undercuts the big-caliber advantage more than the raw numbers suggest"
+    ],
+    "detail": "Jurien carries the heaviest guns of any tier I cruiser, 165mm rifles that hit harder per shell than anything else this early, wrapped in a hull with real armor and a deep hit point pool. The catch is getting those shells to land. Reload and turret traverse both run a touch slow, and dispersion is bad enough that a clean broadside can still miss more than it should. She isn't built to dictate a fight the way Chikuma does with speed, so pick an angle where the armor does its job and let the caliber advantage show up over the course of a fight instead of chasing one big alpha strike."
+  },
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "Heaviest armor and citadel protection of any tier I cruiser, plus a top-of-tier HP pool, built to sit in close and soak hits." }
+  ],
+  "image": "/images/ships/jurien.jpg",
+  "imageCredit": "French cruiser Jurien de la Gravière. Naval History and Heritage Command (NH 55994), public domain, via Wikimedia Commons."
+}

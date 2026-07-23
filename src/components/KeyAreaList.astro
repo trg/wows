@@ -1,0 +1,64 @@
+---
+interface Props {
+  keyAreas: Array<{
+    name: string;
+    type: 'capture-point' | 'camping-spot' | 'chokepoint' | 'flank-route' | 'open-water';
+    notes: string;
+  }>;
+}
+
+const { keyAreas } = Astro.props;
+
+const typeLabels: Record<Props['keyAreas'][number]['type'], string> = {
+  'capture-point': 'Capture Point',
+  'camping-spot': 'Camping Spot',
+  chokepoint: 'Chokepoint',
+  'flank-route': 'Flank Route',
+  'open-water': 'Open Water',
+};
+---
+
+<div class="key-areas">
+  {keyAreas.map((area) => (
+    <div class="key-areas__item">
+      <div class="key-areas__header">
+        <strong>{area.name}</strong>
+        <span class={`badge key-areas__badge key-areas__badge--${area.type}`}>
+          {typeLabels[area.type]}
+        </span>
+      </div>
+      <p>{area.notes}</p>
+    </div>
+  ))}
+</div>
+
+<style>
+  .key-areas__item {
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .key-areas__item:last-child {
+    border-bottom: none;
+  }
+
+  .key-areas__header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-bottom: var(--space-1);
+    flex-wrap: wrap;
+  }
+
+  .key-areas__item p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+
+  .key-areas__badge--capture-point { color: var(--color-cruiser); border-color: var(--color-cruiser); }
+  .key-areas__badge--camping-spot { color: var(--color-bb); border-color: var(--color-bb); }
+  .key-areas__badge--chokepoint { color: var(--color-rating-weak); border-color: var(--color-rating-weak); }
+  .key-areas__badge--flank-route { color: var(--color-dd); border-color: var(--color-dd); }
+  .key-areas__badge--open-water { color: var(--color-text-muted); }
+</style>

@@ -1,0 +1,64 @@
+---
+interface Props {
+  rows: Array<{ label: string; value: string; rating?: 'strong' | 'average' | 'weak' }>;
+}
+
+const { rows } = Astro.props;
+
+const ratingLabels: Record<'strong' | 'average' | 'weak', string> = {
+  strong: 'Strong for tier',
+  average: 'Average for tier',
+  weak: 'Weak for tier',
+};
+---
+
+<div class="stat-grid">
+  {rows.map((row) => (
+    <div class="stat-grid__row">
+      <span class="stat-grid__label">{row.label}</span>
+      <span class="stat-grid__value-col">
+        <span class="stat-grid__value">{row.value}</span>
+        {row.rating && (
+          <span class={`stat-grid__rating stat-grid__rating--${row.rating}`}>
+            {ratingLabels[row.rating]}
+          </span>
+        )}
+      </span>
+    </div>
+  ))}
+</div>
+
+<style>
+  .stat-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-3) var(--space-4);
+  }
+
+  .stat-grid__row {
+    display: contents;
+  }
+
+  .stat-grid__label {
+    color: var(--color-text-muted);
+  }
+
+  .stat-grid__value-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .stat-grid__value {
+    font-weight: 600;
+  }
+
+  .stat-grid__rating {
+    font-size: 0.75rem;
+  }
+
+  .stat-grid__rating--strong { color: var(--color-rating-strong); }
+  .stat-grid__rating--average { color: var(--color-rating-average); }
+  .stat-grid__rating--weak { color: var(--color-rating-weak); }
+</style>

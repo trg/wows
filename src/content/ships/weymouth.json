@@ -1,0 +1,65 @@
+{
+  "name": "HMS Weymouth",
+  "nation": "United Kingdom",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "The British cruiser line's starter ship: eight AP-only guns built to overmatch and citadel, not burn.",
+  "role": "AP-focused starter cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "14,200", "rating": "strong" },
+    { "label": "Main Battery", "value": "8x1 152mm (AP only, no HE)", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "9.1 km", "rating": "strong" },
+    { "label": "Max Speed", "value": "26 kts", "rating": "strong" },
+    { "label": "Turning Radius", "value": "500 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "5.9 s", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "8.2 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "4.9 km", "rating": "average" },
+    { "label": "Armor", "value": "6-152mm", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. The same stock reset every tier I cruiser gets, nothing unique to this hull.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["port"], "position": "port", "note": "Casemate mount, fixed to this broadside only." },
+    { "label": "3", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "4", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "5", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "6", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "7", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "8", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "The only tier I cruiser with an all-AP loadout, letting her overmatch and citadel other tier I cruisers instead of just chipping away with HE",
+    "Surgical Shells (short fuse time) keeps those AP rounds from overpenetrating thin tier I plating, so more of them land as real damage",
+    "8x1 152mm guns, 9.1 km range, and a 26-knot top speed give her real reach and pace to dictate a fight",
+    "14,200 hull HP and up to 152mm of armor make her unusually hard to core for a tier I hull"
+  ],
+  "weaknesses": [
+    "No HE shells at all, so a heavily-angled target that bounces her AP leaves nothing else in the magazine to punish it with",
+    "5.9s rudder shift is sluggish for the tier, she doesn't snap into a dodge or reposition quickly",
+    "AA is nominal at best, two single mounts putting out barely any DPS, though tier I has no carriers around to punish that yet",
+    "Damage Control Party is the only consumable in the kit, same as her tier I peers"
+  ],
+  "tips": [
+    "Load AP and stay on it, there's no HE to fall back on when the angle's wrong",
+    "Hunt broadside or lightly-angled targets, overmatch and citadel chances are the whole point of this loadout",
+    "Use the 9.1 km range edge to open an engagement on your terms before closing in",
+    "Don't try to out-turn or out-rudder anything, that 5.9s shift is on the slow side for tier I"
+  ],
+  "threats": [
+    { "threat": "Heavily-angled targets", "reason": "With no HE in the magazine, a bow-in ship that bounces her AP leaves her without any way to still deal damage." },
+    { "threat": "Faster, more maneuverable tier I ships", "reason": "A 5.9s rudder shift means she can't out-turn a fight someone else picks the terms for." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Tier I's only all-AP cruiser, built to overmatch and citadel rather than burn",
+      "Tougher than a typical tier I hull, with armor and HP that shrug off small-caliber fire",
+      "Sluggish rudder response for the tier, not built for tight dodges"
+    ],
+    "detail": "Weymouth trades the usual tier I fire-spam for straight punching power. Every shell in her magazine is AP, so the whole ship lives or dies by finding angles other cruisers would just shrug off with HE. Surgical Shells keeps the fuse short enough that those hits actually count instead of sailing through, and a hull that's thicker and tougher than her peers backs up the aggression needed to get in range. She's not nimble getting there, though. The rudder is slow, so pick an approach and commit rather than trying to dance around incoming fire."
+  },
+  "image": "/images/ships/weymouth.jpg",
+  "imageCredit": "HMS Weymouth, 1912. Imperial War Museums (Q 21950), public domain, via Wikimedia Commons."
+}

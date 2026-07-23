@@ -1,0 +1,65 @@
+{
+  "name": "IJN Chikuma",
+  "nation": "Japan",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "The Japanese cruiser line's starter ship: eight guns, tough plating, and real speed for tier I, at the cost of turning like a barge.",
+  "role": "Fast-starting gun cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "13,100", "rating": "strong" },
+    { "label": "Main Battery", "value": "8x1 152mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "9.1 km", "rating": "strong" },
+    { "label": "Max Speed", "value": "26 kts", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "3.8 s", "rating": "strong" },
+    { "label": "Turning Radius", "value": "530 m", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "8.2 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "4.9 km", "rating": "average" },
+    { "label": "Armor", "value": "6-102mm", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["port"], "position": "port", "note": "Casemate mount, fixed to this broadside only." },
+    { "label": "3", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "4", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "5", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "6", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "7", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "8", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same fast reset every tier I cruiser starts with, nothing unique to this hull.", "rating": "average" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "Eight 152mm guns is more barrels than almost anything else at tier I, Albany included",
+    "13,100 hull HP and armor up to 102mm shrug off small-caliber fire better than a light cruiser has any right to",
+    "26-knot top speed and a 3.8s rudder shift let her dictate range instead of just absorbing it",
+    "9.1 km gun range already reaches out further than Albany's before any upgrades are in play"
+  ],
+  "weaknesses": [
+    "530m turning radius is wide for the tier, she doesn't jink or reposition tightly once committed",
+    "12s reload on all eight guns means that firepower advantage comes out in a slow drip, not a burst",
+    "No self-heal, Damage Control Party only resets fire and flooding",
+    "Engine and steering spaces are easy to knock out, a disabled ship can't use the speed that's her main edge"
+  ],
+  "tips": [
+    "Use the speed to pick your range and hold it, this ship's real strength is dictating the engagement, not brawling",
+    "Don't try to out-turn anything, that wide turning radius will get you caught broadside",
+    "Keep firing angles open early since the reload is slow, a missed salvo costs you more than it does on faster-firing peers",
+    "Watch your engine rooms against anything that can disable you, losing that speed edge undoes most of what this ship is good at"
+  ],
+  "threats": [
+    { "threat": "Anything that can cripple her engine or steering", "reason": "Speed and rudder response are her main tools, and both disappear the moment either module goes down." },
+    { "threat": "Ships that can out-turn her in a close brawl", "reason": "530m turning radius means she can't out-maneuver a fight she didn't choose the range for." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Eight-gun starter cruiser built around speed and raw gun count rather than agility.",
+      "Tougher than a typical tier I hull, with armor and hit points that absorb small-caliber fire well.",
+      "Turns wide and reloads slow, so she wins by controlling range, not by out-maneuvering anyone."
+    ],
+    "detail": "Chikuma sets the tone for the whole Japanese cruiser line: more guns than the tier expects, real speed to back it up, and a hull that can take a hit. The tradeoff is a turning circle that feels more like a small battleship than a cruiser, so she's not built for close-range dogfighting. Use the speed to open the range you want, keep that eight-gun broadside working steadily against the slow reload, and don't get lured into a turning fight you can't win."
+  },
+  "image": "/images/ships/chikuma.jpg",
+  "imageCredit": "IJN Chikuma, 1912, public domain, via Wikimedia Commons."
+}

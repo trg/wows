@@ -1,0 +1,49 @@
+---
+// The only client-side interactivity on the site: a progressive-enhancement
+// filter over the already-rendered, fully static ship cards. No framework,
+// no hydration — with JS disabled every card still shows.
+---
+
+<input
+  type="search"
+  id="ship-search"
+  class="ship-search"
+  placeholder="Search ships by name, type, or tier..."
+  aria-label="Search ships"
+/>
+
+<style>
+  .ship-search {
+    width: 100%;
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-4);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text);
+    font-size: 1rem;
+  }
+
+  .ship-search::placeholder {
+    color: var(--color-text-muted);
+  }
+</style>
+
+<script>
+  const input = document.getElementById('ship-search') as HTMLInputElement | null;
+  const cards = Array.from(document.querySelectorAll<HTMLAnchorElement>('.ship-card'));
+
+  input?.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+
+    for (const card of cards) {
+      const haystack = [
+        card.dataset.name ?? '',
+        card.dataset.type ?? '',
+        `t${card.dataset.tier ?? ''}`,
+      ].join(' ');
+
+      card.hidden = query.length > 0 && !haystack.includes(query);
+    }
+  });
+</script>

@@ -1,0 +1,66 @@
+{
+  "name": "USS New York",
+  "nation": "USA",
+  "type": "Battleship",
+  "tier": 4,
+  "shortDescription": "Slow, thick-skinned early battleship that hits hard and shrugs off punishment.",
+  "role": "Armored line-holder",
+  "stats": [
+    { "label": "Hull HP", "value": "34,400", "rating": "strong" },
+    { "label": "Main Battery", "value": "5x2 356mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "14.0 km", "rating": "average" },
+    { "label": "Max Speed", "value": "19.5 kts", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "12.5 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "8.0 km", "rating": "average" },
+    { "label": "Armor", "value": "305mm belt", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown. A fire and a flood landing together will outlast it.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 245 hp/s, about 6,860 hp per activation, close to a fifth of her max health pool.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Needs a full broadside to bring this turret to bear, the narrowest arc on the ship." },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Armaments Modification 1" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 1" },
+    { "slot": "Slot 3", "recommended": "Aiming Systems Modification 1" }
+  ],
+  "strengths": [
+    "Heavy belt armor for the tier, bounces a lot of incoming AP",
+    "Ten guns hit hard even at range",
+    "Tanky enough to hold a flank alone if it has to"
+  ],
+  "weaknesses": [
+    "Painfully slow, easy to outmaneuver and hard to reposition",
+    "Sluggish turret traverse struggles to answer flanking attacks",
+    "Turret 3 needs a full broadside to fire at all, a third of her main battery is unavailable bow-on",
+    "Very exposed to torpedoes if caught out of position"
+  ],
+  "tips": [
+    "Pick your spot early and commit. You don't have the speed to change your mind halfway through.",
+    "Angle your bow toward incoming fire. That belt armor does its best work when you're not broadside.",
+    "Listen for torpedoes. You will not be dodging them with this turning circle."
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "Their torpedoes punish your lack of speed and maneuverability badly." },
+    { "threat": "Faster battleships", "reason": "They can dictate range and kite you all game if you let them." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Slow and heavily armored, built to plant on a flank and stay there.",
+      "Ten guns hit hard at range, more firepower than mobility.",
+      "Turning circle and top speed make her helpless against a flanking attack."
+    ],
+    "detail": "New York isn't going anywhere fast, and she doesn't need to. Plant her on a flank, angle that belt toward the enemy, and grind down anything that strays into range of her guns. The catch is commitment. Once you've picked a spot, you're mostly stuck defending it, so choose with care."
+  },
+  "image": "/images/ships/new-york.jpg",
+  "imageCredit": "USS New York (BB-34) underway at high speed, 29 May 1915. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "Heavy armor and a broadside that punishes anyone careless enough to get close." }
+  ]
+}
