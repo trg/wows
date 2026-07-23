@@ -1,15 +1,17 @@
 ---
+import { base } from '../lib/base';
+
 const { pathname } = Astro.url;
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/ships/', label: 'Ships' },
-  { href: '/maps/', label: 'Maps' },
-  { href: '/goals/', label: 'Best For' },
+  { href: base, label: 'Home' },
+  { href: `${base}ships/`, label: 'Ships' },
+  { href: `${base}maps/`, label: 'Maps' },
+  { href: `${base}goals/`, label: 'Best For' },
 ];
 
 function isActive(href: string): boolean {
-  if (href === '/') return pathname === '/';
+  if (href === base) return pathname === base;
   return pathname.startsWith(href);
 }
 ---

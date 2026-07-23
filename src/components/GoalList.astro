@@ -1,4 +1,6 @@
 ---
+import { base } from '../lib/base';
+
 interface Props {
   title: string;
   description: string;
@@ -22,7 +24,7 @@ const { title, description, entries } = Astro.props;
   ) : (
     <div class="goal-list">
       {entries.map((entry) => (
-        <a href={`/ships/${entry.shipId}/`} class="card goal-list__item">
+        <a href={`${base}ships/${entry.shipId}/`} class="card goal-list__item">
           <div class="goal-list__header">
             <span class={`badge badge--${entry.type}`}>T{entry.tier}</span>
             <strong>{entry.name}</strong>

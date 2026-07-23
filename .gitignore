@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # personal Claude Code permission overrides
 .claude/settings.local.json
+
+# personal working notes and screenshots, not part of the site
+captains-notes/
+screenshots/

@@ -1,5 +1,6 @@
 ---
 import NavBar from '../components/NavBar.astro';
+import { base } from '../lib/base';
 import '../styles/global.css';
 
 interface Props {
@@ -20,19 +21,19 @@ const { title, backHref, backLabel } = Astro.props;
     <meta name="description" content="Loadouts, tips, and playstyle notes for World of Warships: Legends." />
     <link
       rel="preload"
-      href="/fonts/staatliches.woff2"
+      href={`${base}fonts/staatliches.woff2`}
       as="font"
       type="font/woff2"
       crossorigin
     />
     <link
       rel="preload"
-      href="/fonts/ibm-plex-sans-400.woff2"
+      href={`${base}fonts/ibm-plex-sans-400.woff2`}
       as="font"
       type="font/woff2"
       crossorigin
     />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
   </head>
   <body>
     <main>
@@ -43,7 +44,7 @@ const { title, backHref, backLabel } = Astro.props;
     </main>
     <NavBar />
     <footer class="disclaimer">
-      <a href="/disclaimer/">Disclaimer</a>
+      <a href={`${base}disclaimer/`}>Disclaimer</a>
     </footer>
   </body>
 </html>

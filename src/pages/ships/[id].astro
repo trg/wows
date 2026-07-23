@@ -6,6 +6,7 @@ import BulletList from '../../components/BulletList.astro';
 import FiringArcDiagram from '../../components/FiringArcDiagram.astro';
 import TierTypePills from '../../components/TierTypePills.astro';
 import { GOAL_CATEGORIES } from '../../lib/goals';
+import { base, withBase } from '../../lib/base';
 
 export async function getStaticPaths() {
   const ships = await getCollection('ships');
@@ -25,7 +26,7 @@ const consumableRatingLabels: Record<'strong' | 'average' | 'weak', string> = {
 };
 ---
 
-<BaseLayout title={data.name} backHref="/ships/" backLabel="Ships">
+<BaseLayout title={data.name} backHref={`${base}ships/`} backLabel="Ships">
   <div class="ship-header-pills">
     <TierTypePills nation={data.nation} type={data.type} tier={data.tier} />
   </div>
@@ -34,7 +35,7 @@ const consumableRatingLabels: Record<'strong' | 'average' | 'weak', string> = {
 
   {data.image && (
     <div class="ship-photo">
-      <img src={data.image} alt={`${data.name}, the real ship`} loading="lazy" />
+      <img src={withBase(data.image)} alt={`${data.name}, the real ship`} loading="lazy" />
       {data.imageCredit && <p class="ship-photo__credit">{data.imageCredit}</p>}
     </div>
   )}

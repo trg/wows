@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { base } from '../lib/base';
 ---
 
 <BaseLayout title="Not Found">
   <h1>Page not found</h1>
-  <p>That page doesn't exist. Head back to the <a href="/">home page</a>.</p>
+  <p>That page doesn't exist. Head back to the <a href={base}>home page</a>.</p>
 </BaseLayout>

@@ -1,4 +1,6 @@
 ---
+import { base, withBase } from '../lib/base';
+
 interface Props {
   id: string;
   name: string;
@@ -10,10 +12,10 @@ interface Props {
 const { id, name, size, description, image } = Astro.props;
 ---
 
-<a href={`/maps/${id}/`} class="card map-card">
+<a href={`${base}maps/${id}/`} class="card map-card">
   <div class="map-card__row">
     <div class="map-card__thumb">
-      {image ? <img src={image} alt="" loading="lazy" /> : <span>{name.charAt(0)}</span>}
+      {image ? <img src={withBase(image)} alt="" loading="lazy" /> : <span>{name.charAt(0)}</span>}
     </div>
     <div>
       <span class="badge">{size}</span>

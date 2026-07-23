@@ -3,6 +3,7 @@ import TierTypePills from './TierTypePills.astro';
 import DestroyerIcon from './icons/DestroyerIcon.astro';
 import CruiserIcon from './icons/CruiserIcon.astro';
 import BattleshipIcon from './icons/BattleshipIcon.astro';
+import { base, withBase } from '../lib/base';
 
 interface Props {
   id: string;
@@ -26,7 +27,7 @@ const Icon = ICONS[type];
 ---
 
 <a
-  href={`/ships/${id}/`}
+  href={`${base}ships/${id}/`}
   class="card ship-card"
   data-name={name.toLowerCase()}
   data-type={type.toLowerCase()}
@@ -34,7 +35,7 @@ const Icon = ICONS[type];
 >
   <div class="ship-card__row">
     <div class={`ship-card__thumb ship-card__thumb--${type}${image ? '' : ' ship-card__thumb--icon'}`}>
-      {image ? <img src={image} alt="" loading="lazy" /> : <Icon class="ship-card__thumb-icon" />}
+      {image ? <img src={withBase(image)} alt="" loading="lazy" /> : <Icon class="ship-card__thumb-icon" />}
     </div>
     <div class="ship-card__body">
       <div class="ship-card__title">

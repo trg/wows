@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import KeyAreaList from '../../components/KeyAreaList.astro';
 import BulletList from '../../components/BulletList.astro';
+import { base } from '../../lib/base';
 
 export async function getStaticPaths() {
   const maps = await getCollection('maps');
@@ -16,7 +17,7 @@ const { map } = Astro.props;
 const { data } = map;
 ---
 
-<BaseLayout title={data.name} backHref="/maps/" backLabel="Maps">
+<BaseLayout title={data.name} backHref={`${base}maps/`} backLabel="Maps">
   <span class="badge">{data.size}</span>
   <h1>{data.name}</h1>
   <p>{data.description}</p>
