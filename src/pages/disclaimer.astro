@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { base } from '../lib/base';
 ---
 
-<BaseLayout title="Disclaimer" backHref="/" backLabel="Home">
+<BaseLayout title="Disclaimer" backHref={base} backLabel="Home">
   <h1>Disclaimer</h1>
   <p>
     Fan-made companion site for World of Warships: Legends. Not affiliated with or endorsed by

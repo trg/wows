@@ -1,0 +1,76 @@
+{
+  "name": "HMS Duke of York",
+  "nation": "United Kingdom",
+  "type": "Battleship",
+  "tier": 6,
+  "shortDescription": "Premium King George V-class battleship, tough belt armor and hard-hitting HE, but only three main turrets and poor gun angles off a full broadside.",
+  "role": "HE-slinging gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "60,500", "rating": "average" },
+    { "label": "Main Battery", "value": "2x4 + 1x2 356mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "29.5 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "15.9 km", "rating": "average" },
+    { "label": "Max Speed", "value": "28 kts", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "17.5 s", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "13.8 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "11.6 km", "rating": "average" },
+    { "label": "Armor", "value": "13-381mm", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "22%", "rating": "average" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "15s action, 80s cooldown, unlimited charges.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "Only 2 charges, fewer than most battleships get, but 363 hp/s is a fast tick rate, about 10,160 hp per activation, close to a sixth of her 60,500 hp pool each time.", "rating": "average" },
+    { "name": "Sonar", "flavor": "94s active on a 180s cooldown, 2 charges. Tags ships out to 4.2 km and torpedoes to 3 km, including inside smoke, standing in for the Observation Seaplane she can't equip.", "rating": "strong" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "+100% shell grouping and -50% dispersion for 30s, 160s cooldown, 3 charges, sharpening the 8x2 134mm secondaries out to their 4.5 km range.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 4, "arcs": ["bow", "port", "starboard"] },
+    { "label": "B", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "Y", "guns": 4, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Damage Control System Modification 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Modification 1" }
+  ],
+  "strengths": [
+    "381mm belt and 60,500 hp let her stand and trade once she's angled",
+    "41% HE fire chance and above-average HE penetration burn down anything that won't or can't show AP-friendly armor",
+    "Sticky Shot trait cuts ricochet chance, more of her AP lands as real damage at odd angles",
+    "28-knot top speed is fast for the caliber and armor she's carrying",
+    "Sonar spots ships and torpedoes through smoke, a tool most battleships don't get"
+  ],
+  "weaknesses": [
+    "Only three turrets total, quad-twin-quad, so anything but a broadside costs a big fraction of her guns",
+    "356mm main guns are on the small side for a tier VI battleship, and reload at 29.5s is slower than her tech-tree sister ship's 25s",
+    "17.5s rudder shift is sluggish for the tier, she commits to an angle slowly",
+    "No Observation Seaplane option, Sonar has to cover spotting duty instead",
+    "AA batteries carry real DPS on paper but most of it is packed into 2-2.5 km range bands"
+  ],
+  "tips": [
+    "Decide your angle before you're in range. Bow-on or stern-on, you're firing with one turret instead of three.",
+    "Lean on HE against anything you can't reliably overmatch, that 41% fire chance adds up over a game.",
+    "Pop Sonar when a smoked-up destroyer or a torpedo spread goes quiet, it'll still find them.",
+    "Angle early and hold it. That rudder isn't bailing you out of a bad turn mid-engagement.",
+    "Save Enhanced Secondary Targeting for fights that are already close, the 4.5 km range means it's dead weight at a distance."
+  ],
+  "threats": [
+    { "threat": "Anything that can force her bow-in or stern-in before she's ready", "reason": "Two of her three turrets go quiet outside a broadside, she loses most of her output." },
+    { "threat": "Destroyers working smoke or islands", "reason": "Her AA and secondaries only really bite inside 2-2.5 km, well short of where most destroyers choose to fight." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Only three main turrets on a King George V hull, quad-twin-quad, so orientation matters more here than on most tier VI battleships.",
+      "381mm belt and a big hit point pool let her hold a fight once she's angled right.",
+      "Modest 356mm guns lean on fire chance and penetration rather than raw alpha.",
+      "Sonar substitutes for the scout plane she can't carry, unusual utility for a battleship."
+    ],
+    "detail": "Duke of York inherits the King George V hull's quirk in a sharper form: three turrets instead of the class's usual four, split quad forward, twin superfiring, quad aft. That's not much gun to spread across a broadside decision, and she pays for it hard when she's caught bow-in or stern-in. What she gets in return is a stout 381mm belt, a deep HP pool, and HE shells that catch fire more often than most. Pick your angle, commit to it, and let the fire chance and the armor do the rest of the work."
+  },
+  "image": "/images/ships/duke-of-york.jpg",
+  "imageCredit": "HMS Duke of York in heavy seas during an Arctic convoy to Russia, March 1942. IWM (A 7894), public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "fire-starter", "note": "41% HE fire chance plus the Superior HE pen trait make her HE genuinely dangerous for the tier." },
+    { "tag": "utility-support", "note": "Sonar spots ships and torpedoes through smoke, filling a role most battleships can't." }
+  ]
+}

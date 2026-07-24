@@ -466,6 +466,10 @@ initially assumed to be the stern, and a small ensign staff was on the opposite 
 assumption and re-check for these physical tells before trusting which end looks more
 bow-shaped.
 
+## Duke of York (British premium tier VI battleship): splash art can't distinguish quad from twin at a glance, and Legends can reorder a real class's turret calibers
+
+`Navy:Duke_of_York`'s module table gives arrangement as aggregate counts only ("1x2" plus "2x4", i.e. one twin mount and two quad mounts, 10 guns total) with no indication of which physical position (A/B/Y) holds which. The forward-cluster splash art crop (`duke-of-york.webp` via wowsbuilds.com, standard bow-quartering angle, same ceiling as every other ship — only the forward two turrets visible) was read as "both quad" at first glance, since overlapping barrels in a 3/4 perspective shot are easy to miscount. The user corrected this from in-game knowledge: A (bow-most) is quad, B (superfiring over A) is twin, Y (stern) is quad — the twin sits in the middle position, not aft. This also doesn't match the real King George V-class's actual historical turret calibers (A and B quad, Y twin) — a reminder that even when Legends visibly models a real ship's general silhouette accurately, per-turret specifics can still diverge from the real vessel, so real-world class knowledge isn't a substitute for in-game or wiki confirmation even as a tie-breaker between two visually similar turrets. Sister tech-tree ship `Navy:King_George_V` was a useful stat-comparison peer (same class, same 2x4+1x2 aggregate arrangement, but 25s reload vs Duke of York's slower 29.5s) despite not resolving the per-position question either — its module table has the identical aggregate-only limitation.
+
 ## Hyūga (Japanese premium tier V battleship): MBRB data page, and turret layout confirmed by the user fast
 
 **`https://wiki.wargaming.net/en/Navy:MBRB_Data`** has a per-ship table of Main Battery Reload
