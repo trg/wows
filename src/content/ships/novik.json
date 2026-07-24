@@ -1,0 +1,65 @@
+{
+  "name": "Novik",
+  "nation": "USSR",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "The Soviet cruiser line's starter ship: eight fast-firing, long-ranged guns wrapped in the thinnest armor of any tier I cruiser.",
+  "role": "Long-range, rapid-fire starter cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "14,500", "rating": "strong" },
+    { "label": "Main Battery", "value": "8x1 120mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "9.4 km", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "5.0 s", "rating": "strong" },
+    { "label": "Max Speed", "value": "25 kts", "rating": "average" },
+    { "label": "Turning Radius", "value": "500 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "4.0 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "9.3 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "5.6 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-50mm", "rating": "weak" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["port"], "position": "port", "note": "Casemate mount, fixed to this broadside only." },
+    { "label": "3", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "4", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "5", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "6", "guns": 1, "arcs": ["port"], "position": "port" },
+    { "label": "7", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "8", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. The same stock reset as every other tier I cruiser, nothing unique to this hull.", "rating": "average" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "9.4 km stock gun range, already ahead of Chikuma, Weymouth, and Jurien's 9.1 km, and stretches to 10.3 km with the Targeting System upgrade. Her own 'Long Reach' ship trait calls this out directly.",
+    "5.0s main battery reload across all eight guns, less than half of Chikuma's 12s cycle, keeps a steady stream of HE going out",
+    "14,500 hull HP, more cushion than Chikuma's 13,100 or Weymouth's 14,200",
+    "4.0s rudder shift is nimble for the tier, quicker than Weymouth's 5.9s or Jurien's 5.8s"
+  ],
+  "weaknesses": [
+    "6-50mm armor, thinner than Albany's 76mm and far behind Chikuma's 102mm or Weymouth's 152mm",
+    "9.3 km sea detection and 5.6 km air detection both trail Chikuma, Weymouth, and Jurien, she tends to get spotted first",
+    "120mm shells are a smaller caliber than every other tier I cruiser's main battery, each hit does less than Chikuma or Weymouth's 152mm or Jurien's 165mm despite the faster reload"
+  ],
+  "tips": [
+    "Open the engagement at range and stay there, that 9.4-10.3 km reach and fast reload are the whole game plan",
+    "Don't slug it out up close, that 6-50mm plating won't survive what Weymouth or Jurien can shrug off",
+    "Keep shooting even at a lightly-angled target, eight guns cycling every five seconds adds up over a fight even when single hits are small",
+    "Reposition early once you're spotted, your concealment is the worst at the tier so that visibility sticks around"
+  ],
+  "threats": [
+    { "threat": "Anything that closes the distance", "reason": "6-50mm armor folds fast in a brawl, and there's no armor edge to lean on once someone gets inside 9 km." },
+    { "threat": "Ships that spot her first", "reason": "9.3 km sea detection is the worst of any tier I cruiser, so she's often outspotted before she can use her range." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Long-ranged, fast-firing starter cruiser built to out-shoot rather than out-tank.",
+      "Thinnest armor of any tier I cruiser, has nothing to fall back on up close.",
+      "Reload speed does the work a bigger caliber would do on her tier I peers."
+    ],
+    "detail": "Novik plays a different game than her tier I peers. Chikuma and Jurien lean on caliber and armor, Novik leans on range and rate of fire instead. Her 120mm guns are small for the tier, but eight of them cycling every five seconds put a steady stream of HE downrange from further out than anyone else at tier I can answer. The tradeoff shows up the moment that range edge disappears. Thin plating and the worst concealment at the tier mean a close fight goes badly fast, so the whole plan is to open the engagement on her own terms and never let it turn into a brawl."
+  },
+  "image": "/images/ships/novik.jpg",
+  "imageCredit": "Russian cruiser Novik at Port Arthur, 1904. Public domain, via Wikimedia Commons."
+}

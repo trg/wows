@@ -6,4 +6,5 @@ export const NATION_FLAGS: Record<string, string> = {
   Japan: '🇯🇵',
   'United Kingdom': '🇬🇧',
   France: '🇫🇷',
+  USSR: '☭',
 };
