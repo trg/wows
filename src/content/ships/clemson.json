@@ -3,8 +3,8 @@
   "nation": "USA",
   "type": "Destroyer",
   "tier": 3,
-  "shortDescription": "Nimble early torpedo boat that lives and dies by concealment.",
-  "role": "Stealth torpedo skirmisher",
+  "shortDescription": "Early torpedo boat with a massive alpha strike, let down by detection worse than most tier III destroyer peers.",
+  "role": "Torpedo alpha striker",
   "stats": [
     { "label": "Hull HP", "value": "11,700", "rating": "weak" },
     { "label": "Main Battery", "value": "4x1 102mm", "rating": "weak" },
@@ -14,7 +14,7 @@
     { "label": "Torpedo Damage", "value": "9,900", "rating": "average" },
     { "label": "Torpedo Speed", "value": "56 kts", "rating": "strong" },
     { "label": "Max Speed", "value": "35.5 kts", "rating": "average" },
-    { "label": "Detectability (Sea)", "value": "6.5 km", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "6.5 km", "rating": "weak" },
     { "label": "Detectability (Air)", "value": "2.7 km", "rating": "strong" },
     { "label": "Armor", "value": "19mm hull, no real belt", "rating": "weak" }
   ],
@@ -40,36 +40,36 @@
     { "slot": "Slot 3", "recommended": "Aiming Systems Modification 1 (torpedo reload)" }
   ],
   "strengths": [
-    "Excellent concealment for the tier, usually gets the first spot",
     "Twelve torpedo tubes across four mounts, an enormous alpha strike for tier III",
-    "Small and nimble enough to dodge return fire"
+    "Fast turret traverse and rudder shift keep her responsive even though the guns are a last resort",
+    "35.5-knot top speed lets her open the range or reposition after a torpedo run"
   ],
   "weaknesses": [
     "No real armor, a couple of cruiser salvos will end you",
     "Gun DPM is weak next to other tier III destroyers",
-    "Short torpedo range forces you in close"
+    "6.5 km sea detection is worse than most other tier III destroyers, she's often spotted before she can spot back",
+    "Short torpedo range forces you in close, often inside your own detection range"
   ],
   "tips": [
     "Don't start a gunfight on purpose. Your guns finish off a low-health target, they don't win fights.",
-    "Use your concealment to spot enemy destroyers first, then decide whether to back off or commit.",
-    "Save the smoke for breaking contact. It's too valuable this early to burn on damage farming alone."
+    "Assume you'll be seen first. Lean on the Smoke Generator to approach or disengage rather than natural concealment.",
+    "Save the smoke for setting up a torpedo run or breaking contact. It's too valuable this early to burn on damage farming alone."
   ],
   "threats": [
     { "threat": "Enemy cruisers", "reason": "One HE salvo can end you, and their guns outrange yours." },
-    { "threat": "Other destroyers with better concealment", "reason": "If they spot you first, the fight is already lost." }
+    { "threat": "Nearly any other destroyer", "reason": "Most tier III destroyers see her before she sees them, so she rarely gets to dictate the engagement." }
   ],
   "playstyle": {
     "summary": [
-      "Smallest, hardest-to-spot destroyer at her tier.",
+      "Huge torpedo alpha strike for the tier, though concealment is below average, not the asset it's often assumed to be.",
       "A torpedo boat first, guns are strictly a last resort.",
       "Paper-thin. One good salvo ends the game."
     ],
-    "detail": "Clemson isn't built to win a fight in the open. She's built to avoid being in one. Stay hidden, line up the angle, and let the torpedoes make your case for you. The instant someone spots you back, the plan has already gone sideways, so don't wait around to find out how badly."
+    "detail": "Clemson isn't built to win a fight in the open, and despite the torpedo-boat reputation she isn't especially good at staying hidden either. Her detection range runs worse than most tier III peers, so the smoke generator is doing the work natural concealment doesn't. Pop smoke, line up the angle, and let the torpedoes make your case for you. The instant someone spots you back, the plan has already gone sideways, so don't wait around to find out how badly."
   },
   "image": "/images/ships/clemson.jpg",
   "imageCredit": "USS Clemson (DD-186) steaming at high speed, c. 1919. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
   "goalTags": [
-    { "tag": "stealth-play", "note": "One of the lowest detection ranges you'll find this early. Built to stay unseen." },
     { "tag": "torpedo-alpha", "note": "Four triple mounts, twelve tubes total. Very few ships this early can put that much ordnance in the water at once." }
   ]
 }

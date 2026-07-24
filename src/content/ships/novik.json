@@ -3,7 +3,7 @@
   "nation": "USSR",
   "type": "Cruiser",
   "tier": 1,
-  "shortDescription": "The Soviet cruiser line's starter ship: eight fast-firing, long-ranged guns wrapped in the thinnest armor of any tier I cruiser.",
+  "shortDescription": "The Soviet cruiser line's starter ship: eight fast-firing, long-ranged guns wrapped in armor thinner than Chikuma, Weymouth, or Jurien carry.",
   "role": "Long-range, rapid-fire starter cruiser",
   "stats": [
     { "label": "Hull HP", "value": "14,500", "rating": "strong" },
@@ -55,7 +55,7 @@
   "playstyle": {
     "summary": [
       "Long-ranged, fast-firing starter cruiser built to out-shoot rather than out-tank.",
-      "Thinnest armor of any tier I cruiser, has nothing to fall back on up close.",
+      "Armor is thinner than most of her tier I peers, has nothing to fall back on up close.",
       "Reload speed does the work a bigger caliber would do on her tier I peers."
     ],
     "detail": "Novik plays a different game than her tier I peers. Chikuma and Jurien lean on caliber and armor, Novik leans on range and rate of fire instead. Her 120mm guns are small for the tier, but eight of them cycling every five seconds put a steady stream of HE downrange from further out than anyone else at tier I can answer. The tradeoff shows up the moment that range edge disappears. Thin plating and the worst concealment at the tier mean a close fight goes badly fast, so the whole plan is to open the engagement on her own terms and never let it turn into a brawl."

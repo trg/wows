@@ -3,7 +3,7 @@
   "nation": "Germany",
   "type": "Cruiser",
   "tier": 1,
-  "shortDescription": "Twelve small-caliber guns and the fastest reload at tier I, built to bury targets in shell volume instead of landing big hits.",
+  "shortDescription": "Twelve small-caliber guns reloading every four seconds, built to bury targets in shell volume instead of landing big hits.",
   "role": "Rapid-fire scout cruiser",
   "stats": [
     { "label": "Hull HP", "value": "11,900", "rating": "average" },

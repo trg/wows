@@ -1,0 +1,16 @@
+{
+  "name": "North",
+  "size": "Large, open flanks around a congested center",
+  "gameModes": ["Domination"],
+  "description": "Wide open water on both flanks with a knot of islands jammed into the middle. Most of a match gets decided out on those flanks; the center is where destroyers slip through or get boxed in.",
+  "keyAreas": [
+    { "name": "West", "type": "capture-point", "notes": "Wide open sea with nothing to hide behind. Holding this cap usually means winning a straight gunnery fight in full view of the enemy." },
+    { "name": "Central island cluster", "type": "chokepoint", "notes": "Islands choke off the middle third of the map. The gaps between them let destroyers and cruisers cross to the other flank, but the same cover that hides you can just as easily trap you." },
+    { "name": "East", "type": "capture-point", "notes": "More hemmed in than the west flank, but still open enough for a straight-up gun fight once ships clear the middle." }
+  ],
+  "strategyNotes": [
+    "Most of the fighting settles on the open flanks, not the center. Commit to one as a group instead of splitting attention.",
+    "Destroyers get real use out of the central islands for crossing flanks or setting up ambushes, but can get boxed in there just as easily.",
+    "With no cover on either flank, battleships do better staying grouped for cross-fire than pushing alone into open water."
+  ]
+}

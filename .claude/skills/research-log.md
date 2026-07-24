@@ -35,6 +35,21 @@ sourced from `Navy:` pages. Remaining soft spots: Omaha's deck armor thickness (
 "6-76mm" range confirmed, no deck-specific number), and some `rating` calls where peer-comparison
 data at the corrected tier is thin (marked conservatively as "average").
 
+## Provorny (USSR, tier VII premium DD): mixed twin/single turret layout confirmed by user
+
+Provorny mounts 1x2 + 3x1 150mm (ex-German Z-33/Type 1936A hull). Splash art (fetched from a
+`supabase.co/storage/.../ships/provorny.webp` URL found in the `wowsbuilds.com` page HTML, not the
+usual `wowsbuilds.com/ships/<slug>.webp` pattern) confirmed only the twin turret at the bow, per
+the standard forward-cluster ceiling — bridge/funnels blocked all three singles. Asked the user
+in-game rather than guessing further; they confirmed: the twin (bow) and both stern singles are
+each able to fire bow/stern-plus-both-broadsides (3 of 4 zones), the two stern singles are a
+stacked/superfiring pair, and the remaining single mount sits amidships restricted to
+port/starboard only (no bow or stern arc) — same restriction pattern as New York's turret 3. Full
+`Navy:Provorny` page (reached via the Jina proxy after a direct `curl`/WebFetch bot-block) didn't
+independently describe turret arcs/positions either — this kind of physical layout data doesn't
+seem to live in any written source found so far for any ship, asking the user has been the only way
+to get it once the splash-art ceiling is hit.
+
 ## Tier I ships have no upgrade slots
 
 Confirmed via `Navy:Albany` (no "Slot 1/2/3" section, just a single non-slotted "Fire Control"
@@ -489,3 +504,54 @@ shield shapes at a glance) amidships, and not being able to see the far broadsid
 the count and per-mount arcs couldn't be reconstructed with confidence. Left `turrets: []` rather
 than guess, per the standing rule — a full-broadside splash art is better than a 3/4 bow shot for
 this but still isn't sufficient alone for a precise mount-by-mount layout.
+
+## Superlative-claim audit (2026-07-24): several "of any tier I cruiser" claims checked only
+
+against this site's own (incomplete) ship set, not the real game
+
+Prompted by a user note that "thinnest armor of any tier I cruiser" (Novik) needs online
+verification, not just a check against whatever's already in `src/content/ships/`. Pulled the full
+tech tree via `Navy:All_Ships` and confirmed **12 tier I cruisers exist in Legends total**, not the
+6 this site had at the time: Albany (USA), Chikuma (Japan), Weymouth (UK), Dresden (Germany),
+Jurien (France), Novik (USSR) were already here; Nino Bixio (Italy), Gryf (Pan-Europe), Shi An
+(Pan-Asia), Hércules (Pan-America), Gelderland (Netherlands), and Júpiter (Pan-America) were not.
+
+Checked every absolute ("of any tier I cruiser") superlative against all 12:
+
+- **Jurien's "heaviest guns and thickest armor of any tier I cruiser" held up** — 165mm is the
+  highest caliber and 160mm max armor is the highest of all 12. Left unchanged.
+- **Novik's "thinnest armor of any tier I cruiser" was false** — Gryf, Hércules, and Júpiter all
+  run 6-10mm max armor, far thinner than Novik's 6-50mm. Novik is actually mid-pack (5th-thinnest
+  of 12). Reworded to name the specific ships it does beat (Chikuma/Weymouth/Jurien) instead of
+  claiming an absolute.
+- **Novik's "9.3 km sea detection is the worst of any tier I cruiser" held up** — genuinely the
+  highest (worst) of all 12. Left unchanged.
+- **Dresden's "the fastest reload at tier I" was false** — Gryf (3.4s) and Hércules (3.5s) both
+  reload faster than Dresden's 4.0s. Dresden's real edge is total shell volume (12 guns × 4.0s is
+  far more DPM than anyone else), which is a different claim and stayed accurate; only the
+  per-gun-reload superlative in the `shortDescription` needed fixing.
+- **Albany's "carries more guns than anything else at tier I" was false** — Albany has 6 guns;
+  Dresden alone has 12. Albany's real (and already-correctly-hedged elsewhere in the file) edge is
+  per-gun caliber (152mm, heavier than 8 of the other 11), not raw gun count. Fixed the two
+  restatements of the gun-count version in `playstyle`.
+
+Also checked the one absolute claim outside tier I cruisers that turned up in the same grep pass:
+**Clemson's "Smallest, hardest-to-spot destroyer at her tier"**, against all confirmable tier III
+destroyers on the tech tree (Wakeful, V-170, Izyaslav, Bourrasque, Turbine, Klas Horn, Shenyang,
+G-101). This one wasn't just wrong, it was backwards: Clemson's 6-6.5 km sea detection is worse
+than every other tier III destroyer checked (all ran 5.3-6.1 km), and `Navy:Clemson`'s own
+Player Opinion section lists "High detectability" as a **con**. The site had built Clemson's whole
+identity around concealment being a strength (a `strong` stat rating, a `stealth-play` goal tag, a
+"stay hidden" playstyle write-up) when the real ship is a highest-alpha-strike torpedo boat that
+gets spotted first and leans on her Smoke Generator to compensate, not natural stealth. Redid
+`role`, `shortDescription`, `strengths`, `weaknesses`, `tips`, `threats`, `playstyle`, and
+`goalTags` to match; removed the `stealth-play` tag entirely (kept `torpedo-alpha`, which is
+still accurate). Didn't touch the `stats.Hull HP` value (11,700) even though `Navy:Clemson` shows
+8,800 stock / 10,900 upgraded — that's a separate discrepancy outside this audit's scope, flagged
+to the user rather than guessed at.
+
+**Lesson for next time:** any claim shaped like "of any X" or "the most/least at tier Y" needs the
+full tech-tree roster for that tier/class pulled from `Navy:All_Ships` first — this site's own
+existing ships are not a sampling frame for what's actually true in the game, especially while the
+DB only covers a fraction of each tier. See the corresponding bullet added to
+`research-quickref.md`.

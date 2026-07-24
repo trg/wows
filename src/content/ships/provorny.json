@@ -1,0 +1,84 @@
+{
+  "name": "Provorny",
+  "nation": "USSR",
+  "type": "Destroyer",
+  "tier": 7,
+  "shortDescription": "Ex-German war-reparations hull carrying five 150mm guns across four mounts for 134,375 HE DPM and 231,250 AP DPM, backed by a Repair Party most destroyers don't get.",
+  "role": "Heavy-gunned premium destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "19,600", "rating": "strong" },
+    { "label": "Main Battery", "value": "1x2 + 3x1 150mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "11.6 km", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "4.8 s", "rating": "strong" },
+    { "label": "Torpedo Tubes", "value": "2x4 533mm", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "10.0 km", "rating": "strong" },
+    { "label": "Torpedo Damage", "value": "15,050", "rating": "strong" },
+    { "label": "Torpedo Speed", "value": "60 kts", "rating": "average" },
+    { "label": "Max Speed", "value": "36.0 kts", "rating": "weak" },
+    { "label": "Turning Radius", "value": "630 m", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "4.7 s", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "7.10 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "3.60 km", "rating": "average" },
+    { "label": "Detectability (Firing in Smoke)", "value": "3.10 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-30mm", "rating": "average" },
+    { "label": "AA", "value": "2x1 + 6x2 37mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Standard reset for the tier, nothing unique to this hull.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "2 charges, 10s at roughly 195 hp/s, about 1,950 hp per activation off an 80s cooldown, close to 20% of her hull across both charges. Most tier VII destroyers don't get a heal at all.", "rating": "strong" },
+    { "name": "Engine Boost", "flavor": "2 charges, 120s at +8% speed (about 38.9 kts) off a 180s cooldown. A long, mild boost rather than a short burst.", "rating": "average" },
+    { "name": "Smoke Generator", "flavor": "2 charges, 20s to lay, roughly 69s screen off a 240s cooldown. Thinner than most destroyer smoke, and a 3.1 km firing-in-smoke detection range gives her away fast if she shoots from inside it.", "rating": "weak" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"], "position": "centerline", "note": "Twin mount, forward-most turret." },
+    { "label": "2", "guns": 1, "arcs": ["port", "starboard"], "position": "centerline", "note": "Amidships mount, needs a full broadside, can't reach the bow or stern arc." },
+    { "label": "3", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" },
+    { "label": "4", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline", "note": "Superfiring over turret 3 at the stern." }
+  ],
+  "torpedoMounts": [
+    { "label": "1", "tubes": "4 tubes", "side": "centerline" },
+    { "label": "2", "tubes": "4 tubes", "side": "centerline" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Propulsion Modification 2" },
+    { "slot": "Slot 3", "recommended": "Concealment Systems Modification 1", "alternative": "Chromium-Plated Barrels" },
+    { "slot": "Slot 4", "recommended": "Gun Fire Control System Modification 2", "alternative": "Main Battery Modification 3" }
+  ],
+  "strengths": [
+    "Five 150mm guns across four mounts put out 134,375 HE DPM and 231,250 AP DPM, the ship's own 'Big Guns' trait, with a 12% HE fire chance to go with it",
+    "AP shells overmatch 10mm of plating and ricochet at improved 50/65 degree angles, punching through most destroyer hulls without needing a lucky angle",
+    "19,600 hull HP is a big pool for a destroyer this tier, and a Repair Party most peers don't get stretches it further",
+    "8 torpedo tubes across two centerline mounts, each able to fire either broadside, and 15,050 damage per fish makes a full salvo genuinely threatening",
+    "11.6 km gun range and 2.00 sigma keep shells landing true at distances other destroyers can't answer as hard"
+  ],
+  "weaknesses": [
+    "36.0 kt top speed and a 630m turning circle are both on the slow, wide side for a tier VII destroyer, hard to dodge or disengage with",
+    "7.10 km surface detection runs high for the tier, she's often outspotted before she can bring the guns to bear",
+    "Smoke Generator is thin, just 2 charges and roughly 69s of screen off a 240s cooldown, not something to lean on for repeated escapes",
+    "22.5s to swing the turrets through 180°, slow to answer once a target crosses to the other side",
+    "AA is weak for the tier, planes can work her over without much pushback"
+  ],
+  "tips": [
+    "Fight at range where the 11.6 km reach and accurate guns can work, her mobility won't bail her out of a bad angle up close",
+    "Save Repair Party for a real HP swing, not a graze, the 80s cooldown means you won't get it back quickly",
+    "Line up the widest angle you can before firing the 2x4 torpedo spread, 8 tubes is too much ordnance to waste on a bow-in target",
+    "Use Engine Boost to reposition or set up a torpedo run, not as a panic button, the Smoke Generator is too weak to lean on for a clean escape"
+  ],
+  "threats": [
+    { "threat": "Destroyers that outspot her", "reason": "7.10 km detection is high for the tier, so most destroyer peers see her before she sees them." },
+    { "threat": "Anything that closes the distance fast", "reason": "36.0 kts and a 630m turning circle make her slow to open the range or dodge once someone commits." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Gun-heavy premium destroyer built around DPM and hit points rather than stealth or speed.",
+      "Repair Party and a 19,600 HP pool give her staying power most destroyers don't have.",
+      "Slower and easier to spot than her peers, she has to win the gunfight rather than avoid it."
+    ],
+    "detail": "Provorny is the ex-German Z33, handed to the Soviet Union as war reparations and refitted into a destroyer that plays nothing like the rest of her tier. Five 150mm guns across four mounts back up the ship's own 'Big Guns' trait with real numbers, 134,375 HE DPM and 231,250 AP DPM, and the AP overmatches enough plating to make broadside destroyers pay for showing themselves. What she doesn't have is the speed or concealment to dictate when that fight happens. 36 knots and a wide turning circle mean she's often the one getting spotted and closed on, not the other way around. The Repair Party is what makes the trade work, letting her sit in an extended gunfight and shrug off damage that would send most destroyers back to cover. Pick a range where the guns can work and use the hit points to hold it, rather than trying to outmaneuver anyone."
+  },
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "8 torpedo tubes across two centerline mounts, 15,050 damage per torpedo, a big spread for a gun-focused destroyer." },
+    { "tag": "tank-brawler", "note": "19,600 hull HP plus a Repair Party most tier VII destroyers don't carry, built to stay in a fight rather than dodge out of one." }
+  ]
+}
