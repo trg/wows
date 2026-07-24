@@ -23,8 +23,9 @@ sparse open-water map and a dense island map, so the schema needs to work for ei
    *World of Warships*, with maps that can differ in layout/rotation. **Never use
    `wiki.worldofwarships.com` or `wiki.wargaming.net`** (the original game's wiki) or any source
    you can't confirm is describing Legends specifically. Check
-   `.claude/skills/research-sources.md` first for sources already known good or bad, and update it
-   with what you learn.
+   `.claude/skills/research-quickref.md` first for sources already known good or bad, and update
+   it with what you learn (a genuinely new lesson worth the narrative detail goes in
+   `.claude/skills/research-log.md` instead).
 3. **Draft the JSON** matching the schema in `src/content.config.ts`:
    - `keyAreas` is a single unified list — don't split into separate capture/camping arrays. Each
      entry gets one `type` of `capture-point | camping-spot | chokepoint | flank-route |

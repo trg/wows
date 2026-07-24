@@ -1,106 +1,15 @@
-# Research sources (internal notes, not site content)
+# Research log (internal notes, not site content)
 
-Working notes on where ship/map research has actually panned out, kept for whoever (human or
-skill) does the next research pass. Not linked from the site or `SPEC.md`. Update this as you go
-when a source turns out useful, useless, or wrong-game.
+Narrative case log of ship/map research passes — how each finding was confirmed, exact quotes,
+dead ends, and the lessons that came out of them. Not linked from the site or `SPEC.md`.
+
+**For the compact source good/bad list and gotcha bullets, check `research-quickref.md` first.**
+Come here when it doesn't cover your specific case, or when you want the full story behind a rule.
+Add a new section here when a research pass produces a genuinely new lesson worth the narrative
+detail; add a straightforward new good/bad source to `research-quickref.md` instead.
 
 This site covers **World of Warships: Legends only** — a different game from the original
-PC/Steam *World of Warships*, with its own balance and values. Check new sources against this list
-before trusting them; the wrong-game ones below look completely legitimate at a glance.
-
-**When a source turns out good for a particular kind of data** (torpedo speed tables, consumable
-numbers, tier confirmation, turret arcs, etc.), note not just the URL but which specific kind of
-data it reliably has — so the next research pass can go straight to the right source instead of
-re-discovering it. Add the finding under the relevant section below, or start a new one if it
-doesn't fit an existing category.
-
-## Good — confirmed Legends-specific
-
-- **`https://wiki.wargaming.net/en/Navy:<Ship_Name>`** (e.g. `Navy:New_York`) — the real Legends
-  wiki, on the same `wargaming.net` domain as the banned PC wiki but a different namespace
-  (`Navy:` vs `Ship:`). Confirm via the page's own breadcrumb ("Homepage / WoWS Legends / ...")
-  before trusting any given URL, since the two namespaces sit on the same host and it's easy to
-  land on the wrong one. Hub/index page: `https://wiki.wargaming.net/en/WoWS_Legends`, which links
-  out to `Navy:All_Ships`, `Navy:Consumables`, `Navy:Gunnery`, `Navy:Torpedoes`, per-class trees,
-  etc. Has real per-ship consumable numbers (confirmed for New York: DCP 20s/80s unlimited, Repair
-  Party 3 charges/28s/245 hp/s/80s reload) and sometimes player-opinion notes with useful gameplay
-  detail (e.g. New York's page notes a "very narrow full salvo firing arc" requiring broadside to
-  bring the amidships turret to bear).
-- **`https://www.wowsbuilds.com/ships/<slug>`** — a Legends-specific (console) stats/build site.
-  Reliably states the ship's real Legends tier in its header/Overview tab (confirmed Omaha and
-  Farragut both showing tier IV here, matching the `Navy:` wiki, when our site had them at V) —
-  a fast way to sanity-check tier specifically. The Consumables tab content is client-rendered and
-  didn't come through via WebFetch (only the Overview stats did). Worth a retry with
-  `claude-in-chrome` browser tools if that's ever connected in this environment.
-- **Fetching the raw page yourself** (`curl`/plain HTTP fetch) instead of relying solely on
-  WebFetch's summarizing pass, when a `Navy:` page has a multi-row stat/module table. WebFetch's
-  small summarizer model has repeatedly paraphrased or dropped table rows inconsistently across
-  repeated fetches of the *same* URL (confirmed on Omaha's module table, where one fetch missed
-  the twin-turret module entirely). When precision matters, re-query with a very specific prompt
-  ("quote the raw table verbatim") or fetch the raw HTML directly rather than trusting one pass.
-- **`https://wiki.wargaming.net/en/Navy:All_Ships`** — the full tech tree listing, useful for
-  confirming a ship's tier against its neighbors in the line when a single ship's page tier looks
-  suspicious. This is what caught the tier errors below (Clemson/Farragut/Omaha were all off by
-  one in different directions from what the site had).
-- **Official Legends ship splash-art images**, hosted at
-  `https://<supabase-project>.supabase.co/storage/v1/object/public/ships/<slug>.webp` and linked
-  from each `wowsbuilds.com/ships/<slug>` page (find the URL via `curl` the raw HTML then `grep -o
-  '"[^"]*ships/[a-z-]*\.webp"'` — it's a plain `<img>` src, not client-rendered, but WebFetch's
-  summarizer never mentions it). These are actual in-game Legends ship renders — useful for
-  visually confirming turret/mount count, type (enclosed turret vs. open pedestal mount), and
-  position when no text source describes physical layout. `Read` can't display `.webp` directly;
-  convert first with `sips -s format png in.webp --out out.png`. The images are large 3/4-angle bow
-  shots (bow toward the camera, stern receding into the distance and often obscured by rigging
-  lines) — crop toward the bow corner with `sips -c <h> <w> --cropOffset <offY> <offX> in.png --out
-  out.png` (sips has no single-step offset+size crop flag; `--cropOffset` must be paired with
-  `-c`) to see bow turret detail at readable resolution. Confirmed useful for Clemson (shows a
-  single open-shield pedestal gun at the bow, forward of the bridge — only one turret forward, not
-  two) and Farragut (shows two enclosed single-gun turrets superfiring at the bow). Did not show
-  the stern in either case, so this source alone can't confirm aft turret count/arrangement —
-  don't assume symmetry from it.
-
-## Bad — wrong game or wrong source type, do not use
-
-- **`wiki.worldofwarships.com`** (and its `wiki.wargaming.net` redirect), all pages including
-  `Ship:<Name>`, `Ship:Smoke_Generator_Data`, `Ship:Repair_Party_Data`, `Ship:Consumables` — this
-  is the wiki for the original PC/Steam *World of Warships*, not Legends. Looks completely
-  legitimate (well-organized, ship-specific, exact numbers) which is what makes it dangerous. Do
-  not use it even for values that seem like they'd obviously carry over (turret/torpedo counts,
-  hull arrangement) — an earlier research pass used it for
-  Clemson/Farragut/Omaha/New-York/New-Mexico consumable numbers before this was caught; those
-  numbers need re-verification against an actual Legends source, not adjustment from this
-  baseline.
-- **General naval-history sites about the real historical ships** — Wikipedia ship-class articles,
-  `historyofwar.org`, `naval-encyclopedia.com`, `destroyerhistory.org`, `warfarehistorynetwork.com`,
-  `laststandonzombieisland.com`, and similar. Explicitly out of scope, not just lower-priority: this
-  site documents the *game* Legends, not the real WWI/WWII vessels, and the two can differ (turret
-  count, arrangement, armament — everything) even when a detail "seems like it would obviously
-  carry over." A research pass on Clemson/Farragut's turret layout initially went down this path —
-  found a real, well-documented "lozenge" gun arrangement for Clemson-class four-pipers (bow, stern,
-  and two guns echeloned to port/starboard amidships) and a "No. 3 mount abaft the second stack"
-  detail for Farragut-class — and was explicitly stopped and corrected mid-task by the user: none
-  of that is usable here even though it's accurate history and not PC-game data, because it isn't
-  the Legends game model. If the in-game splash art (see above) doesn't confirm a historical
-  detail, treat it as unconfirmed for Legends, full stop — don't fall back to real-ship history as
-  a substitute source.
-- **`WebSearch` result synthesis can blend in banned-wiki content silently.** A query for
-  `"World of Warships: Legends" Clemson turret arc guide` returned a summarized claim that "the
-  aiming sector of the researchable upgrade second and third main battery turrets increased by 5
-  degrees" — plausible-sounding and specific, but the search results list included a
-  `wiki.wargaming.net/en/Ship:Clemson` (banned PC-wiki) hit alongside the legitimate ones, and the
-  claim couldn't be reproduced from a direct `curl` of wowsbuilds.com's raw HTML (no
-  sector/degree/turret text present at all there). Treat any specific numeric claim that only shows
-  up in a `WebSearch` summary, and not in a direct fetch of a confirmed Legends-specific page, as
-  unverified — re-check against the raw source before using it.
-
-## Dead ends — right game, unproductive
-
-- General `WebSearch` queries like `"World of Warships Legends <ship> <consumable> cooldown"`
-  reliably return vague, non-numeric summaries. Go straight to a candidate source page instead of
-  searching for the number directly.
-- `en.namu.wiki` (Korean community wiki, has a Legends consumables page) — returns HTTP 403 to
-  WebFetch. Might be reachable another way if it's ever worth revisiting; unconfirmed whether its
-  content is even Legends-accurate.
+PC/Steam *World of Warships*, with its own balance and values.
 
 ## Resolved: full re-verification pass (all 5 ships)
 
@@ -504,6 +413,52 @@ bow-shaped.
 ## Duke of York (British premium tier VI battleship): splash art can't distinguish quad from twin at a glance, and Legends can reorder a real class's turret calibers
 
 `Navy:Duke_of_York`'s module table gives arrangement as aggregate counts only ("1x2" plus "2x4", i.e. one twin mount and two quad mounts, 10 guns total) with no indication of which physical position (A/B/Y) holds which. The forward-cluster splash art crop (`duke-of-york.webp` via wowsbuilds.com, standard bow-quartering angle, same ceiling as every other ship — only the forward two turrets visible) was read as "both quad" at first glance, since overlapping barrels in a 3/4 perspective shot are easy to miscount. The user corrected this from in-game knowledge: A (bow-most) is quad, B (superfiring over A) is twin, Y (stern) is quad — the twin sits in the middle position, not aft. This also doesn't match the real King George V-class's actual historical turret calibers (A and B quad, Y twin) — a reminder that even when Legends visibly models a real ship's general silhouette accurately, per-turret specifics can still diverge from the real vessel, so real-world class knowledge isn't a substitute for in-game or wiki confirmation even as a tie-breaker between two visually similar turrets. Sister tech-tree ship `Navy:King_George_V` was a useful stat-comparison peer (same class, same 2x4+1x2 aggregate arrangement, but 25s reload vs Duke of York's slower 29.5s) despite not resolving the per-position question either — its module table has the identical aggregate-only limitation.
+
+## First Soviet ship (Novik): schema notes, and a Player Opinion blurb that contradicted the ship's own stat table
+
+`nation` extended to `z.enum(['USA', 'Germany', 'Japan', 'United Kingdom', 'France', 'USSR'])` in
+`src/content.config.ts`, plus a `USSR: '☭'` entry in `src/lib/nations.ts`'s `NATION_FLAGS` (checked
+first, no component assumed a fixed nation list, still a two-line change like every prior nation
+addition). Unicode has no flag emoji for a dissolved country, so the hammer-and-sickle symbol
+stands in for the flag pill instead of a real-world national flag.
+
+`Navy:Novik`'s own breadcrumb says "Homepage / WoWS Legends / Novik" (confirmed genuine) but its
+infobox fields are inconsistent about the nation name across the page, same pattern already seen
+on Weymouth: "Nation: U.S.S.R" in the infobox, "Soviet" in the prose blurb, "Legends Nation USSR"
+in the page's own category tag. Used `USSR` for the enum (matches the category tag and is the
+common short form, same reasoning as keeping `USA` instead of "United States").
+
+**A ship's Player Opinion blurb can go stale relative to its own stat table on the same page.**
+Novik's Player Opinion Cons list "Low HP pool" as a con, but the page's own stat table lists
+14,500 hull HP, actually the highest of any tier I cruiser catalogued here (Weymouth 14,200,
+Jurien 14,100, Chikuma 13,100, Albany 11,500). Trusted the hard number from the stat table over
+the prose blurb rather than writing a contradictory weakness into the file; the "Slow shell speed"
+con had no contradicting hard number available so it was left out of `weaknesses` rather than
+either trusted or actively contradicted (120mm shells having lower velocity than heavier-caliber
+peers is plausible but wasn't independently confirmed).
+
+**Tier I ship confirmed to have no upgrade slots again** (`Navy:Novik`'s Modules section jumps
+from the Main Battery module table straight to Consumables, no Slot 1/2/3 section), consistent
+with every other tier I ship checked so far. The only non-slotted module was a hull-tied
+"Targeting System I mod. 2" giving +10% range (9.4 → 10.3 km), the same non-slotted-Fire-Control
+pattern documented for Albany.
+
+**Splash art (`novik.webp`) was a broadside-length view like Chikuma/Weymouth/Jurien's, not the
+usual bow-quarter shot, and still hit the same ceiling.** Crops confirmed one open bow-mounted gun
+and a second gun position further aft, but the far end of the hull showed the exact "second
+bow-like structure that isn't the bow" ambiguity documented under Albany above, not a real stern
+confirmation. Went straight to the user rather than spending a fourth crop chasing it, per
+[[feedback_turret_layout_research]] and the standing token-spend guidance in wows-ship's SKILL.md.
+Proposed the specific Chikuma/Weymouth/Jurien 1-bow/3-port/3-starboard/1-stern layout as a
+concrete yes/no rather than an open question (Novik's own 8x1 120mm arrangement made this a strong
+prior) and the user confirmed it matched exactly, resolving it in one exchange.
+
+**Reference photo**: Wikimedia Commons' `Category:Novik_(ship,_1900)` had 11 files, only two real
+photographs among mostly paintings/diagrams. Used `Novik1904Port-Artur.jpg` (Russian cruiser Novik
+underway at Port Arthur, 1904, sourced from navsource.narod.ru's Russian/Soviet navy photo
+archive, tagged PD-RusEmpire/PD-old/CC-PD-Mark) over the other real photo on the same page
+(`Novik scuttled at Koraskhov Bay.jpg`, showing the ship sunk after her final action) since an
+underway photo is a better illustration than a wreck shot when both are equally well-licensed.
 
 ## Hyūga (Japanese premium tier V battleship): MBRB data page, and turret layout confirmed by the user fast
 

@@ -24,8 +24,9 @@ There is no test suite or lint script in this repo; `npm run check` (Zod schema 
   researching content, sources for the original *World of Warships* (its wiki at
   wiki.worldofwarships.com, most build sites) are NOT authoritative for Legends and may actively
   disagree with it — treat them only as a rough approximation pending a Legends-specific source,
-  and say so in the data if a number is unverified. See `.claude/skills/research-sources.md` for
-  which sources have actually turned out to be Legends-accurate so far.
+  and say so in the data if a number is unverified. See `.claude/skills/research-quickref.md` for
+  which sources have actually turned out to be Legends-accurate so far (full narrative detail in
+  `.claude/skills/research-log.md`).
 - Content lives in `src/content/ships/*.json` and `src/content/maps/*.json`, validated by
   `src/content.config.ts` (note: not `src/content/config.ts` — Astro 6+ moved this to
   `src/content.config.ts`, one level up from where older docs/tutorials show it).

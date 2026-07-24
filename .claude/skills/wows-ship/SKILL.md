@@ -28,23 +28,25 @@ reference for shape and voice.
    namespace** (the original game's wiki, wrong game entirely). The `wiki.wargaming.net/en/Navy:`
    namespace on that same domain is a confirmed-good Legends-specific source — the two namespaces
    sit on the same host and are easy to mix up, so confirm any given URL via the page's own
-   breadcrumb ("Homepage / WoWS Legends / ...") before trusting it. See
-   `.claude/skills/research-sources.md` for the full source rundown and update it with what you
-   learn. Don't trust any other source you can't confirm is describing Legends specifically.
+   breadcrumb ("Homepage / WoWS Legends / ...") before trusting it. Check
+   `.claude/skills/research-quickref.md` first for sources already known good or bad, and add to
+   it with what you learn; the full narrative for any entry (or a genuinely new lesson worth the
+   detail) goes in `.claude/skills/research-log.md`. Don't trust any other source you can't
+   confirm is describing Legends specifically.
    Research hull HP, gun/torpedo stats, consumables, upgrade slots, and any
    legendary module. **Tier I ships have no upgrade slots at all** (the slot system starts at tier
    IV with 1 slot, scaling to 4 from tier VII on) — `upgrades: []` is correct there, not a gap in
    research. Also research physical layout for `turrets`/`torpedoMounts`: bow-to-stern
    turret order and which zones each can fire into, and whether each torpedo mount is centerline
    or fixed to one broadside. Written sources are often silent on this; official Legends ship
-   splash art (see `.claude/skills/research-sources.md`) can confirm turret/mount count and
+   splash art (see `.claude/skills/research-quickref.md`) can confirm turret/mount count and
    position when no text source describes it. **Splash art's standard bow-quartering camera angle
    reliably confirms only the forward turret cluster** (confirmed across every ship checked so
    far, from multiple hosts/resolutions) — the bridge/funnels structurally block the amidships and
    aft turrets from that angle, so don't burn research time hunting for a differently-framed
    splash image expecting it to solve this; treat "forward cluster only" as this source type's
    ceiling and move to the next step instead.
-   `.claude/skills/research-sources.md`'s source list is a leaderboard of what's paid off before,
+   `.claude/skills/research-quickref.md`'s source list is a leaderboard of what's paid off before,
    not an exhaustive whitelist — reach for other Legends-specific sites (search results, community
    wikis, build sites, forum posts) if something better turns up, and add it to the file with what
    kind of data it was good for. **Cap splash-art effort at one crop of the forward cluster.** Don't
@@ -57,14 +59,14 @@ reference for shape and voice.
    than continued image forensics, and is their stated preference over spending tokens on it. Only
    fall back to leaving `turrets`/`torpedoMounts` empty if the user has no way to check either.
    Cross-check more than one source when values
-   disagree, and check `.claude/skills/research-sources.md` first for sources already known good
+   disagree, and check `.claude/skills/research-quickref.md` first for sources already known good
    or bad — update it with what you learn. Also research how each stat compares to peer ships at
    the same tier and class, since you'll need that to set `rating`. If you can't find a
    Legends-verified number for something, don't fill it in with a PC value — write the field
    qualitatively instead, or leave a note in your final summary that it needs a better source.
 3. **Source a reference photo.** Try to find a real-world photo of the actual historical vessel
    for the `image` field — this is illustration, not gameplay data, so it's unrelated to the "real
-   ship history is out of scope" rule in `research-sources.md` (that rule is about stats/mechanics,
+   ship history is out of scope" rule in `research-quickref.md` (that rule is about stats/mechanics,
    not a photo). Search **Wikimedia Commons** (`commons.wikimedia.org`), not Wikipedia article
    pages — Commons only hosts media actually cleared for reuse, so licensing is easier to verify.
    - Find the ship's Commons category or file page (e.g. `Category:USS Albany (1899)`).
@@ -109,7 +111,7 @@ reference for shape and voice.
      (e.g. 2 of 5) actively misplaces them instead of just being incomplete — don't write a
      partial array. If research (including asking the user, see step 2) can't confirm every
      turret, leave the whole array empty and say so in your final summary, don't bury the gap
-     only in `research-sources.md`.
+     only in `research-log.md`.
      - `position` (`'centerline' | 'port' | 'starboard'`, default `'centerline'`) tells the
        diagram which side of the hull to draw the turret marker on. Leave it unset for standard
        turreted mounts that can traverse to fire from the centerline — the vast majority of
@@ -133,7 +135,7 @@ reference for shape and voice.
      train-limit vs. peers), `spreadPattern` (narrow/wide salvo-dispersion degrees, set both or
      neither), and `singleTubeFire` (mostly a British-line mechanic) fields are frequently
      unconfirmable from available sources — see the "Torpedo mount detail fields" section of
-     `.claude/skills/research-sources.md` before spending too long chasing them, and leave a field
+     `.claude/skills/research-log.md` before spending too long chasing them, and leave a field
      unset rather than guess if no source gives a real number. Empty array (default) for ships
      without torpedoes or without confirmed data yet.
      - `FiringArcDiagram.astro` reuses the turret pairing scheme here too, keyed off `side`

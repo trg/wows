@@ -252,5 +252,5 @@ also runs on PC — "console" vs. "PC" is shorthand for Legends vs. the original
 statement about platform. `wiki.worldofwarships.com` (and its `wiki.wargaming.net` redirect) is the
 wiki for the **original, non-Legends game and must not be used as a source**, including for values
 that seem like they'd obviously be identical (hull counts, turret arrangement, etc.) — confirm
-against a Legends-specific source instead. See `.claude/skills/research-sources.md` for sources
+against a Legends-specific source instead. See `.claude/skills/research-quickref.md` for sources
 that have actually checked out as Legends-accurate.
