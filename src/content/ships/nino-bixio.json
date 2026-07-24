@@ -1,0 +1,70 @@
+{
+  "name": "Nino Bixio",
+  "nation": "Italy",
+  "type": "Cruiser",
+  "tier": 1,
+  "shortDescription": "The Italian cruiser line's starter ship: the fastest hull and the lowest detection range of any tier I cruiser, paired with a reload that ties Jurien for second-slowest at the tier.",
+  "role": "Fast, stealthy scout cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "16,600", "rating": "strong" },
+    { "label": "Main Battery", "value": "8x1 120mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "9.1 km", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "9.0 s", "rating": "weak" },
+    { "label": "Max Speed", "value": "26.8 kts", "rating": "strong" },
+    { "label": "Turning Radius", "value": "480 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "4.8 s", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "7.4 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "4.4 km", "rating": "strong" },
+    { "label": "Armor", "value": "6-100mm", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port"], "position": "port", "note": "Forward pair with turret 2. Each bears on the bow arc as well as its own broadside, unlike the single centerline bow mount most tier I cruisers carry." },
+    { "label": "2", "guns": 1, "arcs": ["bow", "starboard"], "position": "starboard", "note": "Forward pair with turret 1. Each bears on the bow arc as well as its own broadside, unlike the single centerline bow mount most tier I cruisers carry." },
+    { "label": "3", "guns": 1, "arcs": ["port"], "position": "port", "note": "Midship pair with turret 4, casemate-style, fixed to this broadside only." },
+    { "label": "4", "guns": 1, "arcs": ["starboard"], "position": "starboard", "note": "Midship pair with turret 3, casemate-style, fixed to this broadside only." },
+    { "label": "5", "guns": 1, "arcs": ["port"], "position": "port", "note": "Midship pair with turret 6, casemate-style, fixed to this broadside only." },
+    { "label": "6", "guns": 1, "arcs": ["starboard"], "position": "starboard", "note": "Midship pair with turret 5, casemate-style, fixed to this broadside only." },
+    { "label": "7", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Stern pair with turret 8, raised to fire over it. Both cover a full arc astern." },
+    { "label": "8", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Stern pair with turret 7, which is raised to fire over this mount. Both cover a full arc astern." }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges, the same stock reset every tier I cruiser starts with.", "rating": "average" }
+  ],
+  "upgrades": [],
+  "strengths": [
+    "26.8-knot top speed, the fastest of any tier I cruiser, backed by her own 'Fast' ship trait",
+    "7.4 km sea detection and 4.4 km air detection, both the lowest of any tier I cruiser, backed by her own 'Hidden' ship trait",
+    "16,600 hull HP ties Gelderland for the deepest pool of any tier I cruiser",
+    "Turrets 1 and 2 both bear on the bow arc, giving 2 guns of bow-chase fire where most tier I cruisers' single centerline bow mount only offers 1",
+    "Turrets 7 and 8 are true centerline mounts covering stern, port, and starboard, so the stern two guns contribute to either broadside as well as a retreat"
+  ],
+  "weaknesses": [
+    "9.0s main battery reload ties Jurien for second-slowest of any tier I cruiser, only Chikuma's 12s cycles slower",
+    "120mm guns are a smaller caliber than half the tier I fleet, Albany, Chikuma, Weymouth, Shi An, and Jurien all carry 152mm or bigger",
+    "Turrets 3 through 6 are locked to their own broadside with no bow or stern coverage, four of the eight guns go silent bow-on or stern-on",
+    "6-100mm armor is only mid-pack for the tier, well behind Jurien's 160mm or Weymouth's 152mm, no cushion for a close brawl"
+  ],
+  "tips": [
+    "Use the speed and concealment together, close to a favorable range or reposition before anyone else at the tier can react",
+    "Don't hesitate to open fire while still approaching bow-in, turrets 1 and 2 can both answer straight ahead",
+    "Make salvos count, the reload is one of the slowest at the tier so missed shots cost more here than on faster-cycling peers",
+    "Angle bow-in or retreat stern-on when you can, that's where this hull keeps the most guns in action"
+  ],
+  "threats": [
+    { "threat": "Anything that closes the distance despite the speed and concealment edge", "reason": "6-100mm armor is only average for the tier, a close brawl goes badly once the range advantage disappears." },
+    { "threat": "Faster-reloading tier I cruisers at even range", "reason": "9.0s reload trails every tier I peer but Chikuma, so a straight gunnery duel favors almost anyone else." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Fastest and best-hidden cruiser at tier I, built to dictate engagement distance rather than out-shoot anyone.",
+      "Reload is among the slowest at the tier, so this isn't a volume-of-fire ship despite carrying eight guns.",
+      "Turret layout rewards bow-in approaches and stern-on retreats over a standing broadside fight."
+    ],
+    "detail": "Nino Bixio doesn't try to win a tier I gunnery duel. Her 120mm battery reloads slower than every peer but Chikuma, so she isn't going to out-DPM anyone. What she has instead is the best concealment of any tier I cruiser and the highest top speed to match, letting her pick when and where a fight actually starts. The turret layout reinforces that plan: two guns can already answer bow-in during the approach, and the true centerline pair aft keeps firing through a full arc on the way back out. Get into range on her own terms, land what shells she can, and use the speed and low profile to leave before the reload becomes a liability."
+  },
+  "goalTags": [
+    { "tag": "stealth-play", "note": "7.4 km sea detection and 4.4 km air detection are both the lowest of any tier I cruiser, letting her scout and reposition closer than anything else at the tier." }
+  ],
+  "image": "/images/ships/nino-bixio.jpg",
+  "imageCredit": "Italian cruiser Nino Bixio at Split, Dalmatia, 1919. Photo by R.E. Wayne, US Naval History and Heritage Command, public domain, via Wikimedia Commons."
+}
