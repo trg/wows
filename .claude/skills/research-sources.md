@@ -447,6 +447,41 @@ NHHC-scanned `.tif` was 3934x2712 / ~10MB; downsized to 1600px wide (`sips -Z 16
 to `public/images/ships/`, dropping it to ~450KB — worth doing for any similarly large NHHC-sourced
 scan, the full scan resolution is unnecessary for a page banner/thumbnail.
 
+## Dover (British premium tier VII battleship): fictional "variant" ships share a hull with a real tech-tree ship, no photo possible
+
+Dover is confirmed genuinely fictional in Legends, not modeling any real vessel or paper design at
+all: `Navy:Dover`'s own infobox lists **"Year of Design: 1179"** (Dover Castle's construction date
+under Henry II, a deliberate joke, not a ship year) and the ship is a `Navy:`-page-labeled
+**"Variant"** of an existing tech-tree ship, `Hawke` (itself a real paper-design 1943 British
+battlecruiser project, K2/K3 lineage). A "Variant" relationship means Dover reuses Hawke's hull,
+turret arrangement, and torpedo arrangement exactly (confirmed identical 3x3 406mm / 4x1 533mm on
+both pages) but is **not** a stats clone: Dover's own numbers (77,500 hp vs Hawke's 66,000/73,800,
+17.6 km range vs 15.2/16.8 km, Sigma 2 vs 1.7, no Engine Boost consumable, no Hidden trait) were
+pulled from `Navy:Dover` directly, not assumed to match Hawke. When a ship's page says "Variant",
+fetch the base ship's `Navy:` page too, both for physical-layout corroboration and because the base
+ship's **Player Opinion Pros/Cons section is valid, directly-transferable sourcing for the variant's
+armor/citadel-specific weaknesses** if the variant's own page lacks one (Dover's page had no Player
+Opinion section at all; Hawke's did, and its Cons "extensively covered in 32mm armor," "bow and
+stern armor of only 25mm," "huge turrets are easily incapacitated" all apply unchanged since the
+hull is identical).
+
+**No real-world reference photo is possible for a "Year of Design: 1179" joke ship**, unlike every
+other ship catalogued so far where at least a paper-design drawing or the real hull's photo exists.
+Correctly left `image`/`imageCredit` unset rather than substituting a photo of the real Dover Castle
+(a building, not a vessel, and not what the schema's `image` field is for) or reaching for Hawke's
+own real-world inspiration instead of Dover's.
+
+**Splash art again confirmed only the forward turret cluster** (2 of 3 406mm triple turrets,
+superfiring, both pointing toward the bow) even on this heavily re-skinned castle-themed hull, the
+same ceiling documented for every prior ship. The long aft deck visible in this particular
+broadside-angled splash art showed no third turret at all (obscured or just not rendered in view),
+so the aft turret's position and arc were resolved by asking the user directly rather than guessing
+or spending further crops, consistent with [[feedback_turret_layout_research]]. Also asked the torpedo
+mount question in the same pass (2 fixed per side, per the standing "ask early once past the
+confirmed cluster" guidance) rather than treating it as a separate research round, worth doing
+proactively whenever turret layout also needs a user check, since it's the same in-game look either
+way (port-view camera / train limits).
+
 ## First Japanese ship (Chikuma): schema notes, splash art limits
 
 `nation` extended to `z.enum(['USA', 'Germany', 'Japan'])` in `src/content.config.ts`, plus a

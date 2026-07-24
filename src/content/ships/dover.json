@@ -1,0 +1,85 @@
+{
+  "name": "Dover",
+  "nation": "United Kingdom",
+  "type": "Battleship",
+  "tier": 7,
+  "shortDescription": "Fictional premium battlecruiser \"designed\" in 1179 and styled after Dover Castle, trading tech-tree sister Hawke's speed and stealth for more range, more HP, and tighter shell grouping.",
+  "role": "Long-range sniper battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "77,500", "rating": "strong" },
+    { "label": "Main Battery", "value": "3x3 406mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "30 s", "rating": "average" },
+    { "label": "Main Battery Range", "value": "17.6 km", "rating": "strong" },
+    { "label": "Torpedo Tubes", "value": "4x1 533mm", "rating": "average" },
+    { "label": "Max Speed", "value": "29 kts", "rating": "average" },
+    { "label": "Rudder Shift", "value": "16.1 s", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "15.6 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "12.4 km", "rating": "average" },
+    { "label": "Armor", "value": "16-406mm", "rating": "weak" },
+    { "label": "Torpedo Damage Reduction", "value": "20%", "rating": "average" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "15s action, 80s cooldown, unlimited charges. Same as every other tier VII battleship's DCP, nothing unique here.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s duration, 60s cooldown, +465 hp/s, about 13,020 hp per activation. A shade stronger than tech-tree sister Hawke's +442 hp/s.", "rating": "average" },
+    { "name": "Defensive AA Fire", "flavor": "3 charges, 25s duration, 140s cooldown, +200% average AA damage. Backed by six separate AA mounts topped by a 281 DPS 40mm Bofors battery, the same loadout Hawke's own page credits with \"good AA defenses.\"", "rating": "strong" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s duration, 160s cooldown. +100% secondary shell grouping and -50% dispersion, sharpening a dense 8x2 114mm plus 4x2 152mm secondary battery out to 5.5 km.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "B", "guns": 3, "arcs": ["bow", "port", "starboard"], "note": "Superfires over A." },
+    { "label": "X", "guns": 3, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "Port 1", "tubes": "1 tube", "side": "port" },
+    { "label": "Port 2", "tubes": "1 tube", "side": "port" },
+    { "label": "Starboard 1", "tubes": "1 tube", "side": "starboard" },
+    { "label": "Starboard 2", "tubes": "1 tube", "side": "starboard" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" },
+    { "slot": "Slot 2", "recommended": "Supercharges", "alternative": "Steering Gears Modification 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Modification 1", "alternative": "Chromium Plated Barrels" },
+    { "slot": "Slot 4", "recommended": "Main Battery Modification 3", "alternative": "Secondary Battery Modification 3" }
+  ],
+  "strengths": [
+    "77,500 hull HP beats tech-tree sister ship Hawke's hull even fully upgraded (73,800)",
+    "17.6 km main battery range out of the box already beats Hawke's own upgraded range (16.8 km), backed by the Long Reach trait",
+    "Sigma 2 tightens shell grouping noticeably over Hawke's stock 1.7, more of those 406mm AP shells land close together at range",
+    "13,860 max AP damage per shell outdoes Hawke's 12,600, and 40% HE fire chance keeps a burn option in reserve too",
+    "Four fixed 533mm torpedo tubes, two per side, add a damage option on top of the main battery",
+    "A dense secondary battery, 8x2 114mm plus 4x2 152mm, backed by Enhanced Secondary Targeting, and six separate AA mounts including a 281 DPS 40mm Bofors battery"
+  ],
+  "weaknesses": [
+    "Same 32mm-heavy armor scheme as Hawke, extensively thin plating that's vulnerable to HE penetration and AP overmatch despite the huge HP number",
+    "Bow and stern armor drop to just 25mm on that shared hull, easy to overmatch head-on",
+    "15.6 km sea and 12.4 km air detectability are both worse than Hawke's, she loses the Hidden trait entirely along with the stealth that came with it",
+    "No Engine Boost in this kit, once she's committed to a course she can't punch through it like Hawke can",
+    "30s main battery reload is on the slower side, and a large exposed citadel makes every broadside a real risk",
+    "Huge turrets sitting high on that shared hull are easy to knock out, the same vulnerability documented on Hawke's own page"
+  ],
+  "tips": [
+    "Fight at range. The 17.6 km reach and Sigma 2 accuracy are the whole point, don't give that up to brawl.",
+    "Bow-tank when you have to take an angle. Turrets A and B both cover the bow arc, only the aft turret can't reach it, so you keep two-thirds of your guns firing.",
+    "Showing stern costs you more, only the aft turret can answer from directly astern.",
+    "The torpedo tubes are fixed two per side, no centerline swing, so pick your broadside before you commit to a torpedo run.",
+    "There's no Engine Boost to bail you out of a bad position, commit to your positioning early rather than trying to fix it mid-fight."
+  ],
+  "threats": [
+    { "threat": "Anything landing HE at range", "reason": "The extensively thin 32mm plating and exposed citadel eat HE penetrations even from smaller-caliber guns." },
+    { "threat": "Ships that can force a stern-on angle", "reason": "Only the aft turret covers the stern arc, a third of her main battery, so getting caught retreating costs real firepower." },
+    { "threat": "Fast destroyers or cruisers closing the range", "reason": "No Engine Boost to disengage and nothing in the consumable kit to spot a torpedo run coming." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Long-range sniper battleship built on Hawke's hull and 3x3 406mm battery, tuned for standoff gunnery over speed",
+      "Enormous 77,500 hp pool sits on the same thin, extensively-armored hull that makes Hawke's own citadel a known weak point",
+      "Carries a real secondary battery and four fixed torpedo tubes on top of the main battery",
+      "Slower and less stealthy than her tech-tree sister, with no Engine Boost to make up the difference"
+    ],
+    "detail": "Dover reuses Hawke's hull and her 3x3 406mm battery without changing the gun arrangement, but the premium version leans harder into range and accuracy: more firing range, a tighter Sigma value, and more hit points than Hawke reaches even fully upgraded. That comes at a cost. She's half a knot slower, gives up Hawke's Hidden trait outright, and has no Engine Boost to close or open a gap on demand. Underneath the castle dressing the armor scheme hasn't changed, still 32mm over most of the hull and just 25mm at the bow and stern, so that huge health total doesn't mean she can trade blows up close. Keep the range open, let the guns and the accuracy do the work, and angle the bow rather than the stern when a fight forces the issue."
+  },
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "Four fixed 533mm tubes, two per side, deal up to 15,867 damage each, a real torpedo threat sitting on top of a full battleship main battery." },
+    { "tag": "aa-defense", "note": "Six separate AA mounts topped by a 281 DPS 40mm Bofors battery, plus Defensive AA Fire. Hawke's own page credits this AA loadout with \"good AA defenses\" for the tier, and Dover carries the same mounts." }
+  ]
+}
