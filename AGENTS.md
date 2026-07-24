@@ -43,6 +43,13 @@ There is no test suite or lint script in this repo; `npm run check` (Zod schema 
   seems to need more JS than that, treat it as a signal to reconsider the feature, not to reach for
   a framework.
 
+## Deployment
+
+Push to `main` and GitHub Actions builds and publishes to GitHub Pages — that's the whole deploy,
+no manual step exists. Run `scripts/deploy.sh` from a clean `main` to build locally first (catches
+failures before they're pushed) and watch the Actions run; see the README's Deployment section for
+details. Never force-push or bypass the pre-flight build without telling the user first.
+
 ## Development
 
 When starting the dev server, use background mode:
