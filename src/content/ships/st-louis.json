@@ -1,0 +1,63 @@
+{
+  "name": "St. Louis",
+  "nation": "USA",
+  "type": "Cruiser",
+  "tier": 2,
+  "shortDescription": "Pre-dreadnought protected cruiser that trades speed for guns, up to fourteen 152mm barrels plus eighteen 76.2mm secondaries once fully researched, behind a 102mm belt that's thick for tier II.",
+  "role": "Gun-heavy protected cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "25,000 stock, 27,000 upgraded", "rating": "strong" },
+    { "label": "Main Battery", "value": "10x1 stock, 14x1 upgraded 152mm", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "10.1 km stock, 11.1 km upgraded", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "10.0 s stock, 8.0 s upgraded", "rating": "average" },
+    { "label": "Secondary Battery", "value": "18x1 76.2mm", "rating": "strong" },
+    { "label": "Max Speed", "value": "22 kts", "rating": "weak" },
+    { "label": "Turning Radius", "value": "450 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "8.4 s stock, 6.4 s upgraded", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "9.10 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "5.40 km", "rating": "average" },
+    { "label": "Armor", "value": "6-102mm", "rating": "strong" },
+    { "label": "AA", "value": "8x1 8mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 60s cooldown, 5s action. The stock reset every cruiser gets, and nothing else fills out her consumable slots.", "rating": "average" }
+  ],
+  "turrets": [],
+  "torpedoMounts": [],
+  "upgrades": [],
+  "strengths": [
+    "Fourteen 152mm guns once fully researched (ten stock) push real DPM for tier II, matching her own 'Guns Aplenty' trait: 126,000 HE and 180,000 AP per minute",
+    "27,000 hit points and a 102mm armor belt are both unusually high for the tier, she can absorb hits most tier II cruisers can't",
+    "Eighteen 76.2mm secondary guns add extra close-range damage most cruisers this early don't carry",
+    "6.4s rudder shift once researched backs up her 'Agile' trait, she changes direction faster than her top speed suggests"
+  ],
+  "weaknesses": [
+    "22 knots is slow for a cruiser at any tier, an official 'Slow' trait, hard to reposition or disengage once committed",
+    "9.10 km surface detection runs high for tier II, smaller ships spot her first",
+    "1.80 sigma means loose dispersion, the big broadside doesn't land as cleanly as the raw DPM numbers suggest",
+    "Only Damage Control Party in her consumable loadout, no heal, no spotting tool, no smoke"
+  ],
+  "tips": [
+    "Commit to fights rather than trying to escape them, 22 knots won't outrun anything",
+    "Let the hit point pool and armor work for you, sit in a slugging match longer than most tier II cruisers can afford to",
+    "Close inside 2.5 km when you can, the secondary battery adds real damage on top of the main guns",
+    "Research the hull upgrade before judging her guns, ten single mounts stock feels thin until the fourteen-gun broadside comes online"
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "They outspot and outrun her, closing for a torpedo run before she can bring enough guns to bear." },
+    { "threat": "Faster cruisers at range", "reason": "Her 1.80 sigma means she loses a clean gunnery duel to anything with tighter dispersion." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Slow, gun-heavy protected cruiser built to slug it out rather than skirmish.",
+      "Thick armor and a big hit point pool for the tier let her stand in a fight most tier II cruisers can't.",
+      "Fourteen 152mm guns plus eighteen secondaries once researched, more raw firepower than mobility."
+    ],
+    "detail": "St. Louis carries the bulk of a much later cruiser into tier II. She's built around sheer gun count rather than speed or stealth, fourteen single 152mm mounts and eighteen 76.2mm secondaries once the hull is fully researched, backed by a 102mm belt that shrugs off more than it should this early. None of that matters if she can't get into range, and at 22 knots she won't dictate when a fight starts. Pick an engagement, commit to it, and let the hit points and armor buy time for the guns to do their work."
+  },
+  "image": "/images/ships/st-louis.jpg",
+  "imageCredit": "USS St. Louis (C-20), circa 1906. U.S. Naval History and Heritage Command (NH 44192), public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "27,000 HP and a 102mm belt are both high for tier II, though 22 knots means she has to commit to a fight rather than pick one." }
+  ]
+}

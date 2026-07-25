@@ -1,0 +1,71 @@
+{
+  "name": "USS Indianapolis",
+  "nation": "USA",
+  "type": "Cruiser",
+  "tier": 6,
+  "shortDescription": "Premium Portland-class heavy cruiser with hard-hitting 203mm guns and the longest-ranged radar at her tier, but a huge, thin-skinned broadside.",
+  "role": "Long-range gun cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "32,500", "rating": "strong" },
+    { "label": "Main Battery", "value": "3x3 203mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "14.3 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "15 km", "rating": "average" },
+    { "label": "Max Speed", "value": "32.5 kts", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "11.8 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "7.4 km", "rating": "average" },
+    { "label": "Armor", "value": "13-146mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 5s action, 60s cooldown. Standard for the tier, nothing extra.", "rating": "average" },
+    { "name": "Sonar", "flavor": "2 charges, 94s active on a 180s cooldown. Tags ships out to 4.2 km and torpedoes at 2.9 km, including through smoke.", "rating": "average" },
+    { "name": "Surveillance Radar", "flavor": "2 charges, 25s active on a 180s cooldown, 9.9 km range, longer reach than Atlanta or Baltimore get at their own tiers.", "rating": "strong" },
+    { "name": "Defensive AA Fire", "flavor": "2 charges, 40s active on a 150s cooldown, +200% average AA damage. Stock numbers for the type.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 3, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 3, "arcs": ["bow", "port", "starboard"], "position": "centerline", "note": "Superfiring over turret 1, same forward-friendly coverage." },
+    { "label": "3", "guns": 3, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "torpedoMounts": [],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 2", "alternative": "Steering Gears Modification 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Modification 1", "alternative": "Chromium Plated Barrels" }
+  ],
+  "strengths": [
+    "9.9 km Surveillance Radar range beats Atlanta and Baltimore, the two other tier VI/VIII US radar cruisers",
+    "4,600 AP damage per shell and Sticky Shot trait punish broadside cruisers and battleships that show any angle",
+    "32,500 hp hull is a deep pool for a tier VI cruiser, most of her tier's line ships need an upgraded hull to match it",
+    "11.8 km sea detection is tight for a heavy cruiser, helps her open engagements on her own terms"
+  ],
+  "weaknesses": [
+    "14.3s reload is slower than New Orleans' stock 13.5s and well behind Yorck's 10s, so DPM lags peers with similar guns",
+    "13-146mm armor and a long hull mean an easy citadel the moment she's caught broadside",
+    "No torpedoes at all, zero threat if a fight closes to brawling range",
+    "No upgrade path to lean on later, the stats she has stock are the stats she keeps for good"
+  ],
+  "tips": [
+    "Fight at range and keep some angle on. That citadel is real and battleships will find it.",
+    "Pop Radar when you need to confirm a target through smoke, 9.9 km covers more of the map than most cruisers can manage.",
+    "Lead with AP against anything broadside, the 4,600 damage per shell adds up fast across nine guns.",
+    "Don't try to out-brawl anything up close, she has no torpedoes and no armor to back up a close fight."
+  ],
+  "threats": [
+    { "threat": "Battleships at any range she's spotted", "reason": "Thin armor and a big broadside make her a reliable citadel target." },
+    { "threat": "Destroyers that close the distance", "reason": "No torpedoes and a slow-turning reload leave her with nothing to answer a close-range brawl." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Long-range heavy cruiser, nine 203mm guns in three triple turrets, two forward and one aft.",
+      "Hard-hitting AP and the longest radar range at her tier, but a slow reload holds her DPM back.",
+      "Big and thin-skinned. A caught broadside is a citadel, not a close call."
+    ],
+    "detail": "Indianapolis plays like most Portland-class cruisers should: sit at range, put AP into anyone who shows a flank, and use Radar to keep tabs on smoked-up targets other cruisers can't see. The guns hit hard per shell but reload slowly enough that sustained pressure isn't her strength, she wins exchanges on alpha damage, not rate of fire. The tradeoff for that firepower and hit point pool is a long, thin-skinned hull with no torpedoes to fall back on, so the whole game is staying at an angle and picking fights she starts."
+  },
+  "captainsNotes": "She's slow and fragile and feels most suitable for rapid sniping, and supporting with the sonar.",
+  "image": "/images/ships/indianapolis.jpg",
+  "imageCredit": "USS Indianapolis (CA-35) off the Mare Island Naval Shipyard, 10 July 1945. US Navy, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "utility-support", "note": "9.9 km Surveillance Radar range is the longest of any US cruiser at tier VI or VIII, genuinely useful team spotting tool." }
+  ]
+}

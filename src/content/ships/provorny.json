@@ -77,6 +77,8 @@
     ],
     "detail": "Provorny is the ex-German Z33, handed to the Soviet Union as war reparations and refitted into a destroyer that plays nothing like the rest of her tier. Five 150mm guns across four mounts back up the ship's own 'Big Guns' trait with real numbers, 134,375 HE DPM and 231,250 AP DPM, and the AP overmatches enough plating to make broadside destroyers pay for showing themselves. What she doesn't have is the speed or concealment to dictate when that fight happens. 36 knots and a wide turning circle mean she's often the one getting spotted and closed on, not the other way around. The Repair Party is what makes the trade work, letting her sit in an extended gunfight and shrug off damage that would send most destroyers back to cover. Pick a range where the guns can work and use the hit points to hold it, rather than trying to outmaneuver anyone."
   },
+  "image": "/images/ships/provorny.jpg",
+  "imageCredit": "German destroyer Z33 under RAAF air attack in Forde Fjord, Norway, 9 February 1945. No. 455 Squadron RAAF, Australian War Memorial, public domain, via Wikimedia Commons.",
   "goalTags": [
     { "tag": "torpedo-alpha", "note": "8 torpedo tubes across two centerline mounts, 15,050 damage per torpedo, a big spread for a gun-focused destroyer." },
     { "tag": "tank-brawler", "note": "19,600 hull HP plus a Repair Party most tier VII destroyers don't carry, built to stay in a fight rather than dodge out of one." }

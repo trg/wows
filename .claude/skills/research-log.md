@@ -555,3 +555,26 @@ full tech-tree roster for that tier/class pulled from `Navy:All_Ships` first —
 existing ships are not a sampling frame for what's actually true in the game, especially while the
 DB only covers a fraction of each tier. See the corresponding bullet added to
 `research-quickref.md`.
+
+## St. Louis (USA, tier II protected cruiser): stock/upgraded gun count, turrets left empty
+
+`Navy:St._Louis` rendered its Ship Overview/stats tables fine via the Jina proxy but not its
+Modules/Consumables section (unlike `Navy:Provorny`, where that section came through) — had to
+pull consumables from `wowsbuilds.com/ships/st-louis/consumables` instead (only Damage Control
+Party, all other slots empty). Confirms the intermittent-rendering gotcha applies per-section, not
+just per-page.
+
+Her main battery hull-upgrade module is a bigger jump than the reload/range deltas already
+documented for other ships: 10x1 stock vs 14x1 upgraded 152mm (plus matching HP 25,000/27,000 and
+rudder shift 8.4s/6.4s deltas) — a real *count* of physical mounts changing, not just a rate.
+Wrote the stat row as `"10x1 stock, 14x1 upgraded 152mm"` following the existing Farragut torpedo
+speed convention (`research-quickref.md`) for stock/upgraded splits worth surfacing.
+
+Left `turrets` empty rather than guess. The splash art for this one is an unusually full broadside
+profile (not the usual bow-quartering shot that only ever confirms the forward cluster) and shows
+several casemate gun positions along the hull, but with up to 14 single mounts across two hull
+states this is well past the "confirm the forward pair" ceiling — asked the user in-game instead,
+per the standing rule. Historically the real St. Louis-class had 14x 6" guns as 2 axial chase
+mounts (bow/stern) plus 12 in broadside casemates (6/side), which lines up suspiciously well with
+the 14-upgraded count, but per the "real ship history is out of scope for gameplay data" rule this
+is a hypothesis to confirm with the user, not something to assume carries over.
