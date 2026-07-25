@@ -1,0 +1,85 @@
+{
+  "name": "Le Terrible",
+  "nation": "France",
+  "type": "Destroyer",
+  "tier": 6,
+  "isPremium": true,
+  "shortDescription": "French torpedo-boat destroyer built around raw speed: 43 knots and five guns that reload in 5 seconds, with no smoke screen to hide behind.",
+  "role": "Fast gun-and-torpedo destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "18,600", "rating": "strong" },
+    { "label": "Main Battery", "value": "5x1 139mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "5.0 s", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "10.8 km", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "3x3 550mm", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "8.0 km", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "18,400", "rating": "strong" },
+    { "label": "Torpedo Speed", "value": "65 kts", "rating": "strong" },
+    { "label": "Max Speed", "value": "43 kts", "rating": "strong" },
+    { "label": "Turning Radius", "value": "690 m", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "4.3 s", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "6.7 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "3.5 km", "rating": "average" },
+    { "label": "Armor", "value": "6-16mm", "rating": "weak" },
+    { "label": "AA", "value": "2x1 + 2x2 13.2mm, 1x1 + 2x2 37mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Same stock reset the tech-tree French destroyers around this tier get, nothing unique to this hull.", "rating": "average" },
+    { "name": "Engine Boost", "flavor": "2 charges, 120s at only +8% speed off a 180s cooldown, about a third of the +20% the tech-tree French destroyers get from the same consumable.", "rating": "weak" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "3", "guns": 1, "arcs": ["port", "starboard"], "position": "centerline", "note": "Amidships mount, needs a full broadside, can't reach the bow or stern arc." },
+    { "label": "4", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" },
+    { "label": "5", "guns": 1, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "torpedoMounts": [
+    { "label": "Port", "tubes": "3 tubes", "side": "port", "note": "Fixed to this broadside, mirrored by the starboard mount on the same line." },
+    { "label": "Starboard", "tubes": "3 tubes", "side": "starboard" },
+    { "label": "Aft", "tubes": "3 tubes", "side": "centerline", "note": "Farthest aft of the three mounts, can swing to either broadside." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Propulsion Modification 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Modification 1", "alternative": "Chromium Plated Barrels" }
+  ],
+  "strengths": [
+    "43 kt top speed is enormous for tier VI, 6 kts faster than the tech-tree French destroyer at the same tier",
+    "Five guns reload in 5 seconds, giving her more DPM than Le Hardi's six guns despite the smaller battery",
+    "9 torpedo tubes across three mounts deal 18,400 damage each, some of the hardest-hitting torpedoes at this tier",
+    "18,600 hull HP is a big pool for a tier VI destroyer"
+  ],
+  "weaknesses": [
+    "No Smoke Generator at all, unlike every tech-tree French destroyer around this tier",
+    "Engine Boost only adds 8% speed instead of the 20% her tech-tree sisters get from the same consumable",
+    "Thin 6-16mm armor and weak AA (four small-caliber mounts) leave her exposed once she's spotted or a carrier finds her",
+    "690m turning radius is wide for the tier, hard to juke incoming fire despite the raw speed",
+    "8 km torpedo range is short, forces a real approach to land a hit"
+  ],
+  "tips": [
+    "Use the speed to control range and reposition, not to face-tank. There's no smoke or heal to bail you out once you're seen.",
+    "Commit to a torpedo run early. 8 km range means you're already close by the time the fish are in the water.",
+    "Kite with the guns rather than trading broadside. The armor won't survive a slugging match with anything that shoots back.",
+    "Watch the sky. The AA won't save you if a carrier decides to focus you down."
+  ],
+  "threats": [
+    { "threat": "Carriers", "reason": "Weak AA across four small-caliber mounts means plane strikes go mostly unanswered." },
+    { "threat": "Radar or hydro cruisers", "reason": "No Smoke Generator means there's nowhere to hide once she's lit up." },
+    { "threat": "Anything at close range", "reason": "6-16mm armor turns a return salvo into real damage fast, and there's no escape tool to break contact." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Premium French torpedo-boat destroyer built entirely around speed and gun pressure, no smoke to hide behind.",
+      "Reloads five guns in five seconds, real DPM for a tier VI destroyer despite the smaller barrel count.",
+      "Nine torpedo tubes across three mounts hit harder than almost anything else at this tier, but the range is short.",
+      "Fast enough to dictate range against nearly anything at tier VI, but thin-skinned and exposed once she's found."
+    ],
+    "detail": "Le Terrible is one of six Le Fantasque-class contre-torpilleurs, ships the French Navy built less as escorts than as fast strike destroyers, all engine and gun. In game she keeps that identity. 43 knots is enormous for tier VI, and five 139mm guns reloading every five seconds give her real gunline pressure despite carrying one fewer barrel than the tech-tree Le Hardi. What she gives up for that speed is any way to hide once she's found. There's no Smoke Generator in her consumable slots, and her Engine Boost only manages an 8% bump instead of the 20% her tech-tree sisters get. Fighting on her terms means using the legs she has to control range and set up torpedo runs before anyone gets a clean shot at that paper-thin hull."
+  },
+  "image": "/images/ships/le-terrible.jpg",
+  "imageCredit": "Le Terrible, 18 May 1943. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "9 tubes across three mounts and 18,400 damage per torpedo, among the heaviest torpedo alpha strikes at tier VI." }
+  ]
+}

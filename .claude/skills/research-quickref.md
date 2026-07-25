@@ -105,9 +105,13 @@ legitimate at a glance — check every new source against this list before trust
   "of any X" phrasing that's the risk.
 - Confirmed-good additional `Navy:` pages beyond the original launch roster: `Navy:Nino_Bixio`,
   `Navy:Gryf`, `Navy:Shi_An`, `Navy:Hércules`, `Navy:Gelderland`, `Navy:Júpiter` (tier I cruisers),
-  and `Navy:Wakeful`, `Navy:V-170`, `Navy:Izyaslav`, `Navy:Bourrasque`, `Navy:Turbine`,
-  `Navy:Klas_Horn`, `Navy:Shenyang`, `Navy:G-101` (tier III destroyers) — all confirmed via
-  breadcrumb, useful for peer-comparison research even for nations not yet on the site.
+  `Navy:Wakeful`, `Navy:V-170`, `Navy:Izyaslav`, `Navy:Bourrasque`, `Navy:Turbine`,
+  `Navy:Klas_Horn`, `Navy:Shenyang`, `Navy:G-101` (tier III destroyers), and `Navy:Le_Terrible`,
+  `Navy:Le_Hardi` (tier VI French destroyers) — all confirmed via breadcrumb, useful for
+  peer-comparison research even for nations not yet on the site.
+- A premium ship's consumables are worth diffing against its closest tech-tree sibling even when
+  the consumable name matches exactly (same duration/cooldown can still hide a weaker magnitude,
+  e.g. a smaller speed bonus on Engine Boost) — confirmed on Le Terrible vs Le Hardi.
 - A ship's own "Player Opinion" prose can contradict its own stat table on the same page — trust
   the hard number over the blurb.
 - `torpedoMounts`' `spreadPattern`/`firingSector`/`singleTubeFire` fields are rarely confirmable

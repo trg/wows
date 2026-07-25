@@ -578,3 +578,29 @@ per the standing rule. Historically the real St. Louis-class had 14x 6" guns as 
 mounts (bow/stern) plus 12 in broadside casemates (6/side), which lines up suspiciously well with
 the 14-upgraded count, but per the "real ship history is out of scope for gameplay data" rule this
 is a hypothesis to confirm with the user, not something to assume carries over.
+
+## Le Terrible (France, tier VI premium destroyer): turret/torpedo layout confirmed by user
+
+`Navy:Le_Terrible` and `Navy:Le_Hardi` (the tech-tree tier VI French destroyer, used as the direct
+same-tier/same-nation peer for stat ratings) both came through cleanly via the Jina proxy, no
+retries needed. Both added to the confirmed-good `Navy:` page list.
+
+The splash art (bow-quartering, as usual) only confirmed the forward cluster was plausible, not
+the full 5-turret/1-torpedo-mount layout, so asked the user in-game per the standing rule rather
+than reasoning further from the image or from the real Le Fantasque-class's historical layout
+(which happens to match what the user reported, but that's not why it went in the file). User
+confirmed: 2 forward turrets (3-way arcs), 1 amidships turret (port/starboard only, no bow/stern),
+2 aft turrets (3-way arcs); torpedoes are a port-fixed mount and a mirrored starboard-fixed mount
+on the same line, with a third centerline (swing-either-way) mount farther aft of those two.
+
+Real-ship history was genuinely useful here in one narrow way: the Wikimedia Commons NH 81774
+photo (public domain, used for the `image` field) is a clean broadside profile with a caption
+confirming ship name, nation, and class, which made picking the right photo fast. That's the
+"photo sourcing is unrelated to the stats-history rule" carve-out from `wows-ship`'s SKILL.md
+working as intended, not an exception to it.
+
+Also confirmed: a premium ship's own consumable numbers are worth diffing against its tech-tree
+sibling even when the consumable name matches exactly. Le Terrible's Engine Boost is +8% speed
+vs Le Hardi's +20% for the same consumable and cooldown/duration, a real and citable weakness
+(the wiki's own Player Opinion section calls it out too) that would've been missed by only reading
+Le Terrible's own page in isolation.
