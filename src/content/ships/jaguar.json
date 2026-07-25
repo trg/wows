@@ -1,0 +1,82 @@
+{
+  "name": "Jaguar",
+  "nation": "France",
+  "type": "Destroyer",
+  "tier": 4,
+  "shortDescription": "Tier IV French contre-torpilleur with five 130mm guns and long, hard-hitting torpedoes, but no smoke screen to hide behind.",
+  "role": "Gun-and-torpedo destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "12,800 stock, 16,600 upgraded", "rating": "strong" },
+    { "label": "Main Battery", "value": "5x1 130mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "6.6 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "9.1 km stock, 10.1 km upgraded", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "2x3 550mm", "rating": "average" },
+    { "label": "Torpedo Range", "value": "7.0 km", "rating": "strong" },
+    { "label": "Torpedo Damage", "value": "14,833", "rating": "strong" },
+    { "label": "Torpedo Speed", "value": "66 kts stock, 68 kts upgraded", "rating": "strong" },
+    { "label": "Max Speed", "value": "35.5 kts", "rating": "average" },
+    { "label": "Turning Radius", "value": "660 m", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "5.7 s stock, 4.0 s upgraded", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "6.0 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "3.0 km", "rating": "average" },
+    { "label": "Armor", "value": "3-10mm", "rating": "weak" },
+    { "label": "AA", "value": "2x1 13.2mm + 2x1 75mm stock, 2x2 13.2mm + 2x2 37mm upgraded", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Stock destroyer reset, nothing unique to this hull.", "rating": "average" },
+    { "name": "Engine Boost", "flavor": "2 charges, +20% speed for 120s off a 180s cooldown, two and a half times the +8% tier IV rival Farragut gets from the same consumable. The main defensive tool here, since there's no smoke to duck into.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 1, "arcs": ["port", "starboard"], "note": "Amidships mount between the funnels, needs a full broadside, can't reach the bow or stern arc." },
+    { "label": "4", "guns": 1, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 1, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "1", "tubes": "3 tubes", "side": "centerline" },
+    { "label": "2", "tubes": "3 tubes", "side": "centerline" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" }
+  ],
+  "strengths": [
+    "12,800/16,600 hull HP is well above tier IV rival Farragut's 11,200, more room to soak damage in a straight fight",
+    "130mm guns hit for 2050 HE and 2450 AP with a 9% fire chance, all ahead of Farragut's 1800 HE, 2100 AP and 5%",
+    "Torpedoes reach 7km at 66-68kts for 14,833 damage, well past Farragut's 5.5km, 56-58kts and 11,733",
+    "Full +20% Engine Boost gives real speed to reposition or open a torpedo run"
+  ],
+  "weaknesses": [
+    "Thin 3-10mm armor and no repair party mean any hit that lands is permanent",
+    "No Smoke Generator at all, unlike most destroyers at this tier",
+    "6.6s main battery reload is well behind Farragut's 4.3s, so gun DPM lags the per-shell numbers",
+    "AA is two small-caliber mounts putting out single-digit DPS, no real defense against planes",
+    "660m turning radius is wide for the tier, harder to juke incoming fire"
+  ],
+  "tips": [
+    "Use Engine Boost to control range, not just to run. The full 20% is enough to set up a torpedo pass or pull out of a bad fight.",
+    "7km torpedo range means you often don't have to close in as tight as most tier IV destroyers to land a hit.",
+    "Land single well-aimed HE shots rather than trying to out-DPM a faster-reloading gunboat. The bigger per-shell damage and fire chance pay off over a longer fight.",
+    "Watch the sky. The AA won't do anything for you if a carrier decides to focus you.",
+    "There's no smoke and no heal, so treat any real hit as permanent and disengage early instead of trading."
+  ],
+  "threats": [
+    { "threat": "Carriers", "reason": "Two small-caliber AA mounts mean plane strikes go almost entirely unanswered." },
+    { "threat": "Radar or hydro cruisers", "reason": "No Smoke Generator means there's nowhere to hide once she's lit up." },
+    { "threat": "Anything at close range", "reason": "3-10mm armor turns a return salvo into real damage fast, and Damage Control Party is the only defensive tool available." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Tier IV French contre-torpilleur built around five 130mm guns and long-legged, hard-hitting torpedoes.",
+      "Bigger hull and stronger per-hit numbers than tier IV rival Farragut, but a slower reload and no smoke screen.",
+      "Leans on a full-strength Engine Boost for survival instead of concealment or a heal."
+    ],
+    "detail": "Jaguar is one of six Chacal-class contre-torpilleurs the French Navy built in the 1920s as fast strike destroyers rather than escorts. In game she keeps that identity halfway. The hull is bigger than most tier IV destroyers, reaching 16,600 HP fully upgraded, and both the guns and torpedoes hit harder per shot than Farragut's, the closest tier IV rival. What she gives up for it is tempo. The 130mm battery takes 6.6 seconds to cycle against Farragut's 4.3, and there's no Smoke Generator anywhere in the consumable slots, just a full 20% Engine Boost to create distance instead. Fighting her well means picking the range where the bigger per-shell numbers matter and using that speed to get there and get out, not trying to win a straight gunfight."
+  },
+  "image": "/images/ships/jaguar.jpg",
+  "imageCredit": "Agence Rol, Bibliothèque nationale de France (Gallica), public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "14,833 damage per torpedo and 7km range comfortably beat tier IV rival Farragut's 11,733 and 5.5km." },
+    { "tag": "fire-starter", "note": "9% HE fire chance and 2050 HE damage per shell outpace Farragut's 5% and 1800, even with a slower reload." }
+  ]
+}

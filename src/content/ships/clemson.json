@@ -3,8 +3,8 @@
   "nation": "USA",
   "type": "Destroyer",
   "tier": 3,
-  "shortDescription": "Early torpedo boat with a massive alpha strike, let down by detection worse than most tier III destroyer peers.",
-  "role": "Torpedo alpha striker",
+  "shortDescription": "Early torpedo boat with massive per-hit torpedo damage, let down by detection worse than most tier III destroyer peers.",
+  "role": "Heavy torpedo striker",
   "stats": [
     { "label": "Hull HP", "value": "11,700", "rating": "weak" },
     { "label": "Main Battery", "value": "4x1 102mm", "rating": "weak" },
@@ -40,7 +40,7 @@
     { "slot": "Slot 3", "recommended": "Aiming Systems Modification 1 (torpedo reload)" }
   ],
   "strengths": [
-    "Twelve torpedo tubes across four mounts, an enormous alpha strike for tier III",
+    "Twelve torpedo tubes across four mounts, enormous per-hit damage for tier III",
     "Fast turret traverse and rudder shift keep her responsive even though the guns are a last resort",
     "35.5-knot top speed lets her open the range or reposition after a torpedo run"
   ],
@@ -61,7 +61,7 @@
   ],
   "playstyle": {
     "summary": [
-      "Huge torpedo alpha strike for the tier, though concealment is below average, not the asset it's often assumed to be.",
+      "Huge per-hit torpedo damage for the tier, though concealment is below average, not the asset it's often assumed to be.",
       "A torpedo boat first, guns are strictly a last resort.",
       "Paper-thin. One good salvo ends the game."
     ],

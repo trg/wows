@@ -640,3 +640,51 @@ sibling even when the consumable name matches exactly. Le Terrible's Engine Boos
 vs Le Hardi's +20% for the same consumable and cooldown/duration, a real and citable weakness
 (the wiki's own Player Opinion section calls it out too) that would've been missed by only reading
 Le Terrible's own page in isolation.
+
+## Jaguar (France, tier IV tech-tree destroyer): name collision on Commons, turret layout from user
+
+`Navy:Jaguar` came through cleanly on a direct `curl` with a browser UA, no bot-check stub and no
+need for the Jina proxy this time (breadcrumb confirmed: Homepage / WoWS Legends / Jaguar). Tier
+IV, sole French destroyer at that tier (Bourrasque at III, Guépard/Vauquelin at V per the
+tech-tree order on `Navy:Destroyers`), so `Navy:Farragut` (USN tier IV) was fetched fresh as the
+same-tier peer for every stat comparison in the file rather than reusing `farragut.json`'s
+checked-in numbers unverified — matches the standing gotcha that a site file can go stale if the
+live page has since changed. Farragut's own page was still consistent with `farragut.json` this
+time, no drift found.
+
+Wiki's own stat tables listed main battery as 5x1, but the user's in-game description only
+accounted for 4 turrets (2 forward, 2 aft, both "3 directions"). Asked rather than guessing or
+silently trusting the number: user confirmed a 5th mount amidships between the funnels, arc
+restricted to port/starboard only, same pattern as Le Terrible's turret 3. Worth remembering as a
+general check: if a user's turret description totals fewer guns than the wiki's arrangement
+figure, there's likely an amidships mount they didn't mention rather than a wiki error — ask about
+the gap specifically instead of taking the partial count at face value.
+
+Aviere (tier V Italian tech-tree destroyer): the user supplied the turret/torpedo layout directly
+from in-game observation, in shorthand ("aft to stern, all centerline: 1 turret (3 ways), torp
+(broadsides only) turret bsides only torp bsides only, then lastly 1 turret 3 sides"). Read as:
+five mounts in bow-to-stern order, alternating turret/torp/turret/torp/turret, all physically
+centerline (no port/starboard-offset casemates), with the first and last turrets getting the usual
+3-of-4 arc and the middle turret restricted to port/starboard only (the by-now-familiar
+amidships-mount pattern from Le Terrible/Mahan). The two "broadsides only" torpedo mentions weren't
+extra restriction beyond the schema's normal `side: 'centerline'` behavior — every centerline
+torpedo mount in this schema fires to either broadside and never bow/stern anyway, so that part of
+the user's description confirmed normalcy (no port/starboard-offset torpedo tubes) rather than
+describing something to encode as a special note. Cross-checked against `Navy:Aviere`'s own
+arrangement notation (1x1 + 2x2 guns = 3 turrets/5 guns, 2x3 torpedoes = 2 mounts/6 tubes) and the
+totals matched the user's mount count exactly, which is what made assigning the 1-gun turret to
+the described amidships slot (rather than guessing) safe.
+
+Commons photo search turned up a genuine name collision: `Category:Jaguar (ship, 1928)` mixes
+photos of *two different ships* both called Jaguar — the French Chacal-class contre-torpilleur
+(this ship, completed 1926) and an unrelated German Type 24 "Raubtier-class" torpedo boat (Kriegsmarine,
+commissioned 1928). The Bundesarchiv file `Bundesarchiv DVM 10 Bild-23-63-36, Torpedoboot "Jaguar".jpg`
+looked like an easy, well-licensed (CC-BY-SA-3.0-DE) pick, but its own German-language description
+reads "Torpedoboote Typ 24, 'Raubtier-Klasse'" — the wrong navy entirely. Caught by reading the
+file's actual description field rather than trusting the filename/category match alone. Used
+`Le Jaguar (contre-torpilleur français) - btv1b53230550n.jpg` instead (Agence Rol via
+Bibliothèque nationale de France/Gallica, PD-France/PD-US, explicitly captioned "contre-torpilleur
+français"). General lesson: a Commons category built around a ship name, not a Wikidata ship
+identity, can silently contain a same-named vessel from a different navy, even when licensing and
+image quality both look fine. Check the file's own caption/description for nation and ship type
+before trusting a category-page match, not just the category title.

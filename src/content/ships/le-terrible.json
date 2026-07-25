@@ -80,6 +80,6 @@
   "image": "/images/ships/le-terrible.jpg",
   "imageCredit": "Le Terrible, 18 May 1943. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
   "goalTags": [
-    { "tag": "torpedo-alpha", "note": "9 tubes across three mounts and 18,400 damage per torpedo, among the heaviest torpedo alpha strikes at tier VI." }
+    { "tag": "torpedo-alpha", "note": "9 tubes across three mounts and 18,400 damage per torpedo, among the heaviest per-hit torpedo damage at tier VI." }
   ]
 }

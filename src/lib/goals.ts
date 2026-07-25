@@ -19,7 +19,7 @@ export const GOAL_CATEGORIES: Record<GoalTag, { title: string; description: stri
     description: 'High fire chance and HE spam to burn down anything that shows broadside.',
   },
   'torpedo-alpha': {
-    title: 'Best for Torpedo Alpha Strikes',
+    title: 'Best for Devastating Torpedo Hits',
     description: 'Devastating torpedo salvos that can delete a ship in one well-placed hit.',
   },
   'stealth-play': {

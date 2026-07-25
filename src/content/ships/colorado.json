@@ -1,0 +1,81 @@
+{
+  "name": "USS Colorado",
+  "nation": "USA",
+  "type": "Battleship",
+  "tier": 6,
+  "shortDescription": "Eight-gun all-or-nothing battleship, the slowest of her tier but the best armored and best protected against torpedoes.",
+  "role": "Armored gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "59,300", "rating": "average" },
+    { "label": "Main Battery", "value": "4x2 406mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "16.5 km", "rating": "strong" },
+    { "label": "Shell Grouping", "value": "1.9", "rating": "strong" },
+    { "label": "Max Speed", "value": "21 kts", "rating": "weak" },
+    { "label": "Turning Circle", "value": "640 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "16 s", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "14.8 km", "rating": "average" },
+    { "label": "Armor", "value": "6-457mm hull range", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "37%", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "8x1 + 8x1 127mm", "rating": "weak" },
+    { "label": "AA Defense", "value": "~294 combined DPS across 3 mounts", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown, unlimited charges. Standard USN reset, the same cycle as Nevada's and New Mexico's.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 391 hp/s, about 0.66% of max HP per second against the standard 0.5%, roughly 32,900 hp back across all three charges against her 59,300 hp pool.", "rating": "strong" },
+    { "name": "Catapult Fighter", "flavor": "3 charges, 90s duration, 80s cooldown. One of three options in the shared utility slot, the pick that keeps spotter planes and strike squadrons off her.", "rating": "average" },
+    { "name": "Observation Seaplane", "flavor": "3 charges, 30s duration at +10% shell grouping, 200s cooldown. The accuracy pick in that same three-way slot, worth saving for a lined-up volley.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 160s cooldown. The third option in that slot, though her 127mm secondaries are short-ranged and light enough that the buff has less to work with than it does on some other USN battleships.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Mod 2", "alternative": "AA Guns Mod 2" },
+    { "slot": "Slot 2", "recommended": "Propulsion Mod 2", "alternative": "Steering Gears Mod 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Mod 1", "alternative": "Chromium Plated Barrels" }
+  ],
+  "strengths": [
+    "457mm max belt on the all-or-nothing armor scheme, tied with Nagato for the thickest of any tier VI battleship and well ahead of Gneisenau's 360mm, Sinop's 400mm, Lyon's 360mm, and King George V's and F. Caracciolo's shared 381mm",
+    "37% torpedo damage reduction, clear of every tier VI peer here (Gneisenau and King George V both sit at 22%, F. Caracciolo at 25%, Sinop and Lyon at 16%)",
+    "16.5 km gun range tied with Nagato for the longest at the tier, backed by 1.9 shell grouping that's tighter than all but Nagato's 2.0",
+    "640m turning circle, the tightest of the tier VI battleships and the official Agile trait to match",
+    "Upgraded AA suite adds up to roughly 294 combined DPS across three mounts, enough to make mid-tier squadrons think twice",
+    "Repair Party heals 0.66% of max HP per second against the standard 0.5%, which claws back some of what the smaller gun count costs her"
+  ],
+  "weaknesses": [
+    "21 knots top speed, the slowest tier VI battleship here by a wide margin (every other one runs 26-32 knots), and acceleration without the top engine is bad enough that stopping or reversing is a real struggle",
+    "Only 8 guns across four turrets, four fewer than her own predecessor New Mexico's twelve, so landing the accuracy on offer matters more than raw volume",
+    "Dispersion gets inconsistent both past 14 km and inside 6 km",
+    "Poor secondary batteries, just 127mm mounts on a 5 km leash",
+    "26mm plating outside the belt like every tier VI battleship, so HE spam and overmatch from 380mm-plus guns still get through, and the tall superstructure catches a lot of it"
+  ],
+  "tips": [
+    "Angle the belt early and hold it. The all-or-nothing layout gives you a real immune zone as long as you're not showing broadside.",
+    "Don't count on speed to get you out of a bad spot, you're the slowest hull at the tier so commit to a position before you're already in range.",
+    "Pick your Slot 3 consumable around the match plan: Catapult Fighter against carriers and spotter planes, Observation Seaplane for a called shot, Enhanced Secondary Targeting only if you're actually planning to brawl.",
+    "Look for the 6-14 km band where your dispersion is at its best rather than sitting at max range or rushing in close.",
+    "Keep Damage Control Party ready for the superstructure, it catches fire easily even though the belt itself is tough."
+  ],
+  "threats": [
+    { "threat": "Anything that can overmatch 26mm plating", "reason": "380mm-plus guns punch through her upper hull and superstructure even though the belt itself holds up fine." },
+    { "threat": "Faster battleships and cruisers dictating range", "reason": "21 knots means she can't chase a fight or reposition out of one, every tier VI peer here outruns her." },
+    { "threat": "Destroyers closing for a torpedo run", "reason": "37% torpedo reduction softens the hit but her top speed still can't out-maneuver a well-aimed spread." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Eight 406mm guns in four turrets, accurate at range and hard-hitting up close, but the slowest hull at tier VI by a wide margin.",
+      "All-or-nothing 457mm belt and 37% torpedo reduction make her the best-armored, best-protected tier VI battleship against both shells and fish.",
+      "A strong upgraded AA suite and a heal-heavy Repair Party offset a smaller gun count and weak secondaries."
+    ],
+    "detail": "Colorado gave up speed for everything else. She can't chase a fight or run from one, and her acceleration off a standing start is genuinely bad, but angle that 457mm belt and very little gets through until someone finds the thinner plating above it. Eight guns is light for the tier, yet tight 1.9 shell grouping and 16.5 km range mean the shots she does land tend to count, and the torpedo protection is the best around at tier VI if a destroyer gets a spread off anyway. The AA suite is unusually strong for a battleship this tier, so carriers and spotter planes don't get an easy pass. Pick a lane, angle in, and let the Repair Party make up some of what the light broadside costs you."
+  },
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "457mm max belt ties Nagato for the thickest at tier VI, and 37% torpedo damage reduction beats every other tier VI battleship here." },
+    { "tag": "aa-defense", "note": "Roughly 294 combined AA DPS across three upgraded mounts, among the strongest AA fits of any tier VI battleship." }
+  ],
+  "image": "/images/ships/colorado.jpg",
+  "imageCredit": "USS Colorado (BB-45) at sea off Honolulu, late 1920s or early 1930s. U.S. Naval History and Heritage Command, public domain, via Wikimedia Commons."
+}

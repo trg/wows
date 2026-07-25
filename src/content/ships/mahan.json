@@ -1,0 +1,87 @@
+{
+  "name": "USS Mahan",
+  "nation": "USA",
+  "type": "Destroyer",
+  "tier": 5,
+  "shortDescription": "Fast-reloading tier V gunboat destroyer with twelve torpedo tubes as a secondary threat.",
+  "role": "Gunboat destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "10,400 stock, 13,400 upgraded", "rating": "average" },
+    { "label": "Main Battery", "value": "5x1 127mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "3.6 s", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "10.4 km", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "3x4 533mm", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "8.0 km", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "11,733", "rating": "weak" },
+    { "label": "Torpedo Speed", "value": "64 kts", "rating": "average" },
+    { "label": "Max Speed", "value": "35 kts", "rating": "weak" },
+    { "label": "Turning Radius", "value": "560 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "4.0 s stock, 2.7 s upgraded", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "6.8 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "3.4 km", "rating": "weak" },
+    { "label": "Armor", "value": "6-21mm hull, no real belt", "rating": "weak" },
+    { "label": "AA", "value": "4x1 secondary mounts, ~30 DPS", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Stock USN cycle, nothing that sets Mahan apart from her sisters.", "rating": "average" },
+    { "name": "Smoke Generator", "flavor": "2 charges, 26s to lay, about 118s of screen off a 240s cooldown. Extended duration helps mask a hull that isn't winning any speed contests, but two charges won't cover a whole match.", "rating": "average" },
+    { "name": "Engine Boost", "flavor": "2 charges, +8% speed for 120s, 180s cooldown. About the only way to shed the 'Slow' label built into this hull.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 1, "arcs": ["port", "starboard"], "note": "Midship mount needs a full broadside, can't fire directly fore or aft." },
+    { "label": "4", "guns": 1, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 1, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "1", "tubes": "4 tubes", "side": "centerline", "note": "Forward-most of the three mounts, can swing to either broadside." },
+    { "label": "2", "tubes": "4 tubes", "side": "port" },
+    { "label": "3", "tubes": "4 tubes", "side": "starboard" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Damage Control System Modification 2" }
+  ],
+  "strengths": [
+    "3.6s reload on the 127mm battery gives some of the best gun DPM at tier V, even with only five barrels",
+    "Fast turret traverse (Nimble Aim) keeps guns on target through close-range turns",
+    "Quick 2.7s upgraded rudder shift and a tight 560m turning radius for dodging incoming fire",
+    "Most torpedo tubes of any tier V destroyer, 12 across three mounts, with one broadside always ready to fire",
+    "Extended smoke duration covers a longer reposition or retreat than a standard destroyer's screen"
+  ],
+  "weaknesses": [
+    "Torpedo damage per hit is the weakest of the tier V peer group",
+    "Floaty 127mm shell arcs make long-range gunnery inconsistent",
+    "Below-average top speed, an official 'Slow' trait",
+    "Bad concealment at 6.8 km sea detection gets her spotted first in most fights",
+    "Thin AA won't stop a determined air strike",
+    "No repair party, so any damage taken is permanent"
+  ],
+  "tips": [
+    "Trade shells first. That 3.6s reload usually wins a straight gunfight against other tier V destroyers.",
+    "Use the rudder and turning circle to juke incoming salvos rather than trying to outrun them, speed isn't her strength.",
+    "Pop smoke early when spotted and let the long linger time cover your reposition.",
+    "Flip on Engine Boost before a push or a retreat, it's the difference-maker for a ship built slower than her peers.",
+    "Fire the port or starboard mount whenever you're already committed to that broadside, and save the centerline mount for a target you can angle toward."
+  ],
+  "threats": [
+    { "threat": "Cruisers or destroyers with radar/hydro", "reason": "They strip away the smoke screen Mahan leans on to reposition and reset a fight." },
+    { "threat": "Faster or stealthier destroyers", "reason": "Below-average speed and bad concealment mean they choose when and where the fight starts." },
+    { "threat": "Carriers", "reason": "Weak AA leaves her exposed to a committed strike." }
+  ],
+  "playstyle": {
+    "summary": [
+      "A fast-firing 127mm gunboat destroyer, the torpedoes are backup rather than the main plan despite carrying twelve tubes.",
+      "Wins gunfights on reload speed and fire chance, not gun caliber.",
+      "Sharp rudder and turning circle for a hull that's otherwise on the slow side.",
+      "Concealment and AA are both weak points, not built to hide or to survive a determined air strike."
+    ],
+    "detail": "Mahan follows the same gunboat idea as Farragut, more torpedo tubes added onto a hull that still wins its fights with the guns. The 127mm battery cycles faster than almost anything else at tier V, so closing to a range where those floaty shell arcs actually land tends to pay off. The third turret sitting amidships only swings to a broadside, a sign this is still an early destroyer design working around deck space rather than a clean sheet. Twelve torpedo tubes look imposing on paper, but the per-fish damage lags the rest of the tier, so treat them as a follow-up rather than the reason to close in. She's not a ship that survives on stealth. The concealment numbers are poor and the speed is nothing special, so the rudder and turning circle end up doing more defensive work than the smoke screen does."
+  },
+  "image": "/images/ships/mahan.jpg",
+  "imageCredit": "USS Mahan (DD-364), 1938. U.S. Navy, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "fire-starter", "note": "3.6s reload and above-average HE fire chance make her one of the fastest-cycling fire starters at tier V." }
+  ]
+}

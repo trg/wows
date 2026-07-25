@@ -10,7 +10,7 @@
     { "label": "Main Battery", "value": "4x2 152mm", "rating": "average" },
     { "label": "Main Battery Reload", "value": "10s stock, 9s upgraded", "rating": "average" },
     { "label": "Main Battery Range", "value": "12.4 km stock, 13.6 km upgraded", "rating": "average" },
-    { "label": "Main Battery Sigma", "value": "2.15", "rating": "strong" },
+    { "label": "Main Battery Shell Grouping", "value": "2.15", "rating": "strong" },
     { "label": "Torpedo Tubes", "value": "2x3 533mm", "rating": "weak" },
     { "label": "Torpedo Damage", "value": "11,136", "rating": "average" },
     { "label": "Torpedo Reload", "value": "88 s", "rating": "weak" },
@@ -39,7 +39,7 @@
   ],
   "strengths": [
     "27,800 hp upgraded beats Omaha (26,800) and Emerald (27,100), backed by the official Tough trait",
-    "Carries both HE and AP with a tight 2.15 sigma, so she isn't locked into one shell type like Emerald or Danae",
+    "Carries both HE and AP with tight 2.15 shell grouping, so she isn't locked into one shell type like Emerald or Danae",
     "Sonar reaches further than Omaha's or Emerald's, 4 km ship / 3 km torpedo detection over a full 100s",
     "10.5 km sea detectability and the Hidden trait let her set her own engagement range"
   ],
@@ -68,7 +68,7 @@
       "Torpedoes are a light secondary threat, two triple mounts, not the main weapon.",
       "Thin, exposed armor and mediocre AA sit behind that HP number."
     ],
-    "detail": "Galicia trades torpedo volume for durability. Where Omaha and Emerald both carry four launcher mounts, Galicia gets by with two and leans instead on more hull HP than either of them and a main battery that doesn't have to choose between HE and AP. The 2.15 sigma keeps those eight guns landing close together, and Sonar here outranges the version they get. None of that fixes the armor, though. The citadel is just as exposed as her peers', the AA is weak, and the consumable kit stops at Damage Control Party and Sonar, no smoke or heal to lean on if a fight goes wrong."
+    "detail": "Galicia trades torpedo volume for durability. Where Omaha and Emerald both carry four launcher mounts, Galicia gets by with two and leans instead on more hull HP than either of them and a main battery that doesn't have to choose between HE and AP. The 2.15 shell grouping keeps those eight guns landing close together, and Sonar here outranges the version they get. None of that fixes the armor, though. The citadel is just as exposed as her peers', the AA is weak, and the consumable kit stops at Damage Control Party and Sonar, no smoke or heal to lean on if a fight goes wrong."
   },
   "image": "/images/ships/galicia.jpg",
   "imageCredit": "Cruiser Príncipe Alfonso, later renamed Libertad and then Galicia, underway in 1927. Public domain, via Wikimedia Commons.",

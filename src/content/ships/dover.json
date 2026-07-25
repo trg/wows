@@ -45,7 +45,7 @@
   "strengths": [
     "77,500 hull HP beats tech-tree sister ship Hawke's hull even fully upgraded (73,800)",
     "17.6 km main battery range out of the box already beats Hawke's own upgraded range (16.8 km), backed by the Long Reach trait",
-    "Sigma 2 tightens shell grouping noticeably over Hawke's stock 1.7, more of those 406mm AP shells land close together at range",
+    "2.0 shell grouping, tighter than Hawke's stock 1.7, means more of those 406mm AP shells land close together at range",
     "13,860 max AP damage per shell outdoes Hawke's 12,600, and 40% HE fire chance keeps a burn option in reserve too",
     "Four fixed 533mm torpedo tubes, two per side, add a damage option on top of the main battery",
     "A dense secondary battery, 8x2 114mm plus 4x2 152mm, backed by Enhanced Secondary Targeting, and six separate AA mounts including a 281 DPS 40mm Bofors battery"
@@ -59,7 +59,7 @@
     "Huge turrets sitting high on that shared hull are easy to knock out, the same vulnerability documented on Hawke's own page"
   ],
   "tips": [
-    "Fight at range. The 17.6 km reach and Sigma 2 accuracy are the whole point, don't give that up to brawl.",
+    "Fight at range. The 17.6 km reach and tight shell grouping are the whole point, don't give that up to brawl.",
     "Bow-tank when you have to take an angle. Turrets A and B both cover the bow arc, only the aft turret can't reach it, so you keep two-thirds of your guns firing.",
     "Showing stern costs you more, only the aft turret can answer from directly astern.",
     "The torpedo tubes are fixed two per side, no centerline swing, so pick your broadside before you commit to a torpedo run.",
@@ -77,7 +77,7 @@
       "Carries a real secondary battery and four fixed torpedo tubes on top of the main battery",
       "Slower and less stealthy than her tech-tree sister, with no Engine Boost to make up the difference"
     ],
-    "detail": "Dover reuses Hawke's hull and her 3x3 406mm battery without changing the gun arrangement, but leans harder into range and accuracy: more firing range, a tighter Sigma value, and more hit points than Hawke reaches even fully upgraded. That comes at a cost. She's half a knot slower, gives up Hawke's Hidden trait outright, and has no Engine Boost to close or open a gap on demand. Underneath the castle dressing the armor scheme hasn't changed, still 32mm over most of the hull and just 25mm at the bow and stern, so that huge health total doesn't mean she can trade blows up close. Keep the range open, let the guns and the accuracy do the work, and angle the bow rather than the stern when a fight forces the issue."
+    "detail": "Dover reuses Hawke's hull and her 3x3 406mm battery without changing the gun arrangement, but leans harder into range and accuracy: more firing range, tighter shell grouping, and more hit points than Hawke reaches even fully upgraded. That comes at a cost. She's half a knot slower, gives up Hawke's Hidden trait outright, and has no Engine Boost to close or open a gap on demand. Underneath the castle dressing the armor scheme hasn't changed, still 32mm over most of the hull and just 25mm at the bow and stern, so that huge health total doesn't mean she can trade blows up close. Keep the range open, let the guns and the accuracy do the work, and angle the bow rather than the stern when a fight forces the issue."
   },
   "goalTags": [
     { "tag": "torpedo-alpha", "note": "Four fixed 533mm tubes, two per side, deal up to 15,867 damage each, a real torpedo threat sitting on top of a full battleship main battery." },

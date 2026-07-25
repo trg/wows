@@ -34,7 +34,7 @@
   "weaknesses": [
     "22 knots is slow for a cruiser at any tier, an official 'Slow' trait, hard to reposition or disengage once committed",
     "9.10 km surface detection runs high for tier II, smaller ships spot her first",
-    "1.80 sigma means loose dispersion, the big broadside doesn't land as cleanly as the raw DPM numbers suggest",
+    "Loose 1.80 shell grouping means the big broadside doesn't land as cleanly as the raw DPM numbers suggest",
     "Only Damage Control Party in her consumable loadout, no heal, no spotting tool, no smoke"
   ],
   "tips": [
@@ -45,7 +45,7 @@
   ],
   "threats": [
     { "threat": "Destroyers", "reason": "They outspot and outrun her, closing for a torpedo run before she can bring enough guns to bear." },
-    { "threat": "Faster cruisers at range", "reason": "Her 1.80 sigma means she loses a clean gunnery duel to anything with tighter dispersion." }
+    { "threat": "Faster cruisers at range", "reason": "Her loose 1.80 shell grouping means she loses a clean gunnery duel to anything with tighter dispersion." }
   ],
   "playstyle": {
     "summary": [

@@ -55,7 +55,7 @@
     "Lead with your guns against other destroyers. The DPM usually wins a straight fight at this tier.",
     "Close the distance before opening up, those arcing shells miss more at range.",
     "Cap early and hold your position, but keep an escape route in mind before you commit.",
-    "Save torps for a ship that's already pushed in close. The range is too short to chip-damage from afar."
+    "Save torpedoes for a ship that's already pushed in close. The range is too short to chip-damage from afar."
   ],
   "threats": [
     { "threat": "Cruisers with radar or hydro", "reason": "They strip away your smoke's usefulness and can punish you at range." },

@@ -1,0 +1,83 @@
+{
+  "name": "Aviere",
+  "nation": "Italy",
+  "type": "Destroyer",
+  "tier": 5,
+  "shortDescription": "Italian tech-tree destroyer with SAP shells and exhaust smoke that stays hidden at full speed, held back by the slowest gun reload and worst concealment of her tier V peers.",
+  "role": "Torpedo and ambush destroyer",
+  "stats": [
+    { "label": "Hull HP", "value": "12,900 stock, 15,300 upgraded", "rating": "strong" },
+    { "label": "Main Battery", "value": "1x1 + 2x2 120mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "6.5 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "9.5 km stock, 10.3 km upgraded", "rating": "weak" },
+    { "label": "Torpedo Tubes", "value": "2x3 533mm", "rating": "average" },
+    { "label": "Torpedo Range", "value": "8 km stock, 10 km upgraded", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "10,000", "rating": "weak" },
+    { "label": "Torpedo Speed", "value": "56 kts", "rating": "weak" },
+    { "label": "Max Speed", "value": "38 kts", "rating": "average" },
+    { "label": "Turning Radius", "value": "570 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "5.0 s stock, 3.6 s upgraded", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "7.8 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "3.4 km", "rating": "average" },
+    { "label": "Armor", "value": "6-16mm", "rating": "average" },
+    { "label": "AA", "value": "6x1 13.2mm, 4x2 20mm, 2x1 37mm upgraded", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 40s cooldown, unlimited charges. Standard reset, nothing that sets Aviere apart from tech-tree destroyers at this tier.", "rating": "average" },
+    { "name": "Exhaust Smoke Generator", "flavor": "3 charges, 10s dispersion, 25s screen off a 120s cooldown, and Aviere can fire from inside it without losing the concealment at full speed. Only 3 charges to work with over a match.", "rating": "average" },
+    { "name": "Engine Boost", "flavor": "4 charges, +25% speed for 25s off a 120s cooldown. Four uses is more chances to relocate or extend a torpedo run than most destroyers get from this consumable.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "2", "guns": 1, "arcs": ["port", "starboard"], "position": "centerline", "note": "Amidships single mount sandwiched between the two torpedo banks, needs a full broadside and can't reach bow or stern." },
+    { "label": "3", "guns": 2, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "torpedoMounts": [
+    { "label": "Fore", "tubes": "3 tubes", "side": "centerline", "note": "Sits just aft of the forward turret, ahead of the amidships gun mount." },
+    { "label": "Aft", "tubes": "3 tubes", "side": "centerline", "note": "Sits just aft of the amidships gun mount, ahead of the stern turret." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Propulsion Modification 2" }
+  ],
+  "strengths": [
+    "12,900 stock / 15,300 upgraded hull HP is the largest health pool of any tier V destroyer, ahead of Gnevny's 14,100 and Gallant's 12,000",
+    "Exhaust Smoke Generator lets her fire from inside the screen without losing concealment even at full speed, and she gets 3 charges to work with",
+    "Engine Boost hands out 4 charges at +25% speed, more uptime than the 2-charge/+8% version most destroyers around this tier get",
+    "SAP shells give a consistent-damage option against broadside targets alongside her HE",
+    "Five guns spread across three turrets keep some firepower live even after one mount is knocked out"
+  ],
+  "weaknesses": [
+    "6.5s main battery reload is the slowest of her tier V peers, well behind Gnevny's 3.5s and Mahan's 3.6s",
+    "7.8 km sea detection is the worst of any tier V destroyer, and the Exposed trait means it only gets worse outside smoke",
+    "10,000 torpedo damage is the lowest alpha strike among tier V destroyer torpedoes, trailing Gnevny's 14,400 and Gallant's 15,433",
+    "9.5 km stock gun range is short for the tier, forces closer engagements to keep the guns relevant",
+    "Only 2 upgrade slots instead of the usual 3, less room to patch up her weaknesses"
+  ],
+  "tips": [
+    "Lean on the Exhaust Smoke Generator to fight, not just to run. Firing from inside it while still moving at full speed is the one thing this hull does better than her peers.",
+    "Don't try to win a gun duel in the open. The 6.5s reload loses to almost anything else at tier V if you're both spotted and shooting.",
+    "Use the 4 charges of Engine Boost freely, there's enough uptime to burn one just repositioning without saving them all for an emergency.",
+    "Switch to SAP against angled or broadside cruisers and battleships when fire chance isn't going to matter anyway.",
+    "Play the detection range like a weakness, not an inconvenience. At 7.8 km you're seen before most destroyers would be, so don't linger after a torpedo run."
+  ],
+  "threats": [
+    { "threat": "Other destroyers at gun range", "reason": "6.5s reload loses most even trades once both ships are spotted and shooting." },
+    { "threat": "Radar cruisers", "reason": "Already-poor 7.8 km concealment leaves little room to dodge a radar pulse once detected." },
+    { "threat": "Carriers", "reason": "Thin AA across small-caliber mounts does little to discourage a strike." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Tanky for a tier V destroyer, with the biggest hull HP pool at the tier, but the slowest-reloading guns of her peers.",
+      "SAP and HE both available, giving a real answer to broadside armor without giving up fire chance entirely.",
+      "Exhaust Smoke Generator turns her into a stationary gun and torpedo platform, one of the few destroyers that doesn't have to choose between hiding and shooting.",
+      "Worst concealment of any tier V destroyer once she's outside the smoke, so positioning matters more here than the raw speed suggests."
+    ],
+    "detail": "Aviere belongs to the Soldati class, one of the largest and most numerous Regia Marina destroyer designs of the war, built with enough hull to carry five main guns instead of the four more common on her contemporaries. In game that extra size shows up as the biggest hit point pool at tier V, but the tradeoff is a 6.5 second reload that leaves her outgunned in a straight duel. Where she makes her case is the Exhaust Smoke Generator: unlike most destroyer smoke, it doesn't force a choice between hiding and shooting, so she can sit in a screen at full speed and keep firing. That's a real tool for a ship whose 7.8 km detection range is the worst of any destroyer at her tier. Play her as a smoke-anchored gun and torpedo platform rather than a scout, and the hull's size starts working for her instead of against her."
+  },
+  "image": "/images/ships/aviere.jpg",
+  "imageCredit": "Aviere, Messina, 1941. Public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "Largest hull HP pool of any tier V destroyer, and can keep shooting from inside her own smoke instead of just hiding in it." }
+  ]
+}

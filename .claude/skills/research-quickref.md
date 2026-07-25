@@ -28,7 +28,13 @@ legitimate at a glance — check every new source against this list before trust
   fine** — use those directly instead of the tab click. The ship's splash art URL isn't always the
   `wowsbuilds.com/ships/<slug>.webp` pattern seen on earlier ships (404'd for Provorny); grep the
   base page's HTML for a `supabase.co/storage/.../ships/<slug>.webp` URL instead and fetch that
-  directly.
+  directly. Watch for occasional stray field glitches on the base stats page (Mahan's torpedo
+  range rendered as "80.00 km" instead of 8.0 km, an apparent units/formatting bug) — cross-check
+  any implausible number against the `Navy:` wiki page rather than assuming it's real.
+- `pc.wowsbuilds.com/ships/<slug>` giving a **different tier** than `wowsbuilds.com/ships/<slug>`
+  for the same ship name is expected and confirms which site is which — Mahan is Legends tier V
+  (`wowsbuilds.com`) vs. PC-game tier VII (`pc.wowsbuilds.com`). Treat a tier mismatch between the
+  two domains as a same-name-different-game sanity check, not a data conflict to resolve.
 - **Official splash art** — `wowsbuilds.com/ships/<slug>.webp`, or the often-higher-res
   `wiki.wgcdn.co/images/<hash>/Legends_<Ship>_splash.png` linked from the ship's own `Navy:` file
   description page. Confirms turret/mount count and type **for the forward cluster only** — the
@@ -114,10 +120,19 @@ legitimate at a glance — check every new source against this list before trust
   `Navy:Gryf`, `Navy:Shi_An`, `Navy:Hércules`, `Navy:Gelderland`, `Navy:Júpiter` (tier I cruisers),
   `Navy:Wakeful`, `Navy:V-170`, `Navy:Izyaslav`, `Navy:Bourrasque`, `Navy:Turbine`,
   `Navy:Klas_Horn`, `Navy:Shenyang`, `Navy:G-101` (tier III destroyers), `Navy:Le_Terrible`,
-  `Navy:Le_Hardi` (tier VI French destroyers), and `Navy:Galicia` (tier IV Spanish cruiser,
+  `Navy:Le_Hardi` (tier VI French destroyers), `Navy:Jaguar` (tier IV French destroyer, direct
+  `curl` worked fine, no Jina proxy needed that run), and `Navy:Galicia` (tier IV Spanish cruiser,
   reached via the Jina proxy after the direct fetch returned only nav-chrome with no page body) —
   all confirmed via breadcrumb, useful for peer-comparison research even for nations not yet on
   the site.
+- **A Commons ship-name category can silently mix two unrelated vessels sharing a name** —
+  `Category:Jaguar (ship, 1928)` contains both the French Chacal-class destroyer Jaguar (completed
+  1926, this site's ship) and an unrelated German Kriegsmarine Type 24 "Raubtier-class" torpedo
+  boat also named Jaguar (commissioned 1928). A CC-BY-SA-licensed Bundesarchiv file in that same
+  category looked like a fine pick until its own description read "Torpedoboote Typ 24,
+  'Raubtier-Klasse'" — wrong navy. Always read the file's own caption/description for nation and
+  hull type before trusting a category-page or filename match, especially for common ship names
+  reused across navies.
 - `Spain` wasn't in the site's `nation` enum before Galicia — added as a one-line change to
   `src/content.config.ts` plus a flag entry in `src/lib/nations.ts` (🇪🇸), no component assumed a
   fixed nation list.
@@ -128,6 +143,15 @@ legitimate at a glance — check every new source against this list before trust
   the hard number over the blurb.
 - `torpedoMounts`' `spreadPattern`/`firingSector`/`singleTubeFire` fields are rarely confirmable
   from available sources — leave unset rather than guess.
+- Upgrade slot **count doesn't scale cleanly with tier, even within one nation/class** — confirmed
+  on Mahan (tier V USN destroyer): only 2 slots (`Navy:Mahan` and `wowsbuilds.com/ships/mahan/
+  modifications` agree independently), fewer than tier IV Farragut's 3 and tier III Clemson's 3.
+  Trust the ship's own sourced modifications table every time, don't infer from neighboring tiers
+  in the line.
+- A ship's turret/torpedo layout can mix standard and restricted mounts in ways no source
+  describes in prose — Mahan's midship turret (3 of 5) is centerline but arc-restricted to
+  port/starboard only (can't fire bow or stern), confirmed by asking the user rather than any
+  written source or splash art. Don't assume a centerline turret gets the usual 3-of-4 arcs.
 - A "Variant" ship (reuses another ship's hull/turret/torpedo arrangement) — fetch the base ship's
   `Navy:` page too, both for layout corroboration and as a fallback Pros/Cons source if the
   variant's own page lacks one.
@@ -145,4 +169,35 @@ legitimate at a glance — check every new source against this list before trust
   `id="slot-N-label"` markup) that the `Navy:` wiki page's flat consumable list doesn't — use it to
   tell whether several listed consumables are simultaneous or mutually-exclusive alternatives in
   one slot (confirmed on Nevada: 3 of her 5 listed consumables share one slot, only one is
-  equippable at a time).
+  equippable at a time). **But this sub-page can itself be wrong for a specific ship** — Colorado's
+  `/ships/colorado/consumables` listed only 3 slots (missing Catapult Fighter and Observation
+  Seaplane entirely) and named an "Exhaust Smoke Generator" alternative, implausible for a US
+  battleship and not mentioned anywhere on the `Navy:` page. Cross-checked against Nevada's already-
+  confirmed pattern (a shared 3-way utility slot: Catapult Fighter / Observation Seaplane /
+  Enhanced Secondary Targeting) instead, which matched Colorado's `Navy:` page consumable list
+  exactly. When this sub-page's grouping looks structurally odd for the ship's class/nation, trust
+  a same-nation sibling's already-verified slot pattern over it.
+- Tier VI battleship peers confirmed via their own `Navy:` pages (useful for future tier VI BB
+  peer-comparison, e.g. Colorado): Gneisenau (Germany), Sinop (USSR), King George V (UK), Lyon
+  (France), Nagato (Japan), F. Caracciolo (Italy). Their tier V predecessors (also confirmed):
+  Bayern, Izmail, Queen Elizabeth, Normandie, Fusō, Andrea Doria.
+- **Spain has no tech-tree Battleship line in Legends yet** — `Navy:All_Ships` lists only one
+  Spanish battleship, Victoria, a tier VIII premium. Don't assume every nation in the enum has a
+  full tech-tree line at every tier; check `All_Ships` before treating an absence as a research gap.
+- Tier V destroyer peers confirmed via their own `Navy:` pages (useful for future tier V DD
+  peer-comparison): `Navy:Gnevny` (USSR), `Navy:Gallant` (UK), `Navy:Aviere` (Italy), plus
+  `mahan.json` (USA, already on-site). All four fetched with a direct `curl` + browser UA, no Jina
+  proxy needed that run — the bot-check stub is intermittent per-request, not a property of
+  specific pages.
+- A ship's "Community Contributions / Changes" changelog section can list a **stale value that
+  contradicts the page's own current stats table** — Aviere's changelog says sea detection was
+  "reduced from 7.1 to 6.8 km" in one patch, but the live Concealment table for the same page
+  currently shows 7.8 km. Likely a later, undocumented patch moved it again. Trust the top-level
+  current stats table over the changelog's before/after numbers when they disagree; the changelog
+  records one historical patch, not necessarily the most recent one.
+- When a user's in-game description of turret/torpedo order doesn't map cleanly onto the wiki's
+  `AxB` arrangement notation, work out which grouping matches by total count rather than guessing
+  position: Aviere's wiki page lists "1x1" and "2x2" for main battery (3 turrets, 5 guns total) and
+  "2x3" for torpedoes (2 mounts, 6 tubes total) — both totals matched the user's 3-turret/2-mount
+  description exactly, so the two 2-gun turrets were assigned to the fore/aft "3-way arc" positions
+  and the 1-gun turret to the described amidships "broadsides only" slot.
