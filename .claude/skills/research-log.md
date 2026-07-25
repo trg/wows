@@ -50,6 +50,42 @@ independently describe turret arcs/positions either — this kind of physical la
 seem to live in any written source found so far for any ship, asking the user has been the only way
 to get it once the splash-art ceiling is hit.
 
+## Nevada (USA, tier IV): mixed triple/twin turret order confirmed by user, New York's file found stale
+
+Nevada mounts 2x3 + 2x2 356mm (356mm Mk9 triples, Mk8 twins), 10 guns across 4 turrets, confirmed
+via `Navy:Nevada`. Splash art (`wiki.wgcdn.co/images/2/2d/Legends_Nevada_splash.png`, cropped to the
+forward cluster per the standard ceiling) showed the forward-most turret as the triple (lower) with
+a twin superfiring behind/above it. Asked the user whether the aft pair mirrors this (twin then
+triple moving toward the stern, giving a symmetric Triple/Twin/Twin/Triple bow-to-stern order) —
+confirmed yes. The user separately volunteered mid-research that "she has 2 turrets in the front, 2
+in the back; they all shoot 3 ways," which combined with the above gave a full, confirmable
+`turrets` array without further image forensics: all four turrets get the standard bow-or-stern
+plus both broadsides (3 of 4 zones), no restricted arc like New York's turret 3 or König's turret 3.
+
+While cross-checking Nevada against her stated predecessor New York for peer comparison, New
+York's *current* `Navy:New_York` page disagrees substantially with the site's existing
+`new-york.json`: hitpoints 49,100 upgraded (file says 34,400), sea detection 13.6 km (file says
+12.5), air detection 10.9 km (file says 8.0), torpedo damage reduction 28% (file doesn't list this
+stat at all), and the current page's Modifications section shows only 1 upgrade slot (matching the
+general tier IV rule) versus the file's 3 slots. This isn't a case of the file being from a
+different ship — breadcrumb and tier/nation categories both confirm it's the same page. Most likely
+explanation is a balance patch since New York's file was originally written. **New York's file
+needs a re-verification pass**, the same way the five originally-PC-wiki-sourced ships did (see
+above) — didn't fix it as part of this Nevada pass since it was out of scope, but flagging here so
+a future pass doesn't trust the existing file's numbers as a baseline without re-checking the live
+page first.
+
+**New technique: `wowsbuilds.com/ships/<slug>/consumables` reveals actual slot structure**, which
+the `Navy:` wiki page's flat consumable list doesn't. Nevada's `Navy:` page lists 5 consumables
+(Damage Control Party, Repair Party, Catapult Fighter, Observation Seaplane, Enhanced Secondary
+Targeting) with no indication of which are simultaneous vs. mutually-exclusive alternatives. The
+wowsbuilds consumables sub-route's HTML has explicit `SlotGrid_slot`/`slotHeader` markup (`id="slot-
+N-label"`) grouping items under real slot numbers: Slot 1 (DCP alone), Slot 2 (Repair Party alone),
+Slot 3 (all three of Catapult Fighter / Observation Seaplane / Enhanced Secondary Targeting, one
+choice), Slot 4 (empty). Worth checking this sub-route whenever a ship's `Navy:` consumable list
+looks like it might have more entries than plausible simultaneous slots, rather than assuming a
+flat list is all equipped at once.
+
 ## Tier I ships have no upgrade slots
 
 Confirmed via `Navy:Albany` (no "Slot 1/2/3" section, just a single non-slotted "Fire Control"

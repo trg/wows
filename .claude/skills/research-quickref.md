@@ -136,3 +136,13 @@ legitimate at a glance — check every new source against this list before trust
   already-confirmed ships before trusting an outlier over a disagreeing source.
 - Real ship history is out of scope for gameplay data, even when a detail "seems like it would
   obviously carry over" (turret count, arrangement, armament can all differ from history).
+- **A ship already on the site can have stale stats if the live `Navy:` page has since changed**
+  (balance patch). Confirmed on New York: current page's HP/detection/torpedo-reduction/upgrade-
+  slot-count all disagree with `new-york.json`. When using an existing site ship as a peer-
+  comparison baseline for a new ship, re-fetch its live `Navy:` page rather than trusting the
+  checked-in file's numbers as ground truth. New York's file needs a re-verification pass.
+- **`wowsbuilds.com/ships/<slug>/consumables` shows real slot grouping** (`SlotGrid_slot` /
+  `id="slot-N-label"` markup) that the `Navy:` wiki page's flat consumable list doesn't — use it to
+  tell whether several listed consumables are simultaneous or mutually-exclusive alternatives in
+  one slot (confirmed on Nevada: 3 of her 5 listed consumables share one slot, only one is
+  equippable at a time).

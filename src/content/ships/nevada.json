@@ -1,0 +1,72 @@
+{
+  "name": "USS Nevada",
+  "nation": "USA",
+  "type": "Battleship",
+  "tier": 4,
+  "shortDescription": "Ten-gun battleship split across two triple and two twin turrets, heavily armored but slower and less torpedo-resistant than her tier IV peers.",
+  "role": "Armored gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "48,200", "rating": "strong" },
+    { "label": "Main Battery", "value": "2x3 + 2x2 356mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "14.6 km", "rating": "average" },
+    { "label": "Secondary Battery", "value": "8x1 + 10x1 127mm", "rating": "average" },
+    { "label": "Max Speed", "value": "20 kts", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "13.4 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "12.9 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "10.4 km", "rating": "average" },
+    { "label": "Armor", "value": "13-457mm hull range", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "18%", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown, unlimited charges. Standard USN reset, same cycle as New York's.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 240 hp/s, about 6,720 hp per activation, roughly 14% of her 48,200 hp pool.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "3 charges, 90s duration, 80s cooldown. One of three options in the same utility slot, the pick that keeps spotter planes and strike squadrons off her.", "rating": "average" },
+    { "name": "Observation Seaplane", "flavor": "2 charges, 30s duration at +10% shell grouping, 200s cooldown. The accuracy pick in that same three-way slot, worth saving for a lined-up volley instead of popping on cooldown.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 160s cooldown. The third option in that slot, and the one that actually leans on her 18-gun secondary battery at close range.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "4", "guns": 3, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Secondary Battery Modification 2" }
+  ],
+  "strengths": [
+    "Ten 356mm guns across just four turrets, two triples and two twins, fewer mounts for an enemy to individually knock out than New York's five twins",
+    "457mm max belt beats New York's and König's shared 356mm cap, and the Ironclad trait recognizes it in-game",
+    "12.9 km sea detection beats New York's 13.6 km and König's 13.4 km, decent concealment for a battleship",
+    "13.4s rudder shift and a 610m turning circle are quick for the tier, backed by the official Agile trait",
+    "A shared utility slot that includes both plane consumables, which most tier IV American battleships don't get"
+  ],
+  "weaknesses": [
+    "18% torpedo damage reduction trails New York's 28% and König's 22%, the softest torpedo protection of the three",
+    "20 knots trails New York's 21 and König's 21.6, the official Slow trait, and she can't reposition to dodge a fight she doesn't like",
+    "Weak AA batteries outside the dual-purpose 127mm mounts, thin cover against strike aircraft",
+    "Losing turret 1 or 4 costs three guns in one hit, a bigger single-hit swing than any of New York's uniform twin turrets"
+  ],
+  "tips": [
+    "Angle that belt early. 457mm at the thickest point shrugs off a lot when you're not showing broadside, but the weak torpedo reduction means don't get complacent about fish.",
+    "Pick your Slot 3 consumable around your plan for the match: Catapult Fighter to keep spotter planes and strike aircraft off you, Observation Seaplane for a called shot, or Enhanced Secondary Targeting if you're planning to brawl.",
+    "Don't count on 20 knots to bail you out of a bad position, commit to your angle before you're in range.",
+    "Watch your bow and stern triples. A citadel or turret knockout there costs more guns at once than a hit on one of the twins."
+  ],
+  "threats": [
+    { "threat": "Destroyers and cruisers with torpedoes", "reason": "18% torpedo damage reduction is the softest of her tier IV peers, so a spread stings more than the armor rating suggests." },
+    { "threat": "Faster battleships and cruisers dictating range", "reason": "20 knots trails both New York and König, so she can't chase a fight or reposition out of one." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Ten 356mm guns split across two triple and two twin turrets, all four with a full bow-or-stern-plus-broadside arc.",
+      "457mm max belt and the Ironclad trait make her hard to citadel when angled, though her torpedo protection is the softest of her tier IV peers.",
+      "A shared utility slot offers a genuine three-way choice between Catapult Fighter, Observation Seaplane, and Enhanced Secondary Targeting."
+    ],
+    "detail": "Nevada holds her ground with a thick belt and a turret layout one step removed from New York's five uniform twins. Two triples on the ends and two twins in the superfiring positions still add up to ten guns, and 457mm of armor at the thickest point turns away a lot of what a tier IV opponent can throw at her. The tradeoff shows up in her torpedo protection, softer than either New York or König, so a well-aimed spread still hurts more than the armor suggests. She isn't fast and her 34-second reload isn't winning any races either, but the shared utility slot is a real perk. Catapult Fighter, Observation Seaplane, and Enhanced Secondary Targeting are all genuine choices, not a single option bolted on."
+  },
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "457mm max belt beats New York's and König's shared 356mm cap, and the Ironclad trait recognizes it in-game." }
+  ],
+  "image": "/images/ships/nevada.jpg",
+  "imageCredit": "USS Nevada (BB-36) underway at sea, 1943. U.S. Navy, public domain, via Wikimedia Commons."
+}
