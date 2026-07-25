@@ -28,7 +28,7 @@ const consumableRatingLabels: Record<'strong' | 'average' | 'weak', string> = {
 
 <BaseLayout title={data.name} backHref={`${base}ships/`} backLabel="Ships">
   <div class="ship-header-pills">
-    <TierTypePills nation={data.nation} type={data.type} tier={data.tier} />
+    <TierTypePills nation={data.nation} type={data.type} tier={data.tier} isPremium={data.isPremium} />
   </div>
   <h1>{data.name}</h1>
   <p>{data.role}</p>

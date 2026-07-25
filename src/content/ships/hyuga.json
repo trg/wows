@@ -3,8 +3,9 @@
   "nation": "Japan",
   "type": "Battleship",
   "tier": 5,
-  "shortDescription": "Premium tier V battleship with twelve 356mm guns across six turrets, only the front pair bears on the bow, the other four need a broadside.",
-  "role": "Broadside-heavy premium battleship",
+  "isPremium": true,
+  "shortDescription": "Tier V battleship with twelve 356mm guns across six turrets, only the front pair bears on the bow, the other four need a broadside.",
+  "role": "Broadside-heavy battleship",
   "stats": [
     { "label": "Hull HP", "value": "60,700", "rating": "strong" },
     { "label": "Main Battery", "value": "6x2 356mm", "rating": "average" },
@@ -22,7 +23,7 @@
     { "name": "Damage Control Party", "flavor": "10s action, 80s cooldown, unlimited charges. Half New Mexico's 20s cycle, one of the quicker DCP resets on a tier IV-V battleship.", "rating": "strong" },
     { "name": "Repair Party", "flavor": "3 charges, 28s each at 304 hp/s, about 8,500 hp per activation and roughly 42% of her 60,700 hp pool across all three, in line with peers at this tier.", "rating": "average" },
     { "name": "Catapult Fighter", "flavor": "90s duration, 80s reload, 3 charges.", "rating": "average" },
-    { "name": "Main Battery Reload Booster", "flavor": "-50% main battery reload for 15s, 150s cooldown, 2 charges. Turns a 29s reload into roughly 14.5s for the window, good for one extra salvo mid-engagement. Not every premium at this tier gets one.", "rating": "strong" },
+    { "name": "Main Battery Reload Booster", "flavor": "-50% main battery reload for 15s, 150s cooldown, 2 charges. Turns a 29s reload into roughly 14.5s for the window, good for one extra salvo mid-engagement. Not every battleship at this tier gets one.", "rating": "strong" },
     { "name": "Observation Seaplane", "flavor": "30s duration, 200s reload, 3 charges, tightens shell groupings while active.", "rating": "average" },
     { "name": "Enhanced Secondary Targeting", "flavor": "30s window, 160s reload, 3 charges. Sharpens an already below-average secondary battery rather than turning a weak one into a real threat.", "rating": "weak" }
   ],
@@ -42,7 +43,7 @@
     "Twelve 356mm guns across six turrets, longest main battery range of any tier IV-V battleship in this DB at 16.2 km",
     "60,700 hull HP and armor the ship's own in-game notes call out as excellent, tanks small and mid-caliber fire well",
     "25.3-knot top speed, the fastest battleship in this DB by a wide margin, enough to pick her own range and angle",
-    "Main Battery Reload Booster cuts reload by half for 15 seconds, a tool most premiums at this tier don't carry",
+    "Main Battery Reload Booster cuts reload by half for 15 seconds, a tool most battleships at this tier don't carry",
     "13.8 km surface detectability is genuinely low for a battleship this size"
   ],
   "weaknesses": [
@@ -63,12 +64,12 @@
   ],
   "playstyle": {
     "summary": [
-      "Fast, well-armored premium battleship whose forward turrets can answer bow-on, but two-thirds of her main battery still needs a broadside to bear.",
+      "Fast, well-armored battleship whose forward turrets can answer bow-on, but two-thirds of her main battery still needs a broadside to bear.",
       "Twelve 356mm guns with more reach than any other battleship in this DB at tier IV-V.",
       "A -50% reload booster gives her a burst window most peers at this tier don't have.",
       "Weak secondaries and AA mean she has little to fall back on if she gets caught out of position."
     ],
-    "detail": "Hyūga shares her hull with sister ship Ise, and the turret arrangement shows it: six twin mounts split fore, amidships, and aft. The front pair swings onto the bow like a normal battleship's, but the amidships and aft turrets are all restricted to the broadside, so a full twelve-gun salvo still means committing to an angle. In exchange she gets real speed for the tier, armor that holds up, a big hit point pool, and a reload booster that most premiums her tier don't carry. Play her patiently, lean on the front two guns while closing, then pick the moment to turn broadside and bring the other eight into the fight, the twelve-gun salvo backed by the longest range at this bracket is worth the wait."
+    "detail": "Hyūga shares her hull with sister ship Ise, and the turret arrangement shows it: six twin mounts split fore, amidships, and aft. The front pair swings onto the bow like a normal battleship's, but the amidships and aft turrets are all restricted to the broadside, so a full twelve-gun salvo still means committing to an angle. In exchange she gets real speed for the tier, armor that holds up, a big hit point pool, and a reload booster that most battleships her tier don't carry. Play her patiently, lean on the front two guns while closing, then pick the moment to turn broadside and bring the other eight into the fight, the twelve-gun salvo backed by the longest range at this bracket is worth the wait."
   },
   "image": "/images/ships/hyuga.jpg",
   "imageCredit": "IJN Hyūga, 4 December 1941, public domain (Kure Naval Arsenal), via Wikimedia Commons.",

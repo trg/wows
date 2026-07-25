@@ -3,7 +3,8 @@
   "nation": "United Kingdom",
   "type": "Battleship",
   "tier": 7,
-  "shortDescription": "Fictional premium battlecruiser \"designed\" in 1179 and styled after Dover Castle, trading tech-tree sister Hawke's speed and stealth for more range, more HP, and tighter shell grouping.",
+  "isPremium": true,
+  "shortDescription": "Fictional battlecruiser \"designed\" in 1179 and styled after Dover Castle, trading tech-tree sister Hawke's speed and stealth for more range, more HP, and tighter shell grouping.",
   "role": "Long-range sniper battleship",
   "stats": [
     { "label": "Hull HP", "value": "77,500", "rating": "strong" },
@@ -76,7 +77,7 @@
       "Carries a real secondary battery and four fixed torpedo tubes on top of the main battery",
       "Slower and less stealthy than her tech-tree sister, with no Engine Boost to make up the difference"
     ],
-    "detail": "Dover reuses Hawke's hull and her 3x3 406mm battery without changing the gun arrangement, but the premium version leans harder into range and accuracy: more firing range, a tighter Sigma value, and more hit points than Hawke reaches even fully upgraded. That comes at a cost. She's half a knot slower, gives up Hawke's Hidden trait outright, and has no Engine Boost to close or open a gap on demand. Underneath the castle dressing the armor scheme hasn't changed, still 32mm over most of the hull and just 25mm at the bow and stern, so that huge health total doesn't mean she can trade blows up close. Keep the range open, let the guns and the accuracy do the work, and angle the bow rather than the stern when a fight forces the issue."
+    "detail": "Dover reuses Hawke's hull and her 3x3 406mm battery without changing the gun arrangement, but leans harder into range and accuracy: more firing range, a tighter Sigma value, and more hit points than Hawke reaches even fully upgraded. That comes at a cost. She's half a knot slower, gives up Hawke's Hidden trait outright, and has no Engine Boost to close or open a gap on demand. Underneath the castle dressing the armor scheme hasn't changed, still 32mm over most of the hull and just 25mm at the bow and stern, so that huge health total doesn't mean she can trade blows up close. Keep the range open, let the guns and the accuracy do the work, and angle the bow rather than the stern when a fight forces the issue."
   },
   "goalTags": [
     { "tag": "torpedo-alpha", "note": "Four fixed 533mm tubes, two per side, deal up to 15,867 damage each, a real torpedo threat sitting on top of a full battleship main battery." },

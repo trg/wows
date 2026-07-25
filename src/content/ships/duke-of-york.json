@@ -3,7 +3,8 @@
   "nation": "United Kingdom",
   "type": "Battleship",
   "tier": 6,
-  "shortDescription": "Premium King George V-class battleship, tough belt armor and hard-hitting HE, but only three main turrets and poor gun angles off a full broadside.",
+  "isPremium": true,
+  "shortDescription": "King George V-class battleship, tough belt armor and hard-hitting HE, but only three main turrets and poor gun angles off a full broadside.",
   "role": "HE-slinging gunline battleship",
   "stats": [
     { "label": "Hull HP", "value": "60,500", "rating": "average" },

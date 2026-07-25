@@ -20,6 +20,7 @@ const ships = (await getCollection('ships')).sort((a, b) => a.data.tier - b.data
       tier={ship.data.tier}
       shortDescription={ship.data.shortDescription}
       image={ship.data.image}
+      isPremium={ship.data.isPremium}
     />
   ))}
 </BaseLayout>

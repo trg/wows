@@ -87,6 +87,13 @@ reference for shape and voice.
      multiple real vessels across eras), leave `image`/`imageCredit` unset rather than guess or use
      a fair-use image.
 4. **Draft the JSON** matching the schema in `src/content.config.ts` exactly. In particular:
+   - `isPremium` — set `true` if the ship is a premium/reward hull (bought or earned outside the
+     tech tree), otherwise omit it (defaults `false`). This renders as a gold badge next to the
+     class pill, so **never write "premium" into prose** (`shortDescription`, `role`,
+     `playstyle`, `strengths`/`weaknesses`/`tips`, consumable `flavor`, etc.) — the badge is the
+     only place that status shows up. If a ship's own identity depends on being non-tech-tree
+     (e.g. a war-reparations hull, a fictional design), that's fine to describe factually without
+     using the word "premium" itself.
    - `stats` is an array of `{ label, value, rating }` rows. Give each a `rating` of
      `strong | average | weak` relative to peers at the same tier and class, unless there's
      genuinely no useful comparison to make.

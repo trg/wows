@@ -6,6 +6,7 @@
  *   - Accent (--color-accent): headings, links, active states.
  *   - Class colors (--color-dd/cruiser/bb): per-ship-type color, doubles as a "multi-trace"
  *     signal color (radar-style) across badges, icons, and diagrams.
+ *   - Premium color (--color-premium): gold, used only for the "Premium" ship badge.
  *   - Rating colors (--color-rating-strong/average/weak): stat and consumable quality.
  *   - Fonts (--font-display/--font-body): see the Theming section in SPEC.md for which to use
  *     where.
@@ -22,6 +23,7 @@
   --color-dd: #4fd9c4;
   --color-cruiser: #39ff6a;
   --color-bb: #ffb454;
+  --color-premium: #ffd447;
 
   --color-rating-strong: var(--color-accent);
   --color-rating-average: var(--color-text-muted);
@@ -108,6 +110,7 @@ main {
 .badge--Destroyer { color: var(--color-dd); border-color: var(--color-dd); }
 .badge--Cruiser { color: var(--color-cruiser); border-color: var(--color-cruiser); }
 .badge--Battleship { color: var(--color-bb); border-color: var(--color-bb); }
+.badge--premium { color: var(--color-premium); border-color: var(--color-premium); }
 
 .card {
   display: block;

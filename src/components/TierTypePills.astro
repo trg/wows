@@ -5,15 +5,17 @@ interface Props {
   nation: string;
   type: 'Destroyer' | 'Cruiser' | 'Battleship';
   tier: number;
+  isPremium?: boolean;
 }
 
-const { nation, type, tier } = Astro.props;
+const { nation, type, tier, isPremium } = Astro.props;
 ---
 
 <span class="pills">
   <span class="badge badge--nation" title={nation} aria-label={nation}>{NATION_FLAGS[nation] ?? nation}</span>
   <span class="badge badge--tier">T{tier}</span>
   <span class={`badge badge--${type}`}>{type}</span>
+  {isPremium && <span class="badge badge--premium">Premium</span>}
 </span>
 
 <style>

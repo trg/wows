@@ -76,6 +76,9 @@ See `src/content.config.ts` for the authoritative Zod schema. Field notes:
 
 - `type` and `tier` render as **two separate pills**, not combined text (e.g. not "T3 Destroyer"
   as one badge — a `T3` pill and a `Destroyer` pill, side by side).
+- `isPremium` (default `false`) renders as a gold "Premium" pill immediately after the class pill,
+  not as prose. Never write "premium" into `shortDescription`, `role`, `playstyle`, or any other
+  prose field — the badge is the only place that status shows up.
 - `stats` is an **array of rows**, not a fixed object, so each ship can list whichever stats
   actually matter for it:
   ```

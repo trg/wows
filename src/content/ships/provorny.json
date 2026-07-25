@@ -3,8 +3,9 @@
   "nation": "USSR",
   "type": "Destroyer",
   "tier": 7,
+  "isPremium": true,
   "shortDescription": "Ex-German war-reparations hull carrying five 150mm guns across four mounts for 134,375 HE DPM and 231,250 AP DPM, backed by a Repair Party most destroyers don't get.",
-  "role": "Heavy-gunned premium destroyer",
+  "role": "Heavy-gunned destroyer",
   "stats": [
     { "label": "Hull HP", "value": "19,600", "rating": "strong" },
     { "label": "Main Battery", "value": "1x2 + 3x1 150mm", "rating": "strong" },
@@ -71,11 +72,11 @@
   ],
   "playstyle": {
     "summary": [
-      "Gun-heavy premium destroyer built around DPM and hit points rather than stealth or speed.",
+      "Gun-heavy destroyer built around DPM and hit points rather than stealth or speed.",
       "Repair Party and a 19,600 HP pool give her staying power most destroyers don't have.",
       "Slower and easier to spot than her peers, she has to win the gunfight rather than avoid it."
     ],
-    "detail": "Provorny is the ex-German Z33, handed to the Soviet Union as war reparations and refitted into a destroyer that plays nothing like the rest of her tier. Five 150mm guns across four mounts back up the ship's own 'Big Guns' trait with real numbers, 134,375 HE DPM and 231,250 AP DPM, and the AP overmatches enough plating to make broadside destroyers pay for showing themselves. What she doesn't have is the speed or concealment to dictate when that fight happens. 36 knots and a wide turning circle mean she's often the one getting spotted and closed on, not the other way around. The Repair Party is what makes the trade work, letting her sit in an extended gunfight and shrug off damage that would send most destroyers back to cover. Pick a range where the guns can work and use the hit points to hold it, rather than trying to outmaneuver anyone."
+    "detail": "Provorny is the ex-German Z33, handed to the Soviet Union as war reparations and refitted into a destroyer that plays nothing like the rest of her tier. She sits outside the tech tree, a one-off you buy rather than research. Five 150mm guns across four mounts back up the ship's own 'Big Guns' trait with real numbers, 134,375 HE DPM and 231,250 AP DPM, and the AP overmatches enough plating to make broadside destroyers pay for showing themselves. What she doesn't have is the speed or concealment to dictate when that fight happens. 36 knots and a wide turning circle mean she's often the one getting spotted and closed on, not the other way around. The Repair Party is what makes the trade work, letting her sit in an extended gunfight and shrug off damage that would send most destroyers back to cover. Pick a range where the guns can work and use the hit points to hold it, rather than trying to outmaneuver anyone."
   },
   "image": "/images/ships/provorny.jpg",
   "imageCredit": "German destroyer Z33 under RAAF air attack in Forde Fjord, Norway, 9 February 1945. No. 455 Squadron RAAF, Australian War Memorial, public domain, via Wikimedia Commons.",

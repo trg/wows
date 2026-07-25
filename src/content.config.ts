@@ -9,6 +9,7 @@ const ships = defineCollection({
     nation: z.enum(['USA', 'Germany', 'Japan', 'United Kingdom', 'France', 'USSR', 'Italy']),
     type: z.enum(['Destroyer', 'Cruiser', 'Battleship']),
     tier: z.number().int().min(1).max(11),
+    isPremium: z.boolean().default(false),
     shortDescription: z.string(),
     role: z.string(),
     stats: z.array(

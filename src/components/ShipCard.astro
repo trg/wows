@@ -13,9 +13,10 @@ interface Props {
   tier: number;
   shortDescription: string;
   image?: string;
+  isPremium?: boolean;
 }
 
-const { id, name, nation, type, tier, shortDescription, image } = Astro.props;
+const { id, name, nation, type, tier, shortDescription, image, isPremium } = Astro.props;
 
 const ICONS = {
   Destroyer: DestroyerIcon,
@@ -39,7 +40,7 @@ const Icon = ICONS[type];
     </div>
     <div class="ship-card__body">
       <div class="ship-card__title">
-        <TierTypePills nation={nation} type={type} tier={tier} />
+        <TierTypePills nation={nation} type={type} tier={tier} isPremium={isPremium} />
       </div>
       <h3>{name}</h3>
     </div>

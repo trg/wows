@@ -3,7 +3,8 @@
   "nation": "USA",
   "type": "Cruiser",
   "tier": 6,
-  "shortDescription": "Premium Portland-class heavy cruiser with hard-hitting 203mm guns and the longest-ranged radar at her tier, but a huge, thin-skinned broadside.",
+  "isPremium": true,
+  "shortDescription": "Portland-class heavy cruiser with hard-hitting 203mm guns and the longest-ranged radar at her tier, but a huge, thin-skinned broadside.",
   "role": "Long-range gun cruiser",
   "stats": [
     { "label": "Hull HP", "value": "32,500", "rating": "strong" },
