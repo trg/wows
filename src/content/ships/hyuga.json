@@ -40,9 +40,9 @@
     { "slot": "Slot 2", "recommended": "Steering Gears Modification 2", "alternative": "Damage Control System Modification 2" }
   ],
   "strengths": [
-    "Twelve 356mm guns across six turrets, longest main battery range of any tier IV-V battleship in this DB at 16.2 km",
+    "Twelve 356mm guns across six turrets, 16.2 km range beats New Mexico's 15.8 km, New York's 14.0 km, and König's 13.9 km",
     "60,700 hull HP and armor the ship's own in-game notes call out as excellent, tanks small and mid-caliber fire well",
-    "25.3-knot top speed, the fastest battleship in this DB by a wide margin, enough to pick her own range and angle",
+    "25.3-knot top speed outpaces New Mexico (21 kt), König (21.6 kt), and New York (19.5 kt) by a wide margin, enough to pick her own range and angle",
     "Main Battery Reload Booster cuts reload by half for 15 seconds, a tool most battleships at this tier don't carry",
     "13.8 km surface detectability is genuinely low for a battleship this size"
   ],
@@ -65,11 +65,11 @@
   "playstyle": {
     "summary": [
       "Fast, well-armored battleship whose forward turrets can answer bow-on, but two-thirds of her main battery still needs a broadside to bear.",
-      "Twelve 356mm guns with more reach than any other battleship in this DB at tier IV-V.",
+      "Twelve 356mm guns with more reach than New Mexico, König, or New York.",
       "A -50% reload booster gives her a burst window most peers at this tier don't have.",
       "Weak secondaries and AA mean she has little to fall back on if she gets caught out of position."
     ],
-    "detail": "Hyūga shares her hull with sister ship Ise, and the turret arrangement shows it: six twin mounts split fore, amidships, and aft. The front pair swings onto the bow like a normal battleship's, but the amidships and aft turrets are all restricted to the broadside, so a full twelve-gun salvo still means committing to an angle. In exchange she gets real speed for the tier, armor that holds up, a big hit point pool, and a reload booster that most battleships her tier don't carry. Play her patiently, lean on the front two guns while closing, then pick the moment to turn broadside and bring the other eight into the fight, the twelve-gun salvo backed by the longest range at this bracket is worth the wait."
+    "detail": "Hyūga shares her hull with sister ship Ise, and the turret arrangement shows it: six twin mounts split fore, amidships, and aft. The front pair swings onto the bow like a normal battleship's, but the amidships and aft turrets are all restricted to the broadside, so a full twelve-gun salvo still means committing to an angle. In exchange she gets real speed for the tier, armor that holds up, a big hit point pool, and a reload booster that most battleships her tier don't carry. Play her patiently, lean on the front two guns while closing, then pick the moment to turn broadside and bring the other eight into the fight, the twelve-gun salvo backed by more range than New Mexico, König, or New York is worth the wait."
   },
   "image": "/images/ships/hyuga.jpg",
   "imageCredit": "IJN Hyūga, 4 December 1941, public domain (Kure Naval Arsenal), via Wikimedia Commons.",

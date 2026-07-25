@@ -19,7 +19,7 @@
     { "label": "Armor", "value": "10-76mm", "rating": "weak" }
   ],
   "consumables": [
-    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same cycle as this site's other tier IV cruiser, Omaha, nothing unique here.", "rating": "average" },
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same cycle as Omaha's, nothing unique here.", "rating": "average" },
     { "name": "Repair Party", "flavor": "+135 hp/s over a 28s duration, about 3,780 hp per charge, 2 charges on an 80s cooldown. A self-heal this early is rare, Omaha carries no Repair Party at all.", "rating": "strong" },
     { "name": "Sonar", "flavor": "3.7 km ship detection, 2.7 km torpedo detection, 90s duration, 180s cooldown, 2 charges. Same numbers as Omaha's, useful here for confirming a target before committing AP-only shells.", "rating": "average" },
     { "name": "Smoke Generator", "flavor": "15s lay time, 96s dispersion, 2 charges on a 240s cooldown. Long screen life per charge, but the cooldown means picking one or two moments to use it.", "rating": "average" },
@@ -45,7 +45,7 @@
   ],
   "strengths": [
     "Improved AP ricochet angles and short fuse timers that are less likely to overpenetrate small targets, so shells arm reliably even against destroyers",
-    "4x4 torpedo tubes upgraded, 16 tubes total dealing up to 15,733 damage each, more tubes and more damage per fish than this site's other tier IV cruiser, Omaha",
+    "4x4 torpedo tubes upgraded, 16 tubes total dealing up to 15,733 damage each, more tubes and more damage per fish than Omaha's torpedoes",
     "Repair Party at tier IV is unusual, Omaha has no self-heal at all",
     "Fast 7s main battery reload keeps all seven guns cycling quickly",
     "A genuinely full consumable kit: heal, sonar, smoke, and fighter cover, not just Damage Control Party"
@@ -72,7 +72,7 @@
   "playstyle": {
     "summary": [
       "AP-only light cruiser, no HE shells at all, built around ricochet-resistant, reliably-arming AP instead",
-      "Heaviest torpedo battery of the tier IV cruisers on this site, 16 tubes upgraded and real damage per hit",
+      "More torpedo tubes than Omaha, 16 upgraded and real damage per hit",
       "One of the few tier IV cruisers with a self-heal, rounded out with sonar, smoke, and an extra-charge fighter",
       "Thin, exposed hull that big-caliber AP can still punish even on an overpenetrating hit"
     ],
@@ -81,7 +81,7 @@
   "image": "/images/ships/emerald.jpg",
   "imageCredit": "Photograph A 6462, Imperial War Museums, public domain, via Wikimedia Commons.",
   "goalTags": [
-    { "tag": "torpedo-alpha", "note": "Four quad mounts upgraded, sixteen tubes total, up to 15,733 damage per torpedo, the heaviest torpedo battery among this site's tier IV cruisers." },
+    { "tag": "torpedo-alpha", "note": "Four quad mounts upgraded, sixteen tubes total, up to 15,733 damage per torpedo, more tubes and higher damage per hit than Omaha's torpedo battery." },
     { "tag": "utility-support", "note": "Carries Repair Party, Sonar, and Smoke Generator options alongside the standard kit, an unusually full support loadout for the tier." }
   ]
 }

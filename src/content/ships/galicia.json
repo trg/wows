@@ -21,8 +21,8 @@
     { "label": "AA", "value": "77 DPS stock, 127 DPS upgraded across two mounts", "rating": "weak" }
   ],
   "consumables": [
-    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock cycle as every other tier IV cruiser on this site.", "rating": "average" },
-    { "name": "Sonar", "flavor": "4 km ship detection, 3 km torpedo detection, 100s duration, 180s cooldown, 2 charges. Longer range and duration than Omaha's or Emerald's Sonar (3.7 km / 2.7 km over 90s), the strongest version of it among this site's tier IV cruisers.", "rating": "strong" }
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock cycle as Omaha and Emerald, standard for the tier.", "rating": "average" },
+    { "name": "Sonar", "flavor": "4 km ship detection, 3 km torpedo detection, 100s duration, 180s cooldown, 2 charges. Longer range and duration than Omaha's or Emerald's Sonar (3.7 km / 2.7 km over 90s).", "rating": "strong" }
   ],
   "turrets": [
     { "label": "A", "guns": 2, "arcs": ["bow", "port", "starboard"] },
@@ -38,9 +38,9 @@
     { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" }
   ],
   "strengths": [
-    "27,800 hp upgraded is the highest hull HP among this site's tier IV cruisers, backed by the official Tough trait",
+    "27,800 hp upgraded beats Omaha (26,800) and Emerald (27,100), backed by the official Tough trait",
     "Carries both HE and AP with a tight 2.15 sigma, so she isn't locked into one shell type like Emerald or Danae",
-    "Best Sonar on this site's tier IV cruisers, 4 km ship / 3 km torpedo detection over a full 100s",
+    "Sonar reaches further than Omaha's or Emerald's, 4 km ship / 3 km torpedo detection over a full 100s",
     "10.5 km sea detectability and the Hidden trait let her set her own engagement range"
   ],
   "weaknesses": [
@@ -62,18 +62,18 @@
   ],
   "playstyle": {
     "summary": [
-      "Tanky tier IV cruiser, highest hull HP on this site's tier IV roster, backed by the Tough trait.",
+      "Tanky tier IV cruiser, more hull HP than Omaha or Emerald, backed by the Tough trait.",
       "Balanced HE/AP main battery with tight dispersion instead of committing to one shell type.",
-      "Best Sonar range of this site's tier IV cruisers, an edge for spotting hidden threats.",
+      "Sonar that outranges Omaha's and Emerald's, an edge for spotting hidden threats.",
       "Torpedoes are a light secondary threat, two triple mounts, not the main weapon.",
       "Thin, exposed armor and mediocre AA sit behind that HP number."
     ],
-    "detail": "Galicia trades torpedo volume for durability. Where Omaha and Emerald both carry four launcher mounts, Galicia gets by with two and leans instead on the highest hull HP of any tier IV cruiser on this site and a main battery that doesn't have to choose between HE and AP. The 2.15 sigma keeps those eight guns landing close together, and Sonar here outranges the version other tier IV cruisers get. None of that fixes the armor, though. The citadel is just as exposed as her peers', the AA is weak, and the consumable kit stops at Damage Control Party and Sonar, no smoke or heal to lean on if a fight goes wrong."
+    "detail": "Galicia trades torpedo volume for durability. Where Omaha and Emerald both carry four launcher mounts, Galicia gets by with two and leans instead on more hull HP than either of them and a main battery that doesn't have to choose between HE and AP. The 2.15 sigma keeps those eight guns landing close together, and Sonar here outranges the version they get. None of that fixes the armor, though. The citadel is just as exposed as her peers', the AA is weak, and the consumable kit stops at Damage Control Party and Sonar, no smoke or heal to lean on if a fight goes wrong."
   },
   "image": "/images/ships/galicia.jpg",
   "imageCredit": "Cruiser Príncipe Alfonso, later renamed Libertad and then Galicia, underway in 1927. Public domain, via Wikimedia Commons.",
   "goalTags": [
-    { "tag": "tank-brawler", "note": "27,800 hp upgraded is the highest hull HP among this site's tier IV cruisers, backed by the official Tough trait." },
+    { "tag": "tank-brawler", "note": "27,800 hp upgraded beats Omaha (26,800) and Emerald (27,100), backed by the official Tough trait." },
     { "tag": "utility-support", "note": "Sonar reaches 4 km ship / 3 km torpedo detection over a 100s duration, longer range and duration than Omaha's or Emerald's version of the same consumable." }
   ]
 }
