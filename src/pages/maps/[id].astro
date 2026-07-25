@@ -17,7 +17,13 @@ const { map } = Astro.props;
 const { data } = map;
 ---
 
-<BaseLayout title={data.name} backHref={`${base}maps/`} backLabel="Maps">
+<BaseLayout
+  title={data.name}
+  backHref={`${base}maps/`}
+  backLabel="Maps"
+  description={data.description}
+  type="article"
+>
   <span class="badge">{data.size}</span>
   <h1>{data.name}</h1>
   <p>{data.description}</p>

@@ -1,0 +1,14 @@
+{
+  "name": "WoWS Legends Companion",
+  "short_name": "WoWS Legends",
+  "description": "Loadouts, tips, and playstyle notes for World of Warships: Legends.",
+  "start_url": "/wows/",
+  "scope": "/wows/",
+  "display": "standalone",
+  "background_color": "#0a0f0b",
+  "theme_color": "#0a0f0b",
+  "icons": [
+    { "src": "/wows/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/wows/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

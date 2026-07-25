@@ -1,15 +1,26 @@
 ---
 import NavBar from '../components/NavBar.astro';
-import { base } from '../lib/base';
+import { base, withBase } from '../lib/base';
 import '../styles/global.css';
 
 interface Props {
   title: string;
   backHref?: string;
   backLabel?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
 }
 
-const { title, backHref, backLabel } = Astro.props;
+const SITE_NAME = 'WoWS Legends Companion';
+const DEFAULT_DESCRIPTION = 'Loadouts, tips, and playstyle notes for World of Warships: Legends.';
+
+const { title, backHref, backLabel, type = 'website' } = Astro.props;
+const description = Astro.props.description ?? DEFAULT_DESCRIPTION;
+const image = Astro.props.image ?? 'og-default.png';
+const absoluteImage = new URL(withBase(image.replace(/^\//, '')), Astro.site).href;
+const canonicalUrl = Astro.url.href;
+const fullTitle = `${title} · ${SITE_NAME}`;
 ---
 
 <!doctype html>
@@ -17,8 +28,21 @@ const { title, backHref, backLabel } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>{title} · WoWS Legends Companion</title>
-    <meta name="description" content="Loadouts, tips, and playstyle notes for World of Warships: Legends." />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content={type} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={absoluteImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteImage} />
+
     <link
       rel="preload"
       href={`${base}fonts/staatliches.woff2`}
@@ -34,6 +58,12 @@ const { title, backHref, backLabel } = Astro.props;
       crossorigin
     />
     <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <link rel="apple-touch-icon" href={`${base}icons/apple-touch-icon.png`} />
+    <link rel="manifest" href={`${base}manifest.webmanifest`} />
+    <meta name="theme-color" content="#0a0f0b" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="WoWS Legends" />
   </head>
   <body>
     <header class="site-header">

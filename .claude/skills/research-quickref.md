@@ -102,9 +102,14 @@ legitimate at a glance — check every new source against this list before trust
   beat Dresden's 4.0s). There are 12 tier I cruisers total in Legends (Albany, Chikuma, Weymouth,
   Dresden, Jurien, Novik, plus Nino Bixio/Italy, Gryf/Pan-Europe, Shi An/Pan-Asia,
   Hércules/Pan-America, Gelderland/Netherlands, Júpiter/Pan-America) — this site only has 6 of them
-  as of 2026-07-23. A claim scoped explicitly to the DB ("...in this DB/fleet," as used on Hyūga
-  and Dresden's detail paragraph) is honest and doesn't need this check; it's the unqualified
-  "of any X" phrasing that's the risk.
+  as of 2026-07-23. **Never phrase the fix as "...in this DB/fleet" or "...on this site" either**
+  — a reader has no idea what "this site" has or hasn't covered, so that phrasing is meaningless
+  to them even when the underlying comparison is honest (a prior version of this file endorsed it;
+  Hyūga's and Dresden's detail paragraphs used it before being rewritten). Instead name the actual
+  peer ship(s) the claim is checked against directly ("beats New Mexico's 15.8 km, New York's
+  14.0 km, and König's 13.9 km" instead of "longest range of any tier IV-V battleship in this
+  DB") — concrete, checkable by the reader, and reads like normal prose instead of a meta note
+  about the database.
 - Confirmed-good additional `Navy:` pages beyond the original launch roster: `Navy:Nino_Bixio`,
   `Navy:Gryf`, `Navy:Shi_An`, `Navy:Hércules`, `Navy:Gelderland`, `Navy:Júpiter` (tier I cruisers),
   `Navy:Wakeful`, `Navy:V-170`, `Navy:Izyaslav`, `Navy:Bourrasque`, `Navy:Turbine`,
