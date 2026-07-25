@@ -1,0 +1,86 @@
+{
+  "name": "HMS Danae",
+  "nation": "United Kingdom",
+  "type": "Cruiser",
+  "tier": 3,
+  "shortDescription": "AP-only British light cruiser with a fast 7.5s reload, twelve fixed-broadside torpedo tubes, and a Repair Party that's rare this early.",
+  "role": "AP-focused gun and torpedo cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "20,300 stock, 23,000 upgraded", "rating": "average" },
+    { "label": "Main Battery", "value": "6x1 152mm", "rating": "weak" },
+    { "label": "Main Battery Reload", "value": "7.5 s", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "11.4 km stock, 12.6 km upgraded", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "4x3 533mm", "rating": "strong" },
+    { "label": "Torpedo Damage", "value": "10,000 stock, 11,967 upgraded", "rating": "average" },
+    { "label": "Torpedo Range", "value": "6 km", "rating": "weak" },
+    { "label": "Max Speed", "value": "30 kts", "rating": "weak" },
+    { "label": "Turning Radius", "value": "540 m", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "9.5 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "5.7 km", "rating": "average" },
+    { "label": "Armor", "value": "10-76mm", "rating": "weak" },
+    { "label": "AA", "value": "23 DPS across three mounts", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Standard stock cycle, nothing unique here.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "+114 hp/s over 28s, about 3,192 hp per charge, 2 charges on an 80s cooldown. A self-heal at tier III is rare, most cruisers this early carry nothing but Damage Control Party.", "rating": "strong" },
+    { "name": "Sonar", "flavor": "3.5 km ship detection, 2.5 km torpedo detection, 90s duration, 180s cooldown, 2 charges. Standard numbers, useful for confirming a target before committing shells that are all AP.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "B", "guns": 1, "arcs": ["bow", "port", "starboard"], "note": "Superfires over A." },
+    { "label": "Q1", "guns": 1, "arcs": ["port", "starboard"], "note": "Centerline amidships mount, blocked fore and aft by the superstructure, broadside only." },
+    { "label": "Q2", "guns": 1, "arcs": ["port", "starboard"], "note": "Centerline amidships mount, blocked fore and aft by the superstructure, broadside only." },
+    { "label": "X", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Superfires over Y." },
+    { "label": "Y", "guns": 1, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "Port 1", "tubes": "3 tubes", "side": "port", "singleTubeFire": true },
+    { "label": "Port 2", "tubes": "3 tubes", "side": "port", "singleTubeFire": true },
+    { "label": "Starboard 1", "tubes": "3 tubes", "side": "starboard", "singleTubeFire": true },
+    { "label": "Starboard 2", "tubes": "3 tubes", "side": "starboard", "singleTubeFire": true, "note": "All four mounts fixed to their own broadside, no centerline swing. The Sequential trait lets each mount fire its tubes one at a time instead of a full salvo." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" }
+  ],
+  "strengths": [
+    "Fast 7.5s reload and quick turret traverse keep all six 152mm guns cycling and on target",
+    "AP shells with improved ricochet angles for reliable penetration even at odd impact angles",
+    "Twelve torpedo tubes across four fixed mounts, up to 11,967 damage per fish once upgraded",
+    "Repair Party at tier III is unusual, most cruisers this early carry nothing but Damage Control Party",
+    "6.1s rudder shift once upgraded turns tighter than the 540m radius alone suggests"
+  ],
+  "weaknesses": [
+    "No HE shells at all, AP-only means no fire chance and no reliable way to chip down an angled or bow-tanking target",
+    "10-76mm armor with an exposed citadel, and the Compromising trait means enemy AP can still arm through it even on an overpenetrating hit",
+    "11.4 km gun range and a 6 km torpedo range both run short, she has to close in to do any damage",
+    "30 knots is slow for a tier III cruiser, hard to disengage or reposition once committed",
+    "Consumable kit stops at Damage Control Party, Repair Party, and Sonar, no smoke or fighter cover"
+  ],
+  "tips": [
+    "Save AP for broadsides or exposed superstructure, there's no HE to fall back on against an angled target.",
+    "Lean on Repair Party to shrug off chip damage most tier III cruisers can't heal back.",
+    "Ping with Sonar before you commit, every shell you carry is AP and needs a good angle to pay off.",
+    "Close the range with some patience before a torpedo run, 6 km doesn't give much room for error.",
+    "Don't try to outrun anything at 30 knots, pick your fights instead of disengaging from them."
+  ],
+  "threats": [
+    { "threat": "Faster cruisers and destroyers", "reason": "30 knots can't keep pace with most tier III peers, so she can't dictate the range of a fight." },
+    { "threat": "Battleships and heavy-caliber AP", "reason": "The Compromising trait lets their shells arm and deal damage even when they overpenetrate her thin 10-76mm plating." },
+    { "threat": "Anything that spots her first", "reason": "9.5 km sea detectability isn't especially stealthy, and she has no HE to answer back at range without a good angle." }
+  ],
+  "playstyle": {
+    "summary": [
+      "AP-only light cruiser, no HE shells at all, leaning on ricochet-resistant AP and a fast reload instead.",
+      "Twelve fixed-broadside torpedo tubes, real secondary punch that torpedo-less tier III peers like Phoenix don't carry at all.",
+      "One of the few cruisers this early with a genuine self-heal, rounded out by Sonar for target confirmation.",
+      "Slow at 30 knots and thin-skinned at 10-76mm, has to pick her moments rather than dictate a fight."
+    ],
+    "detail": "Danae gives up HE entirely, the same trade Emerald makes a tier later, and leans on ricochet-resistant AP and a 7.5s reload to make up for it. Six single 152mm mounts is fewer barrels than some peers carry, but the fast cycle keeps the rate of fire competitive, and the real draw is the torpedo battery: four fixed triple mounts for twelve tubes, up to 11,967 damage a hit once upgraded. Repair Party this early is genuinely rare, most tier III cruisers make do with just Damage Control Party, and Sonar rounds out a kit built for confirming a target before committing shells that only work at the right angle. None of that changes the hull underneath her. Thin armor, a 30 knot top speed, and no HE to fall back on mean she has to close in deliberately and pick fights on her own terms rather than have them dictated to her."
+  },
+  "image": "/images/ships/danae.jpg",
+  "imageCredit": "HMS Danae (D44) underway off San Diego, 29 June 1934. US Navy, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "Four fixed triple mounts for twelve tubes, up to 11,967 damage per torpedo once upgraded, a torpedo battery most tier III cruisers (including her American counterpart Phoenix) don't carry at all." },
+    { "tag": "utility-support", "note": "Carries Repair Party and Sonar at tier III, both unusual this early, most cruisers at this tier only have Damage Control Party." }
+  ]
+}

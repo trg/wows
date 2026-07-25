@@ -91,7 +91,9 @@ legitimate at a glance — check every new source against this list before trust
 - Bow/stern tell on a broadside-view splash art: anchor hawsepipe rust streaks + a breaking bow
   wave mark the bow — mast/rigging prominence is not a reliable tell (can point either way).
 - Tier I ships have no upgrade slots (the slot system starts at tier IV, 1 slot, scaling to 4 from
-  tier VII).
+  tier VII). This is a general pattern, not a hard rule: Danae (tier III British cruiser) has a
+  confirmed Slot 1 on its own `Navy:` page (Main Battery Mod 2 / Aiming Systems Mod 1). Trust the
+  ship's own sourced modifications table over the general tier guideline when they disagree.
 - **A superlative claim ("thinnest armor of any tier I cruiser," "fastest reload at tier I") must
   be checked against the full real roster for that tier/class via `Navy:All_Ships`, not just the
   ships already in this site's `src/content/ships/`.** Confirmed wrong twice this way: Novik's
@@ -106,9 +108,14 @@ legitimate at a glance — check every new source against this list before trust
 - Confirmed-good additional `Navy:` pages beyond the original launch roster: `Navy:Nino_Bixio`,
   `Navy:Gryf`, `Navy:Shi_An`, `Navy:Hércules`, `Navy:Gelderland`, `Navy:Júpiter` (tier I cruisers),
   `Navy:Wakeful`, `Navy:V-170`, `Navy:Izyaslav`, `Navy:Bourrasque`, `Navy:Turbine`,
-  `Navy:Klas_Horn`, `Navy:Shenyang`, `Navy:G-101` (tier III destroyers), and `Navy:Le_Terrible`,
-  `Navy:Le_Hardi` (tier VI French destroyers) — all confirmed via breadcrumb, useful for
-  peer-comparison research even for nations not yet on the site.
+  `Navy:Klas_Horn`, `Navy:Shenyang`, `Navy:G-101` (tier III destroyers), `Navy:Le_Terrible`,
+  `Navy:Le_Hardi` (tier VI French destroyers), and `Navy:Galicia` (tier IV Spanish cruiser,
+  reached via the Jina proxy after the direct fetch returned only nav-chrome with no page body) —
+  all confirmed via breadcrumb, useful for peer-comparison research even for nations not yet on
+  the site.
+- `Spain` wasn't in the site's `nation` enum before Galicia — added as a one-line change to
+  `src/content.config.ts` plus a flag entry in `src/lib/nations.ts` (🇪🇸), no component assumed a
+  fixed nation list.
 - A premium ship's consumables are worth diffing against its closest tech-tree sibling even when
   the consumable name matches exactly (same duration/cooldown can still hide a weaker magnitude,
   e.g. a smaller speed bonus on Engine Boost) — confirmed on Le Terrible vs Le Hardi.

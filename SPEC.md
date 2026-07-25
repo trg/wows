@@ -181,6 +181,9 @@ See `src/content.config.ts` for the authoritative Zod schema. Field notes:
 
 ### Map (`src/content/maps/<slug>.json`)
 
+- `gameModes` renders as **one pill per mode**, not joined into a comma-separated string (e.g. not
+  "Standard Battle, Domination" as one line — a `Standard Battle` pill and a `Domination` pill,
+  side by side).
 - `keyAreas` — a single unified list (not separate capture/camping/callout arrays) with a `type`
   of `capture-point | camping-spot | chokepoint | flank-route | open-water`.
 - `strategyNotes` — team-level tactics, short bullets.

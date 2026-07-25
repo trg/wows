@@ -24,7 +24,9 @@ const { data } = map;
 
   <div class="section">
     <h2>Game Modes</h2>
-    <p>{data.gameModes.join(', ')}</p>
+    <span class="pills">
+      {data.gameModes.map((mode) => <span class="badge">{mode}</span>)}
+    </span>
   </div>
 
   <div class="section">

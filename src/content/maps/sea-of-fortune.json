@@ -1,0 +1,17 @@
+{
+  "name": "Sea of Fortune",
+  "size": "Medium-large, islands on both flanks around a central strait",
+  "gameModes": ["Domination"],
+  "description": "Somewhere between France and Great Britain, with islands stacked onto both flanks and a strait cutting through the middle. The right side sits close enough for a stand-up brawl, the left stays open enough to snipe from range.",
+  "keyAreas": [
+    { "name": "Right flank capture point", "type": "capture-point", "notes": "Taller islands and tighter spacing favor cruisers and battleships willing to close the distance. Fights here open shorter than anywhere else on the map." },
+    { "name": "Left flank capture point", "type": "capture-point", "notes": "The islands run low here, blocking torpedoes more than they block gunfire. Better ground for a long-range duel than a torpedo ambush." },
+    { "name": "Center strait", "type": "chokepoint", "notes": "A narrow passage splits the map, with a small island and its castle marking the middle. Whoever holds it controls how fast either side can reinforce the other flank." }
+  ],
+  "strategyNotes": [
+    "Commit to the right flank as a group. The tighter quarters punish whoever hesitates more than whoever pushes first.",
+    "Use the left flank's low islands for cover from shells, not concealment. Cruisers and battleships can still trade at range without full exposure.",
+    "Holding the center strait early makes it much harder for the enemy to shift ships between flanks once one side starts losing.",
+    "Lower-tier matches run a smaller version of this map, so flank distances shrink and the center strait matters even sooner."
+  ]
+}

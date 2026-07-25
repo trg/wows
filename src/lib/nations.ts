@@ -8,4 +8,5 @@ export const NATION_FLAGS: Record<string, string> = {
   France: '🇫🇷',
   USSR: '☭',
   Italy: '🇮🇹',
+  Spain: '🇪🇸',
 };

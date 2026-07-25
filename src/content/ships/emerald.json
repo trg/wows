@@ -1,0 +1,87 @@
+{
+  "name": "HMS Emerald",
+  "nation": "United Kingdom",
+  "type": "Cruiser",
+  "tier": 4,
+  "shortDescription": "AP-only British light cruiser, seven fast-reloading 152mm guns backed by a heavy torpedo battery and an unusually full consumable kit.",
+  "role": "AP-focused gun and torpedo cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "27,100", "rating": "average" },
+    { "label": "Main Battery", "value": "7x1 152mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "7 s", "rating": "strong" },
+    { "label": "Main Battery Range", "value": "13.4 km", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "4x4 533mm", "rating": "strong" },
+    { "label": "Torpedo Damage", "value": "15,733", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "6 km", "rating": "weak" },
+    { "label": "Max Speed", "value": "33 kts", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "10.4 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "6.2 km", "rating": "average" },
+    { "label": "Armor", "value": "10-76mm", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same cycle as this site's other tier IV cruiser, Omaha, nothing unique here.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "+135 hp/s over a 28s duration, about 3,780 hp per charge, 2 charges on an 80s cooldown. A self-heal this early is rare, Omaha carries no Repair Party at all.", "rating": "strong" },
+    { "name": "Sonar", "flavor": "3.7 km ship detection, 2.7 km torpedo detection, 90s duration, 180s cooldown, 2 charges. Same numbers as Omaha's, useful here for confirming a target before committing AP-only shells.", "rating": "average" },
+    { "name": "Smoke Generator", "flavor": "15s lay time, 96s dispersion, 2 charges on a 240s cooldown. Long screen life per charge, but the cooldown means picking one or two moments to use it.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "100s uptime, 80s cooldown, 3 charges, one more charge than Omaha gets from the same consumable.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 1, "arcs": ["bow", "port", "starboard"] },
+    { "label": "B", "guns": 1, "arcs": ["bow", "port", "starboard"], "note": "Superfires over A." },
+    { "label": "Port Wing", "guns": 1, "arcs": ["port"], "position": "port", "note": "Amidships casemate mount, fixed to port, can't cross to starboard." },
+    { "label": "Starboard Wing", "guns": 1, "arcs": ["starboard"], "position": "starboard" },
+    { "label": "Q", "guns": 1, "arcs": ["port", "starboard"], "note": "Centerline amidships mount, blocked fore and aft by the superstructure, broadside only." },
+    { "label": "X", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Superfires over Y." },
+    { "label": "Y", "guns": 1, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "Port 1", "tubes": "3 tubes (4 upgraded)", "side": "port", "singleTubeFire": true },
+    { "label": "Port 2", "tubes": "3 tubes (4 upgraded)", "side": "port", "singleTubeFire": true },
+    { "label": "Starboard 1", "tubes": "3 tubes (4 upgraded)", "side": "starboard", "singleTubeFire": true },
+    { "label": "Starboard 2", "tubes": "3 tubes (4 upgraded)", "side": "starboard", "singleTubeFire": true, "note": "All four mounts fixed to their own broadside, no centerline swing. The Sequential trait lets each mount fire its tubes one at a time instead of a full salvo." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" }
+  ],
+  "strengths": [
+    "Improved AP ricochet angles and short fuse timers that are less likely to overpenetrate small targets, so shells arm reliably even against destroyers",
+    "4x4 torpedo tubes upgraded, 16 tubes total dealing up to 15,733 damage each, more tubes and more damage per fish than this site's other tier IV cruiser, Omaha",
+    "Repair Party at tier IV is unusual, Omaha has no self-heal at all",
+    "Fast 7s main battery reload keeps all seven guns cycling quickly",
+    "A genuinely full consumable kit: heal, sonar, smoke, and fighter cover, not just Damage Control Party"
+  ],
+  "weaknesses": [
+    "No HE shells at all, AP-only means no fire chance and no reliable way to chip down a heavily angled or bow-tanking target",
+    "Thin 10-76mm armor with an exposed citadel, and the Compromising trait means high-caliber AP can still arm through that plating even on an overpenetrating hit",
+    "Only seven guns against Omaha's twelve, less raw volume of fire even with the faster reload",
+    "6 km torpedo range even fully upgraded, a short leash that forces a real approach to use them",
+    "Modest AA (95 DPS total across three short-ranged mounts) with no Defensive AA Fire option, just the Catapult Fighter"
+  ],
+  "tips": [
+    "Save AP for broadsides or exposed superstructure, there's no HE to fall back on against an angled target.",
+    "Lean on Repair Party to shrug off chip damage that would just pile up on a ship without a heal.",
+    "Ping with Sonar before committing to a fight, confirming the target matters more when every shell you carry is AP.",
+    "Smoke has a long cooldown, save it for a real disengage or a repositioning push rather than routine cover.",
+    "Close the range with some caution before a torpedo run, 6 km doesn't give much room for error."
+  ],
+  "threats": [
+    { "threat": "Battleships and heavy cruisers with big-caliber AP", "reason": "The Compromising trait means their shells can still arm and deal full damage through her thin plating even when they overpenetrate." },
+    { "threat": "Carrier strikes", "reason": "No Defensive AA Fire in her kit, just a Catapult Fighter and modest baseline DPS, so plane attacks go mostly unanswered." },
+    { "threat": "Destroyers that spot her first", "reason": "10.4 km sea detectability isn't especially stealthy, and her own torpedoes need to close to 6 km to answer back." }
+  ],
+  "playstyle": {
+    "summary": [
+      "AP-only light cruiser, no HE shells at all, built around ricochet-resistant, reliably-arming AP instead",
+      "Heaviest torpedo battery of the tier IV cruisers on this site, 16 tubes upgraded and real damage per hit",
+      "One of the few tier IV cruisers with a self-heal, rounded out with sonar, smoke, and an extra-charge fighter",
+      "Thin, exposed hull that big-caliber AP can still punish even on an overpenetrating hit"
+    ],
+    "detail": "Emerald gives up HE entirely and leans all the way into AP, backed by better ricochet angles and fuse timers tuned to arm even against small targets. Seven guns is fewer than Omaha's twelve, but a 7s reload keeps the rate of fire competitive, and the torpedo battery is the real prize, four quad mounts upgraded for sixteen tubes and over 15,000 damage a hit. The consumable kit is unusually complete for the tier: a real Repair Party, Sonar, Smoke Generator, and Catapult Fighter all in the mix. None of that changes the armor, though. She's thin-skinned and the Compromising trait means even overpenetrating hits from bigger guns can still arm and hurt her, so staying unseen and picking the right target matters more than the consumable list might suggest."
+  },
+  "image": "/images/ships/emerald.jpg",
+  "imageCredit": "Photograph A 6462, Imperial War Museums, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "Four quad mounts upgraded, sixteen tubes total, up to 15,733 damage per torpedo, the heaviest torpedo battery among this site's tier IV cruisers." },
+    { "tag": "utility-support", "note": "Carries Repair Party, Sonar, and Smoke Generator options alongside the standard kit, an unusually full support loadout for the tier." }
+  ]
+}

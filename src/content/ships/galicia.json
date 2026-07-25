@@ -1,0 +1,79 @@
+{
+  "name": "Galicia",
+  "nation": "Spain",
+  "type": "Cruiser",
+  "tier": 4,
+  "shortDescription": "Tanky Spanish light cruiser with a balanced HE/AP main battery, tight gun dispersion, and Sonar that outranges Omaha's or Emerald's.",
+  "role": "Balanced gun cruiser with a durability edge",
+  "stats": [
+    { "label": "Hull HP", "value": "24,900 stock, 27,800 upgraded", "rating": "strong" },
+    { "label": "Main Battery", "value": "4x2 152mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "10s stock, 9s upgraded", "rating": "average" },
+    { "label": "Main Battery Range", "value": "12.4 km stock, 13.6 km upgraded", "rating": "average" },
+    { "label": "Main Battery Sigma", "value": "2.15", "rating": "strong" },
+    { "label": "Torpedo Tubes", "value": "2x3 533mm", "rating": "weak" },
+    { "label": "Torpedo Damage", "value": "11,136", "rating": "average" },
+    { "label": "Torpedo Reload", "value": "88 s", "rating": "weak" },
+    { "label": "Max Speed", "value": "33 kts", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "10.5 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "6.3 km", "rating": "average" },
+    { "label": "Armor", "value": "10-76mm", "rating": "weak" },
+    { "label": "AA", "value": "77 DPS stock, 127 DPS upgraded across two mounts", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock cycle as every other tier IV cruiser on this site.", "rating": "average" },
+    { "name": "Sonar", "flavor": "4 km ship detection, 3 km torpedo detection, 100s duration, 180s cooldown, 2 charges. Longer range and duration than Omaha's or Emerald's Sonar (3.7 km / 2.7 km over 90s), the strongest version of it among this site's tier IV cruisers.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "B", "guns": 2, "arcs": ["bow", "port", "starboard"], "note": "Superfires over A." },
+    { "label": "X", "guns": 2, "arcs": ["stern", "port", "starboard"], "note": "Superfires over Y." },
+    { "label": "Y", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [
+    { "label": "Port", "tubes": "3 tubes", "side": "port", "note": "One launcher per broadside, fixed to that side with no centerline swing." },
+    { "label": "Starboard", "tubes": "3 tubes", "side": "starboard" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" }
+  ],
+  "strengths": [
+    "27,800 hp upgraded is the highest hull HP among this site's tier IV cruisers, backed by the official Tough trait",
+    "Carries both HE and AP with a tight 2.15 sigma, so she isn't locked into one shell type like Emerald or Danae",
+    "Best Sonar on this site's tier IV cruisers, 4 km ship / 3 km torpedo detection over a full 100s",
+    "10.5 km sea detectability and the Hidden trait let her set her own engagement range"
+  ],
+  "weaknesses": [
+    "Only two torpedo mounts for six tubes total on an 88s reload, half the launcher count of Omaha or Emerald",
+    "Consumable slots stop at Damage Control Party and Sonar, no smoke, heal, or fighter option at all",
+    "10-76mm armor with an exposed citadel that HE shells punish just as easily as AP",
+    "Mediocre AA (127 DPS upgraded across just two mounts) with no Defensive AA Fire to lean on"
+  ],
+  "tips": [
+    "Use the good concealment to pick your range instead of brawling in close, the armor won't hold up to focused fire.",
+    "Don't count on the torpedoes as a primary weapon, two mounts and an 88s reload make them a bonus, not a plan.",
+    "Save Sonar for confirming a real threat, there's no fighter or smoke to fall back on if you burn both charges early.",
+    "Lean on HE against angled or bow-tanking targets since you're not locked into AP-only like Emerald or Danae."
+  ],
+  "threats": [
+    { "threat": "Battleships and heavy cruisers with big AP", "reason": "The exposed 10-76mm citadel gives them an easy hit even at range." },
+    { "threat": "Destroyers that spot her first", "reason": "Only two torpedo mounts to answer with, and no smoke to break contact." },
+    { "threat": "Carrier strikes", "reason": "Mediocre AA and no Defensive AA Fire consumable leave plane attacks mostly unanswered." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Tanky tier IV cruiser, highest hull HP on this site's tier IV roster, backed by the Tough trait.",
+      "Balanced HE/AP main battery with tight dispersion instead of committing to one shell type.",
+      "Best Sonar range of this site's tier IV cruisers, an edge for spotting hidden threats.",
+      "Torpedoes are a light secondary threat, two triple mounts, not the main weapon.",
+      "Thin, exposed armor and mediocre AA sit behind that HP number."
+    ],
+    "detail": "Galicia trades torpedo volume for durability. Where Omaha and Emerald both carry four launcher mounts, Galicia gets by with two and leans instead on the highest hull HP of any tier IV cruiser on this site and a main battery that doesn't have to choose between HE and AP. The 2.15 sigma keeps those eight guns landing close together, and Sonar here outranges the version other tier IV cruisers get. None of that fixes the armor, though. The citadel is just as exposed as her peers', the AA is weak, and the consumable kit stops at Damage Control Party and Sonar, no smoke or heal to lean on if a fight goes wrong."
+  },
+  "image": "/images/ships/galicia.jpg",
+  "imageCredit": "Cruiser Príncipe Alfonso, later renamed Libertad and then Galicia, underway in 1927. Public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "27,800 hp upgraded is the highest hull HP among this site's tier IV cruisers, backed by the official Tough trait." },
+    { "tag": "utility-support", "note": "Sonar reaches 4 km ship / 3 km torpedo detection over a 100s duration, longer range and duration than Omaha's or Emerald's version of the same consumable." }
+  ]
+}
