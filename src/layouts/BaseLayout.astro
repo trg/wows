@@ -49,6 +49,33 @@ const { title, backHref, backLabel } = Astro.props;
   </body>
 </html>
 
+{/*
+  @font-face src paths must resolve through `base` here rather than living as
+  hardcoded /fonts/... urls in global.css: Vite only rewrites public-dir url()
+  references with the configured base during the production build, so a plain
+  absolute path 404s in dev even though it works once built. This can't use
+  define:vars (CSS custom properties) because @font-face descriptors don't
+  support var() substitution per spec — lightningcss silently drops the whole
+  src line. set:html injects the already-resolved path as a plain string.
+*/}
+<style set:html={`
+  @font-face {
+    font-family: 'Staatliches';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('${base}fonts/staatliches.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('${base}fonts/ibm-plex-sans-400.woff2') format('woff2');
+  }
+`} />
+
 <style>
   .disclaimer {
     max-width: 720px;
