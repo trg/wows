@@ -3,7 +3,7 @@
   "nation": "Italy",
   "type": "Cruiser",
   "tier": 3,
-  "shortDescription": "Fast, low-profile Condottieri-class cruiser with the tier's biggest guns and slowest reload, plus a choice between HE and SAP on her top turrets.",
+  "shortDescription": "Fast, low-profile Condottieri-class cruiser with the tier's biggest guns and slowest reload, plus a choice between HE and SAP on her upgraded turrets.",
   "role": "Fast gunnery cruiser",
   "stats": [
     { "label": "Hull HP", "value": "19,300 stock, 24,000 upgraded", "rating": "average" },
@@ -42,7 +42,7 @@
     "36.5 kt top speed is the fastest of any tier III cruiser, ahead of Phoenix's 35 kts, Kuma's 34.5 kts, Danae's 30 kts, and Karlsruhe's 27.5 kts",
     "9.2 km sea detection and 5.5 km air detection both beat every other tier III cruiser (Danae 9.5/5.7 km, Kuma 9.9/5.9 km, Phoenix 10.3/6.2 km, Karlsruhe 10.5/6.3 km)",
     "8.0 km torpedo range is the longest of any tier III cruiser, ahead of Kuma's 7 km, Danae and Karlsruhe's 6 km, and Phoenix's 5.5 km",
-    "Researching the top turrets swaps HE for SAP, a real option against angled or broadside armor that most of her tier III peers don't have",
+    "Researching the upgraded turrets swaps HE for SAP, a real option against angled or broadside armor that most of her tier III peers don't have",
     "152mm/53 guns hit harder per shell than the 140mm and smaller mounts most tier III cruiser peers carry"
   ],
   "weaknesses": [
@@ -55,7 +55,7 @@
   "tips": [
     "Use the speed and concealment to pick your range instead of slugging it out, the slow reload loses a straight duel against every other tier III cruiser",
     "Make every salvo count. A missed 15-second reload costs you more than it would on a faster-cycling peer",
-    "Research the top turrets for SAP once you're comfortable giving up HE, it's the sharpest answer this hull has to angled targets",
+    "Research the upgraded turrets for SAP once you're comfortable giving up HE, it's the sharpest answer this hull has to angled targets",
     "Commit to a broadside before opening a torpedo run, the tubes can't swing to the other side once you've picked one",
     "Lean on the superfiring turret pairs bow-in and stern-out, all eight guns stay live in either posture"
   ],
@@ -67,10 +67,10 @@
     "summary": [
       "Fastest and best-hidden cruiser at tier III, built to dictate range rather than out-shoot anyone in a straight fight.",
       "Reload is the slowest at the tier by a wide margin, so this isn't a volume-of-fire ship despite carrying eight guns.",
-      "SAP becomes available on the top turrets, trading HE fire chance for consistent penetration damage against broadside targets.",
+      "SAP becomes available on the upgraded turrets, trading HE fire chance for consistent penetration damage against broadside targets.",
       "Torpedoes are short on tubes but reach further than any other tier III cruiser's."
     ],
-    "detail": "Giussano is a Condottieri-class light cruiser built for speed over protection, and it shows. Her top speed and concealment both lead the tier III cruiser field, letting her set the terms of an engagement the way her thin 6-40mm plating never could in a straight brawl. The eight-gun broadside hits hard per shell, but a 15-second reload means she's rarely winning a standing gunnery duel against faster-cycling peers. Researching the top turrets adds SAP to the loadout, a real tool against angled armor once you're willing to give up HE's fire chance. Play her at range, pick shots carefully, and use the speed to be somewhere else by the time return fire arrives."
+    "detail": "Giussano is a Condottieri-class light cruiser built for speed over protection, and it shows. Her top speed and concealment both lead the tier III cruiser field, letting her set the terms of an engagement the way her thin 6-40mm plating never could in a straight brawl. The eight-gun broadside hits hard per shell, but a 15-second reload means she's rarely winning a standing gunnery duel against faster-cycling peers. Researching the upgraded turrets adds SAP to the loadout, a real tool against angled armor once you're willing to give up HE's fire chance. Play her at range, pick shots carefully, and use the speed to be somewhere else by the time return fire arrives."
   },
   "goalTags": [
     { "tag": "stealth-play", "note": "9.2 km sea detection and 5.5 km air detection both beat every other tier III cruiser, letting her scout and reposition closer than any peer." }
