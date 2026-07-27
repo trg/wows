@@ -1,0 +1,71 @@
+{
+  "name": "Gangut",
+  "nation": "USSR",
+  "type": "Battleship",
+  "tier": 3,
+  "shortDescription": "Twelve 305mm guns spread across four triple turrets set at a single deck level instead of superfiring pairs, the widest broadside of her tier III peers but the slowest reload and thinnest hull.",
+  "role": "Broadside-focused gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "37,600", "rating": "weak" },
+    { "label": "Main Battery", "value": "4x3 305mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "36 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "12.1 km", "rating": "weak" },
+    { "label": "Secondary Battery", "value": "16x1 120mm", "rating": "strong" },
+    { "label": "AA Defense", "value": "8x1 75mm, 15 DPS", "rating": "weak" },
+    { "label": "Max Speed", "value": "20.7 kts", "rating": "average" },
+    { "label": "Rudder Shift", "value": "14.3 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "12.0 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "9.6 km", "rating": "strong" },
+    { "label": "Armor", "value": "12-305mm hull range", "rating": "average" },
+    { "label": "Torpedo Damage Reduction", "value": "9%", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "3 charges, 10s action, 40s cooldown. The On Demand Repairs trait trades the usual unlimited-charge cycle for a much faster reset, half Nevada's 80s cooldown, but she runs out after three uses.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "2 charges, 28s at 202 hp/s, about 5,660 hp per activation, roughly 15% of her 37,600 hp pool.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 160s cooldown. A real boost to a 16-gun secondary battery that already hits hard at brawling range.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 3, "arcs": ["port", "starboard"], "note": "Amidships mount, needs close to a full broadside to bear, can't hit bow or stern targets." },
+    { "label": "3", "guns": 3, "arcs": ["port", "starboard"], "note": "Amidships mount, needs close to a full broadside to bear, can't hit bow or stern targets." },
+    { "label": "4", "guns": 3, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Secondary Battery Modification 2" }
+  ],
+  "strengths": [
+    "Twelve guns across just four turrets, the fewest mounts of any tier III battleship carrying that many guns, so there's less to knock out one hit at a time",
+    "12.0 km sea detection beats Kaiser's 12.5, Wyoming's 12.5, Orion's 12.6, and Ishizuchi's 12.9, the best concealment of her tech-tree tier III peers",
+    "14.3s rudder shift is the quickest of that same peer group",
+    "16-gun secondary battery hits hard once someone closes the range",
+    "On Demand Repairs resets Damage Control Party in 40s instead of the usual 80-90s, so fire and flood spam gets punished less"
+  ],
+  "weaknesses": [
+    "36s main battery reload is well behind Nassau's 22.2s, Ishizuchi's 25s, Kaiser's 26s, and Wyoming/Orion's 30s, the slowest of the group by a wide margin",
+    "37,600 hp is the lowest hull pool among tech-tree tier III battleships",
+    "9% torpedo damage reduction is the second-softest of her peers, only Ishizuchi's 4% is worse",
+    "Turrets 2 and 3 are locked to broadside only and can't answer a target off the bow or stern",
+    "12.1 km main battery range is the shortest of her tier III peer group"
+  ],
+  "tips": [
+    "Two of your four turrets can't fire unless you're actually showing broadside, so don't expect a full 12-gun salvo at an awkward angle.",
+    "Commit to your angle early. A 36s reload punishes a wasted salvo hard.",
+    "On Demand Repairs only gives you three charges, don't burn one on a single small fire, but don't be afraid to use it either since it's back in 40s.",
+    "Let fights come to mid-range if you can. Her secondary battery adds real damage once someone closes in."
+  ],
+  "threats": [
+    { "threat": "Destroyers and cruisers with torpedoes", "reason": "9% torpedo damage reduction is the second-softest of her tier III peers, so a spread hurts more than her armor rating suggests." },
+    { "threat": "Ships that can sit off her bow or stern", "reason": "Turrets 2 and 3 are locked to broadside only, so she loses half her main battery the moment she can't show her side." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Twelve 305mm guns across four turrets at one deck level instead of superfiring pairs, built to get every gun into the broadside at once.",
+      "Best concealment and quickest rudder of her tech-tree tier III peers, but the slowest reload and lowest hp pool of the group.",
+      "On Demand Repairs trades Damage Control Party's usual long cooldown for a fast 40s reset, at the cost of only three charges total."
+    ],
+    "detail": "Gangut spreads her twelve guns across four turrets set at a single deck level rather than stacking them in superfiring pairs, a layout aimed at one thing: getting every gun into the broadside at once. Turrets 1 and 4 can still swing to cover the bow or stern, but turrets 2 and 3 sit locked onto the beam, so she really is built to fight from the side. The cost of that gun count shows up in a 36 second reload, the slowest of her tier, and a hull that's thinner than any other tech-tree battleship at tier III. On Demand Repairs offsets some of the risk, a Damage Control Party that resets in 40 seconds instead of the usual minute-plus, though it runs out after three uses. Get the angle set early and she pays it back with a wide, hard-hitting broadside."
+  },
+  "goalTags": [],
+  "image": "/images/ships/gangut.jpg",
+  "imageCredit": "Imperial Russian battleship Gangut, Helsinki, 1915. Public domain, via Wikimedia Commons."
+}

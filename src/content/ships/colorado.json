@@ -22,9 +22,8 @@
   "consumables": [
     { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown, unlimited charges. Standard USN reset, the same cycle as Nevada's and New Mexico's.", "rating": "average" },
     { "name": "Repair Party", "flavor": "3 charges, 28s each at 391 hp/s, about 0.66% of max HP per second against the standard 0.5%, roughly 32,900 hp back across all three charges against her 59,300 hp pool.", "rating": "strong" },
-    { "name": "Catapult Fighter", "flavor": "3 charges, 90s duration, 80s cooldown. One of three options in the shared utility slot, the pick that keeps spotter planes and strike squadrons off her.", "rating": "average" },
-    { "name": "Observation Seaplane", "flavor": "3 charges, 30s duration at +10% shell grouping, 200s cooldown. The accuracy pick in that same three-way slot, worth saving for a lined-up volley.", "rating": "average" },
-    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 160s cooldown. The third option in that slot, though her 127mm secondaries are short-ranged and light enough that the buff has less to work with than it does on some other USN battleships.", "rating": "average" }
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 160s cooldown. The accuracy pick in her Slot 3 pairing, though her 127mm secondaries are short-ranged and light enough that the buff has less to work with than it does on some other USN battleships.", "rating": "average" },
+    { "name": "Exhaust Smoke Generator", "flavor": "3 charges, 45s screen off a 150s cooldown, 10s to lay. An unusual option for a battleship this size, the Slot 3 alternative to Enhanced Secondary Targeting for breaking contact or repositioning instead of committing to a brawl.", "rating": "strong" }
   ],
   "turrets": [
     { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
@@ -55,7 +54,7 @@
   "tips": [
     "Angle the belt early and hold it. The all-or-nothing layout gives you a real immune zone as long as you're not showing broadside.",
     "Don't count on speed to get you out of a bad spot, you're the slowest hull at the tier so commit to a position before you're already in range.",
-    "Pick your Slot 3 consumable around the match plan: Catapult Fighter against carriers and spotter planes, Observation Seaplane for a called shot, Enhanced Secondary Targeting only if you're actually planning to brawl.",
+    "Pick your Slot 3 consumable around the match plan: Enhanced Secondary Targeting if you're planning to brawl, Exhaust Smoke Generator if you'd rather have an escape option in your pocket.",
     "Look for the 6-14 km band where your dispersion is at its best rather than sitting at max range or rushing in close.",
     "Keep Damage Control Party ready for the superstructure, it catches fire easily even though the belt itself is tough."
   ],

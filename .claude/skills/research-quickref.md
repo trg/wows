@@ -15,7 +15,11 @@ legitimate at a glance — check every new source against this list before trust
   `Ship:` — same host as the banned PC wiki, easy to land on the wrong one). Confirm via the
   page's own breadcrumb ("Homepage / WoWS Legends / ..."). Has stats, consumables, module tables,
   and a "Player Opinion" Pros/Cons section that's good ready-made sourcing for
-  `strengths`/`weaknesses`. Hub page: `Navy:WoWS_Legends`.
+  `strengths`/`weaknesses`. Hub page: `Navy:WoWS_Legends`. **The `Navy:` prefix alone isn't a
+  guarantee, though** — `Navy:Exhaust_Smoke_Generator_Data` breadcrumbs as "Homepage / World of
+  Warships / ..." (no "Legends"), meaning it's original-game content despite living under `Navy:`.
+  Check the breadcrumb on every page, even ones that look like a same-pattern URL to an
+  already-confirmed page.
 - **`wiki.wargaming.net/en/Navy:All_Ships`** — full tech tree; sanity-check a ship's tier against
   its neighbors in the line.
 - **`wiki.wargaming.net/en/Navy:MBRB_Data`** — per-ship Main Battery Reload Booster numbers.
@@ -169,14 +173,26 @@ legitimate at a glance — check every new source against this list before trust
   `id="slot-N-label"` markup) that the `Navy:` wiki page's flat consumable list doesn't — use it to
   tell whether several listed consumables are simultaneous or mutually-exclusive alternatives in
   one slot (confirmed on Nevada: 3 of her 5 listed consumables share one slot, only one is
-  equippable at a time). **But this sub-page can itself be wrong for a specific ship** — Colorado's
-  `/ships/colorado/consumables` listed only 3 slots (missing Catapult Fighter and Observation
-  Seaplane entirely) and named an "Exhaust Smoke Generator" alternative, implausible for a US
-  battleship and not mentioned anywhere on the `Navy:` page. Cross-checked against Nevada's already-
-  confirmed pattern (a shared 3-way utility slot: Catapult Fighter / Observation Seaplane /
-  Enhanced Secondary Targeting) instead, which matched Colorado's `Navy:` page consumable list
-  exactly. When this sub-page's grouping looks structurally odd for the ship's class/nation, trust
-  a same-nation sibling's already-verified slot pattern over it.
+  equippable at a time).
+- **Reversal on Colorado's consumables, confirmed 2026-07-25**: an earlier research pass saw
+  `wowsbuilds.com/ships/colorado/consumables` list only 3 slots (no Catapult Fighter/Observation
+  Seaplane, plus an "Exhaust Smoke Generator" alternative). Instead of treating that as Colorado's
+  own data, it reasoned "no US battleship would have smoke" (real-world/genre plausibility — not a
+  valid check on a video game's design at all) and went looking for a second opinion, landing on
+  Nevada's already-confirmed 3-way floatplane slot as a stand-in for what Colorado "should" have.
+  Both moves were invalid on their own, independent of which source turned out newer: a sibling
+  ship's structure is never evidence for what a *different* ship's own data is (it's only valid for
+  comparative `rating`/prose once each ship's own facts are separately confirmed), and neither is an
+  assumption about what "makes sense" for the ship's class. The user reported in-game that Colorado
+  has no Catapult Fighter or Observation Seaplane, confirming `wowsbuilds` was right all along:
+  Slot 3 is a 2-way alternative between Enhanced Secondary Targeting and Exhaust Smoke Generator,
+  Slot 4 has no item. (`Navy:Colorado` separately turned out to be stale — unedited since 5 March
+  2026, no "Changes" section — but that's a secondary finding, not the reason the original
+  conclusion was wrong.) When a ship's own direct source disagrees with what seems typical for its
+  class, or with another ship's pattern, treat neither as grounds to doubt it — a live source
+  showing specific, structurally clean data for *this* ship outranks both. Ask the user to confirm
+  in-game as the real tiebreaker when a direct source still seems doubtful, not analogy to a
+  sibling or a sense of what "should" be normal.
 - Tier VI battleship peers confirmed via their own `Navy:` pages (useful for future tier VI BB
   peer-comparison, e.g. Colorado): Gneisenau (Germany), Sinop (USSR), King George V (UK), Lyon
   (France), Nagato (Japan), F. Caracciolo (Italy). Their tier V predecessors (also confirmed):
@@ -189,6 +205,16 @@ legitimate at a glance — check every new source against this list before trust
   `mahan.json` (USA, already on-site). All four fetched with a direct `curl` + browser UA, no Jina
   proxy needed that run — the bot-check stub is intermittent per-request, not a property of
   specific pages.
+- Tier III battleship peers confirmed via their own `Navy:` pages (useful for future tier III BB
+  peer-comparison, e.g. Gangut): `Navy:Kaiser` (Germany), `Navy:Wyoming` (USA), `Navy:Orion` (UK),
+  `Navy:Ishizuchi` (Japan), `Navy:Nassau` (Germany, premium). All fetched with a direct `curl` +
+  browser UA, no Jina proxy needed.
+- **Splash art isn't always the standard bow-quartering angle** — Gangut's
+  (`syntubpzoenozdaohyfa.supabase.co/storage/v1/object/public/ships/gangut.webp`, found by
+  grepping the wowsbuilds base page HTML per the pattern above) is an unusually wide broadside/
+  three-quarter shot that shows all four turret positions and gun counts, not just the forward
+  cluster. Worth a quick look at the full image before assuming the usual ceiling applies, though
+  it still won't confirm firing arcs/train limits either way — that still needs the user in-game.
 - A ship's "Community Contributions / Changes" changelog section can list a **stale value that
   contradicts the page's own current stats table** — Aviere's changelog says sea detection was
   "reduced from 7.1 to 6.8 km" in one patch, but the live Concealment table for the same page
@@ -201,3 +227,17 @@ legitimate at a glance — check every new source against this list before trust
   "2x3" for torpedoes (2 mounts, 6 tubes total) — both totals matched the user's 3-turret/2-mount
   description exactly, so the two 2-gun turrets were assigned to the fore/aft "3-way arc" positions
   and the 1-gun turret to the described amidships "broadsides only" slot.
+- Tier III cruisers confirmed via `Navy:All_Ships` (raw `curl`, not WebFetch's summary — the page
+  is a real ship-icon tech tree, not JS-gated) plus their own `Navy:` pages: `Navy:Phoenix` (USA),
+  `Navy:Kuma`/Iwaki/Iwaki FE/Yubari (Japan, one line), `Navy:Danae` (UK), `Navy:Karlsruhe`
+  (Germany), `Navy:Giussano` (Italy). No France/USSR/Spain tier III cruiser line exists yet —
+  don't treat the absence as a research gap.
+- **WebSearch synthesis contradicted a direct `Navy:` page fetch on Giussano's shell types** —
+  the search summary claimed she "does not have access to traditional HE or AP," only SAP, and
+  paired that with a 10.8 km detection figure that matched neither `Navy:Giussano` nor
+  `wowsbuilds.com/ships/giussano` (both independently agree on 9.2 km). The direct fetch of the
+  module research tree showed the real split instead: stock turrets carry HE (12% fire, 1,950
+  dmg) + AP (2,800 dmg), and researching the upgraded turrets trades HE away for SAP (3,850 dmg,
+  42mm pen) rather than adding it, a genuine stock-vs-upgraded choice, not "no HE ever." Confirms
+  the standing rule above: trust a direct fetch of a confirmed source over anything only seen in a
+  search summary, especially once a second, unrelated number (detection) also disagrees.
