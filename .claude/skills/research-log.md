@@ -688,3 +688,35 @@ français"). General lesson: a Commons category built around a ship name, not a 
 identity, can silently contain a same-named vessel from a different navy, even when licensing and
 image quality both look fine. Check the file's own caption/description for nation and ship type
 before trusting a category-page match, not just the category title.
+
+## Duguay-Trouin (tier III French cruiser): stale wiki added a consumable that isn't there
+
+`Navy:Duguay-Trouin` (last modified 12 November 2024, breadcrumb confirmed "Homepage / WoWS Legends
+/ Duguay-Trouin") listed three consumables in its flat Consumables section: Damage Control Party,
+Sonar (2 charges, 90s/180s, 2.5 km torpedo / 3.5 km ship detection), and Catapult Fighter (3
+charges, 100s/80s). `wowsbuilds.com/ships/duguay-trouin/consumables` (a live, slot-grouped page,
+per the pattern in `research-quickref.md`) showed only two real slots: Slot 1 Damage Control Party,
+Slot 2 Catapult Fighter, with Slot 3 and Slot 4 both explicitly "No items" — no Sonar anywhere. A
+WebSearch synthesis independently landed on the same two-consumable reading ("the ship appears to
+be equipped with Catapult Fighter rather than Sonar"), for whatever that's worth given the standing
+rule that search synthesis alone isn't trustworthy. All of the other stats on both pages matched
+almost exactly (HP, armor, gun/torpedo arrangement, ranges), so this wasn't a case of two different
+ships or a wrong-game source, just one specific field disagreeing.
+
+Applied the same resolution as the Colorado case ([[feedback_source_conflict_resolution]]): a live
+source with specific, structurally clean data (explicit per-slot grouping, empty slots stated
+outright) outranks a page that hasn't been touched in nearly two years, and neither cross-ship
+pattern-matching nor "does this look right for the class" is valid evidence either way. Went with
+wowsbuilds' two-consumable reading: no Sonar. If this turns out wrong, the fix is a one-line
+consumables edit to `duguay-trouin.json`, not a deep re-research.
+
+Also: while researching tier III cruiser peers for `rating` comparisons (Phoenix, Kuma, Karlsruhe,
+Danae, Giussano all previously confirmed), found Duguay-Trouin has the thinnest armor of the group
+(10-30mm, thinner than Giussano's 6-40mm) and the worst detection (10.9 km sea / 6.5 km air, worse
+than Karlsruhe's previous-worst 10.5/6.3). Corrected `giussano.json`'s weaknesses bullet, which had
+called its own 6-40mm "the thinnest of any tier III cruiser" — true until this ship's data came in,
+another instance of the Novik/Dresden pattern in `research-quickref.md` where the superlative was
+honestly sourced at the time but the site's own coverage was the limiting factor. Also,
+`research-quickref.md` previously said "no France ... tier III cruiser line exists yet" — false,
+Duguay-Trouin is that line's tier III entry (predecessor Friant II, successor Émile Bertin IV,
+confirmed on both `Navy:Duguay-Trouin` and `wowsbuilds.com`'s sidebar). Corrected there too.

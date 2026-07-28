@@ -230,8 +230,39 @@ legitimate at a glance — check every new source against this list before trust
 - Tier III cruisers confirmed via `Navy:All_Ships` (raw `curl`, not WebFetch's summary — the page
   is a real ship-icon tech tree, not JS-gated) plus their own `Navy:` pages: `Navy:Phoenix` (USA),
   `Navy:Kuma`/Iwaki/Iwaki FE/Yubari (Japan, one line), `Navy:Danae` (UK), `Navy:Karlsruhe`
-  (Germany), `Navy:Giussano` (Italy). No France/USSR/Spain tier III cruiser line exists yet —
-  don't treat the absence as a research gap.
+  (Germany), `Navy:Giussano` (Italy), `Navy:Duguay-Trouin` (France, predecessor Friant, successor
+  Émile Bertin). No USSR/Spain tier III cruiser line exists yet — don't treat the absence as a
+  research gap. Max armor across this group, useful for future thinnest/thickest claims: Karlsruhe
+  100mm, Phoenix/Danae 76mm, Kuma 65mm, Giussano 40mm, Duguay-Trouin 30mm (currently thinnest).
+  Sea/air detection: Giussano 9.2/5.5 (best), Danae 9.5/5.7, Kuma 9.9/5.9, Phoenix 10.3/6.2,
+  Karlsruhe 10.5/6.3, Duguay-Trouin 10.9/6.5 (currently worst).
+- **`Navy:Duguay-Trouin` (last modified 12 November 2024) listed a Sonar consumable that
+  `wowsbuilds.com/ships/duguay-trouin/consumables`'s live, slot-grouped page doesn't show at all**
+  (that page has only 2 populated slots — Damage Control Party, Catapult Fighter — with slots 3/4
+  explicitly "No items"). Every other stat matched between the two sources. Treated the same as the
+  Colorado case below: trusted the live, structurally-clean wowsbuilds slot data over the stale
+  wiki page. See `research-log.md` for the full writeup if this ever needs re-checking.
+- **`wowsbuilds.com`'s per-consumable stat card can silently duplicate the previous item's numbers** —
+  confirmed on Indiana's `/ships/indiana/consumables` page: the Catapult Fighter card showed charges
+  4 / cooldown 100s / duration 30s, identical to the Enhanced Secondary Targeting card listed right
+  before it, and 30s duration broke the pattern of every other confirmed Catapult Fighter instance
+  on this site (Emerald, Hyūga, Giussano, Omaha, Nevada all show 90-100s duration, 80s cooldown).
+  `Navy:Indiana`'s own page gave Catapult Fighter as Duration 60s / Cooldown 80s / 4 charges instead,
+  consistent with the 80s-cooldown invariant, and every other consumable on both pages (Sonar,
+  Defensive AA Fire, Enhanced Secondary Targeting, Observation Seaplane/Spotter Plane) matched
+  exactly between the two sources. When a specific named consumable's numbers break an invariant
+  held by every other confirmed instance of that same consumable elsewhere on the site, and a second
+  independent source disagrees in the direction of the invariant, trust the invariant-consistent
+  source, not "prior ship data isn't evidence for this ship" — that guidance covers *inferring what a
+  ship should have*, not noticing a template/rendering bug in a specific field.
+- Tier VIII battleship peers confirmed via their own `Navy:` pages (useful for future tier VIII BB
+  peer-comparison, e.g. Indiana): `Navy:Maine` (USA), `Navy:Izumo` (Japan), `Navy:Temeraire` (UK),
+  `Navy:Alsace` (France), `Navy:Sovetsky_Soyuz` (USSR). All fetched with a direct `curl` + browser
+  UA, no Jina proxy needed.
+- **`Navy:All_Ships` can lag a brand-new ship's own page by months** — Indiana's own `Navy:Indiana`
+  page (last modified 30 June 2026) confirms tier VIII, but `Navy:All_Ships` (last modified 7 April
+  2026) doesn't list her at all yet. Not a red flag on the ship's own page; just check the ship's own
+  page's last-modified date before treating an absence from `All_Ships` as suspicious.
 - **WebSearch synthesis contradicted a direct `Navy:` page fetch on Giussano's shell types** —
   the search summary claimed she "does not have access to traditional HE or AP," only SAP, and
   paired that with a 10.8 km detection figure that matched neither `Navy:Giussano` nor

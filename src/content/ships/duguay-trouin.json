@@ -1,0 +1,84 @@
+{
+  "name": "Duguay-Trouin",
+  "nation": "France",
+  "type": "Cruiser",
+  "tier": 3,
+  "shortDescription": "Tanky, big-gunned French light cruiser with the tier's longest range and hardest-hitting torpedoes, undone by the thinnest armor and worst detection in her class.",
+  "role": "Long-range gun and torpedo cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "22,900 stock, 26,700 upgraded", "rating": "strong" },
+    { "label": "Main Battery", "value": "4x2 155mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "12.0 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "11.9 km stock, 13.1 km upgraded", "rating": "strong" },
+    { "label": "Torpedo Tubes", "value": "4x3 550mm", "rating": "strong" },
+    { "label": "Torpedo Range", "value": "6 km stock, 6.5 km upgraded", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "12,233", "rating": "strong" },
+    { "label": "Torpedo Speed", "value": "57 kts stock, 58 kts upgraded", "rating": "average" },
+    { "label": "Max Speed", "value": "33 kts", "rating": "average" },
+    { "label": "Rudder Shift", "value": "10.9 s stock, 7.8 s upgraded", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "10.9 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "6.5 km", "rating": "weak" },
+    { "label": "Armor", "value": "10-30mm", "rating": "weak" },
+    { "label": "AA", "value": "15 DPS stock, 28 DPS upgraded, across two mounts", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Standard reset, nothing that sets her apart from other tech-tree cruisers this tier.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "3 charges, 100s uptime on an 80s cooldown. Same stock numbers most tier III cruisers carry, and her only answer to spotter planes and air strikes.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "A", "guns": 2, "arcs": ["bow", "port", "starboard"], "position": "centerline" },
+    { "label": "B", "guns": 2, "arcs": ["bow", "port", "starboard"], "position": "centerline", "note": "Superfires over A, same 3-way coverage. Community feedback singles out this AB-XY layout as excellent for the tier." },
+    { "label": "X", "guns": 2, "arcs": ["stern", "port", "starboard"], "position": "centerline", "note": "Superfires over Y, same 3-way coverage." },
+    { "label": "Y", "guns": 2, "arcs": ["stern", "port", "starboard"], "position": "centerline" }
+  ],
+  "torpedoMounts": [
+    { "label": "Port 1", "tubes": "3 tubes", "side": "port", "note": "Fixed to this broadside, no centerline swing. Forward pair, mirrored by Starboard 1." },
+    { "label": "Port 2", "tubes": "3 tubes", "side": "port", "note": "Aft pair, mirrored by Starboard 2." },
+    { "label": "Starboard 1", "tubes": "3 tubes", "side": "starboard" },
+    { "label": "Starboard 2", "tubes": "3 tubes", "side": "starboard" }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Aiming Systems Modification 1", "alternative": "Main Battery Modification 2" }
+  ],
+  "strengths": [
+    "26,700 hp upgraded is the most hit points of any tier III cruiser, ahead of Kuma's 24,200, Phoenix and Giussano's 24,000, Danae's 23,000, and Karlsruhe's 22,700",
+    "13.1 km upgraded main battery range beats every other tier III cruiser researched so far",
+    "155mm guns are the biggest caliber at the tier, edging out Karlsruhe's 150mm and the 152mm crowd (Phoenix, Danae, Giussano)",
+    "12,233 torpedo damage is the hardest-hitting torpedo of any tier III cruiser, ahead of Danae's 11,967 upgraded and Phoenix's 11,733",
+    "12 torpedo tubes total, tied with Danae for the most at tier III",
+    "AB-XY turret layout keeps all eight guns firing bow-in or stern-out, called out specifically in player feedback as excellent for the tier"
+  ],
+  "weaknesses": [
+    "10-30mm armor is the thinnest of any tier III cruiser, thinner even than Giussano's 6-40mm",
+    "10.9 km sea detection and 6.5 km air detection are both the worst of any tier III cruiser",
+    "10.9s stock rudder shift is the slowest of any tier III cruiser, though it drops to a respectable 7.8s upgraded",
+    "12.0s main battery reload trails every tier III cruiser but Giussano's 15.0s",
+    "Torpedo tubes are fixed one per broadside with no centerline swing, so a torpedo run commits to a side before you fire",
+    "Only 1 upgrade slot to work with"
+  ],
+  "tips": [
+    "Use the 13.1 km upgraded range to poke from distance instead of closing, the armor and detection both punish getting seen up close",
+    "Don't sit still in return fire. That 10-30mm plating turns a well-aimed AP salvo into a citadel fast",
+    "Pick your broadside early on a torpedo run, the tubes can't swing to the other side once you've committed",
+    "Bow-in or stern-out, both postures keep all eight guns live thanks to the AB-XY layout, so there's rarely a reason to show full broadside",
+    "Assume you're spotted before you spot them. Worst detection at the tier means islands and range are your friends, not brawling"
+  ],
+  "threats": [
+    { "threat": "Anything that closes the range", "reason": "10-30mm armor is the thinnest of any tier III cruiser, a close brawl goes badly fast." },
+    { "threat": "Stealthier or faster cruisers and destroyers", "reason": "Worst detection at the tier means most peers see her before she sees them." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Tankiest cruiser at tier III by hit points, with the longest gun range and the hardest-hitting torpedoes in her class.",
+      "Worst detection and slowest stock rudder shift of any tier III cruiser leave her exposed if caught out of position.",
+      "Thin 10-30mm plating turns any well-aimed AP hit into a serious citadel risk.",
+      "Twelve fixed-broadside tubes deliver the tier's hardest-hitting torpedo salvo once she commits to a side."
+    ],
+    "detail": "Duguay-Trouin was the first large French warship built after the last war, and Legends leans into that transitional design: real hit points and reach, but nothing like the armor to back it up. The AB-XY turret layout keeps all eight 155mm guns in the fight whether she's bow-in or stern-out, and her upgraded range lets her poke from further out than any other tier III cruiser. The problem is getting away with it. Detection is the worst in her class, the rudder is sluggish until upgraded, and 10-30mm of plating means a spotted broadside ends badly. She rewards a cruiser player who picks a line, pokes from range, and never forgets the twelve torpedoes waiting for anyone who overextends."
+  },
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "12,233 damage is the hardest-hitting torpedo of any tier III cruiser, delivered across 12 tubes." }
+  ],
+  "image": "/images/ships/duguay-trouin.jpg",
+  "imageCredit": "Duguay-Trouin, Agence Rol press photograph, October 1930. Public domain, via Wikimedia Commons / Bibliothèque nationale de France."
+}

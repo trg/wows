@@ -1,0 +1,81 @@
+{
+  "name": "USS Indiana",
+  "nation": "USA",
+  "type": "Battleship",
+  "tier": 8,
+  "isPremium": true,
+  "shortDescription": "Nine-gun South Dakota-class battleship, the most agile hull at tier VIII with long-reaching secondaries and strong AA, at the cost of below-average HP and HE punch.",
+  "role": "Nimble all-rounder battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "70,000", "rating": "weak" },
+    { "label": "Main Battery", "value": "3x3 406mm", "rating": "average" },
+    { "label": "Main Battery Range", "value": "17.2 km", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "28 s", "rating": "average" },
+    { "label": "Max Speed", "value": "27.5 kts", "rating": "average" },
+    { "label": "Turning Circle", "value": "710 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "15.3 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "15.8 km", "rating": "average" },
+    { "label": "Armor", "value": "6-457mm hull range", "rating": "average" },
+    { "label": "Torpedo Damage Reduction", "value": "49%", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "10x2 127mm, 7 km range", "rating": "strong" },
+    { "label": "AA Defense", "value": "~627 combined DPS across 3 mounts", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action, 80s cooldown, unlimited charges. Standard USN reset, the same cycle as Colorado's and New Mexico's.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 461 hp/s, about 0.66% of max HP per second, roughly 12,900 hp per activation and close to 55% of her 70,000 hp pool across all three.", "rating": "average" },
+    { "name": "Sonar", "flavor": "2 charges, 98s active on a 180s cooldown. Tags ships out to 4.7 km and torpedoes at 3.3 km, extended by her own Extended Sonar trait. Shares Slot 3 with Defensive AA Fire, only one is equipped at a time.", "rating": "strong" },
+    { "name": "Defensive AA Fire", "flavor": "4 charges, 25s window at +200% AA damage, 120s cooldown. The Slot 3 alternative to Sonar, worth it the moment a carrier shows up.", "rating": "strong" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "4 charges, 30s window, +100% secondary shell grouping and -50% dispersion, 100s cooldown. One of three options in Slot 4, the pick that leans hardest on her 7 km secondary reach.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "4 charges, 60s duration, 80s cooldown. A second Slot 4 option for keeping spotter planes and strike squadrons off her instead of buffing the secondaries or main guns.", "rating": "average" },
+    { "name": "Observation Seaplane", "flavor": "4 charges, 40s duration at +10% main battery shell grouping, 200s cooldown. The accuracy pick among Slot 4's three options, worth saving for a lined-up volley.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 3, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 3, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Mod 2", "alternative": "Secondary Battery Mod 2" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Mod 2", "alternative": "Steering Gears Mod 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Mod 1", "alternative": "Chromium Plated Barrels" },
+    { "slot": "Slot 4", "recommended": "Main Battery Mod 3", "alternative": "AA Guns Mod 3" }
+  ],
+  "strengths": [
+    "710m turning circle and a 15.3s rudder shift, both the tightest of the tier VIII battleships checked (Maine 950m/25.3s, Izumo 890m/26s, Temeraire 830m/22.2s, Alsace 910m/23.2s, Sovetsky Soyuz 950m/20.8s), backed by the official Agile trait",
+    "49% torpedo damage reduction, the highest of that same group, ahead of Alsace's 44% and well clear of Izumo's and Temeraire's 25%",
+    "17.2 km main battery range beats every one of those peers, Maine's 16.1 km included",
+    "7 km secondary battery range and 25mm HE penetration both lead the group too, backed by the Secondary Reach trait, even though the 127mm caliber itself is smaller than several peers' secondary batteries",
+    "Roughly 627 combined AA DPS across three mounts, second only to Maine's 669 and well ahead of Izumo, Temeraire, Alsace, and Sovetsky Soyuz",
+    "Extended Sonar trait pushes the Sonar consumable out to 4.7 km ship detection and 3.3 km torpedo detection when it's the Slot 3 pick"
+  ],
+  "weaknesses": [
+    "70,000 hp trails Maine (72,000), Izumo (76,500), and Sovetsky Soyuz (80,900), though it beats Alsace (69,000) and clears Temeraire (58,600) easily",
+    "5,700 max HE damage sits below Izumo (6,500), Temeraire (6,900), and Sovetsky Soyuz (5,800), only Alsace's 5,400 is lower, so the main battery leans on range and accuracy rather than raw HE damage",
+    "The improved secondary HE penetration still tops out at 25mm, not enough to reliably punch through anything bigger than a destroyer or a lightly armored cruiser",
+    "Slot 3 forces a choice between Sonar and Defensive AA Fire, never both at once"
+  ],
+  "tips": [
+    "Use the turning circle. You out-turn most tier VIII battleships, so work an angle change into a fight instead of holding a straight line.",
+    "Pick Slot 3 around the match: Sonar against a stealthy destroyer or torpedo-heavy lineup, Defensive AA Fire when carriers are in play.",
+    "Don't expect big HE numbers. Line up AP on anything you can pen and save HE for targets you can't overmatch.",
+    "Close to that 7 km secondary range early, it starts chipping HP well before most other tier VIII battleships' secondaries would even reach, just don't expect it to punch through real armor."
+  ],
+  "threats": [
+    { "threat": "Sustained HE fire from cruisers and destroyers", "reason": "Her HP pool is on the low end for tier VIII, so it doesn't take a huge fire volume to wear it down." },
+    { "threat": "Carrier strikes when Defensive AA Fire isn't equipped", "reason": "Slot 3 is Sonar or Defensive AA Fire, never both, so a Sonar-focused fit leaves her AA suite without its best cooldown tool." },
+    { "threat": "Battleships with harder-hitting HE trading at range", "reason": "Her own 5,700 HE damage lags Izumo's, Temeraire's, and Sovetsky Soyuz's, so a pure HE slugging match favors them." }
+  ],
+  "playstyle": {
+    "summary": [
+      "A South Dakota-class battleship built around agility rather than raw broadside, the tightest turning circle and quickest rudder shift of the tier VIII battleships checked.",
+      "Long-reaching 7 km secondaries and a strong AA suite make her a real deterrent to destroyers and carrier strikes up close.",
+      "Below-average HP and HE damage mean she wins by outmaneuvering and outlasting, not by trading blows head-on."
+    ],
+    "detail": "Indiana carries the South Dakota class's tightly packed hull into tier VIII, three 406mm triple turrets reaching out to 17.2 km, longer than any of the tier VIII peers checked here. She won't out-damage them shell for shell, 5,700 HE damage and a 36% fire chance are middling for the tier, but she turns and reverses course faster than anything else at tier VIII, and the Agile trait makes that edge felt in a fight more than the raw numbers suggest. The 127mm secondaries reach 7 km with better penetration than her peers manage, useful chip damage against anything that closes, and the AA suite backs up the Secondary Reach trait with real DPS if a carrier presses the issue. What she gives up is durability: 70,000 hp is on the low side for the tier, and the hull doesn't shrug off sustained HE the way a slower, more heavily armored peer might. Angle in, use the turning circle to dictate range and facing, and let the secondaries and AA do quiet work while the main battery picks its moments."
+  },
+  "goalTags": [
+    { "tag": "aa-defense", "note": "Roughly 627 combined AA DPS across three mounts, second only to Maine among the tier VIII battleships checked, backed by a strong Defensive AA Fire option." }
+  ],
+  "image": "/images/ships/indiana.jpg",
+  "imageCredit": "USS Indiana (BB-58) underway with Task Force 58.1 near the Marshall Islands, 27 January 1944. U.S. Navy photo NH 52661, public domain, via Wikimedia Commons."
+}
