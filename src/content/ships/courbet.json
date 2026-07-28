@@ -1,0 +1,83 @@
+{
+  "name": "Courbet",
+  "nation": "France",
+  "type": "Battleship",
+  "tier": 3,
+  "shortDescription": "France's first dreadnought, tier III battleship with the largest secondary battery and best anti-air of her class, backed by tied-for-thickest armor, but held back by a below-average hit point pool, sluggish turret traverse, and near-worst detection at the tier.",
+  "role": "Secondary-battery brawler",
+  "stats": [
+    { "label": "Hull HP", "value": "38,200 stock, 41,000 upgraded", "rating": "weak" },
+    { "label": "Main Battery", "value": "6x2 305mm", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "30 s", "rating": "average" },
+    { "label": "Main Battery 180° Turn Time", "value": "60 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "12.8 km stock, 14.1 km upgraded", "rating": "average" },
+    { "label": "AP Damage", "value": "8,300", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "22x1 139mm", "rating": "strong" },
+    { "label": "Max Speed", "value": "19.9 kt stock, 21 kt upgraded", "rating": "weak" },
+    { "label": "Turning Circle", "value": "580 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "17.2 s stock, 12.3 s upgraded", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "12.8 km", "rating": "weak" },
+    { "label": "Detectability (Air)", "value": "10.2 km", "rating": "weak" },
+    { "label": "Armor", "value": "12-400mm", "rating": "strong" },
+    { "label": "Torpedo Damage Reduction", "value": "10%", "rating": "weak" },
+    { "label": "AA Defense", "value": "62 DPS upgraded across three mounts", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 15s action, 80s cooldown. Mid-pack reset for a tier III battleship, quicker than Wyoming's 20s but well behind Ishizuchi's 10s.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at roughly 204 hp/s, about 5,700 hp per activation, close to 14% of her 41,000 hp pool. Weakest heal of the tier III battleships researched so far, only the premium Nassau's 177 hp/s is lower.", "rating": "weak" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, -50% secondary dispersion and +100% shell grouping, 160s cooldown. Stock numbers shared across the tier, but landing on the biggest secondary battery of any tier III battleship (22 guns) makes it worth more here than on any peer.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port"], "position": "port", "note": "Wing turret fixed to the port side, can't traverse to starboard at all." },
+    { "label": "4", "guns": 2, "arcs": ["starboard"], "position": "starboard", "note": "Wing turret fixed to the starboard side, mirrors Turret 3." },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "6", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Secondary Battery Modification 2" }
+  ],
+  "strengths": [
+    "22-gun secondary battery is the largest of any tier III battleship researched, ahead of Wyoming, Orion, Ishizuchi, Nassau, and Gangut, all of which top out at 16",
+    "400mm max armor ties the premium Nassau for the thickest of the group, ahead of Kaiser's 350mm, Wyoming/Orion/Gangut's 305mm, and Ishizuchi's 254mm",
+    "8,300 AP damage ties Wyoming for second in the peer group, behind only Orion's 9,500, and matches her own \"Superior AP Damage\" trait",
+    "62 DPS anti-air upgraded is more than double the tier's roughly 29 DPS average and four times Gangut's 15 DPS",
+    "580m turning circle beats Kaiser's 600m, Wyoming's 590m, and Orion's 610m, and Ishizuchi's 740m by a wide margin; only Nassau's 510m turns tighter",
+    "12.3s upgraded rudder shift ties Orion for second-quickest of the group, beaten only by Nassau's 11.2s"
+  ],
+  "weaknesses": [
+    "41,000 hp upgraded trails every tech-tree tier III battleship but Gangut's 37,600",
+    "60s to swing the main battery 180 degrees, the ship's own \"Sluggish Aim\" trait flags this as below-average traverse and it shows in a turning gunfight",
+    "12.8 km sea detection is worse than every peer but Ishizuchi's 12.9 km; Gangut spots first at 12.0 km, Nassau at 11.5 km",
+    "10% torpedo damage reduction beats only Ishizuchi's 4% and Gangut's 9%, every other peer sits at 13% or higher",
+    "21 kt upgraded beats only Gangut's 20.7 and Wyoming's 20.5, every other peer tops 22.7",
+    "Two of six turrets are fixed one to a broadside, so a full 12-gun salvo never happens, the best any single side gets is 10 guns"
+  ],
+  "tips": [
+    "Don't expect all six turrets on one broadside, only one of the two wing turrets can ever bear on a given side, so plan your approach around 10 guns, not 12",
+    "Lean into the secondary battery. With 22 guns and Enhanced Secondary Targeting, closing the range punishes the enemy more than it punishes you",
+    "That 60s traverse means you can get out-turned in a knife fight, so commit to an angle early instead of trying to track a flanking target",
+    "You'll usually be seen before you see them, so use the tight turning circle to dodge incoming fire rather than trying to out-spot anyone",
+    "Watch for torpedoes more than most tier III battleships, 10% damage reduction won't save you from a spread"
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "Weak torpedo protection and near-worst detection at the tier make her an easy first target for a torpedo run." },
+    { "threat": "Anything that can sit off her bow or stern in a turning fight", "reason": "60s main battery traverse means she can't track a target that keeps circling outside her broadside." }
+  ],
+  "playstyle": {
+    "summary": [
+      "France's first dreadnought, built around a massive 22-gun secondary battery rather than raw speed or armor scheme.",
+      "Twelve 305mm guns with above-average AP damage, but two of the six turrets are locked to one broadside each, so a full salvo tops out at 10 guns.",
+      "Tied-for-thickest armor and the tightest turning circle of her tech-tree peers, undercut by a below-average hit point pool and sluggish turret traverse.",
+      "Best anti-air of any tier III battleship researched, and near-worst detection in both dimensions."
+    ],
+    "detail": "Courbet was the first battleship-dreadnought France built, and Legends carries over the awkward, transitional layout that came with it: six turrets at a single deck level instead of clean superfiring pairs, with the two wing turrets welded to one broadside each. That costs her a genuine 12-gun salvo, but the 22-gun secondary battery she carries instead is unmatched at the tier, and her 305mm AP shells hit hard enough to overmatch thin-plated targets outright, though at range they don't always carry enough velocity left to arm before punching through. She turns tighter than nearly everything else at the tier, which helps cover for a main battery that swings dead slow, but she gives up a chunk of her own hit point pool and gets spotted before most of her peers do. Play her like a brawler with reach: use the guns to soften someone at range, then let the secondaries finish the job once they close in."
+  },
+  "goalTags": [
+    { "tag": "aa-defense", "note": "62 DPS upgraded across three AA mounts is more than double the roughly 29 DPS tier III battleship average." }
+  ],
+  "image": "/images/ships/courbet.jpg",
+  "imageCredit": "Courbet, forward turrets, probably at Toulon circa 1919. Naval History and Heritage Command (NH 42849), public domain, via Wikimedia Commons."
+}
