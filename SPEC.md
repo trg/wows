@@ -203,6 +203,9 @@ try-hard competitive-meta-guide dryness ("optimal DPM," min-max lecturing). Numb
 - **`playstyle.detail`** — naval/thematic voice. A paragraph with some character, but still
   grounded and useful, not purple prose.
 - **`captainsNotes`** — the site owner's own voice, whatever that is. Skills don't touch it.
+- **No unglossed gaming jargon in prose** — "alpha strike," "citadel," "overmatch," etc. assume a
+  WoWS-fluent reader. Use plain language instead (e.g. "burst damage" for "alpha strike"). Doesn't
+  apply to fixed schema values like the `torpedo-alpha` goal tag.
 
 ### Writing like a person, not a model
 

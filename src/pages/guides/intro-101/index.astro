@@ -7,9 +7,23 @@ import { base } from '../../../lib/base';
   <h1>World of Warships: Legends - Intro 101</h1>
   <h5><i>This page is 100% Human Authored</i></h5>
 
-  <p>Ready to get quickly up to speed on the basics of this game?  Start here.</p>
-  
-  <h2>It's a Tactical Shooter</h2>
+  <p>
+    This is all the stuff I learned the hard way during the 
+    first 10 or so hours of playing that would have been helpful
+    to know ahead of time.  
+  </p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <ul>
+      <li><a href="#tactical-shooter">It's a Tactical Shooter</a></li>
+      <li><a href="#ship-classes">Ship Classes</a></li>
+      <li><a href="#map-visibility">Map &amp; Map Visibility</a></li>
+      <li><a href="#shot-placement">Shot Placement</a></li>
+      <li><a href="#shell-types">Shell Types: HE vs AP</a></li>
+    </ul>
+  </nav>
+
+  <h2 id="tactical-shooter">It's a Tactical Shooter</h2>
   <p>
     This is something that's important to keep in the back of your mind as you start to learn the game.  
     While "tactics" may be beyond the scope of an intro guide, know that games are won by long term (in game terms) choices, not twitchy fingers or perfect accuracy with the guns / torpedoes.
@@ -25,11 +39,11 @@ import { base } from '../../../lib/base';
     multiplayer shooting game = you're sunk.
   </p>
 
-  <h2>Ship Classes</h2>
+  <h2 id="ship-classes">Ship Classes</h2>
   <p>
     There's variance of course within a given class but the following is generally true:
   </p>
-  <h3>Destroyers</h3>
+  <h3 id="destroyers">Destroyers</h3>
   <p>
     Small, fast, low HP, short range low calliber guns, hard to see, hard to hit.  
     Uses agility and smoke screens and their high top speed to avoid being quickly wiped out.  
@@ -42,7 +56,7 @@ import { base } from '../../../lib/base';
     </ol>
   </p>
 
-  <h3>Cruisers</h3>
+  <h3 id="cruisers">Cruisers</h3>
   <p>
     Medium in almost every dimension.  Eg: More HP than a Destroyer, less than a Battlship.  
     Higher calliber guns than a Destroyer but less than a Battlsship.  Faster reload than a Battleship but slower than a Destroyer.
@@ -50,7 +64,7 @@ import { base } from '../../../lib/base';
     can vary a lot, from glass cannon snipers to tough close range brawlers to support ships.
   </p>
 
-  <h3>Battleships</h3>
+  <h3 id="battleships">Battleships</h3>
   <p>
     Big, slow, high HP, long range high caliber guns, easy to see, easy to hit.  
     The opposite of a Destroyer.  Often lack torpedoes entirely.
@@ -68,7 +82,7 @@ import { base } from '../../../lib/base';
     </ol>
   </p>
 
-  <h3>Aircraft Carriers</h3>
+  <h3 id="aircraft-carriers">Aircraft Carriers</h3>
   <p>
     Very different from the other 3 classes.  Max 1 per side per battle.  The player mostly directly controls airplanes instead 
     of only the ship.  Not really part of the rock/paper/scissors of the other three classes; instead it's mostly 
@@ -105,14 +119,14 @@ import { base } from '../../../lib/base';
     </ul>
   </p>
 
-  <h2>Map &amp; Map Visibility</h2>
+  <h2 id="map-visibility">Map &amp; Map Visibility</h2>
   <p>
     Here's how visibility works in this game:
   </p>
   <p>
     At all times, your ship is either <strong>visibile</strong> <i>or</i> <strong>invisibile</strong> to enemy ships. 
   </p>
-  <h3>Invisible</h3>
+  <h3 id="invisible">Invisible</h3>
   <p>
     You're invisibile when you see a blue eye icon next to your minimap.  In this mode, 
     you do not show up <strong>at all</strong> to enemy ships.  Not on their map, not on their screen as a ship.
@@ -122,13 +136,13 @@ import { base } from '../../../lib/base';
     In most shooter games, all players are always visible from anywhere with line of sight, but not so in this game.
     All things being equal, it's way better to be Invisible than Visible.
   </p>
-  <h3>Visibile</h3>
+  <h3 id="visible">Visibile</h3>
   <p>
     You're visible when you're not invisible :P, represented by an orange icon next to your minimap.  When you're visible, 
     <strong>all enemy ships (except for those exceptionally far away) can see you</strong>, not just the ships near you.
     You show up on the minimap and your ship can be seen by other players.
   </p>
-  <h3>Invisible -&gt; Visible</h3>
+  <h3 id="invisible-to-visible">Invisible -&gt; Visible</h3>
   <p>
     Your ship becomes visibile when an enemy ship is within a certain range (the detectability range) of your ship.
   </p>
@@ -150,7 +164,7 @@ import { base } from '../../../lib/base';
     the smoke, visibilty is also altered.
   </p>
 
-  <h3>Visibile -&gt; Invisible</h3>
+  <h3 id="visible-to-invisible">Visibile -&gt; Invisible</h3>
   <p>
     These actions make you go back to Invisible
     <ul>
@@ -166,7 +180,7 @@ import { base } from '../../../lib/base';
     when trying to soak up damage.
   </p>
 
-  <h3>Spotting Ships</h3>
+  <h3 id="spotting-ships">Spotting Ships</h3>
   <p>
     Now that it's clear what visibility is all about, an important part of this game is "spotting" ships.  
     This simply means making enemy ships show up on the map for yourself and other players via having your or an allied ship within
@@ -184,14 +198,14 @@ import { base } from '../../../lib/base';
     likely are enemy ships within their gun range, but are invisible).
   </p>
 
-  <h2>Shot Placement</h2>
+  <h2 id="shot-placement">Shot Placement</h2>
   <p>
     This game attempts to model damage in a "realistic" way; which means that there's a lot of factors that go in to how much HP
     damange a given shot inflicts.  It's beyond an intro guide but know that where your shot lands on the enemy ship is hugely influencial
     on how much damage it does, especially Armor Piercing shells.
   </p>
 
-  <h2>Shell Types: High Explosive (HE) vs Armor Piercing (AP)</h2>
+  <h2 id="shell-types">Shell Types: High Explosive (HE) vs Armor Piercing (AP)</h2>
   <p>
     Most ships have these two types of shells, and can switch between the two.  This is a big topic, so here's just the gist of it:
   </p>
@@ -249,3 +263,9 @@ import { base } from '../../../lib/base';
     </ul>
   </p>
 </BaseLayout>
+
+<style>
+  .toc {
+    padding-bottom: 1.5rem;
+  }
+</style>
