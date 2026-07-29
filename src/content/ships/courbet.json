@@ -3,7 +3,7 @@
   "nation": "France",
   "type": "Battleship",
   "tier": 3,
-  "shortDescription": "France's first dreadnought, tier III battleship with the largest secondary battery and best anti-air of her class, backed by tied-for-thickest armor, but held back by a below-average hit point pool, sluggish turret traverse, and near-worst detection at the tier.",
+  "shortDescription": "France's first dreadnought, tier III battleship with the largest secondary battery of her class, backed by tied-for-thickest armor, but held back by a below-average hit point pool, sluggish turret traverse, and near-worst detection at the tier.",
   "role": "Secondary-battery brawler",
   "stats": [
     { "label": "Hull HP", "value": "38,200 stock, 41,000 upgraded", "rating": "weak" },
@@ -20,7 +20,7 @@
     { "label": "Detectability (Air)", "value": "10.2 km", "rating": "weak" },
     { "label": "Armor", "value": "12-400mm", "rating": "strong" },
     { "label": "Torpedo Damage Reduction", "value": "10%", "rating": "weak" },
-    { "label": "AA Defense", "value": "62 DPS upgraded across three mounts", "rating": "strong" }
+    { "label": "AA Defense", "value": "62 DPS upgraded across three mounts", "rating": "average" }
   ],
   "consumables": [
     { "name": "Damage Control Party", "flavor": "Unlimited charges, 15s action, 80s cooldown. Mid-pack reset for a tier III battleship, quicker than Wyoming's 20s but well behind Ishizuchi's 10s.", "rating": "average" },
@@ -43,7 +43,6 @@
     "22-gun secondary battery is the largest of any tier III battleship researched, ahead of Wyoming, Orion, Ishizuchi, Nassau, and Gangut, all of which top out at 16",
     "400mm max armor ties the premium Nassau for the thickest of the group, ahead of Kaiser's 350mm, Wyoming/Orion/Gangut's 305mm, and Ishizuchi's 254mm",
     "8,300 AP damage ties Wyoming for second in the peer group, behind only Orion's 9,500, and matches her own \"Superior AP Damage\" trait",
-    "62 DPS anti-air upgraded is more than double the tier's roughly 29 DPS average and four times Gangut's 15 DPS",
     "580m turning circle beats Kaiser's 600m, Wyoming's 590m, and Orion's 610m, and Ishizuchi's 740m by a wide margin; only Nassau's 510m turns tighter",
     "12.3s upgraded rudder shift ties Orion for second-quickest of the group, beaten only by Nassau's 11.2s"
   ],
@@ -71,13 +70,11 @@
       "France's first dreadnought, built around a massive 22-gun secondary battery rather than raw speed or armor scheme.",
       "Twelve 305mm guns with above-average AP damage, but two of the six turrets are locked to one broadside each, so a full salvo tops out at 10 guns.",
       "Tied-for-thickest armor and the tightest turning circle of her tech-tree peers, undercut by a below-average hit point pool and sluggish turret traverse.",
-      "Best anti-air of any tier III battleship researched, and near-worst detection in both dimensions."
+      "Near-worst detection in both dimensions among her tech-tree tier III peers."
     ],
     "detail": "Courbet was the first battleship-dreadnought France built, and Legends carries over the awkward, transitional layout that came with it: six turrets at a single deck level instead of clean superfiring pairs, with the two wing turrets welded to one broadside each. That costs her a genuine 12-gun salvo, but the 22-gun secondary battery she carries instead is unmatched at the tier, and her 305mm AP shells hit hard enough to overmatch thin-plated targets outright, though at range they don't always carry enough velocity left to arm before punching through. She turns tighter than nearly everything else at the tier, which helps cover for a main battery that swings dead slow, but she gives up a chunk of her own hit point pool and gets spotted before most of her peers do. Play her like a brawler with reach: use the guns to soften someone at range, then let the secondaries finish the job once they close in."
   },
-  "goalTags": [
-    { "tag": "aa-defense", "note": "62 DPS upgraded across three AA mounts is more than double the roughly 29 DPS tier III battleship average." }
-  ],
+  "goalTags": [],
   "image": "/images/ships/courbet.jpg",
   "imageCredit": "Courbet, forward turrets, probably at Toulon circa 1919. Naval History and Heritage Command (NH 42849), public domain, via Wikimedia Commons."
 }

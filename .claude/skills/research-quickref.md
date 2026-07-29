@@ -278,6 +278,29 @@ legitimate at a glance — check every new source against this list before trust
   page (last modified 30 June 2026) confirms tier VIII, but `Navy:All_Ships` (last modified 7 April
   2026) doesn't list her at all yet. Not a red flag on the ship's own page; just check the ship's own
   page's last-modified date before treating an absence from `All_Ships` as suspicious.
+- **The tier III battleship peer set used across Courbet/Gangut/Orion's research (Kaiser, Wyoming,
+  Orion, Ishizuchi, Nassau, Courbet, Gangut) is not the full roster** — `Navy:All_Ships` lists at
+  least Arkansas, Arkansas FE, and S. Carolina as additional American tier III battleships, Kawachi
+  as an additional Japanese one, and possibly more (Italian/UK entries didn't parse cleanly from
+  the page's flat tier-prefix format). Every superlative claim in `orion.json` was phrased as
+  "...among tier III battleships researched" with named peers rather than "best in tier," per the
+  standing Novik/Dresden rule above — don't let this specific named list calcify into an assumed
+  complete roster in future ship passes either.
+- **Fixed: Courbet's "best anti-air of her class" claim (62 DPS) was beaten by two peers** —
+  Wyoming (72 DPS: 50+22 upgraded) and Kaiser (96 DPS: 51+13+32 upgraded), both fetched fresh from
+  their own `Navy:` pages while researching Orion (69 DPS: 8+23+38). `courbet.json` had apparently
+  been written without checking those two ships' AA specifically. Corrected in `courbet.json`:
+  dropped the "best anti-air" claim from `shortDescription`/`playstyle.summary`, downgraded the AA
+  stat row from `strong` to `average`, removed the now-false AA strength bullet, and removed the
+  `aa-defense` goalTag (62 DPS ranks 5th of the 7 tier III battleships researched, not a genuine
+  standout).
+- **`wowsbuilds.com`'s embedded `peerStats` aggregate can use a much narrower/different peer group
+  than the full tier+class roster** — Orion's `peerStats` was labeled `peerGroupLabel:"Three
+  Battleships"` with an `aa_max_dps_m` mean of ~29, but the 7 tier III battleships directly
+  confirmed via their own `Navy:` pages average ~55 DPS, and Orion (69) alone is more than double
+  the stated mean. Named-peer comparisons from direct `Navy:` fetches remain more trustworthy than
+  this aggregate for rating calls; treat the aggregate as a rough sanity check only, not ground
+  truth, when it disagrees this sharply with concrete named ships.
 - **WebSearch synthesis contradicted a direct `Navy:` page fetch on Giussano's shell types** —
   the search summary claimed she "does not have access to traditional HE or AP," only SAP, and
   paired that with a 10.8 km detection figure that matched neither `Navy:Giussano` nor
@@ -287,3 +310,24 @@ legitimate at a glance — check every new source against this list before trust
   42mm pen) rather than adding it, a genuine stock-vs-upgraded choice, not "no HE ever." Confirms
   the standing rule above: trust a direct fetch of a confirmed source over anything only seen in a
   search summary, especially once a second, unrelated number (detection) also disagrees.
+- Tier IV battleship peers confirmed via their own `Navy:` pages (useful for future tier IV BB
+  peer-comparison, e.g. Iron Duke): `Navy:König` (Germany), `Navy:Kongō` (Japan), `Navy:Bretagne`
+  (France), `Navy:New_York` (USA), `Navy:Pyotr_Velikiy` (USSR). Found by fetching each tier III
+  peer's own page for its "Successors" field (Kaiser→König, Ishizuchi→Kongō, Courbet→Bretagne,
+  Wyoming→New York, Gangut→Pyotr Velikiy), a reliable way to walk one tier up a line without
+  guessing names. `wowsbuilds.com`'s `peerStats`/`parameters` blocks were mislabeled
+  `"Four Battleships"` for this group despite 6 real peers existing, the same narrow-aggregate
+  gotcha seen on Orion — used named direct-fetch comparisons instead, not the aggregate mean.
+- **Iron Duke's own `Navy:` page gives Enhanced Secondary Targeting a 150s cooldown, but
+  `wowsbuilds.com/ships/iron-duke/consumables` says 160s, and all 5 confirmed tier IV battleship
+  peers' own `Navy:` pages also show 160s** (New York alone shows 180s). Trusted the
+  invariant-consistent 160s over the wiki's lone 150s, same reasoning as the Indiana Catapult
+  Fighter case above: a value that breaks a pattern held by every other same-consumable instance,
+  contradicted by a second live source, is more likely a stale/typo field than a real ship-specific
+  difference.
+- A ship's own official one-line description on its `Navy:` page can be a direct, citable source
+  for turret/gun layout, not just flavor text — Iron Duke's says she "carried the same main
+  battery guns as the battleships of the preceding class" (Orion), which combined with the
+  in-game 5x2 343mm arrangement matching Orion's exactly was treated as confirmation to reuse
+  Orion's already-researched turret arcs (1-2 bow/port/starboard, 3 amidships port/starboard-only,
+  4-5 stern/port/starboard) rather than re-deriving them from splash art or asking the user again.

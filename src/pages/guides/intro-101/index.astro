@@ -7,15 +7,18 @@ import { base } from '../../../lib/base';
   <h1>World of Warships: Legends - Intro 101</h1>
   <h5><i>This page is 100% Human Authored</i></h5>
 
-  <p>Ready to get quickly up to speed on the basics of this game?  Start here:</p>
+  <p>Ready to get quickly up to speed on the basics of this game?  Start here.</p>
   
   <h2>It's a Tactical Shooter</h2>
   <p>
     This is something that's important to keep in the back of your mind as you start to learn the game.  
-    While "tactics" may be beyond the scope of an intro guide, I think it's important to know right off
-    the bat that games are won by long term (in game terms) choices, not twitchy fingers or perfect accuracy with the guns / torpedoes.
+    While "tactics" may be beyond the scope of an intro guide, know that games are won by long term (in game terms) choices, not twitchy fingers or perfect accuracy with the guns / torpedoes.
     Think of it like American Football: Yes the fundamentals (throwing, catching) are table stakes for playing well, but the actual game
     is the choices the team makes.
+  </p>
+  <p>
+    To drive this point home: When piloting a Battleship, the entire game for you may be to motor to the left or right side of the map once;
+    and your guns take 30 seconds to reload.
   </p>
   <p>
     I'll leave it at this for this guide:  Running around guns-blazing engaging in any ship within range like it's a typical 
@@ -28,7 +31,7 @@ import { base } from '../../../lib/base';
   </p>
   <h3>Destroyers</h3>
   <p>
-    Small, fast, low HP, short range guns, hard to see, hard to hit.  
+    Small, fast, low HP, short range low calliber guns, hard to see, hard to hit.  
     Uses agility and smoke screens and their high top speed to avoid being quickly wiped out.  
     Their role:
     <ol>
@@ -49,7 +52,7 @@ import { base } from '../../../lib/base';
 
   <h3>Battleships</h3>
   <p>
-    Big, slow, high HP, long range guns, easy to see, easy to hit.  
+    Big, slow, high HP, long range high caliber guns, easy to see, easy to hit.  
     The opposite of a Destroyer.  Often lack torpedoes entirely.
     Their role:
     <ol>
@@ -62,6 +65,21 @@ import { base } from '../../../lib/base';
         Fight cruisers.  While Destroyers are very difficult to hit with a Battleship,
         a well placed shot or two can shred a lot of cruisers.
       </li>
+    </ol>
+  </p>
+
+  <h3>Aircraft Carriers</h3>
+  <p>
+    Very different from the other 3 classes.  Max 1 per side per battle.  The player mostly directly controls airplanes instead 
+    of only the ship.  Not really part of the rock/paper/scissors of the other three classes; instead it's mostly 
+    weak against everything but counters this weakness by staying well behind their own battleline such that enemy ships cannot reach them,
+    while they are able to attack across the map with their planes.  
+  </p>
+  <p>
+    Their role:
+    <ol>
+      <li>Spotting, especially early on</li>
+      <li>Harassing stationary or slow ships</li>
     </ol>
   </p>
   
@@ -87,4 +105,147 @@ import { base } from '../../../lib/base';
     </ul>
   </p>
 
+  <h2>Map &amp; Map Visibility</h2>
+  <p>
+    Here's how visibility works in this game:
+  </p>
+  <p>
+    At all times, your ship is either <strong>visibile</strong> <i>or</i> <strong>invisibile</strong> to enemy ships. 
+  </p>
+  <h3>Invisible</h3>
+  <p>
+    You're invisibile when you see a blue eye icon next to your minimap.  In this mode, 
+    you do not show up <strong>at all</strong> to enemy ships.  Not on their map, not on their screen as a ship.
+    You basically do not exist to the enemy when you're invisible 
+    (there are quite a few caveats to this, but I'm glossing over it for an intro guide).  The fact that you do
+    not show up <i>at all</i> on enemy player's screens is something that is relatively unique to this game as far as I know.
+    In most shooter games, all players are always visible from anywhere with line of sight, but not so in this game.
+    All things being equal, it's way better to be Invisible than Visible.
+  </p>
+  <h3>Visibile</h3>
+  <p>
+    You're visible when you're not invisible :P, represented by an orange icon next to your minimap.  When you're visible, 
+    <strong>all enemy ships (except for those exceptionally far away) can see you</strong>, not just the ships near you.
+    You show up on the minimap and your ship can be seen by other players.
+  </p>
+  <h3>Invisible -&gt; Visible</h3>
+  <p>
+    Your ship becomes visibile when an enemy ship is within a certain range (the detectability range) of your ship.
+  </p>
+  <p>Your specific ship determines this range.
+    The small Destroyer class tends to have a very small detectability range, meaning Destroyers can get quite close to larger enemies
+    before the Cruiser or Destroyer knows they're there.  Your ship's detectability range is shown on the mini-map:  When you're invisible,
+    it's the blue circle around your ship, and when you're visible, it's the orange one.
+  </p>
+  <p>
+    The detectability range for your ship increases drastically when you shoot, and remains elevated for 20 seconds.  
+    Generally speaking you can assume once you fire your guns, you'll likely become visible.
+  </p>
+  <p>
+    Planes can also detect you, but the range for them is often smaller than your ship detectability range.
+  </p>
+  <p>
+    Smoke also affects detectability:  When your ship is inside the boundaries of the smoke screen, your detectability range is exceptionally 
+    small, but will increase when you fire from inside smoke.  When there's smoke between you and an enemy ship but neither are inside
+    the smoke, visibilty is also altered.
+  </p>
+
+  <h3>Visibile -&gt; Invisible</h3>
+  <p>
+    These actions make you go back to Invisible
+    <ul>
+      <li>Piloting your ship out of the detectability range of any ships, or</li>
+      <li>Breaking line of sight with all enemy ships by going behind an island, or</li>
+      <li>Going inside a smoke screen.</li>
+    </ul>
+  </p>
+  <p>
+    Generally when playing as a Destroyer, being very aware of your visibility and using it effectively is a requirement for success,
+    as being able to sneak up and fire off torpedoes is an important skill for most Destroyers.
+    In contrast, when playing a Battleship, you might as well assume you're always visible, which may be what you want anyway
+    when trying to soak up damage.
+  </p>
+
+  <h3>Spotting Ships</h3>
+  <p>
+    Now that it's clear what visibility is all about, an important part of this game is "spotting" ships.  
+    This simply means making enemy ships show up on the map for yourself and other players via having your or an allied ship within
+    the enemy's detectability range.  As a reminder, once a ship is visible, it's visible to <strong>all ships</strong>.
+  </p>
+  <p>
+    What this looks like in practice:  Destroyers, which are hardest for enemies detect, are the most forward deployed ships in your fleet.
+    While sailing around they are causing enemy ships to show up for other players that have longer range guns, allowing the long range gun
+    ships to be able to engage targets.  Meanwhile, the Destroyers themselves remain undetected or at least are nimble enough to avoid
+    being sunk.
+  </p>
+  <p>
+    When teammates are not spotting for each other, you can end up with several ships 
+    at the back of your fleet unable to contribute anything to the battle, as they have no targets available to hit (even though there
+    likely are enemy ships within their gun range, but are invisible).
+  </p>
+
+  <h2>Shot Placement</h2>
+  <p>
+    This game attempts to model damage in a "realistic" way; which means that there's a lot of factors that go in to how much HP
+    damange a given shot inflicts.  It's beyond an intro guide but know that where your shot lands on the enemy ship is hugely influencial
+    on how much damage it does, especially Armor Piercing shells.
+  </p>
+
+  <h2>Shell Types: High Explosive (HE) vs Armor Piercing (AP)</h2>
+  <p>
+    Most ships have these two types of shells, and can switch between the two.  This is a big topic, so here's just the gist of it:
+  </p>
+  <p>
+    High Explosive Shells (HE)
+    <ul>
+      <li>Lower max damage than AP shells.</li>
+      <li>Consistent damage output -- shot placement matters but matters a lot less than with AP shells.</li>
+      <li>Can catch the enemy ship on fire</li>
+      <li>More likely to damage ship systems (disable guns, rudder, etc)</li>
+    </ul>
+  </p>
+  <p>
+    Armor Piercing Shells (AP)
+    <ul>
+      <li>Higher max damage than HE shells (sometimes double)</li>
+      <li>Damage output for a given shell is highly variable, from 0 
+        (ricochet's off or breaks apart on impact instead of piercing) to absolutely massive damage
+        if they penetrate the Citadel (the important guts of the ship, typically the center/bottom) of a ship.
+      </li>
+    </ul>
+  </p>
+  <p>
+    Which type to shoot is highly dependant on the situation and ships involved. Some people online say things
+    like "just always use AP" but I think that's bad advice, even if on-average AP is better in a skilled captain's hands.  
+    Some intro-level guidelines:
+    <ul>
+      <li>
+        If you suddenly find yourself in a fight, the best ammo is probably whatever is already loaded.  Switching ammo types
+        requires a reload, so unless your ship can quickly reload you likely want to go with what's on hand.  
+        However if you can prepare:
+      </li>
+      <li>
+        Shoot HE at destroyers.  AP shells can easily punch through the thin armor of Destroyers, 
+        meaning they just punch a hole instead of exploding, doing very little damage unless it happens 
+        to be under the waterline.
+      </li>
+      <li>
+        Destroyers should typically shoot HE.  Destroyers have low caliber guns and their AP shells can struggle to penetrate 
+        the armor of larger ships.  It's likely, especially in a team fight or against Battleships, that harrassing the enemy with fires
+        and breaking their guns / rudders / etc will be <i>much more useful</i> than any little extra damage that a Destroyer-sized AP shell 
+        may or may not inflict.  Technically, AP shells can also disable systems (but not start fires) but the chance of them doing so is
+        much lower than HE.
+      </li>
+      <li>
+        When the enemy is broadside (exposing the side of their ship to you), AP shells are often ideal.  That's because the Citadel
+        and other sensitive areas of the ship are much easier for AP shells to punch in to from the side.  Furthermore, AP shells
+        don't ricochet when they hit something head-on, as a broadside shot would be.
+      </li>
+      <li>
+        When the enemy is coming directy at you or directly away from you (opposite of broadside), HE is often better, simply because at these angles, AP
+        shells are likely to ricochet off and do no damage.  When the enemy is fleeing, HE shells that hit the back of their ship 
+        may also disable their engine allowing you or your team to catch up and have an easy near-stationary target to hit.
+      </li>
+    </ul>
+  </p>
 </BaseLayout>

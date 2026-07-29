@@ -1,0 +1,81 @@
+{
+  "name": "Orion",
+  "nation": "United Kingdom",
+  "type": "Battleship",
+  "tier": 3,
+  "shortDescription": "The first dreadnought with every main gun on the centerline instead of wing turrets, backed by the hardest-hitting AP and HE shells of any tier III battleship researched, but held back by the slowest turret traverse of the group.",
+  "role": "All-centerline gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "38,600 stock, 42,700 upgraded", "rating": "average" },
+    { "label": "Main Battery", "value": "5x2 343mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "30 s", "rating": "average" },
+    { "label": "Main Battery 180° Turn Time", "value": "72 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "12.6 km stock, 13.9 km upgraded", "rating": "average" },
+    { "label": "AP Damage", "value": "9,500", "rating": "strong" },
+    { "label": "HE Penetration", "value": "86mm", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "16x1 102mm", "rating": "average" },
+    { "label": "Max Speed", "value": "20.4 kt stock, 22.7 kt upgraded", "rating": "average" },
+    { "label": "Turning Circle", "value": "610 m", "rating": "weak" },
+    { "label": "Rudder Shift", "value": "17.2 s stock, 12.3 s upgraded", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "12.6 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "10 km", "rating": "average" },
+    { "label": "Armor", "value": "13-305mm", "rating": "average" },
+    { "label": "Torpedo Damage Reduction", "value": "13%", "rating": "average" },
+    { "label": "AA Defense", "value": "69 DPS upgraded across three mounts", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 15s action, 80s cooldown. Standard reset for a tier III battleship, no fast-cycling trick like Gangut's 40s On Demand Repairs.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 213 hp/s, about 5,960 hp per activation, roughly 14% of her 42,700 hp pool. The strongest heal rate of any tier III battleship researched, ahead of Courbet's 204 hp/s, Gangut's 202 hp/s, and Nassau's 177 hp/s.", "rating": "strong" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, -50% secondary dispersion and +100% shell grouping, 160s cooldown. Stock numbers shared across the tier, landing on a 16-gun secondary battery that already carries the highest HE fire chance researched at tier III.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships mount, needs to show broadside to fire, can't hit bow or stern targets." },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Secondary Battery Modification 2" }
+  ],
+  "strengths": [
+    "9,500 AP damage is the highest among tier III battleships researched, ahead of Courbet/Wyoming's 8,300, Kaiser's 8,100, Ishizuchi's 8,000, and Nassau's 7,200",
+    "86mm HE penetration matches her own \"Superior HE pen\" trait and tops the researched group, ahead of Kaiser's 76mm, Nassau's 71mm, and Wyoming/Ishizuchi's 51mm",
+    "40% HE fire chance also leads the researched group, ahead of Ishizuchi's 32%, Wyoming/Kaiser's 22-23%, and Nassau's 19%",
+    "All five turrets sit on the centerline, so the fore and aft pairs cover bow or stern plus both broadsides, and the amidships turret adds two more guns the moment she shows her side, a genuine 10-gun broadside without a wing-turret asymmetry like Courbet's",
+    "213 hp/s Repair Party is the strongest self-heal rate of any tier III battleship researched, ahead of Courbet's 204 hp/s, Gangut's 202 hp/s, and Nassau's 177 hp/s",
+    "12.3s upgraded rudder shift ties Courbet for second-quickest of the researched group, beaten only by Nassau's 11.2s"
+  ],
+  "weaknesses": [
+    "72s to swing the main battery 180 degrees is the slowest traverse of any tier III battleship researched, well behind Ishizuchi's 41.9s, Nassau's 51.4s, Wyoming's 51s upgraded, and Kaiser/Courbet's 60s, and the researched hull doesn't improve it at all",
+    "610m turning circle is the second-loosest of the researched group, beaten only by Ishizuchi's 740m",
+    "Her own Pros/Cons page flags that AP shells can struggle to deal damage against enemy battleships despite the highest AP alpha researched at the tier, likely an arming quirk at range",
+    "Amidships turret is dead weight bow-on or stern-on, only the four fore/aft turrets can answer a target that won't let her show her side"
+  ],
+  "tips": [
+    "Commit to your angle early. A target that keeps circling to a new bearing can outpace a 72s traverse entirely",
+    "Show your broadside deliberately when you want the amidships turret in the fight, it's dead weight bow-on or stern-on",
+    "Lean into the HE game at range: 40% fire chance and 86mm penetration punish anything lightly armored before you even close in",
+    "Don't hesitate to pop Repair Party early in a prolonged fight, at 213 hp/s it heals more per activation than any tier III battleship peer researched",
+    "Watch for destroyers repositioning for a torpedo run, the slow traverse makes it hard to swing the guns onto a threat that changes bearing"
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "13% torpedo damage reduction won't fully offset a spread, and the 72s traverse makes it hard to swing onto a torpedo boat that keeps repositioning." },
+    { "threat": "Anything that can circle outside her firing line", "reason": "72s to bring the main battery around means a target that keeps changing bearing can simply outturn her guns." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Britain's first dreadnought with every main gun on the centerline instead of wing turrets: two turrets forward, two aft, and a fifth wedged amidships that only opens up on the broadside.",
+      "Highest AP damage, HE penetration, and HE fire chance of any tier III battleship researched, backed by the tier's strongest self-heal.",
+      "72-second main battery traverse that never improves with the researched hull, the single defining weakness of the ship.",
+      "Carries an official \"Slow\" trait built off her 20.4 kt stock speed, though the researched hull's 22.7 kt actually outruns every tier III battleship peer researched but Ishizuchi."
+    ],
+    "detail": "Orion carries over a genuinely historic layout into Legends: the first dreadnought built with every main gun on the centerline rather than tucked into wing turrets. Two turrets sit forward, two aft, both pairs able to swing across the bow or stern and either broadside, with a fifth mount wedged amidships that only opens up once she shows her side, a real 10-gun salvo without the lopsided compromise Courbet's wing turrets impose. Her 343mm guns back that layout with the hardest-hitting AP of any tier III battleship researched, plus the highest HE penetration and fire chance too, so there's real bite whichever shell she loads. The catch is a 72-second full traverse that doesn't budge even with the researched hull, the slowest of the group and the one flaw that can undo everything else if a target gets an angle on her. She's also carrying an official \"Slow\" trait, though that's clearly built off her sluggish 20.4 knot stock speed: once the engine upgrade lands, 22.7 knots actually outruns every tier III battleship peer researched but Ishizuchi. Get your angle set early, lean on the Repair Party to outlast a fight, and don't ask the guns to do anything they can't turn fast enough for."
+  },
+  "goalTags": [
+    { "tag": "fire-starter", "note": "40% HE fire chance and 86mm HE penetration are both the highest among tier III battleships researched." }
+  ],
+  "image": "/images/ships/orion.jpg",
+  "imageCredit": "HMS Orion at Portsmouth, circa 1913. Naval History and Heritage Command (NH 57802), public domain, via Wikimedia Commons."
+}

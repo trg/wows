@@ -5,6 +5,12 @@
 # /consumables and /modifications sub-routes need -L to follow a 308 redirect. See
 # research-quickref.md's "Good sources" section for background.
 #
+# Every successful fetch is snapshotted to .cache/wowsbuilds_<slug>_<subpage>.html (gitignored)
+# as a side effect. That snapshot is a fallback of last resort only, used solely if the live
+# fetch comes back empty — never a substitute for a fresh fetch when the network is up, since a
+# live page can change (balance patch, corrected stat). If used, the fallback prints a loud
+# warning with the snapshot's age so stale data is never mistaken for a live confirmation.
+#
 # Usage: fetch-wowsbuilds.sh <slug> [base|consumables|modifications]
 #   e.g. fetch-wowsbuilds.sh courbet
 #        fetch-wowsbuilds.sh courbet consumables
@@ -27,7 +33,22 @@ esac
 
 TMP="$(mktemp)"
 trap 'rm -f "$TMP"' EXIT
-curl -s -L -A "$UA" "$URL" -o "$TMP"
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CACHE_DIR="$SCRIPT_DIR/.cache"
+CACHE_FILE="$CACHE_DIR/wowsbuilds_${SLUG}_${SUBPAGE}.html"
+mkdir -p "$CACHE_DIR"
+
+curl -s -L -A "$UA" "$URL" -o "$TMP" || true
+
+if [ -s "$TMP" ]; then
+  cp "$TMP" "$CACHE_FILE"
+elif [ -f "$CACHE_FILE" ]; then
+  echo "WARNING: live fetch came back empty for ${URL} — falling back to a cached snapshot from $(date -r "$CACHE_FILE" '+%Y-%m-%d %H:%M %Z'). This may be stale; treat it as provisional and re-fetch once the live page is reachable." >&2
+  cp "$CACHE_FILE" "$TMP"
+else
+  echo "WARNING: fetch came back empty for ${URL} and no cached snapshot exists." >&2
+fi
 
 if [ "$SUBPAGE" = "base" ]; then
   echo "=== Splash art (grep for supabase ships/*.webp) ==="

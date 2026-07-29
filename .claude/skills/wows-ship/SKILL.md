@@ -25,6 +25,13 @@ Python one-liners again:
   larger). Confirm the license on the file's Commons page yourself first — the script doesn't
   check it.
 
+The two wiki-page scripts snapshot every successful fetch into a gitignored `scripts/.cache/`
+directory. That snapshot is a fallback of last resort only — used solely when the live fetch
+fails outright (bot-check stub with no Jina success, empty response) — and is never treated as
+equivalent to a fresh fetch, since a live page can change after a balance patch. If a fallback is
+used, the script prints a loud warning with the snapshot's age; treat that data as provisional and
+re-fetch once the live page is reachable again.
+
 Read `SPEC.md` at the repo root — it is the authoritative schema and tone guide. Also read
 `src/content.config.ts` for the exact Zod shape and `src/lib/goals.ts` for the fixed `goalTags`
 taxonomy. Look at 1-2 existing files in `src/content/ships/` (e.g. `omaha.json`) as a concrete

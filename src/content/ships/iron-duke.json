@@ -1,0 +1,83 @@
+{
+  "name": "Iron Duke",
+  "nation": "United Kingdom",
+  "type": "Battleship",
+  "tier": 4,
+  "shortDescription": "Carries the same all-centerline 5x2 343mm main battery as predecessor Orion, with the highest HE penetration and fire chance of any tier IV battleship researched, backed by a genuinely strong AA fit, but held back by the slowest turret traverse and a thin hull among her peers.",
+  "role": "All-centerline gunline battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "41,200 stock, 47,100 upgraded", "rating": "weak" },
+    { "label": "Main Battery", "value": "5x2 343mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "30 s", "rating": "average" },
+    { "label": "Main Battery 180° Turn Time", "value": "72 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "13.5 km stock, 14.9 km upgraded", "rating": "weak" },
+    { "label": "AP Damage", "value": "9,900", "rating": "average" },
+    { "label": "HE Penetration", "value": "86mm", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "16 guns stock, 20 guns upgraded (102mm + 152mm)", "rating": "average" },
+    { "label": "AA Defense", "value": "142 DPS upgraded, including her dual-purpose secondaries", "rating": "strong" },
+    { "label": "Max Speed", "value": "21 kt stock, 22.5 kt upgraded", "rating": "average" },
+    { "label": "Turning Circle", "value": "650 m", "rating": "average" },
+    { "label": "Rudder Shift", "value": "18.5 s stock, 13.2 s upgraded", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "13.4 km", "rating": "strong" },
+    { "label": "Detectability (Air)", "value": "10.7 km", "rating": "strong" },
+    { "label": "Armor", "value": "13-305mm", "rating": "weak" },
+    { "label": "Torpedo Damage Reduction", "value": "16%", "rating": "average" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "Unlimited charges, 15s action, 80s cooldown. Standard reset for a tier IV battleship, no fast-cycling trick like Gangut's 40s On Demand Repairs.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 29s each at 235 hp/s, about 6,800 hp per activation, roughly 14% of her 47,100 hp pool. Ties König for the second-lowest heal rate of the tier IV battleships researched, ahead of only Bretagne's 208 hp/s.", "rating": "weak" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window, -50% secondary dispersion and +100% shell grouping, 160s cooldown, the same numbers shared by most of the researched tier IV group. Backs a secondary battery that grows to 20 guns on the upgraded hull.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships mount, needs to show broadside to fire, can't hit bow or stern targets." },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "torpedoMounts": [],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Secondary Battery Modification 2" }
+  ],
+  "strengths": [
+    "86mm HE penetration and 40% HE fire chance are both the highest among tier IV battleships researched, ahead of König's 76mm/22%, Kongō/New York/Pyotr Velikiy's 59mm, and Bretagne's 57mm, the same guns and traits carried over from predecessor Orion",
+    "142 DPS upgraded AA is the second-strongest of the tier IV group researched, behind only Pyotr Velikiy's 172, and ahead of Bretagne's 133, König's 112, New York's 102, and Kongō's 82",
+    "13.4 km sea detection and 10.7 km air detection tie König for second-best of the researched group, beaten only by Pyotr Velikiy",
+    "All five turrets sit on the centerline like Orion before her, so a full 10-gun broadside is always available, with the amidships turret adding two more guns the moment she shows her side",
+    "Her own Pros/Cons page notes she can fire all ten guns without needing to expose much of her side, and that her guns hit harder and more accurately than Orion's"
+  ],
+  "weaknesses": [
+    "72s to swing the main battery 180 degrees is the slowest traverse of the tier IV battleships researched, well behind Pyotr Velikiy's 45s, Kongō's 53.5s, and König/New York/Bretagne's 60s, the same abysmal traverse Orion carried at tier III",
+    "47,100 hp upgraded ties König for the second-lowest hull pool of the researched group, ahead of only Bretagne's 41,700",
+    "305mm max armor ties Pyotr Velikiy for second-thinnest of the group, only Kongō's 254mm is thinner",
+    "14.9 km upgraded range is the second-shortest researched, only Pyotr Velikiy's 14.8 km is less",
+    "Turret 3 is locked to broadside only and goes dead the moment she can't show her side",
+    "Her own Pros/Cons page flags mediocre speed and a slower shell flight time than most peers at the tier, plus AP shells that can struggle at long range against enemy battleships"
+  ],
+  "tips": [
+    "Commit to your angle early, a 72s traverse means you can't chase a target that keeps circling to a new bearing",
+    "Show broadside deliberately when you want turret 3 in the fight, it's dead weight bow-on or stern-on",
+    "Lean on the HE game at range, 40% fire chance and 86mm penetration punish lightly armored targets before you're even close",
+    "Don't expect a fast heal from Repair Party, its 235 hp/s trails most of the tier, so time it for sustained pressure rather than a quick top-off",
+    "Watch for destroyers repositioning for a torpedo run, the slow traverse makes it hard to swing the guns onto a threat that changes bearing"
+  ],
+  "threats": [
+    { "threat": "Destroyers", "reason": "16% torpedo damage reduction won't fully offset a spread, and the 72s traverse makes it hard to swing onto a torpedo boat that keeps repositioning." },
+    { "threat": "Anything that can circle outside her firing line", "reason": "72s to bring the main battery around means a target that keeps changing bearing can simply outturn her guns." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Carries the same all-centerline 5x2 343mm main battery as predecessor Orion: two turrets forward, two aft, and a fifth wedged amidships that only opens up on the broadside.",
+      "Highest HE penetration and fire chance of any tier IV battleship researched, backed by the second-strongest AA fit and best-tied concealment of the group.",
+      "72-second main battery traverse is the single defining weakness, the slowest of her researched tier IV peers and unchanged from Orion's own flaw.",
+      "Thin hull and armor for the tier, ranking near the bottom of the researched group in both hit points and max plating."
+    ],
+    "detail": "Iron Duke's own description says it plainly: she carries the same main battery guns as Orion before her, just with a heavier secondary armament bolted on. That means the same genuinely historic layout, every gun on the centerline, and the same bite behind it: 86mm HE penetration and a 40% fire chance that outdo every other tier IV battleship researched. The secondary battery grows to twenty guns on the upgraded hull, and Enhanced Secondary Targeting makes them worth using once someone closes the range. What didn't improve from Orion is the traverse. Seventy-two seconds to swing the main battery through 180 degrees is the slowest of her researched peers, and it's the one flaw that can undo everything else if a target gets an angle she can't track. Her hull is thin for the tier too, so she isn't built to soak damage while she waits for guns to catch up. Get the angle set early, lean on the HE game at range, and don't ask the turrets to do anything they can't turn fast enough for."
+  },
+  "goalTags": [
+    { "tag": "fire-starter", "note": "40% HE fire chance and 86mm HE penetration are both the highest among tier IV battleships researched, the same standout traits carried over from predecessor Orion." },
+    { "tag": "aa-defense", "note": "142 DPS upgraded across her AA and dual-purpose secondary mounts, second only to Pyotr Velikiy among the tier IV battleships researched." }
+  ],
+  "image": "/images/ships/iron-duke.jpg",
+  "imageCredit": "HMS Iron Duke, photographed by Ernest Hopkins, Imperial War Museums (Q 75209), public domain, via Wikimedia Commons."
+}
