@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { base } from '../../lib/base';
+---
+
+<BaseLayout title="Guides" backHref={base} backLabel="Home">
+  <h1>Guides</h1>
+  <p>Beginner tips and ship-picking help.</p>
+
+  <div class="home-links">
+    <a class="card home-links__item" href={`${base}guides/intro-101/`}>
+      <h2>Intro 101</h2>
+      <p>New to the game? Start here.</p>
+    </a>
+    <a class="card home-links__item" href={`${base}guides/best-for/`}>
+      <h2>Best For...</h2>
+      <p>Which ship to pick when you want to start fires, brawl, or run torpedoes.</p>
+    </a>
+  </div>
+</BaseLayout>
+
+<style>
+  .home-links {
+    display: grid;
+    gap: var(--space-3);
+    margin-top: var(--space-5);
+  }
+
+  .home-links__item h2 {
+    margin: 0 0 var(--space-1);
+    font-size: 1.15rem;
+    color: var(--color-accent);
+  }
+
+  .home-links__item p {
+    margin: 0;
+    color: var(--color-text-muted);
+  }
+</style>

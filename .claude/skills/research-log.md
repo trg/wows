@@ -720,3 +720,41 @@ honestly sourced at the time but the site's own coverage was the limiting factor
 `research-quickref.md` previously said "no France ... tier III cruiser line exists yet" — false,
 Duguay-Trouin is that line's tier III entry (predecessor Friant II, successor Émile Bertin IV,
 confirmed on both `Navy:Duguay-Trouin` and `wowsbuilds.com`'s sidebar). Corrected there too.
+
+## Courbet (France, tier III battleship): AA mount omission on Navy page, user confirmed echelon turret layout
+
+`Navy:Courbet` breadcrumbs "Homepage / WoWS Legends / Courbet", confirmed good. Tech tree (not
+premium — `Legends IsPremium 0` category tag). Cross-checked cleanly against
+`wowsbuilds.com/ships/courbet`'s embedded JSON stats blob and its `/consumables` and
+`/modifications` sub-routes, which agreed on everything except one field:
+
+- **`Navy:Courbet`'s AA Armament table only lists two mounts (AA1, AA3), but
+  `wowsbuilds.com/ships/courbet`'s stats JSON shows three** (`aa_1`/`aa_2`/`aa_3`, 20/28/14 DPS
+  upgraded = 62 total), and the site's own aggregated peer-average field (`aa_max_dps_m: 29.29`
+  across the tier III battleship peer group) is consistent with a real 62 DPS ship pulling that
+  average up, not with a 34 DPS one. Treated as another instance of the "occasional stray field
+  glitches" pattern already documented for `wowsbuilds` (Mahan's torpedo range) — this time the
+  *wiki* page is the one missing a row, not `wowsbuilds`. Went with the more complete source (all
+  three mounts, 62 DPS) rather than assuming the wiki's shorter table was authoritative just
+  because it's the usual first-choice source.
+- **`wowsbuilds.com`'s per-ship stats JSON includes a `peerStats` object** (`peerGroupLabel`,
+  `hp_m`/`e_hp_m`/`range_m`/`ap_dpm_m`/`he_dpm_m`/`reload_m`/`aa_max_dps_m`/`sea_detect_m`/
+  `max_speed_m`/`rudder_shift_m` means + stdevs) computed across the ship's own tier+class peer
+  group. Genuinely useful for `rating` calibration beyond hand-fetching every individual peer page
+  — worth checking for on future ships via the base `/ships/<slug>` page's raw JSON (grep for
+  `peerStats`), though it's still worth spot-checking a couple of named peers directly since the
+  aggregate alone doesn't give you the concrete comparisons `strengths`/`weaknesses` prose wants.
+- **User confirmed Courbet's turret layout in-game directly** (skipped splash-art forensics
+  entirely, went straight to asking per the standing gotcha): 2 forward turrets sharing a 3-way
+  arc (bow/port/starboard), 2 aft sharing a 3-way arc (stern/port/starboard), and 2 amidships wing
+  turrets each fixed to one broadside only (one port-only, one starboard-only) — the classic French
+  dreadnought "echelon" layout. Real-ship history is off-limits as a *source*, but this in-game
+  confirmation happens to match the historical Courbet-class arrangement, which is a useful prior
+  to have in mind (not to rely on) if a later French battleship of similar vintage (Bretagne,
+  Courbet's own in-game successor) needs the same question asked.
+- Re-confirmed the existing tier III battleship peer figures already in `research-quickref.md`
+  (Kaiser/Wyoming/Orion/Ishizuchi/Nassau) via fresh direct fetches, all matched. Also cross-checked
+  against `gangut.json`'s already-published stats (a 6th/7th tier III BB data point already on the
+  site) rather than re-fetching `Navy:Gangut` — safe here since that file was itself sourced from
+  the same peer set and its numbers (Kaiser 12.5/Wyoming 12.5/Orion 12.6/Ishizuchi 12.9 sea
+  detection, Ishizuchi 4% torpedo reduction, etc.) matched this pass's own fresh fetches exactly.

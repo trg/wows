@@ -206,9 +206,24 @@ legitimate at a glance — check every new source against this list before trust
   proxy needed that run — the bot-check stub is intermittent per-request, not a property of
   specific pages.
 - Tier III battleship peers confirmed via their own `Navy:` pages (useful for future tier III BB
-  peer-comparison, e.g. Gangut): `Navy:Kaiser` (Germany), `Navy:Wyoming` (USA), `Navy:Orion` (UK),
-  `Navy:Ishizuchi` (Japan), `Navy:Nassau` (Germany, premium). All fetched with a direct `curl` +
-  browser UA, no Jina proxy needed.
+  peer-comparison, e.g. Gangut, Courbet): `Navy:Kaiser` (Germany), `Navy:Wyoming` (USA),
+  `Navy:Orion` (UK), `Navy:Ishizuchi` (Japan), `Navy:Nassau` (Germany, premium). All fetched with a
+  direct `curl` + browser UA, no Jina proxy needed. Re-confirmed independently on the Courbet pass
+  (all figures matched); `gangut.json` (already on-site) is a further tier III BB data point whose
+  published numbers matched this second round of fetches exactly, safe to cross-check against
+  directly instead of re-fetching `Navy:Gangut`.
+- **`Navy:<Ship>`'s AA Armament table can silently omit a whole mount** — `Navy:Courbet` lists only
+  AA1 and AA3, but `wowsbuilds.com/ships/courbet`'s stats JSON has a third (AA2, 28 DPS) that the
+  site's own peer-average field corroborates (62 DPS total is consistent with the tier's ~29 DPS
+  mean; a 34 DPS ship pulling that mean up would not be). Same "stray field glitch" class as the
+  Mahan/Indiana entries below, just on the wiki side this time — don't assume the wiki table is
+  the complete one by default, cross-check total AA DPS against `wowsbuilds` when the numbers seem
+  low for the ship's apparent role.
+- **`wowsbuilds.com/ships/<slug>` embeds a `peerStats` object** in its stats JSON (grep the raw
+  HTML) with mean/stdev for HP, effective HP, range, AP/HE DPM, reload, AA DPS, sea detection, max
+  speed, and rudder shift, computed across that ship's own tier+class peer group. Good for
+  calibrating `rating` fields quickly; still worth spot-checking 1-2 named peers directly for
+  concrete numbers to cite in `strengths`/`weaknesses` prose.
 - **Splash art isn't always the standard bow-quartering angle** — Gangut's
   (`syntubpzoenozdaohyfa.supabase.co/storage/v1/object/public/ships/gangut.webp`, found by
   grepping the wowsbuilds base page HTML per the pattern above) is an unusually wide broadside/

@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import GoalList from '../../components/GoalList.astro';
-import { GOAL_TAGS, GOAL_CATEGORIES, type GoalTag } from '../../lib/goals';
-import { base } from '../../lib/base';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import GoalList from '../../../components/GoalList.astro';
+import { GOAL_TAGS, GOAL_CATEGORIES, type GoalTag } from '../../../lib/goals';
+import { base } from '../../../lib/base';
 
 const ships = await getCollection('ships');
 
@@ -26,7 +26,7 @@ function entriesFor(tag: GoalTag) {
 }
 ---
 
-<BaseLayout title="Best For..." backHref={base} backLabel="Home">
+<BaseLayout title="Best For..." backHref={`${base}guides/`} backLabel="Guides">
   <h1>Best Ships For...</h1>
   <p>Quick picks by goal, roughly one per tier as the roster grows.</p>
 

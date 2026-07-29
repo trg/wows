@@ -1,0 +1,90 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { base } from '../../../lib/base';
+---
+
+<BaseLayout title="Intro 101" backHref={`${base}guides/`} backLabel="Guides">
+  <h1>World of Warships: Legends - Intro 101</h1>
+  <h5><i>This page is 100% Human Authored</i></h5>
+
+  <p>Ready to get quickly up to speed on the basics of this game?  Start here:</p>
+  
+  <h2>It's a Tactical Shooter</h2>
+  <p>
+    This is something that's important to keep in the back of your mind as you start to learn the game.  
+    While "tactics" may be beyond the scope of an intro guide, I think it's important to know right off
+    the bat that games are won by long term (in game terms) choices, not twitchy fingers or perfect accuracy with the guns / torpedoes.
+    Think of it like American Football: Yes the fundamentals (throwing, catching) are table stakes for playing well, but the actual game
+    is the choices the team makes.
+  </p>
+  <p>
+    I'll leave it at this for this guide:  Running around guns-blazing engaging in any ship within range like it's a typical 
+    multiplayer shooting game = you're sunk.
+  </p>
+
+  <h2>Ship Classes</h2>
+  <p>
+    There's variance of course within a given class but the following is generally true:
+  </p>
+  <h3>Destroyers</h3>
+  <p>
+    Small, fast, low HP, short range guns, hard to see, hard to hit.  
+    Uses agility and smoke screens and their high top speed to avoid being quickly wiped out.  
+    Their role:
+    <ol>
+      <li>Spot ships (more on what this means later)</li>
+      <li>Capture areas</li>
+      <li>Support slower teammates (typicallly smoke)</li>
+      <li>Fight battleships</li>
+    </ol>
+  </p>
+
+  <h3>Cruisers</h3>
+  <p>
+    Medium in almost every dimension.  Eg: More HP than a Destroyer, less than a Battlship.  
+    Higher calliber guns than a Destroyer but less than a Battlsship.  Faster reload than a Battleship but slower than a Destroyer.
+    On so on.   They are the backbone of any fleet.  They often have the best selection of consumables and ships within this class
+    can vary a lot, from glass cannon snipers to tough close range brawlers to support ships.
+  </p>
+
+  <h3>Battleships</h3>
+  <p>
+    Big, slow, high HP, long range guns, easy to see, easy to hit.  
+    The opposite of a Destroyer.  Often lack torpedoes entirely.
+    Their role:
+    <ol>
+      <li>
+        Tank.  High visibility, high HP, great armor.  They can absorb many times the number of hits of Cruisers and Destroyers before sinking,
+        plus many have consumables that repairs light damage, further increasing their total HP pool.  Many have good belt armor 
+        (the armor at the waterline that torpedoes will hit).
+      </li>
+      <li>
+        Fight cruisers.  While Destroyers are very difficult to hit with a Battleship,
+        a well placed shot or two can shred a lot of cruisers.
+      </li>
+    </ol>
+  </p>
+  
+  <p>
+    As a general guideline, each ship class is weak to a class and strong against a class:
+    <ul>
+      <li>
+        Battleships generally outgun Cruisers, particularly at close range.  The high calliber of the typical Battleship's 
+        main guns is enough to really mess up a lot of Cruisers.
+      </li>
+      <li>
+        Cruisers generally outgun Destroyers.  Agility has less to do with it, it's a simple matter of relative HP pool sizes, 
+        relative armor thickness, relative gun calliber, etc.
+      </li>
+      <li>
+        Destroyers generally outgun Battleships.  This is the unusal paring, as one might assume that 'bigger = better' 
+        and since Battlships are the biggest class of regular ship and Destroyers are the smallest, that Battleships beat Destroyers.
+        The reason it doesn't work that way is that Battleships are <i>so much slower</i> and due to their slow-reloading speed 
+        and slow turret rotation speed, Destroyers simply dance around them, with the Battleship captain struggling to land a single
+        shot on the Destroyer, while the Destroyer has a nice big easy target for it's torpedoes (main gun fire from a Destroyer
+        is not typically effective against Battleships).
+      </li>
+    </ul>
+  </p>
+
+</BaseLayout>

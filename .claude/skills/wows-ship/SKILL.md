@@ -1,12 +1,29 @@
 ---
 name: wows-ship
 description: Research and create or update a World of Warships Legends ship entry in src/content/ships/. Use when the user wants to add a new ship to the companion site, or refresh an existing one after a balance patch.
-allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Bash(npm run check), Bash(curl:*), Bash(sips:*), Bash(mkdir:*)
+allowed-tools: WebSearch, WebFetch, Read, Write, Edit, Bash(npm run check), Bash(curl:*), Bash(sips:*), Bash(mkdir:*), Bash(.claude/skills/wows-ship/scripts/*.sh:*)
 ---
 
 Research and author (or refresh) one ship's data file for the companion site.
 
 ## Before you start
+
+`.claude/skills/wows-ship/scripts/` has three helper scripts that wrap the repetitive
+curl/parsing steps research keeps needing — prefer these over hand-rolling the same `curl` +
+Python one-liners again:
+
+- `fetch-navy-page.sh <PageTitle>` — fetches a `wiki.wargaming.net/en/Navy:<PageTitle>` page,
+  confirms the Legends breadcrumb (retrying via the Jina proxy if the direct fetch hits the bot
+  stub), and prints clean plain text.
+- `fetch-wowsbuilds.sh <slug> [base|consumables|modifications]` — fetches a `wowsbuilds.com`
+  ship page. `base` prints the splash-art URL, the `peerStats` tier/class peer-group
+  means/stdevs, and the ship's own parameters JSON; `consumables`/`modifications` print the
+  slot-grouped readable text.
+- `fetch-commons-image.sh "<Commons file name>" <output/path.jpg> [max-dimension]` — downloads a
+  Commons file via `Special:FilePath` and resizes it to a normal web size (existing
+  `public/images/ships/*.jpg` files run roughly 300KB-2MB; raw Commons originals can be far
+  larger). Confirm the license on the file's Commons page yourself first — the script doesn't
+  check it.
 
 Read `SPEC.md` at the repo root — it is the authoritative schema and tone guide. Also read
 `src/content.config.ts` for the exact Zod shape and `src/lib/goals.ts` for the fixed `goalTags`
