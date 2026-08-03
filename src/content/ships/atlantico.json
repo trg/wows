@@ -1,0 +1,79 @@
+{
+  "name": "Atlântico",
+  "nation": "Pan-America",
+  "type": "Battleship",
+  "tier": 7,
+  "isPremium": true,
+  "shortDescription": "Ten-gun Pan-American \"project\" battleship pairing British 381mm AP-only guns with an outsized 127mm/234mm secondary battery and the tier's strongest AA, trading away top speed and belt armor to get it.",
+  "role": "Secondary-gun brawler battleship",
+  "stats": [
+    { "label": "Hull HP", "value": "60,100", "rating": "average" },
+    { "label": "Main Battery", "value": "5x2 381mm (AP only)", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "16.4 km", "rating": "strong" },
+    { "label": "Main Battery Reload", "value": "30 s", "rating": "average" },
+    { "label": "Max Speed", "value": "25 kts", "rating": "weak" },
+    { "label": "Turning Circle", "value": "800 m", "rating": "strong" },
+    { "label": "Rudder Shift", "value": "15 s", "rating": "strong" },
+    { "label": "Detectability (Sea)", "value": "14.9 km", "rating": "strong" },
+    { "label": "Armor", "value": "19-356mm hull range", "rating": "weak" },
+    { "label": "Torpedo Damage Reduction", "value": "31%", "rating": "strong" },
+    { "label": "Secondary Battery", "value": "10x1 127mm + 8x2 234mm, 7.5 km range", "rating": "strong" },
+    { "label": "AA Defense", "value": "450 combined DPS across 5 mounts", "rating": "strong" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "20s action time, 80s cooldown, unlimited charges. Standard USN-style reset, the same cycle as Colorado's and Indiana's.", "rating": "average" },
+    { "name": "Repair Party", "flavor": "3 charges, 28s each at 300 hp/s, the baseline 0.5% of her 60,100 hp pool per second, about 25,200 hp back across all three activations. Lighter than the boosted 0.66% cycle on Colorado or Indiana.", "rating": "average" },
+    { "name": "Enhanced Secondary Targeting", "flavor": "3 charges, 30s window at +100% secondary shell grouping and -50% dispersion, 160s cooldown. With 26 secondary guns split across two batteries inside 7.5 km, this has far more to amplify than it does on most battleships carrying it.", "rating": "strong" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"] },
+    { "label": "3", "guns": 2, "arcs": ["port", "starboard"], "note": "Amidships mount, blocked fore and aft by the superstructure, fires only to a broadside." },
+    { "label": "4", "guns": 2, "arcs": ["stern", "port", "starboard"] },
+    { "label": "5", "guns": 2, "arcs": ["stern", "port", "starboard"] }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Secondary Battery Mod 2", "alternative": "Main Battery Mod 2" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Mod 2", "alternative": "Steering Gears Mod 2" },
+    { "slot": "Slot 3", "recommended": "Concealment System Mod 1", "alternative": "Chromium Plated Barrels" },
+    { "slot": "Slot 4", "recommended": "Secondary Battery Mod 3", "alternative": "Main Battery Mod 3" }
+  ],
+  "strengths": [
+    "Two full secondary batteries, 10x1 127mm and 8x2 234mm, both reaching 7.5 km, backed by the Secondary Reach trait. The 234mm mounts alone hit for 3,850 HE damage with a 21% fire chance, cruiser-caliber punch on a secondary gun.",
+    "450 combined AA DPS across five mounts, tied with Iowa for the strongest of the tier VII battleships checked here, clear of Vanguard's 439 and more than double Richelieu's 154.",
+    "16.4 km main battery range, the longest of the tier VII battleships checked (Iowa and Richelieu both 16.0 km, Bismarck 15.8 km).",
+    "800m turning circle and a 15s rudder shift, the tightest and (behind only Vanguard's 14.7s) quickest of the group, a real edge for a ship this slow in a straight line.",
+    "14.9 km sea detection, the lowest of the tier VII battleships checked, and Concealment System Mod 1 pushes it lower still.",
+    "31% torpedo damage reduction, ahead of five of the seven researched peers (only Richelieu's 35% and Amagi's 43% beat it)."
+  ],
+  "weaknesses": [
+    "25 knots top speed, the slowest of the tier VII battleships checked, with Vladivostok's 26.1 kts the next slowest.",
+    "Main guns fire AP only, and at 10,700 damage per shell it's the lightest per-shell punch of the group (up to 13,100 on Vladivostok and Iowa). The 381mm caliber also can't overmatch the plating that 406mm-plus peers like Vladivostok, Iowa, and Amagi can.",
+    "356mm max belt, tied with Vanguard for the thinnest of the tier VII battleships checked, well behind Iowa's 439mm and Amagi's 458mm.",
+    "Only three consumable slots are populated (Damage Control Party, Repair Party, Enhanced Secondary Targeting), no smoke, radar, sonar, or spotter plane to fall back on."
+  ],
+  "tips": [
+    "Close inside 7.5 km whenever you can and let both secondary batteries work, the 234mm guns alone do real damage once they're in range.",
+    "Pop Enhanced Secondary Targeting as you commit to the fight, the accuracy buff matters far more with two batteries firing at once than it does on most other battleships.",
+    "Use the 16.4 km main battery range to soften targets at distance rather than banking on a straight AP duel, your per-shell damage is the weakest at the tier.",
+    "Lean on the tight turning circle and fast rudder to dodge incoming fire, since you can't outrun anything at 25 knots.",
+    "Don't be shy about shooting down planes, the AA suite is the strongest researched at this tier and it's there to be used."
+  ],
+  "threats": [
+    { "threat": "406mm-plus battleships like Vladivostok, Iowa, or Amagi", "reason": "Their guns overmatch her 356mm belt at range, something her own 381mm AP can't return in kind." },
+    { "threat": "Cruisers and destroyers that fight at range", "reason": "Her lightest-in-class per-shell AP damage struggles to punish targets that never close inside her 7.5 km secondary reach." },
+    { "threat": "Anything faster dictating the engagement", "reason": "25 knots is the slowest of the tier VII battleships checked, so she can't force a fight or disengage from a bad one." }
+  ],
+  "playstyle": {
+    "summary": [
+      "A Pan-American \"project\" battleship pairing British 381mm main guns with an outsized American secondary and AA fit.",
+      "Ten AP-only main guns with the longest range and lightest per-shell punch of the researched tier VII field.",
+      "Two full secondary batteries, 127mm and 234mm, both reaching 7.5 km, backed by the tier's strongest AA suite.",
+      "Slow in a straight line, but the tightest turning circle and near-quickest rudder of the group, built to twist rather than run."
+    ],
+    "detail": "Atlântico is one of Wargaming's Pan-American amalgams, married British 15-inch turrets to a secondary and AA fit no real design ever carried together. Ten 381mm guns reach out to 16.4 km, further than any other tier VII battleship researched here, but they load AP only and hit softer per shell than Vladivostok or Iowa, so a straight main-battery trade isn't where she wins. What she brings instead is a genuine second gun line: 127mm and 234mm secondaries both stretch to 7.5 km, and Enhanced Secondary Targeting turns that into real, repeatable damage once a target closes. The tradeoff is speed, 25 knots is the slowest at the tier, but an 800m turning circle and a 15-second rudder shift claw back some of the difference by letting her change facing and dodge fire rather than outrun it. Play the long main battery range to soften a target on the approach, then let both secondary batteries and the AA suite finish the job up close."
+  },
+  "goalTags": [
+    { "tag": "aa-defense", "note": "450 combined AA DPS across five mounts, tied with Iowa for the strongest of the tier VII battleships checked." }
+  ]
+}

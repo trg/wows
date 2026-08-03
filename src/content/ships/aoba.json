@@ -1,0 +1,81 @@
+{
+  "name": "IJN Aoba",
+  "nation": "Japan",
+  "type": "Cruiser",
+  "tier": 5,
+  "shortDescription": "Twin-turreted heavy cruiser with hard-hitting 203mm guns and torpedoes, trading rate of fire and protection for range and per-hit punch.",
+  "role": "Long-range heavy gun cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "31,900 upgraded (30,500 stock)", "rating": "average" },
+    { "label": "Main Battery", "value": "3x2 203mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "10.5 s upgraded (11 s stock)", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "14.4 km upgraded", "rating": "strong" },
+    { "label": "Torpedo Tubes", "value": "2x4 610mm, fixed port/starboard", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "16,267", "rating": "strong" },
+    { "label": "Torpedo Reload", "value": "102 s", "rating": "weak" },
+    { "label": "Max Speed", "value": "35 kts", "rating": "strong" },
+    { "label": "Turning Radius", "value": "710 m", "rating": "average" },
+    { "label": "Detectability (Sea)", "value": "11.4 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "6.8 km", "rating": "average" },
+    { "label": "Armor", "value": "6-105mm, 4% torpedo damage reduction", "rating": "weak" },
+    { "label": "AA", "value": "83 DPS combined, all short-ranged mounts", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock cycle as Furutaka's or Omaha's, nothing unique to this hull.", "rating": "average" },
+    { "name": "Sonar", "flavor": "3.9 km ship detection, 2.8 km torpedo detection, 92s duration, 180s cooldown, 2 charges. One of two options in the same utility slot, marginally longer range and duration than Furutaka's near-identical version.", "rating": "average" },
+    { "name": "Defensive AA Fire", "flavor": "+200% AA damage, 40s duration, 150s cooldown, 2 charges. The other option in that same slot, worth taking over Sonar when the enemy team is carrier-heavy since the stock AA doesn't hold up alone.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "100s uptime, 80s cooldown, 3 charges. Same numbers as Furutaka's, and the only anti-air answer in the kit if Sonar is picked instead.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 2, "arcs": ["bow", "port", "starboard"], "note": "Forward lower turret." },
+    { "label": "2", "guns": 2, "arcs": ["bow", "port", "starboard"], "note": "Superfires over turret 1." },
+    { "label": "3", "guns": 2, "arcs": ["stern", "port", "starboard"], "note": "Sole aft turret, no amidships mounts like Furutaka's pyramid layout." }
+  ],
+  "torpedoMounts": [
+    { "label": "Port", "tubes": "4 tubes", "side": "port", "note": "Fixed to this broadside only, the same fixed-mount layout as Furutaka rather than a centerline swing." },
+    { "label": "Starboard", "tubes": "4 tubes", "side": "starboard", "note": "Fixed to this broadside only." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" },
+    { "slot": "Slot 2", "recommended": "Damage Control System Modification 2", "alternative": "Steering Gears Modification 2" }
+  ],
+  "strengths": [
+    "14.4 km firing range upgraded beats Leander's 12.9 km and Nürnberg's 13.4 km, and nearly matches Molotov's 14.8 km, letting her poke from beyond most tier V cruiser gun range",
+    "16,267 torpedo damage is the hardest-hitting fish among researched tier V cruiser peers, ahead of Leander's 15,733, Molotov's 14,400, and Nürnberg's 13,700",
+    "35 kt top speed outruns Leander's and Nürnberg's 32 kt, trailing only Molotov's 36 kt",
+    "4,700 AP and 3,300 HE per 203mm shell hits harder per shot than the smaller-caliber guns most tier V cruiser peers carry, backed by the official Superior HE Damage trait",
+    "17% HE fire chance per shell is backed by the official Pyromania trait"
+  ],
+  "weaknesses": [
+    "10.5s reload across only six guns gives below-average HE and AP DPM against the researched tier V cruiser peer group",
+    "Official Sluggish Aim trait means turret traverse lags behind, a real problem when a target crosses her firing arc",
+    "102s torpedo reload is far slower than Leander's 96s, Molotov's 70s, or Nürnberg's 68s, so a dodged salvo costs a long wait for the next one",
+    "Thin protection: 6mm minimum armor and only 4% torpedo damage reduction, both behind Trento's 13mm minimum and 10% reduction",
+    "83 DPS AA looks fine on paper but every mount is short-ranged (1.2-4.5 km), so planes are past the outer layers before taking real damage"
+  ],
+  "tips": [
+    "Fight at range where the 14.4 km reach and hard-hitting 203mm shells pay off, closing the distance just exposes the slow reload and thin armor to return fire.",
+    "Pick your broadside before committing to a torpedo run, the mounts are welded one per side with no centerline swing.",
+    "Lead your aim early against a turning target, the official Sluggish Aim traverse won't catch up mid-fight.",
+    "Swap Sonar for Defensive AA Fire when carriers are in the match, the stock AA doesn't hold up on its own."
+  ],
+  "threats": [
+    { "threat": "Carrier strikes", "reason": "Every AA mount is short-ranged, so planes close to effective range before the DPS matters." },
+    { "threat": "Anything that closes the range fast", "reason": "Sluggish turret traverse and a slow main battery reload both punish her hardest once a fight goes close-range." },
+    { "threat": "Ships with faster torpedo reload", "reason": "A 102s cycle means a missed or dodged salvo leaves her without an answer for a long stretch." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Twin-turreted heavy cruiser, three 203mm turrets in a straightforward two-forward-one-aft layout, no amidships mounts.",
+      "Wins by out-ranging and out-hitting rather than out-firing, the reload is slow but every shell and torpedo lands hard.",
+      "Torpedo tubes are fixed one per broadside, committing to a side before the fish are in the water.",
+      "AA looks respectable on a stat sheet but every mount is short-ranged, so she leans on Defensive AA Fire more than most tier V cruisers."
+    ],
+    "detail": "Aoba refines Furutaka's pyramid-turret idea into something simpler: three twin 203mm turrets, two forward and one aft, with no broadside-only amidships mounts to work around. What she loses in gun count she gets back in range and payload, 14.4 km reach and 4,700 AP per shell make her a real threat to anyone who lets her sit at distance, and her 16,267-damage torpedoes hit harder than any tier V cruiser peer researched so far. The tradeoffs are the same family of problems Furutaka has: a slow reload, official Sluggish Aim traverse, and thin protection that doesn't forgive getting caught up close. Play her like an artillery piece, not a brawler, pick the range, keep the guns firing, and save the torpedoes for a target that's already committed."
+  },
+  "image": "/images/ships/aoba.jpg",
+  "imageCredit": "Japanese cruiser Aoba in the later 1920s. U.S. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "torpedo-alpha", "note": "16,267 damage per salvo is the highest among researched tier V cruiser peers (Leander 15,733, Molotov 14,400, Nürnberg 13,700), though the fixed port/starboard mounts and 102s reload limit how often it's usable." }
+  ]
+}

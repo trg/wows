@@ -1,0 +1,82 @@
+{
+  "name": "IJN Furutaka",
+  "nation": "Japan",
+  "type": "Cruiser",
+  "tier": 4,
+  "shortDescription": "Six-gun heavy cruiser in a pyramid turret layout, trading rate of fire for big 203mm shells, heavy-hitting torpedoes, and the thickest armor of her tier.",
+  "role": "Slow-firing heavy gun cruiser",
+  "stats": [
+    { "label": "Hull HP", "value": "30,700 upgraded (28,300 stock)", "rating": "strong" },
+    { "label": "Main Battery", "value": "6x1 203mm", "rating": "average" },
+    { "label": "Main Battery Reload", "value": "13.5 s", "rating": "weak" },
+    { "label": "Main Battery Range", "value": "13.4 km upgraded", "rating": "average" },
+    { "label": "Torpedo Tubes", "value": "2x3 (2x4 upgraded) 610mm", "rating": "average" },
+    { "label": "Torpedo Damage", "value": "16,267 upgraded", "rating": "strong" },
+    { "label": "Max Speed", "value": "34.5 kts", "rating": "average" },
+    { "label": "Turning Radius", "value": "750 m", "rating": "weak" },
+    { "label": "Detectability (Sea)", "value": "10.7 km", "rating": "average" },
+    { "label": "Detectability (Air)", "value": "6.4 km", "rating": "average" },
+    { "label": "Armor", "value": "6-105mm, 48mm deck", "rating": "strong" },
+    { "label": "AA", "value": "20 DPS", "rating": "weak" }
+  ],
+  "consumables": [
+    { "name": "Damage Control Party", "flavor": "5s action, 60s cooldown, unlimited charges. Same stock cycle as Omaha or Emerald, nothing unique to this hull.", "rating": "average" },
+    { "name": "Sonar", "flavor": "3.7 km ship detection, 2.7 km torpedo detection, 90s duration, 180s cooldown, 2 charges. Same numbers as Omaha's, short of Galicia's longer-ranged version.", "rating": "average" },
+    { "name": "Catapult Fighter", "flavor": "100s uptime, 80s cooldown, 3 charges, one more charge than Omaha gets from the same consumable.", "rating": "average" }
+  ],
+  "turrets": [
+    { "label": "1", "guns": 1, "arcs": ["bow", "port", "starboard"], "note": "Forward pair of the pyramid layout." },
+    { "label": "2", "guns": 1, "arcs": ["bow", "port", "starboard"], "note": "Superfires over 1." },
+    { "label": "3", "guns": 1, "arcs": ["port", "starboard"], "note": "Amidships pyramid mount, centerline but blocked fore and aft, broadside fire only." },
+    { "label": "4", "guns": 1, "arcs": ["port", "starboard"], "note": "Amidships pyramid mount, same broadside-only restriction as turret 3." },
+    { "label": "5", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Aft pair of the pyramid layout." },
+    { "label": "6", "guns": 1, "arcs": ["stern", "port", "starboard"], "note": "Superfires over 5." }
+  ],
+  "torpedoMounts": [
+    { "label": "Port", "tubes": "3 tubes (4 upgraded)", "side": "port", "note": "Sits between the amidships turrets and the aft pair, fixed to this broadside only." },
+    { "label": "Starboard", "tubes": "3 tubes (4 upgraded)", "side": "starboard", "note": "Sits between the amidships turrets and the aft pair, fixed to this broadside only." }
+  ],
+  "upgrades": [
+    { "slot": "Slot 1", "recommended": "Main Battery Modification 2", "alternative": "Aiming Systems Modification 1" }
+  ],
+  "strengths": [
+    "30,700 hp upgraded beats every other researched tier IV cruiser, backed by the official Tough trait",
+    "48mm deck armor is thick enough to bounce shells that would punch straight through a peer at range",
+    "203mm guns hit harder per shell than any other tier IV cruiser's main battery, with 4,700 AP and 3,300 HE",
+    "16,267 torpedo damage upgraded outdoes Omaha's or Galicia's fish, backed by the official Superior HE Damage trait on the gun side"
+  ],
+  "weaknesses": [
+    "13.5s reload across only six guns gives the lowest DPM of the researched tier IV cruiser peer group",
+    "Official Sluggish Aim trait means turret traverse lags well behind, punishing in close-range fights",
+    "750m turning radius is wide for the tier, she can't reposition tightly once committed",
+    "Only two torpedo mounts, one per side, versus Omaha's four or Emerald's four",
+    "20 DPS AA is thin with no Defensive AA Fire option, just the Catapult Fighter"
+  ],
+  "tips": [
+    "Pick your range and stay there, the slow reload means a missed salvo costs more than it does on faster-firing peers.",
+    "Angle the bow or stern in a firefight so the amidships pyramid turrets can't be worked around, they only answer broadside.",
+    "Don't try to out-turn anything, that 750m turning radius will get you caught showing your flank.",
+    "Save the torpedoes for a committed push, only one mount per side means no follow-up shot from the other broadside.",
+    "Lean on the 48mm deck armor at range but don't assume it holds up if you're spotted and pinned up close."
+  ],
+  "threats": [
+    { "threat": "Anything that can close the range fast", "reason": "Sluggish turret traverse and a wide turning radius both punish her hardest in a brawl she didn't choose." },
+    { "threat": "Carrier strikes", "reason": "20 DPS AA and no Defensive AA Fire leave plane attacks mostly unanswered." },
+    { "threat": "Destroyers that spot her first", "reason": "Only one torpedo mount per side to answer with, and the slow main battery reload doesn't punish them quickly either." }
+  ],
+  "playstyle": {
+    "summary": [
+      "Six-gun heavy cruiser in a pyramid turret layout, big 203mm shells over rate of fire.",
+      "Tougher than her tier IV cruiser peers, highest hull HP and thick deck armor built to bounce shells at range.",
+      "Turns wide and reloads slow, so she wins by picking her range, not by out-maneuvering anyone.",
+      "Two amidships turrets are centerline but broadside-only, closing off bow and stern arcs entirely."
+    ],
+    "detail": "Furutaka's pyramid arrangement puts six single 203mm turrets across the hull: a superfiring pair forward, a superfiring pair aft, and two more locked to centerline amidships that can only answer a broadside. That last part matters, showing bow or stern in a fight takes four of her six guns out of the equation. What she gets in exchange is real punch per shell, torpedoes that hit harder than most of her tier IV peers, and the thickest deck armor in the bracket. The reload is slow and the turret traverse is officially sluggish, so this isn't a ship that wins a turning fight or a close brawl. Pick the range, keep the broadside open, and let the big guns do the work."
+  },
+  "image": "/images/ships/furutaka.jpg",
+  "imageCredit": "IJN Furutaka at anchor off Shinagawa, October 1935. U.S. Naval History and Heritage Command, public domain, via Wikimedia Commons.",
+  "goalTags": [
+    { "tag": "tank-brawler", "note": "30,700 hp upgraded is the highest of the researched tier IV cruiser peer group, backed by the official Tough trait and 48mm deck armor that can bounce shells at range." },
+    { "tag": "fire-starter", "note": "3,300 HE damage and 17% fire chance per shell are backed by the official Superior HE Damage trait, though the slow 13.5s reload limits how often that fire chance comes up." }
+  ]
+}

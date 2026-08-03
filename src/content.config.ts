@@ -6,7 +6,7 @@ const ships = defineCollection({
   loader: glob({ pattern: '**/*.json', base: './src/content/ships' }),
   schema: z.object({
     name: z.string(),
-    nation: z.enum(['USA', 'Germany', 'Japan', 'United Kingdom', 'France', 'USSR', 'Italy', 'Spain']),
+    nation: z.enum(['USA', 'Germany', 'Japan', 'United Kingdom', 'France', 'USSR', 'Italy', 'Spain', 'Pan-America']),
     type: z.enum(['Destroyer', 'Cruiser', 'Battleship']),
     tier: z.number().int().min(1).max(11),
     isPremium: z.boolean().default(false),

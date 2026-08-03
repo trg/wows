@@ -9,4 +9,5 @@ export const NATION_FLAGS: Record<string, string> = {
   USSR: '☭',
   Italy: '🇮🇹',
   Spain: '🇪🇸',
+  'Pan-America': '🌎',
 };
